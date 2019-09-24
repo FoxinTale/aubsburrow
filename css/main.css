@@ -1,0 +1,36 @@
+h1{
+  font-family: 'Indie Flower', cursive;
+  text-align: center;
+}
+
+nav ul li{
+ list-style-type: none;
+ display: inline;
+ padding-left: 20px;
+}
+
+nav{
+  text-align: center;
+}
+
+p{
+  font-family: 'Coming Soon', cursive;
+}
+
+footer{
+  clear: both; 
+  text-align: center;
+}
+
+nav a{
+    text-decoration: none;
+}
+main{
+    text-align: center;
+ 
+}
+
+body{
+  background-image: url(sunset.jpg);
+  background-color: #cccccc;
+}

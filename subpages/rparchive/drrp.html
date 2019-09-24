@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Mega RP Universe - dr-rp</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <style>
+        /* === GENERAL === */
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/6c6374bad0b0b6d204d8d6dc4a18d820.woff);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/e8acd7d9bf6207f99350ca9f9e23b168.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/3bdef1251a424500c1b3a78dea9b7e57.woff);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/be0060dafb7a0e31d2a1ca17c0708636.woff);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/8e12fb4f14d9c4592eb8ec9f22337b04.woff);
+    font-weight: 700;
+}
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.markdown {
+    white-space: pre-wrap;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.spoiler {
+    border-radius: 3px;
+}
+
+.quote {
+    border-left: 4px solid;
+    border-radius: 3px;
+    margin: 8px 0;
+    padding-left: 10px;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, monospace;
+}
+
+.pre--multiline {
+    margin-top: 4px;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 85%;
+}
+
+.mention {
+    font-weight: 500;
+}
+
+.emoji {
+    width: 1.45em;
+    height: 1.45em;
+    margin: 0 1px;
+    vertical-align: -0.4em;
+}
+
+.emoji--small {
+    width: 1rem;
+    height: 1rem;
+}
+
+.emoji--large {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* === INFO === */
+
+.info {
+    display: flex;
+    max-width: 100%;
+    margin: 0 5px 10px 5px;
+}
+
+.info__guild-icon-container {
+    flex: 0;
+}
+
+.info__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.info__metadata {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.info__guild-name {
+    font-size: 1.4em;
+}
+
+.info__channel-name {
+    font-size: 1.2em;
+}
+
+.info__channel-topic {
+    margin-top: 2px;
+}
+
+.info__channel-message-count {
+    margin-top: 2px;
+}
+
+.info__channel-date-range {
+    margin-top: 2px;
+}
+
+/* === CHATLOG === */
+
+.chatlog {
+    max-width: 100%;
+    margin-bottom: 24px;
+}
+
+.chatlog__message-group {
+    display: flex;
+    margin: 0 10px;
+    padding: 15px 0;
+    border-top: 1px solid;
+}
+
+.chatlog__author-avatar-container {
+    flex: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.chatlog__messages {
+    flex: 1;
+    min-width: 50%;
+    margin-left: 20px;
+}
+
+.chatlog__author-name {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.chatlog__timestamp {
+    margin-left: 5px;
+    font-size: .75em;
+}
+
+.chatlog__message {
+    padding: 2px 5px;
+    margin-right: -5px;
+    margin-left: -5px;
+    background-color: transparent;
+    transition: background-color 1s ease;
+}
+
+.chatlog__content {
+    font-size: .9375em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 3px;
+    font-size: .8em;
+}
+
+.chatlog__attachment-thumbnail {
+    margin-top: 5px;
+    max-width: 50%;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__embed {
+    margin-top: 5px;
+    display: flex;
+    max-width: 520px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 4px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 10px;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    width: 100%;
+    display: flex;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.chatlog__embed-author-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 9px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 4px;
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 10px;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 4px;
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-size: .875em;
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 20px;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 10px;
+}
+
+.chatlog__embed-image {
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 10px;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-weight: 500;
+    font-size: .75em;
+}
+
+.chatlog__reactions {
+    display: flex;
+}
+
+.chatlog__reaction {
+    display: flex;
+    align-items: center;
+    margin: 6px 2px 2px 2px;
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 6px;
+    font-size: .875em;
+}
+
+.chatlog__bot-tag {
+    margin-left: 0.3em;
+    background: #7289da;
+    color: #ffffff;
+    font-size: 0.625em;
+    padding: 1px 2px;
+    border-radius: 3px;
+    vertical-align: middle;
+    line-height: 1.3;
+    position: relative;
+    top: -.2em;
+}
+    </style>
+    <style>
+        /* === GENERAL === */
+
+body {
+    background-color: #36393e;
+    color: #dcddde;
+}
+
+a {
+    color: #0096cf;
+}
+
+.spoiler {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.quote {
+    border-color: #4f545c;
+}
+
+.pre {
+    background-color: #2f3136 !important;
+}
+
+.pre--multiline {
+    border-color: #282b30 !important;
+    color: #839496 !important;
+}
+
+.mention {
+    color: #7289da;
+}
+
+/* === INFO === */
+
+.info__guild-name {
+    color: #ffffff;
+}
+
+.info__channel-name {
+    color: #ffffff;
+}
+
+.info__channel-topic {
+    color: #ffffff;
+}
+
+/* === CHATLOG === */
+
+.chatlog__message-group {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.chatlog__author-name {
+    color: #ffffff;
+}
+
+.chatlog__timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__message--highlighted {
+    background-color: rgba(114, 137, 218, 0.2) !important;
+}
+
+.chatlog__message--pinned {
+    background-color: rgba(249, 168, 37, 0.05);
+}
+
+.chatlog__edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__embed-content-container {
+    background-color: rgba(46, 48, 54, 0.3);
+    border-color: rgba(46, 48, 54, 0.6);
+}
+
+.chatlog__embed-author-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-author-name-link {
+    color: #ffffff;
+}
+
+.chatlog__embed-title {
+    color: #ffffff;
+}
+
+.chatlog__embed-description {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-field-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-field-value {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-footer {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__reaction {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.chatlog__reaction-count {
+    color: rgba(255, 255, 255, 0.3);
+}
+    </style>
+
+    <script>
+        function scrollToMessage(event, id) {
+            var element = document.getElementById('message-' + id);
+
+            if (element !== null && element !== undefined) {
+                event.preventDefault();
+
+                element.classList.add('chatlog__message--highlighted');
+
+                window.scrollTo({
+                    top: element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - (window.innerHeight / 2),
+                    behavior: 'smooth'
+                });
+
+                window.setTimeout(function() {
+                    element.classList.remove('chatlog__message--highlighted');
+                }, 2000);
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div class="info">
+    <div class="info__guild-icon-container">
+        <img class="info__guild-icon" src="https://cdn.discordapp.com/icons/477724130368684032/16e0f8d136336c383a888f9bea7382a2.png" />
+    </div>
+    <div class="info__metadata">
+        <div class="info__guild-name">Mega RP Universe</div>
+        <div class="info__channel-name">dr-rp</div>
+
+
+        <div class="info__channel-message-count">55 messages</div>
+
+    </div>
+</div>
+
+<div class="chatlog">
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 05:24 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588659889287462913" id="message-588659889287462913">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>After Monokuma had told the students that they&#39;d be forced to play a killing game, they all disappeared to their rooms for the night and didn&#39;t come out into breakfast the next morning. Most of the students where in the dining restaurant before the Monokuma announcement and were talking.</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/473644614809681946/43c4d9025beab5dfde3d23e1a71317a3.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Mytale#1991" data-user-id="473644614809681946">Mytale</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 05:29 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588661264201285675" id="message-588661264201285675">
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Maikuro wasn&#39;t at the restaurant, she was probably just being a lazy shit and sleeping in her room despite Monokuma&#39;s menacing killing game beginning.</strong></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 05:31 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588661747527843847" id="message-588661747527843847">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Hope was in the restaurant, waiting in for the morning announcement and the others to arrive before he started eating. The morning announcement played and the people who weren&#39;t already at the restaurant started to wake up.</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/473644614809681946/43c4d9025beab5dfde3d23e1a71317a3.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Mytale#1991" data-user-id="473644614809681946">Mytale</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 05:33 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588662293164982273" id="message-588662293164982273">
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Maikuro was among the late people, she woke up while realizing that she was late and rushed out of her dorm towards the restaurant.</strong></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 05:35 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588662807944232961" id="message-588662807944232961">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Hope was greeting the others as they went to the restuarant for breakfast and talked to some people about anything that came to his mind.</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/473644614809681946/43c4d9025beab5dfde3d23e1a71317a3.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Mytale#1991" data-user-id="473644614809681946">Mytale</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 05:39 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588663755722719252" id="message-588663755722719252">
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>While she was running towards the restaurant, Maikuro noticed Hope and stopped for a second to walk over and greet him.</strong></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 05:42 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588664542406377492" id="message-588664542406377492">
+                        <div class="chatlog__content">
+                            <span class="markdown">Hope:&quot;oh hi, Maikuro.&quot; <em>Hope waved at her and smiled, mainly bc he just finished up greeting Nagito and now he gets to talk to someone.. &#39;normal&#39;</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/473644614809681946/43c4d9025beab5dfde3d23e1a71317a3.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Mytale#1991" data-user-id="473644614809681946">Mytale</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 05:45 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588665214824873985" id="message-588665214824873985">
+                        <div class="chatlog__content">
+                            <span class="markdown">Maikuro: &quot;Hello, Hope! How&#39;re you doing today?&quot; <strong>She was being her normal loud self, it&#39;s like she wasn&#39;t even concerned that she was in a killing game.</strong></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 05:47 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588665622901161985" id="message-588665622901161985">
+                        <div class="chatlog__content">
+                            <span class="markdown">Hope:&quot;I&#39;m a little tired and hungry but other than that I&#39;m good. How about you?&quot;</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/473644614809681946/43c4d9025beab5dfde3d23e1a71317a3.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Mytale#1991" data-user-id="473644614809681946">Mytale</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 05:49 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588666247936213005" id="message-588666247936213005">
+                        <div class="chatlog__content">
+                            <span class="markdown">Maikuro: &quot;I&#39;m feelin&#39; pretty great, can&#39;t wait to taste the tea they have at the restaurant!&quot;</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 05:51 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588666675595837480" id="message-588666675595837480">
+                        <div class="chatlog__content">
+                            <span class="markdown">Hope:&quot;sounds great. I think everyone is already at the restaurant right now so I&#39;m gonna head there now.&quot;</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/473644614809681946/43c4d9025beab5dfde3d23e1a71317a3.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Mytale#1991" data-user-id="473644614809681946">Mytale</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 05:52 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588667013380046848" id="message-588667013380046848">
+                        <div class="chatlog__content">
+                            <span class="markdown">Maikuro: &quot;Alright, Let&#39;s go then!&quot; <strong>She said before running into the hotel and rushing up the stairs to the restaurant.</strong></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 05:53 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588667331253895188" id="message-588667331253895188">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Hope follows but walks instead of runs.</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/473644614809681946/43c4d9025beab5dfde3d23e1a71317a3.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Mytale#1991" data-user-id="473644614809681946">Mytale</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 05:59 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588668822345613322" id="message-588668822345613322">
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Once she reached the doors to the restaurant, Maikuro kicked the door open and walked inside.</strong></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 06:06 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588670439128170506" id="message-588670439128170506">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Hope soon followed in after Maikuro and sat down to eat, ending up next to Nagito and Ibuki.</em> (Hope is next to crazy-obsessed and loud best girl. This will be interesting-</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/473644614809681946/43c4d9025beab5dfde3d23e1a71317a3.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Mytale#1991" data-user-id="473644614809681946">Mytale</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 06:12 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588671913908240385" id="message-588671913908240385">
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Maikuro ended up pouring a large cup of green tea for herself and sat down between Gundham and Hiyoko. (Best boi and Tsundere baby, this could be interesting.)</strong></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 06:20 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588674074176389120" id="message-588674074176389120">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Hope started talking to Ibuki about the most random bs then he soon got a small headache from how loud she was being.</em> Ibuki:&quot;You don&#39;t look so good, Hope. Does your head hurt?!&quot; Hope:&quot;no I&#39;m fine.&quot;</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/473644614809681946/43c4d9025beab5dfde3d23e1a71317a3.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Mytale#1991" data-user-id="473644614809681946">Mytale</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 06:24 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588674997728444437" id="message-588674997728444437">
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Maikuro just watched everything around her happen while sipping her tea, before she decided to strike up a small conversation with Gundham since he was sitting next to her.</strong></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 06:28 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588675945460662293" id="message-588675945460662293">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Ibuki was now pestering him to tell her if he was feeling well or not, leading him to have a bigger headache bc she was basically yelling. All Hope could do was rest his head on the table and pray she&#39;ll be quieter in a bit, someone will stop her, drag him away for something, or start talking to him.</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/473644614809681946/43c4d9025beab5dfde3d23e1a71317a3.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Mytale#1991" data-user-id="473644614809681946">Mytale</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 06:29 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588676365805551626" id="message-588676365805551626">
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>After a little while, Maikuro noticed Ibuki pestering Hope and instead of helping him out, she decided to join Ibuki in annoying him while mimicking Ibuki&#39;s voice.</strong></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 06:31 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588676716453429259" id="message-588676716453429259">
+                        <div class="chatlog__content">
+                            <span class="markdown">Hope:&quot;I want to die..&quot; <em>Hope covered his ears and wanted to commit a cry to make them shut up.</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/473644614809681946/43c4d9025beab5dfde3d23e1a71317a3.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Mytale#1991" data-user-id="473644614809681946">Mytale</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 06:38 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588678455449616410" id="message-588678455449616410">
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Both of the girls&#39; bickering probably annoyed everyone nearby, especially Hiyoko.</strong>
+Hiyoko: &quot;Hey, could you two shut your big mouths up!? I&#39;m trying to eat in peace!&quot;</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 06:40 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588679009374830592" id="message-588679009374830592">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Hope let out a sigh of relief when Hiyoko told them to shut up.</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/473644614809681946/43c4d9025beab5dfde3d23e1a71317a3.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Mytale#1991" data-user-id="473644614809681946">Mytale</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 06:43 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588679768153653273" id="message-588679768153653273">
+                        <div class="chatlog__content">
+                            <span class="markdown">Maikuro: &quot;Aww, but this game&#39;s getting kinda boring!&quot; <strong>...game?</strong></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 06:45 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588680417985691668" id="message-588680417985691668">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Hope looks at Maikuro, confused then decides to try and talk to someone else. He ends up talking to Nagito sinces he&#39;s next to him and isn&#39;t talking to anyone.</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/473644614809681946/43c4d9025beab5dfde3d23e1a71317a3.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Mytale#1991" data-user-id="473644614809681946">Mytale</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 06:50 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588681695910297613" id="message-588681695910297613">
+                        <div class="chatlog__content">
+                            <span class="markdown">Nagito: &quot;Why hello there, Hope, did those two give you a headache?&quot; <strong>He seemed to be talking about Ibuki and Maikuro.</strong></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 06:54 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588682574436761601" id="message-588682574436761601">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Hope nods.</em> Hope:&quot;I usually get really bad headaches if I hear loud noises too early in the morning.&quot;</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/473644614809681946/43c4d9025beab5dfde3d23e1a71317a3.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Mytale#1991" data-user-id="473644614809681946">Mytale</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 06:58 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588683526132465666" id="message-588683526132465666">
+                        <div class="chatlog__content">
+                            <span class="markdown">Nagito: &quot;Ah, that&#39;s quite unfortunate..&quot; <strong>Nagito said as he was about to finish his plate.</strong></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 07:01 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588684275029639168" id="message-588684275029639168">
+                        <div class="chatlog__content">
+                            <span class="markdown">Hope:&quot;yeah..&quot; <em>Hope tried to think of how to get rid of the headache.</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/473644614809681946/43c4d9025beab5dfde3d23e1a71317a3.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Mytale#1991" data-user-id="473644614809681946">Mytale</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 07:08 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588686044862480385" id="message-588686044862480385">
+                        <div class="chatlog__content">
+                            <span class="markdown">Nagito: &quot;Ibuki and Maikuro are pretty loud, I suggest perhaps not sitting near them during breakfast.&quot;</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 07:10 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588686601471787009" id="message-588686601471787009">
+                        <div class="chatlog__content">
+                            <span class="markdown">Hope:&quot;noted.&quot;</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 07:27 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588690806420799560" id="message-588690806420799560">
+                        <div class="chatlog__content">
+                            <span class="markdown">~Time Skip brought to u by Mo being impatient~
+<em>Breakfast ended. almost everyone parted ways and went to do their own things. Hope went to the supermarket to get stuff to decorate his room with or to get fabric and stuff for making outfits.</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/473644614809681946/43c4d9025beab5dfde3d23e1a71317a3.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Mytale#1991" data-user-id="473644614809681946">Mytale</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 07:38 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588693762570715149" id="message-588693762570715149">
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Maikuro decided to head to her dorm so she could plot some pranks to pull on everyone on the island.</strong></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 07:43 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588694954948296713" id="message-588694954948296713">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Hope quickly found everything he needed and started walking back to the dorms, not really being able to fully be able to see bc he got a lot of things.</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/473644614809681946/43c4d9025beab5dfde3d23e1a71317a3.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Mytale#1991" data-user-id="473644614809681946">Mytale</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 07:48 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588696092359524393" id="message-588696092359524393">
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>While plotting, Maikuro noticed Hope walking outside and decided to do one of her pranks on him.</strong></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 07:50 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588696718543945744" id="message-588696718543945744">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Hope is trying to walk carefully so he can avoid dropping anything or falling.</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/473644614809681946/43c4d9025beab5dfde3d23e1a71317a3.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Mytale#1991" data-user-id="473644614809681946">Mytale</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 07:55 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588697965443547137" id="message-588697965443547137">
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Maikuro reached for a random stick shaped object from her drawers, then she opened the windows and threw the object which landed in Hope&#39;s tracks.</strong></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 07:59 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588698839402283028" id="message-588698839402283028">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Hope ended up tripping and dropping most of his stuff, Luckily some fabrics broke his fall. After Hope fell, he sat up and looked at all his stuff.</em> Hope:&quot;Crap.&quot;</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/473644614809681946/43c4d9025beab5dfde3d23e1a71317a3.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Mytale#1991" data-user-id="473644614809681946">Mytale</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 08:01 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588699545475612672" id="message-588699545475612672">
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Maikuro then began laughing her ass off, you could probably hear it loud and clear from 50 miles away.</strong></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 08:03 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588699875273736216" id="message-588699875273736216">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Hope heard Maikuro laughing an muttered.</em> Hope:&quot;hm.. wonder what she found so funny.&quot; <em>Hope stood up and started picking up his stuff.</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/473644614809681946/43c4d9025beab5dfde3d23e1a71317a3.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Mytale#1991" data-user-id="473644614809681946">Mytale</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 08:08 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588701128494022657" id="message-588701128494022657">
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Maikuro then peeked out of her window and looked right at Hope.</strong>
+Maikuro (In a FF voice): &quot;OOH, YOU JUST GOT PRANKED, BITCH!&quot;</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 08:11 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588702011441283103" id="message-588702011441283103">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Hope got spooked and dropped his stuff again. He then mutters to himself as he looks down at his stuff.</em> Hope:&quot;Lady Luck is not with me today..&quot;</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/473644614809681946/43c4d9025beab5dfde3d23e1a71317a3.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Mytale#1991" data-user-id="473644614809681946">Mytale</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 08:14 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588702759025508352" id="message-588702759025508352">
+                        <div class="chatlog__content">
+                            <span class="markdown">Maikuro: &quot;Well, uh, you&#39;re definitely not gonna like Lady Luck after about like 3 days.&quot; <strong>[Insert 4th wall shattering in the background-]</strong></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 08:16 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588703207492943884" id="message-588703207492943884">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Hope gives a confused look.</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/473644614809681946/43c4d9025beab5dfde3d23e1a71317a3.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Mytale#1991" data-user-id="473644614809681946">Mytale</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 08:18 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588703652659593216" id="message-588703652659593216">
+                        <div class="chatlog__content">
+                            <span class="markdown">Maikuro: &quot;Anyways, what&#39;cha doing with all that fabric?&quot;</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 08:19 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588703944298201123" id="message-588703944298201123">
+                        <div class="chatlog__content">
+                            <span class="markdown">Hope:&quot;uh just gonna design some clothes since I&#39;m bored.&quot;</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/473644614809681946/43c4d9025beab5dfde3d23e1a71317a3.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Mytale#1991" data-user-id="473644614809681946">Mytale</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 08:20 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588704175274328099" id="message-588704175274328099">
+                        <div class="chatlog__content">
+                            <span class="markdown">Maikuro: &quot;Oooh, sounds neat!&quot; <strong>She pulled out a nearby notepad and a pen.</strong></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 08:21 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588704423652491274" id="message-588704423652491274">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Hope gives her a slighty confused look again when she pulled out the notepad and pen.</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/473644614809681946/43c4d9025beab5dfde3d23e1a71317a3.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Mytale#1991" data-user-id="473644614809681946">Mytale</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 08:22 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588704723670925343" id="message-588704723670925343">
+                        <div class="chatlog__content">
+                            <span class="markdown">Maikuro: &quot;Oh, this? I just like listing random facts about people, don&#39;t worry &#39;bout it.&quot;</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 08:25 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588705415471300639" id="message-588705415471300639">
+                        <div class="chatlog__content">
+                            <span class="markdown">Hope:&quot;Oh ok.&quot; <em>Hope picks up his stuff and starts heading back to his dorm.</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/473644614809681946/43c4d9025beab5dfde3d23e1a71317a3.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Mytale#1991" data-user-id="473644614809681946">Mytale</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 08:28 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588706369750695936" id="message-588706369750695936">
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>Maikuro waved Hope goodbye, then she closed her window and continued plotting more pranks.</strong></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 08:31 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588706990478589954" id="message-588706990478589954">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Hope made it to his room, managing to not drop anything till he got inside.</em> (Hope just yeets his stuff on his desk-</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/473644614809681946/43c4d9025beab5dfde3d23e1a71317a3.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Mytale#1991" data-user-id="473644614809681946">Mytale</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 08:40 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588709243126022145" id="message-588709243126022145">
+                        <div class="chatlog__content">
+                            <span class="markdown"><strong>After a few minutes, Maikuro decided to go to the restaurant to pull one of her pranks.</strong></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 08:41 AM</span>
+
+                    <div class="chatlog__message " data-message-id="588709523691274261" id="message-588709523691274261">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Hope started working on an outfit after sketching it out.</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">13-Jun-19 02:20 PM</span>
+
+                    <div class="chatlog__message " data-message-id="588794899785056258" id="message-588794899785056258">
+                        <div class="chatlog__content">
+                            <span class="markdown">( <span class="mention" title="Mytale#1991">@Mytale</span> continue?</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+</div>
+
+</body>
+</html>

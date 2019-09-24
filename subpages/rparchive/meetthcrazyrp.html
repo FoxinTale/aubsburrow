@@ -1,0 +1,4811 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Mega RP Universe - meet-the-crazy-rp</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <style>
+        /* === GENERAL === */
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/6c6374bad0b0b6d204d8d6dc4a18d820.woff);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/e8acd7d9bf6207f99350ca9f9e23b168.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/3bdef1251a424500c1b3a78dea9b7e57.woff);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/be0060dafb7a0e31d2a1ca17c0708636.woff);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discordapp.com/assets/8e12fb4f14d9c4592eb8ec9f22337b04.woff);
+    font-weight: 700;
+}
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.markdown {
+    white-space: pre-wrap;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.spoiler {
+    border-radius: 3px;
+}
+
+.quote {
+    border-left: 4px solid;
+    border-radius: 3px;
+    margin: 8px 0;
+    padding-left: 10px;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, monospace;
+}
+
+.pre--multiline {
+    margin-top: 4px;
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 85%;
+}
+
+.mention {
+    font-weight: 500;
+}
+
+.emoji {
+    width: 1.45em;
+    height: 1.45em;
+    margin: 0 1px;
+    vertical-align: -0.4em;
+}
+
+.emoji--small {
+    width: 1rem;
+    height: 1rem;
+}
+
+.emoji--large {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* === INFO === */
+
+.info {
+    display: flex;
+    max-width: 100%;
+    margin: 0 5px 10px 5px;
+}
+
+.info__guild-icon-container {
+    flex: 0;
+}
+
+.info__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.info__metadata {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.info__guild-name {
+    font-size: 1.4em;
+}
+
+.info__channel-name {
+    font-size: 1.2em;
+}
+
+.info__channel-topic {
+    margin-top: 2px;
+}
+
+.info__channel-message-count {
+    margin-top: 2px;
+}
+
+.info__channel-date-range {
+    margin-top: 2px;
+}
+
+/* === CHATLOG === */
+
+.chatlog {
+    max-width: 100%;
+    margin-bottom: 24px;
+}
+
+.chatlog__message-group {
+    display: flex;
+    margin: 0 10px;
+    padding: 15px 0;
+    border-top: 1px solid;
+}
+
+.chatlog__author-avatar-container {
+    flex: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.chatlog__messages {
+    flex: 1;
+    min-width: 50%;
+    margin-left: 20px;
+}
+
+.chatlog__author-name {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.chatlog__timestamp {
+    margin-left: 5px;
+    font-size: .75em;
+}
+
+.chatlog__message {
+    padding: 2px 5px;
+    margin-right: -5px;
+    margin-left: -5px;
+    background-color: transparent;
+    transition: background-color 1s ease;
+}
+
+.chatlog__content {
+    font-size: .9375em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 3px;
+    font-size: .8em;
+}
+
+.chatlog__attachment-thumbnail {
+    margin-top: 5px;
+    max-width: 50%;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__embed {
+    margin-top: 5px;
+    display: flex;
+    max-width: 520px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 4px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 10px;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    width: 100%;
+    display: flex;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.chatlog__embed-author-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 9px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 4px;
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 10px;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 4px;
+    font-size: .875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-size: .875em;
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 20px;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 10px;
+}
+
+.chatlog__embed-image {
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 10px;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-weight: 500;
+    font-size: .75em;
+}
+
+.chatlog__reactions {
+    display: flex;
+}
+
+.chatlog__reaction {
+    display: flex;
+    align-items: center;
+    margin: 6px 2px 2px 2px;
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 6px;
+    font-size: .875em;
+}
+
+.chatlog__bot-tag {
+    margin-left: 0.3em;
+    background: #7289da;
+    color: #ffffff;
+    font-size: 0.625em;
+    padding: 1px 2px;
+    border-radius: 3px;
+    vertical-align: middle;
+    line-height: 1.3;
+    position: relative;
+    top: -.2em;
+}
+    </style>
+    <style>
+        /* === GENERAL === */
+
+body {
+    background-color: #36393e;
+    color: #dcddde;
+}
+
+a {
+    color: #0096cf;
+}
+
+.spoiler {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.quote {
+    border-color: #4f545c;
+}
+
+.pre {
+    background-color: #2f3136 !important;
+}
+
+.pre--multiline {
+    border-color: #282b30 !important;
+    color: #839496 !important;
+}
+
+.mention {
+    color: #7289da;
+}
+
+/* === INFO === */
+
+.info__guild-name {
+    color: #ffffff;
+}
+
+.info__channel-name {
+    color: #ffffff;
+}
+
+.info__channel-topic {
+    color: #ffffff;
+}
+
+/* === CHATLOG === */
+
+.chatlog__message-group {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.chatlog__author-name {
+    color: #ffffff;
+}
+
+.chatlog__timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__message--highlighted {
+    background-color: rgba(114, 137, 218, 0.2) !important;
+}
+
+.chatlog__message--pinned {
+    background-color: rgba(249, 168, 37, 0.05);
+}
+
+.chatlog__edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__embed-content-container {
+    background-color: rgba(46, 48, 54, 0.3);
+    border-color: rgba(46, 48, 54, 0.6);
+}
+
+.chatlog__embed-author-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-author-name-link {
+    color: #ffffff;
+}
+
+.chatlog__embed-title {
+    color: #ffffff;
+}
+
+.chatlog__embed-description {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-field-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-field-value {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-footer {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__reaction {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.chatlog__reaction-count {
+    color: rgba(255, 255, 255, 0.3);
+}
+    </style>
+
+    <script>
+        function scrollToMessage(event, id) {
+            var element = document.getElementById('message-' + id);
+
+            if (element !== null && element !== undefined) {
+                event.preventDefault();
+
+                element.classList.add('chatlog__message--highlighted');
+
+                window.scrollTo({
+                    top: element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - (window.innerHeight / 2),
+                    behavior: 'smooth'
+                });
+
+                window.setTimeout(function() {
+                    element.classList.remove('chatlog__message--highlighted');
+                }, 2000);
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div class="info">
+    <div class="info__guild-icon-container">
+        <img class="info__guild-icon" src="https://cdn.discordapp.com/icons/477724130368684032/16e0f8d136336c383a888f9bea7382a2.png" />
+    </div>
+    <div class="info__metadata">
+        <div class="info__guild-name">Mega RP Universe</div>
+        <div class="info__channel-name">meet-the-crazy-rp</div>
+
+            <div class="info__channel-topic">?</div>
+
+        <div class="info__channel-message-count">237 messages</div>
+
+    </div>
+</div>
+
+<div class="chatlog">
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">15-Oct-18 11:08 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501411163473707037" id="message-501411163473707037">
+                        <div class="chatlog__content">
+                            <span class="markdown">Meet Memory, the insane one (the older girl in the pictures of Nulls family)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">15-Oct-18 07:40 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501539814403866635" id="message-501539814403866635">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Memory walks along the side of the highway, hoping for a ride</em></span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501540291367665667" id="message-501540291367665667">
+                        <div class="chatlog__content">
+                            <span class="markdown">( <span class="mention" title="Aubrey#2376">@Aubrey</span> <span class="mention" title="Rat Boy#6360">@Rat Boy</span> RP!!!)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">15-Oct-18 07:42 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501540511555780638" id="message-501540511555780638">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Azzy went to do something)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">15-Oct-18 07:47 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501541736485617665" id="message-501541736485617665">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Ah)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/409223157585805318/5642a82bcadb05fb71e69168a60c667b.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Aubrey#2376" data-user-id="409223157585805318">Aubrey</span>
+
+
+                <span class="chatlog__timestamp">15-Oct-18 07:52 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501543010597863435" id="message-501543010597863435">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Sorry..Had floor meeting)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">15-Oct-18 07:54 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501543500052168704" id="message-501543500052168704">
+                        <div class="chatlog__content">
+                            <span class="markdown">(It’s K)</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501545209323192321" id="message-501545209323192321">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Memory keeps walking, needing a ride</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/409223157585805318/5642a82bcadb05fb71e69168a60c667b.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Aubrey#2376" data-user-id="409223157585805318">Aubrey</span>
+
+
+                <span class="chatlog__timestamp">15-Oct-18 09:34 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501568606035902485" id="message-501568606035902485">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Macie lands down with grace somewhere</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">15-Oct-18 09:35 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501568827268792320" id="message-501568827268792320">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Litha lands next to her sister</em></span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501569758756601856" id="message-501569758756601856">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>”Why are we here again Sis?”</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/409223157585805318/5642a82bcadb05fb71e69168a60c667b.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Aubrey#2376" data-user-id="409223157585805318">Aubrey</span>
+
+
+                <span class="chatlog__timestamp">15-Oct-18 10:20 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501580158575312907" id="message-501580158575312907">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Macie looks around, unsure as to where she is.</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">15-Oct-18 10:21 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501580476218212363" id="message-501580476218212363">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>“Arizona, near the highway my lost sister”</em></span>
+
+                                <span class="chatlog__edited-timestamp" title="15-Oct-18 10:21 PM">(edited)</span>
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/409223157585805318/5642a82bcadb05fb71e69168a60c667b.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Aubrey#2376" data-user-id="409223157585805318">Aubrey</span>
+
+
+                <span class="chatlog__timestamp">15-Oct-18 11:19 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501595132865544192" id="message-501595132865544192">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Off in the distance she sees a few figures</em>
+(She has some degree of night vision)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/409223157585805318/5642a82bcadb05fb71e69168a60c667b.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Aubrey#2376" data-user-id="409223157585805318">Aubrey</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:03 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501621255510818816" id="message-501621255510818816">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>To self</em> &quot;hm....&quot;</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:04 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501621339015348225" id="message-501621339015348225">
+                        <div class="chatlog__content">
+                            <span class="markdown">(<s>idk how tf to join dis</s>)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:04 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501621406048583693" id="message-501621406048583693">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Can Yuri join)</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501621452412551179" id="message-501621452412551179">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Yuri: I mean, i&#39;m a bit psycho, so...i&#39;d fit.)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:06 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501621815681220629" id="message-501621815681220629">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Nah, Argo would fit better cause she would recognize Memory)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:08 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501622328942395392" id="message-501622328942395392">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Yuri: I also saw the photo. All reality warpers get access to the same information if permitted.)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:08 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501622464573341696" id="message-501622464573341696">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Ah, Well j still want le Argo in this one... but you can join if you want)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:08 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501622517186953217" id="message-501622517186953217">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Yuri: Need to stretch anyways.)</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501622635348754433" id="message-501622635348754433">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri appears in the shadows, along with her recently acquired demon.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:10 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501622912999227394" id="message-501622912999227394">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Yuri sees Memory in front of her and Macie sees Yuri appear, both my characters are oblivious</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/409223157585805318/5642a82bcadb05fb71e69168a60c667b.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Aubrey#2376" data-user-id="409223157585805318">Aubrey</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:10 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501623000249008158" id="message-501623000249008158">
+                        <div class="chatlog__content">
+                            <span class="markdown">&quot;Um... who are you?&quot;</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:11 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501623105131642890" id="message-501623105131642890">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Ara falls out of a tree nearby</em> &quot;shit-&quot;</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:11 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501623113843212288" id="message-501623113843212288">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri: My name&#39;s Yuri...nice to meet you.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/409223157585805318/5642a82bcadb05fb71e69168a60c667b.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Aubrey#2376" data-user-id="409223157585805318">Aubrey</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:11 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501623204872192003" id="message-501623204872192003">
+                        <div class="chatlog__content">
+                            <span class="markdown">&quot;Macie.&quot;</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:11 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501623216012394506" id="message-501623216012394506">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Memory keeps walking down the road</em></span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501623287776804865" id="message-501623287776804865">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>”Litha, her sister” Litha says</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:12 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501623389748723742" id="message-501623389748723742">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri: ...Huh, <em>his</em> sister&#39;s oblivious.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:13 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501623590152568834" id="message-501623590152568834">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Macie is female)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:13 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501623689003925505" id="message-501623689003925505">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Yuri: I&#39;m addressing Memory as Null&#39;s sister.)</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501623767814897669" id="message-501623767814897669">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Yuri: Also to confuse both Macie and Memory)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/269592725093875712/1921f90a7462d105399e3847646dec44.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Rat Boy#6360" data-user-id="269592725093875712">Rat Boy</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:15 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501624269726547968" id="message-501624269726547968">
+                        <div class="chatlog__content">
+                            <span class="markdown">(<s>Idk how to have my character be in this rp so Ima just take Ara and leave so you can all enjoy ur rp</s>)</span>
+
+                                <span class="chatlog__edited-timestamp" title="16-Oct-18 01:16 AM">(edited)</span>
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:15 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501624272050192385" id="message-501624272050192385">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Memory is to far away to see you)</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501624378891436043" id="message-501624378891436043">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>She suddenly explodes across the desert flash speed</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:16 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501624512589070366" id="message-501624512589070366">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri: Woah. Flashy.</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501624559699755018" id="message-501624559699755018">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri begins taking out a knife, and cutting her arm a bit.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/409223157585805318/5642a82bcadb05fb71e69168a60c667b.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Aubrey#2376" data-user-id="409223157585805318">Aubrey</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:17 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501624767426854914" id="message-501624767426854914">
+                        <div class="chatlog__content">
+                            <span class="markdown">&quot;What the...&quot;</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:17 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501624776205271040" id="message-501624776205271040">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>”Self harm Huh?” She smirks “Same to see a cute girl do that”</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:18 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501624862226251789" id="message-501624862226251789">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri: Bit of a hobby.</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501624916991541268" id="message-501624916991541268">
+                        <div class="chatlog__content">
+                            <span class="markdown">Drops of blood begin falling from her arm, and the demon greedily gobbles it all up.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:18 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501625062542147584" id="message-501625062542147584">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>”Nice pet” she leans a bit down showing a little bit to much to Yuri</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:19 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501625149024501780" id="message-501625149024501780">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri doesn&#39;t flinch. Yuri: Yeah, sure.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:19 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501625322232479745" id="message-501625322232479745">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>She kneels down and stares it over</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:20 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501625421683621908" id="message-501625421683621908">
+                        <div class="chatlog__content">
+                            <span class="markdown">It hisses, and shoots a small blast at her.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:20 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501625546690789387" id="message-501625546690789387">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>”Help sister!” Her shirt is on fire</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:22 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501625949859741706" id="message-501625949859741706">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri just ignores it and continues cutting.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/409223157585805318/5642a82bcadb05fb71e69168a60c667b.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Aubrey#2376" data-user-id="409223157585805318">Aubrey</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:22 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501626029014515719" id="message-501626029014515719">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Macie isn&#39;t sure what to do...she&#39;s kinda shy</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:26 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501626881221591041" id="message-501626881221591041">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>”Smack my shirt out!” She rolls and the fire almost extinguished</em></span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501628234987864065" id="message-501628234987864065">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Memory runs into the cave the wind following her extinguishing the shirt</em> “Hello losers”</span>
+
+                                <span class="chatlog__edited-timestamp" title="16-Oct-18 01:31 AM">(edited)</span>
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:33 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501628619236442112" id="message-501628619236442112">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri: ...You&#39;re a bit of an idiot compared to <em>him.</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:34 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501628894189977601" id="message-501628894189977601">
+                        <div class="chatlog__content">
+                            <span class="markdown">“Him? Who’s he?” <em>She smirks reveling her fangs</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:34 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501629007922724874" id="message-501629007922724874">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri: He-who-must-never-have-spoken.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/409223157585805318/5642a82bcadb05fb71e69168a60c667b.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Aubrey#2376" data-user-id="409223157585805318">Aubrey</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:34 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501629014293610496" id="message-501629014293610496">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Where the hell did everyone go?  I&#39;m confuzzled.)</span>
+
+                                <span class="chatlog__edited-timestamp" title="16-Oct-18 01:34 AM">(edited)</span>
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:37 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501629811525943296" id="message-501629811525943296">
+                        <div class="chatlog__content">
+                            <span class="markdown">(They are all in the area)</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501629920343228436" id="message-501629920343228436">
+                        <div class="chatlog__content">
+                            <span class="markdown">“Never spoken? Riddle tongue speak the answer without your riddle”</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/409223157585805318/5642a82bcadb05fb71e69168a60c667b.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Aubrey#2376" data-user-id="409223157585805318">Aubrey</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:38 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501630016715751434" id="message-501630016715751434">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Macie is silent... she&#39;s nervous</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:39 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501630161041489921" id="message-501630161041489921">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri smiles sweetly, yet sarcastically. Yuri: Make me.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:40 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501630376674983936" id="message-501630376674983936">
+                        <div class="chatlog__content">
+                            <span class="markdown">“See you then” <em>Memory turns around and starts walking away</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:42 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501630990985461772" id="message-501630990985461772">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri just continues feeding blood to her demon.</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501631044206854147" id="message-501631044206854147">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Yuri: Curiousity&#39;s a powerful bait, she&#39;s definitely coming back.)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/409223157585805318/5642a82bcadb05fb71e69168a60c667b.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Aubrey#2376" data-user-id="409223157585805318">Aubrey</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:43 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501631156333051904" id="message-501631156333051904">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Macie is still kind of confused</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:43 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501631172900552714" id="message-501631172900552714">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Suddenly she body slaps Yuri into the wall</em> “Tell me, or you all die”</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/409223157585805318/5642a82bcadb05fb71e69168a60c667b.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Aubrey#2376" data-user-id="409223157585805318">Aubrey</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:43 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501631225862291457" id="message-501631225862291457">
+                        <div class="chatlog__content">
+                            <span class="markdown">&quot;Please no.&quot;</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:43 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501631266983247872" id="message-501631266983247872">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri: What? You and what power?</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:45 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501631789320634368" id="message-501631789320634368">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>She presses Yuri’s chest with enough force to break even her ribs</em></span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501631889468031007" id="message-501631889468031007">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Memory stupid strong, like break reality over her knees strong$</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:47 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501632164706648075" id="message-501632164706648075">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri just smirks. Yuri: If that&#39;s all you&#39;ve got, you&#39;re definitely not going to do anything to me at full power.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:48 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501632387373858816" id="message-501632387373858816">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Memory punches her</em></span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501632432102047755" id="message-501632432102047755">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Got to choose a pretty bad injury from that she strong)</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501632465597890560" id="message-501632465597890560">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Obey my characters strength)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:48 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501632468311343125" id="message-501632468311343125">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri just catches the punch, and begins healing back up.</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501632506202816512" id="message-501632506202816512">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri: That was your only free punch.</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501632567167156274" id="message-501632567167156274">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri then proceeds to slam her to the floor, HARD.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/409223157585805318/5642a82bcadb05fb71e69168a60c667b.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Aubrey#2376" data-user-id="409223157585805318">Aubrey</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:49 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501632635513077762" id="message-501632635513077762">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Macie nopes out</em></span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501632685765033984" id="message-501632685765033984">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>But, doesn&#39;t run too far away</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:49 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501632839574618112" id="message-501632839574618112">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>She never touches the floor, as she then floats a inch above the floor, unmovable</em></span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501632900152819712" id="message-501632900152819712">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Memory is Hana strength *1.2 let’s say)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:50 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501633084232302602" id="message-501633084232302602">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Please stop making people at Reality Warp tier strength)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:51 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501633161474736129" id="message-501633161474736129">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Reason for this is Null backstory)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/409223157585805318/5642a82bcadb05fb71e69168a60c667b.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Aubrey#2376" data-user-id="409223157585805318">Aubrey</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:51 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501633207322804224" id="message-501633207322804224">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Who doesn&#39;t touch...Macie?)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:51 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501633257750921237" id="message-501633257750921237">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Yuri: Alright...stepping my game up.)</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501633307499429890" id="message-501633307499429890">
+                        <div class="chatlog__content">
+                            <span class="markdown">An occult circle begins appearing under Yuri.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:51 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501633333734801410" id="message-501633333734801410">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Plan on killing her AFTER she meets Null)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:51 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501633371491794954" id="message-501633371491794954">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri: Nice strength. Would be a shame if i drained it.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:52 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501633526760865795" id="message-501633526760865795">
+                        <div class="chatlog__content">
+                            <span class="markdown">“Try me”</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:53 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501633641953099786" id="message-501633641953099786">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri&#39;s hands begins to glow purple, draining the energy out of Memory.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:53 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501633796471390208" id="message-501633796471390208">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>The energy flow is super slow and Memory stops, breaking the circle</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:54 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501633916806103060" id="message-501633916806103060">
+                        <div class="chatlog__content">
+                            <span class="markdown">Memory&#39;s hand begins turning purple.</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501633982430052352" id="message-501633982430052352">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri: I used my own blood for that ritual, you&#39;re not shaking it off that easily.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:54 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501634106707410964" id="message-501634106707410964">
+                        <div class="chatlog__content">
+                            <span class="markdown">“Guess I’ll end this fast then” <em>She rips her own arm off and it regrows in a half second</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:55 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501634157248512011" id="message-501634157248512011">
+                        <div class="chatlog__content">
+                            <span class="markdown">The arm turns purple again.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/409223157585805318/5642a82bcadb05fb71e69168a60c667b.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Aubrey#2376" data-user-id="409223157585805318">Aubrey</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:55 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501634194166906881" id="message-501634194166906881">
+                        <div class="chatlog__content">
+                            <span class="markdown">(What is happening?!)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:55 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501634197321154571" id="message-501634197321154571">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri: The ritual already reached your entire body.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:55 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501634323145818114" id="message-501634323145818114">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Massive fight)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:55 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501634323171246101" id="message-501634323171246101">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri then tackles memory, then proceeds to suplex her into a tree.</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501634389826863105" id="message-501634389826863105">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Yuri: Gotta keep somebody entertained.)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/409223157585805318/5642a82bcadb05fb71e69168a60c667b.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Aubrey#2376" data-user-id="409223157585805318">Aubrey</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:56 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501634412480299008" id="message-501634412480299008">
+                        <div class="chatlog__content">
+                            <span class="markdown">(My Elf has noped the fuck out.. She&#39;s a shy bab.)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:56 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501634414057357312" id="message-501634414057357312">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Memory doesn’t hit the tree, she floated again a inch off of it</em></span>
+
+                                <span class="chatlog__edited-timestamp" title="16-Oct-18 01:56 AM">(edited)</span>
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501634528826228736" id="message-501634528826228736">
+                        <div class="chatlog__content">
+                            <span class="markdown">(My other char is like, FOLLOW SISSY!)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:59 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501635187701186570" id="message-501635187701186570">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri just leaves her floating there. Her legs are turning purple now.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 01:59 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501635381440151564" id="message-501635381440151564">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Memory flies at Yuri and punches her through a mountain into the middle of a Walmart</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 02:00 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501635431377666049" id="message-501635431377666049">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri: Why a Walmart?!</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/409223157585805318/5642a82bcadb05fb71e69168a60c667b.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Aubrey#2376" data-user-id="409223157585805318">Aubrey</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 02:00 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501635436603506695" id="message-501635436603506695">
+                        <div class="chatlog__content">
+                            <span class="markdown">(The...fuck?)</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501635489720434718" id="message-501635489720434718">
+                        <div class="chatlog__content">
+                            <span class="markdown"><s><em>A mosquito flies in</em></s></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 02:00 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501635647551832064" id="message-501635647551832064">
+                        <div class="chatlog__content">
+                            <span class="markdown">(HELL NAH <em>Disappears</em>)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 02:01 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501635688949612544" id="message-501635688949612544">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri was barely hurt by that though, as the ritual has significantly lowered her hitting power.</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501635742032723968" id="message-501635742032723968">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri teleports back in, more amused then anything.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 02:01 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501635835431616543" id="message-501635835431616543">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>She is on the floor heavily breathing now</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 02:02 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501635988825702400" id="message-501635988825702400">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri: What&#39;s the matter? You were full of bravado early on.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 02:03 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501636193130250241" id="message-501636193130250241">
+                        <div class="chatlog__content">
+                            <span class="markdown">“Damn, energy, drai...” <em>She passes out</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 02:04 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501636437528150016" id="message-501636437528150016">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri swiftly undoes the ritual, and starts writing poetry for the club meeting later on.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 02:04 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501636560333045761" id="message-501636560333045761">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Ender: Capture her and bring her to blackfang!)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 02:05 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501636703187107841" id="message-501636703187107841">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Yuri: Please, she&#39;s pretty psycho. Better leave her to wander for a bit before stumbling in.)</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501636768769245184" id="message-501636768769245184">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Monika: YOU&#39;RE pretty psycho.)</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501636802466152452" id="message-501636802466152452">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Yuri: Hush)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 02:06 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501636945206837248" id="message-501636945206837248">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Do it or I spread around Yuri X Monica posters)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 02:06 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501637052283092992" id="message-501637052283092992">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Monika: Bish they already have porn of that)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 02:06 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501637146864648192" id="message-501637146864648192">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Yuri X Hana)</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501637247234342912" id="message-501637247234342912">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Wait no, you don’t do it I spread around Ender X Hana!)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 02:07 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501637318214549504" id="message-501637318214549504">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Hana: Do that, and I&#39;ll slaughter you for good.)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 02:08 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501637664634830851" id="message-501637664634830851">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Can’t slaughter me i live beyond the 4th wall)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 02:09 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501637892133748737" id="message-501637892133748737">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Hana: I don&#39;t care how many walls are there, I will find you and butcher you.)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 02:11 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501638239669714955" id="message-501638239669714955">
+                        <div class="chatlog__content">
+                            <span class="markdown">(I can mind control Ender to follow you around begging for a date, with plot armor so you can’t stop him either)</span>
+
+                                <span class="chatlog__edited-timestamp" title="16-Oct-18 02:11 AM">(edited)</span>
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 02:11 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501638325489238037" id="message-501638325489238037">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Hana: Plot armor only works if we agree on it. I don&#39;t.)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 02:12 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501638529223491585" id="message-501638529223491585">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Oh! I spread the rumor you and Ender are secretly dating to Argo <em>Forces Argo to not hear this</em>)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 02:14 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501638953506701322" id="message-501638953506701322">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Argo: I kinda already realized it was completely bogus anyways...)</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501639052353732608" id="message-501639052353732608">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Argo: Seriously, Hana would date Melodos before you. And she knows everything bad about him.)</span>
+
+                                <span class="chatlog__edited-timestamp" title="16-Oct-18 02:14 AM">(edited)</span>
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501639119957524480" id="message-501639119957524480">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri just continues sitting there, writing.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 02:17 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501639881089613824" id="message-501639881089613824">
+                        <div class="chatlog__content">
+                            <span class="markdown">(De Ex Machina? Take Memory into custody)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 02:20 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501640625087709185" id="message-501640625087709185">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Let her wander around on her own adventures first, she&#39;s barely fleshed out)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/409223157585805318/5642a82bcadb05fb71e69168a60c667b.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Aubrey#2376" data-user-id="409223157585805318">Aubrey</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 02:21 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501640742138281985" id="message-501640742138281985">
+                        <div class="chatlog__content">
+                            <span class="markdown">(And Macie&#39;s already noped out of the scene)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 02:32 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501643598182219788" id="message-501643598182219788">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri: ...Man, this is a long time to past out for...</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501643689446211615" id="message-501643689446211615">
+                        <div class="chatlog__content">
+                            <span class="markdown">She&#39;s basically written several poems, and is now moving on to drawing Kathr&#233;ftiski&#225;s.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 09:54 AM</span>
+
+                    <div class="chatlog__message " data-message-id="501754784089505803" id="message-501754784089505803">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>She starts waking up</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 07:36 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501901274699268096" id="message-501901274699268096">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri: Man, you&#39;ve been out cold for an hour.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 07:37 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501901479687487508" id="message-501901479687487508">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Memory stares at her</em> “Cheap fighting”</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 07:38 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501901724882173963" id="message-501901724882173963">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri: Get used to it. Nobody fights fair nowadays.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 07:50 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501904710320652290" id="message-501904710320652290">
+                        <div class="chatlog__content">
+                            <span class="markdown">“I’m used to being able to punch anyone to the moon, usually in a thousand small pieces...”</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 08:54 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501920879241068557" id="message-501920879241068557">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri: Please, I know people who do that on a daily basis.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 08:56 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501921313229635625" id="message-501921313229635625">
+                        <div class="chatlog__content">
+                            <span class="markdown">“Huh, people as powerful as me?” <em>She seems curious as she sits up</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 08:57 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501921563155759114" id="message-501921563155759114">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri: ...I feel like I&#39;ve said too much...</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 08:57 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501921707259330621" id="message-501921707259330621">
+                        <div class="chatlog__content">
+                            <span class="markdown">“Nah, tell me more” <em>She yawns a bit</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 08:58 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501921895235715073" id="message-501921895235715073">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri doesn&#39;t respond, and goes back to drawing.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 08:59 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501922268440690691" id="message-501922268440690691">
+                        <div class="chatlog__content">
+                            <span class="markdown">“Come on, please... I kinda need a place to stay while looking for my brother...” <em>She begs a bit</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 09:00 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501922470689898496" id="message-501922470689898496">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri: You&#39;ll find him eventually. Yuri says that absentmindedly while the demon wraps around her neck like a scarf.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 09:02 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501922949641535488" id="message-501922949641535488">
+                        <div class="chatlog__content">
+                            <span class="markdown">“I know... I hope... it’s been so long, I miss him a lot. I actually had a vampire bite me so they would give me a lead to his location... it was a dead end though, they all have been”</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 09:46 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501934033023008793" id="message-501934033023008793">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri: ...I&#39;ll at least give you a lead.</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501934184852357141" id="message-501934184852357141">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri quickly scribbles something on a piece of paper, and hands it to her.</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501934254872199178" id="message-501934254872199178">
+                        <div class="chatlog__content">
+                            <span class="markdown">It reads: &quot;Polaria&quot;</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501934351609495592" id="message-501934351609495592">
+                        <div class="chatlog__content">
+                            <span class="markdown">Yuri: If you find this person, you&#39;ll find Null. I promise.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 09:49 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501934697765404673" id="message-501934697765404673">
+                        <div class="chatlog__content">
+                            <span class="markdown">“Wait really!” <em>She seems joyous</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 09:49 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501934766321565706" id="message-501934766321565706">
+                        <div class="chatlog__content">
+                            <span class="markdown">...She sees nobody there. Yuri left without a sound.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 09:50 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501935083444502537" id="message-501935083444502537">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>She sprints off at nuclear speeds, and hits a glacier in Antarctica</em> “Bit to fast” <em>Then searches</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 09:51 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501935374017232911" id="message-501935374017232911">
+                        <div class="chatlog__content">
+                            <span class="markdown">A large dragon jets by at insanely fast speeds.</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501935422679810078" id="message-501935422679810078">
+                        <div class="chatlog__content">
+                            <span class="markdown">On top of the dragon, you could barely make out a person on it.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 09:53 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501935861387100170" id="message-501935861387100170">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>She runs under the dragon, not daring flying up to it as she is much slower in the air</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 09:54 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501935993054822406" id="message-501935993054822406">
+                        <div class="chatlog__content">
+                            <span class="markdown">It begins spewing energy everywhere. <em>Primal energy.</em></span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501936094133223434" id="message-501936094133223434">
+                        <div class="chatlog__content">
+                            <span class="markdown">(It&#39;s belly is basically a closable wormhole to the primal energy)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/409223157585805318/5642a82bcadb05fb71e69168a60c667b.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Aubrey#2376" data-user-id="409223157585805318">Aubrey</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 09:54 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501936117419999233" id="message-501936117419999233">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Macie was hiding, but now she&#39;s straight up left the area and is flying who knows where.)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 09:55 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501936291315974156" id="message-501936291315974156">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Primal energy infused dragon? Shit...)</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501936360446492696" id="message-501936360446492696">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>The energy hits her and melts her head back, and it heals up instantly</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 09:56 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501936414640832513" id="message-501936414640832513">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Das why it&#39;s taking forever to finish the mission, she&#39;s suppose to study it)</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501936560615456838" id="message-501936560615456838">
+                        <div class="chatlog__content">
+                            <span class="markdown">Polaria: God, does this thing even have a sleep cycle?!</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501936675446980610" id="message-501936675446980610">
+                        <div class="chatlog__content">
+                            <span class="markdown">Polaria has eyebags, and probably no sleep.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 10:13 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501940682701668363" id="message-501940682701668363">
+                        <div class="chatlog__content">
+                            <span class="markdown">Polaria then begins writing on her notepad.</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501940727081598986" id="message-501940727081598986">
+                        <div class="chatlog__content">
+                            <span class="markdown">The dragon rears back, roaring forth again.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 10:13 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501940788456849418" id="message-501940788456849418">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Memory tries flying to Polaria</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/409223157585805318/5642a82bcadb05fb71e69168a60c667b.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Aubrey#2376" data-user-id="409223157585805318">Aubrey</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 10:14 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501940923295596574" id="message-501940923295596574">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Mine left...she&#39;s a shy bab and doesn&#39;t really like conflict.)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 10:14 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501941011300220986" id="message-501941011300220986">
+                        <div class="chatlog__content">
+                            <span class="markdown">(My second left cause her sis left)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 10:14 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501941111816978433" id="message-501941111816978433">
+                        <div class="chatlog__content">
+                            <span class="markdown">The dragon snaps at her. Meanwhile, Polaria is suddenly thrown off her balance.</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501941143580180496" id="message-501941143580180496">
+                        <div class="chatlog__content">
+                            <span class="markdown">Polaria: What the...is it fighting something?</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 10:34 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501946000194404364" id="message-501946000194404364">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Memory lands next to Polaria</em> “Heya, nice pet”</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 10:51 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501950433674395659" id="message-501950433674395659">
+                        <div class="chatlog__content">
+                            <span class="markdown">Polaria: Who the heck are- The dragon spins around hurling the both of them down into the floor.</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501950472991801356" id="message-501950472991801356">
+                        <div class="chatlog__content">
+                            <span class="markdown">It then begins flying away swiftly.</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501950518583885837" id="message-501950518583885837">
+                        <div class="chatlog__content">
+                            <span class="markdown">Polaria: GOD DAMN IT IT TOOK ME 14 HOURS JUST TO GET ON</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 10:52 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501950661022318599" id="message-501950661022318599">
+                        <div class="chatlog__content">
+                            <span class="markdown">“Oh, sorry...”</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 10:52 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501950683629486101" id="message-501950683629486101">
+                        <div class="chatlog__content">
+                            <span class="markdown">Polaria turns into her taguel form and sprints off towards it.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 10:53 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501950833575854090" id="message-501950833575854090">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Memory follows</em> “Whats your name?”</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 10:54 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501951090116395013" id="message-501951090116395013">
+                        <div class="chatlog__content">
+                            <span class="markdown">Polaria just ignores her, sprinting faster and faster while slowly yelling louder and louder about butchering Argo for sending her on this mission.</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="501951498494672919" id="message-501951498494672919">
+                        <div class="chatlog__content">
+                            <span class="markdown">The dragon then proceed to turn around and EAT POLARIA.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 10:57 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501951842427863040" id="message-501951842427863040">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Memory jumps down the dragons throat</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">16-Oct-18 11:04 PM</span>
+
+                    <div class="chatlog__message " data-message-id="501953550516224008" id="message-501953550516224008">
+                        <div class="chatlog__content">
+                            <span class="markdown">The dragon then flies back to Antarctica and begins doing a fortnite dance.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">17-Oct-18 07:26 PM</span>
+
+                    <div class="chatlog__message " data-message-id="502261195877777412" id="message-502261195877777412">
+                        <div class="chatlog__content">
+                            <span class="markdown">“Please?”</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">17-Oct-18 07:26 PM</span>
+
+                    <div class="chatlog__message " data-message-id="502261247241093131" id="message-502261247241093131">
+                        <div class="chatlog__content">
+                            <span class="markdown">Sinon doesn&#39;t respond. She&#39;s staring at the dragon.</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="502261296159260683" id="message-502261296159260683">
+                        <div class="chatlog__content">
+                            <span class="markdown">The dragon&#39;s eyes are hollow. Devoid of life. <em>Something killed it.</em></span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="502261651798491136" id="message-502261651798491136">
+                        <div class="chatlog__content">
+                            <span class="markdown">Sinon: ...This thing had primal energy on it. It shouldn&#39;t die so easily.</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="502262079944785932" id="message-502262079944785932">
+                        <div class="chatlog__content">
+                            <span class="markdown">Sinon examines the dragon. It&#39;s cold. A sinister feeling can be felt from the corpse.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">17-Oct-18 07:30 PM</span>
+
+                    <div class="chatlog__message " data-message-id="502262169111625729" id="message-502262169111625729">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>No signs of primal energy remains</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">17-Oct-18 07:31 PM</span>
+
+                    <div class="chatlog__message " data-message-id="502262366990368788" id="message-502262366990368788">
+                        <div class="chatlog__content">
+                            <span class="markdown">Sinon tries to resurrect it, but...no luck.</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="502262430282416139" id="message-502262430282416139">
+                        <div class="chatlog__content">
+                            <span class="markdown">Sinon: This should revive it back to life...What happened to it?</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="502262466621734914" id="message-502262466621734914">
+                        <div class="chatlog__content">
+                            <span class="markdown">Polaria&#39;s still unconscious on the floor.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">17-Oct-18 07:32 PM</span>
+
+                    <div class="chatlog__message " data-message-id="502262568644247592" id="message-502262568644247592">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Ender: ... I could help if I had permission to appear)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">17-Oct-18 07:33 PM</span>
+
+                    <div class="chatlog__message " data-message-id="502262903739514910" id="message-502262903739514910">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Sinon: No luck, I&#39;m trying to reality warp it back to life, and it&#39;s failing.)</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="502263008966344714" id="message-502263008966344714">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Sinon: That only happens if it&#39;s still alive, but...the body&#39;s clearly dead.)</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="502263085751336977" id="message-502263085751336977">
+                        <div class="chatlog__content">
+                            <span class="markdown">(That, or it no longer exists as a consciousness.)</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="502263169327169538" id="message-502263169327169538">
+                        <div class="chatlog__content">
+                            <span class="markdown">Sinon: ...I need to check up something.</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="502263245248397322" id="message-502263245248397322">
+                        <div class="chatlog__content">
+                            <span class="markdown">Sinon teleports away with Polaria&#39;s body, leaving Memory there.</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="502263316308033536" id="message-502263316308033536">
+                        <div class="chatlog__content">
+                            <span class="markdown">A piece of paper falls down from her waist as she goes, though.</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="502263384046305280" id="message-502263384046305280">
+                        <div class="chatlog__content">
+                            <span class="markdown">&quot;Black Fang&quot;.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">17-Oct-18 07:37 PM</span>
+
+                    <div class="chatlog__message " data-message-id="502263935462801435" id="message-502263935462801435">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>Memory taps Polarias shoulder and places a tracker on her, one deeply rooted in her subconscious and reads the paper</em> “The hell is a Black Fang”</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">17-Oct-18 07:37 PM</span>
+
+                    <div class="chatlog__message " data-message-id="502264037254496257" id="message-502264037254496257">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Sinon: Too late for that, I teleported her away already.)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">17-Oct-18 07:39 PM</span>
+
+                    <div class="chatlog__message " data-message-id="502264404482457610" id="message-502264404482457610">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Oh, fun)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">17-Oct-18 07:40 PM</span>
+
+                    <div class="chatlog__message " data-message-id="502264635219509289" id="message-502264635219509289">
+                        <div class="chatlog__content">
+                            <span class="markdown">...attached to the back of the paper is a...compass?</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">17-Oct-18 07:40 PM</span>
+
+                    <div class="chatlog__message " data-message-id="502264701296574484" id="message-502264701296574484">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>She taps the compass and casts a diagnose spell</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">17-Oct-18 07:41 PM</span>
+
+                    <div class="chatlog__message " data-message-id="502264936920121346" id="message-502264936920121346">
+                        <div class="chatlog__content">
+                            <span class="markdown">It just points towards the north.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">17-Oct-18 07:43 PM</span>
+
+                    <div class="chatlog__message " data-message-id="502265462923460611" id="message-502265462923460611">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>She runs north extremely fast</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">17-Oct-18 07:45 PM</span>
+
+                    <div class="chatlog__message " data-message-id="502265933763444742" id="message-502265933763444742">
+                        <div class="chatlog__content">
+                            <span class="markdown">The compass then points...south?</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">17-Oct-18 07:46 PM</span>
+
+                    <div class="chatlog__message " data-message-id="502266262651404298" id="message-502266262651404298">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>She turns south and goes slower</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">17-Oct-18 07:53 PM</span>
+
+                    <div class="chatlog__message " data-message-id="502267872568016896" id="message-502267872568016896">
+                        <div class="chatlog__content">
+                            <span class="markdown">It points north again.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">17-Oct-18 08:06 PM</span>
+
+                    <div class="chatlog__message " data-message-id="502271158880829450" id="message-502271158880829450">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>She stops and takes one step north</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">18-Oct-18 01:42 AM</span>
+
+                    <div class="chatlog__message " data-message-id="502355886233354250" id="message-502355886233354250">
+                        <div class="chatlog__content">
+                            <span class="markdown">It points south.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">18-Oct-18 01:43 AM</span>
+
+                    <div class="chatlog__message " data-message-id="502356009935962113" id="message-502356009935962113">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>She takes a step east</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">18-Oct-18 01:43 AM</span>
+
+                    <div class="chatlog__message " data-message-id="502356080312057856" id="message-502356080312057856">
+                        <div class="chatlog__content">
+                            <span class="markdown">Now it&#39;s south-west.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">18-Oct-18 01:45 AM</span>
+
+                    <div class="chatlog__message " data-message-id="502356448769212436" id="message-502356448769212436">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>She steps south-west and starts digging down</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">18-Oct-18 01:45 AM</span>
+
+                    <div class="chatlog__message " data-message-id="502356556097257474" id="message-502356556097257474">
+                        <div class="chatlog__content">
+                            <span class="markdown">...Nothing.</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="502356583335067661" id="message-502356583335067661">
+                        <div class="chatlog__content">
+                            <span class="markdown">(It&#39;s in de skies)</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="502356608869990402" id="message-502356608869990402">
+                        <div class="chatlog__content">
+                            <span class="markdown">(Why? I don&#39;t know.)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">18-Oct-18 01:46 AM</span>
+
+                    <div class="chatlog__message " data-message-id="502356811865915392" id="message-502356811865915392">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>She does the opposite direction, she flies up</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">18-Oct-18 01:47 AM</span>
+
+                    <div class="chatlog__message " data-message-id="502357041302732820" id="message-502357041302732820">
+                        <div class="chatlog__content">
+                            <span class="markdown">...something seems to be there, but it&#39;s not visible.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">18-Oct-18 01:48 AM</span>
+
+                    <div class="chatlog__message " data-message-id="502357202674253839" id="message-502357202674253839">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>She casts a mental detection spell to see who is above her</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">18-Oct-18 01:48 AM</span>
+
+                    <div class="chatlog__message " data-message-id="502357310895685642" id="message-502357310895685642">
+                        <div class="chatlog__content">
+                            <span class="markdown">...The spell misses.</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="502357327614312448" id="message-502357327614312448">
+                        <div class="chatlog__content">
+                            <span class="markdown">(It&#39;s a wormhole)</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">18-Oct-18 01:49 AM</span>
+
+                    <div class="chatlog__message " data-message-id="502357445423792128" id="message-502357445423792128">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>She flies into the thing, trying to feel it</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">18-Oct-18 01:49 AM</span>
+
+                    <div class="chatlog__message " data-message-id="502357556044234752" id="message-502357556044234752">
+                        <div class="chatlog__content">
+                            <span class="markdown">It&#39;s faint, but it&#39;s there. It seems to need a massive amount of power to open.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">18-Oct-18 01:50 AM</span>
+
+                    <div class="chatlog__message " data-message-id="502357765390598145" id="message-502357765390598145">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>She smirks and pushes a ton of their absolutely insane mana pool into the thing</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">18-Oct-18 01:50 AM</span>
+
+                    <div class="chatlog__message " data-message-id="502357840451862538" id="message-502357840451862538">
+                        <div class="chatlog__content">
+                            <span class="markdown">It&#39;s slowly creaking open, but barely.</span>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="chatlog__message " data-message-id="502357863742701579" id="message-502357863742701579">
+                        <div class="chatlog__content">
+                            <span class="markdown">It&#39;s still not large enough to go through.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">18-Oct-18 01:53 AM</span>
+
+                    <div class="chatlog__message " data-message-id="502358635721261060" id="message-502358635721261060">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>She shoves more</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">18-Oct-18 01:54 AM</span>
+
+                    <div class="chatlog__message " data-message-id="502358776616058880" id="message-502358776616058880">
+                        <div class="chatlog__content">
+                            <span class="markdown">The gap is as big as a grapefruit currently. Too small for her to actually go through, but she can stick her hand in.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">18-Oct-18 01:55 AM</span>
+
+                    <div class="chatlog__message " data-message-id="502359131190198272" id="message-502359131190198272">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>She keeps pumping until she is almost drained</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">18-Oct-18 01:56 AM</span>
+
+                    <div class="chatlog__message " data-message-id="502359256344035329" id="message-502359256344035329">
+                        <div class="chatlog__content">
+                            <span class="markdown">It&#39;s possible to squeeze through now, but there&#39;s a potential she&#39;d get stuck.</span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">18-Oct-18 01:56 AM</span>
+
+                    <div class="chatlog__message " data-message-id="502359324480241674" id="message-502359324480241674">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>She goes through not caring</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/280160866773762048/d94c2e5311d6f6439d85c9f72878833f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Melodos#4092" data-user-id="280160866773762048">Melodos</span>
+
+
+                <span class="chatlog__timestamp">18-Oct-18 01:57 AM</span>
+
+                    <div class="chatlog__message " data-message-id="502359451324645376" id="message-502359451324645376">
+                        <div class="chatlog__content">
+                            <span class="markdown">Aaaand she gets stuck. She can see a cafeteria though.</span>
+
+                                <span class="chatlog__edited-timestamp" title="18-Oct-18 01:57 AM">(edited)</span>
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+        <div class="chatlog__message-group">
+            <div class="chatlog__author-avatar-container">
+                <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/305555141933662229/7086725d17a5bdd3138daa25bcbbd26f.png" />
+            </div>
+            <div class="chatlog__messages">
+                <span class="chatlog__author-name" title="Ender#3624" data-user-id="305555141933662229">Ender</span>
+
+
+                <span class="chatlog__timestamp">18-Oct-18 01:57 AM</span>
+
+                    <div class="chatlog__message " data-message-id="502359539589447682" id="message-502359539589447682">
+                        <div class="chatlog__content">
+                            <span class="markdown"><em>She shoves the portal closed cutting her in half</em></span>
+
+                        </div>
+
+
+
+                    </div>
+            </div>
+        </div>
+</div>
+
+</body>
+</html>
