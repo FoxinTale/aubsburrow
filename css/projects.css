@@ -1,0 +1,28 @@
+h1{
+  /* font-family: 'Indie Flower', cursive; */
+  font-family: 'Rancho', cursive;
+  text-align: center;
+}
+
+body{
+  background-color: #cccccc;
+}
+
+nav ul li{
+ list-style-type: none;
+ display: inline;
+ padding-left: 20px;
+}
+
+nav{
+  text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+footer{
+  clear: both; 
+  text-align: center;
+}

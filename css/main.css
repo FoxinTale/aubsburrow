@@ -23,14 +23,29 @@ footer{
 }
 
 nav a{
-    text-decoration: none;
+  text-decoration: none;
 }
 main{
-    text-align: center;
- 
+  text-align: center;
 }
 
 body{
-  background-image: url(sunset.jpg);
+  background-image: url(..//images/sunset.jpg);
   background-color: #cccccc;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: soft-light;  
+}
+
+li{
+  padding-bottom: 10px;
+}
+
+aside:first-of-type{
+  text-align: left;
+  border: px;
+}
+
+aside{
+  text-align: right;
 }
