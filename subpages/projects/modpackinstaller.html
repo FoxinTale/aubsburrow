@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="../../images/flower.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modpack Installer</title>
+  <link rel="stylesheet" href="../../css/normalize.css">
+  <link rel="stylesheet" href="../../css/menu.css">
+  <link rel="stylesheet" href="../../css/installer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Coming+Soon|Rancho|Architects+Daughter|Shadows+Into+Light+Two|Delius&display=swap" rel="stylesheet">
+</head>
+  
+<body >
+  <div class="topnav" id="Topnav">
+    <a  href="../../index.html">Home</a>
+    
+    <div class="dropdown">
+   <button class="dropbtn" class="active">Projects<i class="fa fa-caret-down"></i></button>
+      <div class="dropdown-content">
+        <a href="modpackinstaller.html" class="active" >Modpack Installer</a>
+        <a href="dualboot.html">Dual Boot Guide</a>
+        <a href="#">Some other future project</a> 
+      </div>
+    </div> 
+    <a href="../../servers.html">Minecraft Servers</a>
+    <a href="../../rparchives.html">RP Archives</a>
+    <a href="../../about.html">About Me</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="function()"> &#9776;</a>
+    </div>
+<script>
+    function function(){
+        var x = document.getElementById("Topnav");
+        if(x.className === "topnav"){
+            x.className += " responsive";
+        }
+        else{
+            x.className = "topnav";
+        }
+    }
+    
+</script>
+    
+<main>
+  <h1>The modpack installer.</h1>
+      <p>
+        Ah yes. This. I spent around a month and a half overall, with a total combined time of a week working on this.
+      </p>
+      <section>
+        <h4>What is this and what does it do?</h4>
+        <p>
+          This is a neat little program I made that helps to install a modpack for a modded Minecraft server.
+          It is made in Java, utilizing Swing as its GUI component.
+        </p>
+      </section>
+        <section>
+        <h3 style="text-align: center;">Download it!</h3>
+            <ul style ="list-style: none;">
+              <li>Main Download: <a href=""></a></li> 
+              <li>Mirror One: <a href=""></a></li>
+              <li>Mirror Two: <a href=""></a></li>
+            </ul>
+            
+              <ul style ="list-style: none;">
+                <li>For you security-oriented folks, here's your sums!</li>
+                <li style= "margin-left: 1em;">MD5: </li>
+                <li style= "margin-left: 1em;">SHA 256: </li>
+                <li style= "margin-left: 1em;">CRC 32: </li>
+              </ul>
+           <p> And finally, if desired, you can view, and even download the source code on Github here! <a href=""></a></p>
+            
+        </section>
+    
+       <section>
+           
+           <h3>Resource pack</h3>
+            <p>For the massive resource pack, <a href="../gameservers/resourcepack.html">please go here</a>.</p>
+       </section>
+       <section>
+        <h4>What all does it do?</h4>
+        <p>
+        This little thing has many features in it. I'm quite proud of all I packed into it.
+        </p>
+           <ul>
+            <li>Automatic modpack installation.</li>
+            <li>An option panel that allows the user to utilize specific aspects.</li> 
+            <li>It automatically backs up any pre-existing mods and config</li>
+            <li>Automatic Forge and Minecraft detection, and if no Forge is found it tells you it is needed.</li>
+            <li>Code is licensed under the WTFPL V2 allowing one to do what they wish with it.</li>
+            <li>The ability to ping the server to see if it is up, saving the user from waiting 10 minutes loading Minecraft.</li>
+            <li>If it cannot find the directories needed to install, it asks to be pointed to them</li>
+            <li>A GUI slider option that allows memory allocation for Minecraft.</li>
+            <li>Multiple "failsafes" so it should be hard to break.</li>
+            <li>An option to restore the launcher settings if something goes wrong during allocation.</li>
+            <li>Platform agnostic, so it should (in theory) run on Windows, Mac and Linux.</li>
+            <li>The ability to download updates for the modpack too.</li>
+            <li>A nice looking GUI with custom fonts.</li>
+            <li>Custom error messages so if something does break, it breaks in style.</li>
+            <li> And finally, over 2800 lines of Java code.</li>
+          </ul>
+      </section>
+
+      <section>
+        <h4>What's this WTFPL V2 you mentioned?</h4>
+        <p>
+          "This program is free software. It comes without any warranty, to the extent permitted by applicable law. 
+           You can redistribute it and/or modify it under the terms of the Do What The Fuck You Want To Public License, Version 2, as published by Sam Hocevar. See <a href="http://www.wtfpl.net/" target="_blank">wtfpl.net</a> for more details."
+        </p>
+        <p>
+         Prety much that, except with one addition. I ask that if you do modify or improve upon it to let me know. If I really like the improvements, I might add it in, with credit to you.
+        </p>
+      </section>
+</main>
+  <footer>
+    &copy; Aubrey Jane - Fall 2019 
+  </footer>
+</body>
+</html> 

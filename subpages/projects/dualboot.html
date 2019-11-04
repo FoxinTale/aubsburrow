@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="../../images/flower.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aubrey's website</title>
+  <link rel="stylesheet" href="../../css/normalize.css">
+  <link rel="stylesheet" href="../../css/menu.css">
+  <link rel="stylesheet" href="../../css/dualboot.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Coming+Soon|Rancho|Architects+Daughter|Shadows+Into+Light+Two|Delius&display=swap" rel="stylesheet">
+</head>
+  
+<body >
+  <div class="topnav" id="Topnav">
+    <a  href="../../index.html">Home</a>
+    
+    <div class="dropdown">
+   <button class="dropbtn">Projects<i class="fa fa-caret-down"></i></button>
+      <div class="dropdown-content">
+        <a href="modpackinstaller.html">Modpack Installer</a>
+        <a href="dualboot.html" class="active">Dual Boot Guide</a>
+        <a href="#">Some other future project</a> 
+      </div>
+    </div> 
+    <a href="../../servers.html">Minecraft Servers</a>
+    <a href="../../rparchives.html">RP Archives</a>
+    <a href="../../about.html">About Me</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="function()"> &#9776;</a>
+    </div>
+<script>
+    function function(){
+        var x = document.getElementById("Topnav");
+        if(x.className === "topnav"){
+            x.className += " responsive";
+        }
+        else{
+            x.className = "topnav";
+        }
+    }
+    
+</script>
+    
+<main>
+  <h1>Dual booting guide</h1>
+    <section>
+      <h3>Introduction</h3>
+      <p>
+        This is a guide that will help one to install both Windows 10 and Linux Mint on a laptop. Now, the exact process may vary due to differences in laptops. The specific guide this is for is an Acer Predator G3-571 Gaming Laptop, but the overall process does not change between laptops. I chose Linux Mint Xfce due to the fact that that it is both popular and user friendly. 
+      </p>
+    </section>
+    <section>
+      <h3>Prerequisites</h3>
+        <ul>
+          <li>At least 2 16Gb flash drives, OR 3 8 GB flash drives.</li>
+          <li>An empty drive large enough to hold your backed up content, preferably the same size as your main system drive. This can be an external drive, or other hard drive inside the system.</li>
+          <li>A computer with an internet connection.</li>
+          <li>At least 30 GB free on your computer.</li> 
+          <li>Optional: An electronics toolkit.</li>
+          <li>At least 3 hours of free time.</li>
+        </ul>
+    </section>
+    <section>
+    <h3>Part One - Downloading Everything</h3>
+         <ul>
+         <li><a href="https://www.microsoft.com/en-us/software-download/windows10">Windows 10</a></li>
+         <li><a href="https://www.linuxmint.com/edition.php?id=271">Linux Mint</a></li>
+         <li><a href="https://www.hirensbootcd.org/download/">Hirens Boot CD PE</a></li> 
+         <li><a href="https://www.pendrivelinux.com/yumi-multiboot-usb-creator/">YUMI</a></li> 
+         <li><a href="https://rufus.ie">Rufus - Bootable USB Creator</a></li> 
+         <li>Any software drivers for your system. Get them from the manufacturer, if possible.</li>
+         <li>Any programs you may want to use, such as web browsers.</li>
+         <li>Optional:<a href="https://www.winreducer.net/winreducer-ex-100.html">WinReducer x64</a></li>  
+         <li>Optional:<a href="https://www.fosshub.com/Classic-Shell.html">Classic Shell</a></li>
+         <li>Optional:<a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a></li>
+         <li>Optional:<a href="">Windows XP Content</a></li>
+       </ul>
+        <p>
+        This is a rather simple step, but it forms the basis of this whole guide, so make sure to get everything.
+        The optional content is if you want to customize your Windows install, and/or make it look like Windows XP.
+            
+        </p>
+    </section>
+    <section>
+        
+    </section>
+</main>
+  <footer>
+    &copy; Aubrey Jane - Fall 2019 
+  </footer>
+</body>
+</html> 

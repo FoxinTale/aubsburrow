@@ -1,0 +1,39 @@
+h1{
+    text-align: center;
+}
+
+p{
+    margin: 1%;
+    text-align: center;
+}
+
+section{
+    margin: 2% 5%;
+    border: 2px solid;
+}
+
+section ul li{
+    padding: 2px;
+}
+
+body{
+  background-image: url(..//images/minecraft3.png)  no-repeat center fixed;
+  background-color: #cccccc;
+  background-size: cover;
+  background-blend-mode: soft-light;  
+}
+
+h3{
+    padding-left: 1%;
+}
+
+section a{
+    text-decoration: none;
+}
+
+footer{
+    text-align: center;
+    clear: both;
+    margin-bottom: 1%;
+}
+

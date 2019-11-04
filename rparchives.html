@@ -2,21 +2,44 @@
 <html lang="en">
 <head>
   <link rel="icon" type="image/png" href="images/flower.ico">
-  <meta charset="UTF-8">
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The RP Archives</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/rparchive.css">
+  <link rel="stylesheet" href="css/menu.css">
  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Coming+Soon|Rancho|Architects+Daughter|Shadows+Into+Light+Two|Delius&display=swap" rel="stylesheet">
 </head>
   
 <body >
-  <nav>
-    <ul>
-      <li><a href ="index.html">Home</a></li>
-      <li><a href = "projects.html">Projects</a></li>
-      <li><a href ="about.html">About Me</a></li>
-    </ul>
-  </nav>
+    <div class="topnav" id="Topnav">
+    <a  href="index.html">Home</a>
+    
+    <div class="dropdown">
+   <button class="dropbtn">Projects<i class="fa fa-caret-down"></i></button>
+      <div class="dropdown-content">
+        <a href="subpages/projects/modpackinstaller.html">Modpack Installer</a>
+        <a href="subpages/projects/dualboot.html">Dual Boot Guide</a>
+        <a href="#">Link 3</a> 
+      </div>
+    </div> 
+    <a href="servers.html">Minecraft Servers</a>
+    <a href="rparchives.html"  class="active">RP Archives</a>
+    <a href="about.html">About Me</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="function()"> &#9776;</a>
+    </div>
+<script>
+    function function(){
+        var x = document.getElementById("Topnav");
+        if(x.className === "topnav"){
+            x.className += " responsive";
+        }
+        else{
+            x.className = "topnav";
+        }
+    }
+    
+</script>
 <main>
     <h1>The RP Archive Vault</h1>
     <pre>
@@ -37,13 +60,13 @@
         
         <li><p>Apparently, Battle 1 is missing.</p></li>
         
-        <li><p>For those who decide to go into a mysterious portal...and end up inside the Black Fang headquarters: </p></li>
+        <li><p>For those who decide to go into a mysterious portal...and end up inside the Black Fang headquarters: </p>
           <ul>
               <li><a href = "subpages/rparchive/blackfang/blackfang11.html">Part One</a></li>
               <li><a href = "subpages/rparchive/blackfang/blackfang12.html">Part Two</a></li>
               <li><a href = "subpages/rparchive/blackfang/blackfang13.html">Part Three</a></li>
           </ul>
-        
+        </li>
         <li><p>Black Fang - Electric Boogaloo: </p><a href ="subpages/rparchive/blackfang2.html">Black Fang 2</a></li>
         
         <li><p>PURE FUCKING CHAOS BIATCH: </p><a href ="subpages/rparchive/chaotic1.html">Chaotic RP 1</a></li>

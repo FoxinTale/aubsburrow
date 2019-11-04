@@ -1,0 +1,44 @@
+h1{
+    text-align: center;
+}
+
+p{
+    margin: 1%;
+    text-align: center;
+}
+
+section{
+    margin: 2% 5%;
+    border: 2px solid;
+}
+
+section ul li{
+    padding: 2px;
+}
+h3{
+    padding-left: 1%;
+}
+h4{
+    padding-left: 1%;
+}
+
+section a{
+    text-decoration: none;
+}
+
+footer{
+    text-align: center;
+    clear: both;
+    margin-bottom: 1%;
+}
+
+body{
+    background-image: url(../images/woodhoriz.jpg);
+    background-size: cover;
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-blend-mode: soft-light; 
+    padding: 10px;
+    background-color: #cccccc;
+}
