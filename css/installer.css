@@ -5,6 +5,8 @@ h1{
 p{
     margin: 1%;
     text-align: center;
+    font-family: 'Coming Soon', cursive;
+    
 }
 
 section{
@@ -14,6 +16,7 @@ section{
 
 section ul li{
     padding: 2px;
+    font-family: 'Coming Soon', cursive;
 }
 
 body{
@@ -23,12 +26,18 @@ body{
   background-blend-mode: soft-light;  
 }
 
-h3{
+h1, h2, h3, h4, h5, h6{
     padding-left: 1%;
+    font-family: 'Architects Daughter', cursive;
+    font-weight: 100;
+    text-align: center;
 }
 
 section a{
     text-decoration: none;
+}
+img{
+    margin: 5%;
 }
 
 footer{
