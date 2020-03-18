@@ -1,59 +1,101 @@
 <!DOCTYPE html> 
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Character Database</title>
-        <link rel="stylesheet" href="css/fonts.css">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/jquery-ui.min.css">
-        <link rel="stylesheet" href="css/nav.css">
-        <link rel="stylesheet" href="css/default.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="scripts/jquery.min.js"></script>
-        <script src="scripts/jquery.js"></script>
-        <script src="scripts/jquery-ui.min.js"></script>
-    </head>
-    <body>
-        <h1>The Character Database</h1>
-        <div class = "sidenav" id="navmenu">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Character Database</title>
+      <link rel="stylesheet" href="css/fonts.css">
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="css/jquery-ui.min.css">
+      <link rel="stylesheet" href="css/nav.css">
+      <link rel="stylesheet" href="css/default.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/gui.css"/>
+      <script src="scripts/jquery.min.js"></script>
+      <script src="scripts/jquery.js"></script>
+      <script src="scripts/jquery-ui.min.js"></script>
+      <script src="scripts/jquery.keyframes.min.js"></script>
+      <script src="scripts/ui.anglepicker.js"></script>
+      <script src="scripts/spectrum.js"></script>
+       <!--
+      <script type="text/javascript" src="scripts/ponycfg.js" id="browser-ponies-config"></script>
+      <script type="text/javascript" src="scripts/browserponies.js" id="browser-ponies-script"></script>
+      <script type="text/javascript" src="scripts/gui-common.js"></script>
+      <script type="text/javascript" src="scripts/gui.js"></script>
+-->
+   </head>
+   <body>
+       <!--
+      <div id="paddock-back">
+         <div id="paddock-left">
+            <div id="paddock-right">
+               <div id="paddock-front"></div>
+            </div>
+         </div>
+      </div>
+
+      <div id="controls">
+         <a class="button" id="start" href="javascript:BrowserPonies.start();void(0)" title="Start">&#x25B6;</a>
+         <a class="button" id="stop" href="javascript:BrowserPonies.stop();void(0)" title="Stop">&#x25A0;</a>
+         <a class="button" href="javascript:BrowserPonies.pause();void(0)" title="Pause">&#x25AE;&#x25AE;</a>
+         <a class="button" href="javascript:BrowserPonies.resume();void(0)" title="Resume">&#x25AE;&#x25B6;</a>
+         <a class="button" href="javascript:BrowserPonies.togglePoniesToBackground();void(0)"
+            title="Toggle ponies in background">&#x2195;</a>
+         <a class="button" href="javascript:BrowserPonies.unspawnAll();BrowserPonies.stop();void(0)" title="Remove all Ponies">&times;</a>
+      </div>
+       
+       <script>
+           //  onload="init();updateConfig();initScriptUrl();"
+           document.getElementById('controls').style.display = "none";
+           document.getElementById('paddock-back').style.display = "none";
+           document.getElementById('paddock-left').style.display = "none";
+           document.getElementById('paddock-right').style.display = "none";
+           document.getElementById('paddock-front').style.display = "none";
+
+       </script>
+       -->
+      <h1>The Character Database</h1>
+      <div class = "sidenav" id="navmenu">
+         <div class="text">
             <a href="home.html" target="iframe_content">Home</a>
             <div class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Create New...</a>
-                <div class="dropdown-content">
-                    <a href="newability.html" target="iframe_content">Ability</a>
-                    <a href="newchar.html" target="iframe_content">Character</a>
-                    <a href="newitem.html" target="iframe_content">Item</a>
-                    <a href="newweapon.html" target="iframe_content">Weapon</a>
-                </div>
+               <a href="javascript:void(0)" class="dropbtn">Create New...</a>
+               <div class="dropdown-content">
+                  <a href="newability.html" target="iframe_content">Ability</a>
+                  <a href="newchar.html" target="iframe_content">Character</a>
+                  <a href="newitem.html" target="iframe_content">Item</a>
+                  <a href="newweapon.html" target="iframe_content">Weapon</a>
+               </div>
             </div>
+         </div>
+         <div class="text">
             <a href="chars.html" target="iframe_content">Characters</a>
             <a href="items.html" target="iframe_content">Items</a>
             <a href="weapons.html" target="iframe_content">Weapons</a>
             <a href="notes.html" target="iframe_content">Notes</a>
             <a href="resources.html" target="iframe_content">Resources</a>
             <a href="profile.html" target="iframe_content">My Profile</a>
+            <a href="funstuff.html" target="iframe_content">Fun Stuff</a>
             <a href="logout.html" id="logout">Log Out</a>
-            <a href="javascript:void(0);" class="icon" onclick="menu()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
-
-        <iframe src="home.html" name="iframe_content">
-
-        </iframe>
-
-
-
-        <script>
-            function menu() {
-                var x = document.getElementById("navmenu");
-                if (x.className === "sidenav") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "sidenav";
-                }
-            }
-        </script>
-    </body>
+         </div>
+         <a href="javascript:void(0);" class="icon" onclick="menu()">
+         <i class="fa fa-bars"></i>
+         </a>
+      </div>
+      <iframe src="home.html" name="iframe_content">
+      </iframe>
+      <script>
+         function menu() {
+             var x = document.getElementById("navmenu");
+             if (x.className === "sidenav") {
+                 x.className += " responsive";
+             } else {
+                 x.className = "sidenav";
+             }
+         }
+      </script>
+      <footer>
+         Aubrey Jane - Spring 2020 || Background by <a href="https://www.deviantart.com/imooilo">imooilo on DeviantArt</a>
+      </footer>
+   </body>
 </html>

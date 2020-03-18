@@ -1,3 +1,5 @@
+
+
 h1{
     font-weight: 600;
     font-family: 'handlee';
@@ -12,12 +14,28 @@ iframe{
     overflow: hidden;
     border-radius: 10px;
 }
+
+
 body{
-    background-color: #967bb6;
+background-image: url(/images/sunset.png);
 }
 
+footer{
+    text-align: center;
+    border: 1px solid black;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    padding: 10px;
+    width: 50%;
+    border-radius: 3px;
+    margin-left: 31%;
+    background: rgba(135,128, 206, 0.35);
+    font-family: 'coming';
+}
 
-
-
+footer a{
+    text-decoration: none;
+    
+}
 
 
