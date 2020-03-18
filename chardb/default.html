@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Character Database</title>
+        <link rel="stylesheet" href="css/fonts.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/jquery-ui.min.css">
+        <link rel="stylesheet" href="css/nav.css">
+        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="scripts/jquery.min.js"></script>
+        <script src="scripts/jquery.js"></script>
+        <script src="scripts/jquery-ui.min.js"></script>
+    </head>
+    <body>
+        <h1>The Character Database</h1>
+        <div class = "sidenav" id="navmenu">
+            <a href="home.html" target="iframe_content">Home</a>
+            <div class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Create New...</a>
+                <div class="dropdown-content">
+                    <a href="newability.html" target="iframe_content">Ability</a>
+                    <a href="newchar.html" target="iframe_content">Character</a>
+                    <a href="newitem.html" target="iframe_content">Item</a>
+                    <a href="newweapon.html" target="iframe_content">Weapon</a>
+                </div>
+            </div>
+            <a href="chars.html" target="iframe_content">Characters</a>
+            <a href="items.html" target="iframe_content">Items</a>
+            <a href="weapons.html" target="iframe_content">Weapons</a>
+            <a href="notes.html" target="iframe_content">Notes</a>
+            <a href="resources.html" target="iframe_content">Resources</a>
+            <a href="profile.html" target="iframe_content">My Profile</a>
+            <a href="logout.html" id="logout">Log Out</a>
+            <a href="javascript:void(0);" class="icon" onclick="menu()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <iframe src="home.html" name="iframe_content">
+
+        </iframe>
+
+
+
+        <script>
+            function menu() {
+                var x = document.getElementById("navmenu");
+                if (x.className === "sidenav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "sidenav";
+                }
+            }
+        </script>
+    </body>
+</html>

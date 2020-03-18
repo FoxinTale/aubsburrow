@@ -1,0 +1,23 @@
+h1{
+    font-weight: 600;
+    font-family: 'handlee';
+    text-align: center;
+}
+
+iframe{
+    border: none;
+    width: 70%;
+    height: 700px;
+    margin-left: 22.5%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+body{
+    background-color: #967bb6;
+}
+
+
+
+
+
+
