@@ -92,12 +92,7 @@ function init () {
 	}
 }
 
-observe(window,'click',function (event) {
-	var target = (event.target || event.srcElement);
-	if (target.id !== 'addcat') {
-		$('catselect').style.display = 'none';
-	}
-});
+
 
 function items (list) {
 	var node = list.firstChild;

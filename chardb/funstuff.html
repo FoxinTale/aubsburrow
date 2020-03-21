@@ -1,16 +1,30 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Character Database - Items</title>
-    </head>
-    <body>
-   <!--
-    As usual, in tabs. Because tabs are awesome. No forms, however.
-    One tab will have all the configurations for the varous features.
-    Another will have Browser Ponies configuration.
-    
-    
 
--->
-    </body>
-</html>
+<head>
+      <meta charset="UTF-8">
+      <title>Character Database - Items</title>
+   </head>
+   <body>
+      <!--
+         As usual, in tabs. Because tabs are awesome. No forms, however.
+         One tab will have all the configurations for the varous features.
+         Another will have Browser Ponies configuration.
+         
+         -->
+      <main>
+         <div id="optiontabs" >
+            <ul>
+               <li><a href="#customize">Website Customization</a></li>
+               <li><a href="#ponies">Browser Ponies</a></li>
+            </ul>
+            <div id="customize">
+            </div>
+            <div id="ponies">
+                <label for="yesPonies">Enable Browser Ponies: </label>
+                <input type="checkbox" id="yesPonies" value="" onclick="ponycheck();">
+            </div>
+         </div>
+      </main>
+      <script>
+         $("#optiontabs").tabs();
+      </script>
+   </body>

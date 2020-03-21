@@ -98,6 +98,7 @@
     .sidenav{
         width: 20%;
         margin-bottom: 5%;
+        margin-top: 20%;
     }
     .sidenav a:not(:first-child), .dropdown .dropbtn {
         display: none;
