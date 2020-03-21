@@ -13,9 +13,11 @@
       <link rel="stylesheet" href="css/gui.css"/>
       <script src="scripts/jquery.js"></script>
       <script src="scripts/jquery-ui.min.js"></script>
-       <script src="scripts/ponycfg.js"></script>
+        <script type="text/javascript" src="scripts/ponycfg.js" id="browser-ponies-config"></script>
+       <script type="text/javascript" src="scripts/browserponies.js" id="browser-ponies-script"></script>
+       <script type="text/javascript" src="scripts/gui-common.js"></script>
+       <script type="text/javascript" src="scripts/gui.js"></script>
        <script src="scripts/ponies.js"></script>
-       <script src="scripts/gui.js"></script>
    </head>
    <body>
       <div id="paddock-back">
@@ -62,8 +64,7 @@
       <div href="home.html" id="container" name="pages">
       </div>
       <script>
-                
-          window.onload = load();
+          window.onload = hidedetails();
             function menu() {
                 var x = document.getElementById("navmenu");
                 if (x.className === "sidenav") {
@@ -72,15 +73,20 @@
                     x.className = "sidenav";
                 }
             }
-            jQuery(document).ready(function($){
+          jQuery(document).ready(function($){
           $("#navmenu a").on( "click", function(e) {
             e.preventDefault();
             var url = $(this).attr("href"); // this should be some-page.html in this example.
             $("#container").load( url ); // where we're adding the new html.
             });
             });
-          function load(){
+          function hidedetails(){
+              jQuery(document).ready(function($){
                 $("#container").load("home.html");
+                  });
+              init();
+              updateConfig();
+              initScriptUrl();
                 document.getElementById('controls').style.visibility = "hidden"; 
                 document.getElementById('paddock-back').style.visibility = "hidden"; 
                 document.getElementById('paddock-left').style.visibility = "hidden"; 
