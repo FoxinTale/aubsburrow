@@ -1,4 +1,3 @@
-var initialized = false;
 function ponycheck() {
 	var yes = document.getElementById("yesPonies");
 	if (yes.checked == true) {

@@ -2855,9 +2855,11 @@ var BrowserPonies = (function () {
 									if (row.length > 21) {
 										behavior.dont_repeat_animation = parseBoolean(row[21]);
 										if (behavior.dont_repeat_animation) {
+											/*
 											console.warn(baseurl+': behavior '+behavior.name+
 												' sets dont_repeat_animation to true, which is not supported by Browser Ponies due to limitations in browsers. '+
 												'Please use a GIF that does not loop instead.');
+												*/
 										}
 										if (row[22]) {
 											behavior.group = parseInt(row[22],10);
@@ -2891,9 +2893,11 @@ var BrowserPonies = (function () {
 							dont_repeat_animation: row[12] ? parseBoolean(row[12]) : false // XXX: cannot be supported by JavaScript
 						};
 						if (effect.dont_repeat_animation) {
+							/*
 							console.warn(baseurl+': effect '+effect.name+
 								' sets dont_repeat_animation to true, which is not supported by Browser Ponies due to limitations in browsers. '+
 								'Please use a GIF that does not loop instead.');
+								*/
 						}
 						effects.push(effect);
 						break;

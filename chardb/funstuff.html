@@ -1,6 +1,8 @@
 <head>
    <meta charset="UTF-8">
    <title>Character Database - Items</title>
+           <script type="text/javascript" src="scripts/jquery.min.js"></script>
+
 </head>
 <body>
    <main>
@@ -10,6 +12,7 @@
             <li><a href="#ponies">Browser Ponies</a></li>
          </ul>
          <div id="customize">
+             
          </div>
          <div id="ponies">
             <div class ="align" id=enablePonies>
@@ -17,7 +20,6 @@
                <label for="yesPonies">Enable Browser Ponies: </label>
                <br>
             </div>
-             
             <div class="align" id="options">
                <input type="checkbox" id="showfps" onchange="updateConfig();"/>
                <label for="showfps">Show Frames per Second</label>
@@ -29,7 +31,6 @@
                <label for="dontspeak">Never Speak</label>
                <br>
             </div>
-             
             <div class="align" id ="ponyoptions">
                <label for="speed">Speed Multiplier:</label>
                <input type="text" class="number" id="speed" value="3.0" data-value="3.0"
@@ -46,7 +47,7 @@
                   <button onclick="increaseNumberField.call($('speak'));">+</button>
                   <button onclick="decreaseNumberField.call($('speak'));">&ndash;</button>
                   <br>
-                </div>  
+               </div>
                <label for="fps">Frames per Second:</label>
                <input type="text" class="number" id="fps" value="25"
                   data-value="25" data-min="1" data-decimals="0" size="3"
@@ -61,7 +62,6 @@
                <button onclick="increaseNumberField.call($('fade'));">+</button>
                <button onclick="decreaseNumberField.call($('fade'));">&ndash;</button>
             </div>
-             
             <div id="filterwrapper">
                <label for="addcat">Filter Categories:</label>
                <button id="addcat" onclick="showCategorySelect();">+</button>
@@ -78,12 +78,11 @@
       </div>
    </main>
    <script>
-       window.onload = hideconfig();
-   jQuery(document).ready(function($){
+      window.onload = hideconfig();
+      jQuery(document).ready(function($){
       $("#optiontabs").tabs();
-        });
-              $(function () {
-                $(document).tooltip();
-            });
+        $(document).tooltip();
+       });
+
    </script>
 </body>
