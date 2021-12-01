@@ -9,25 +9,16 @@ nav ul li{
  padding-left: 20px;
 }
 
-nav{
-  text-align: center;
-}
+
 
 p{
   font-family: 'Coming Soon', cursive;
 }
 
-footer{
-  clear: both; 
-  text-align: center;
-}
-
 nav a{
   text-decoration: none;
 }
-main{
-  text-align: center;
-}
+
 
 body{
   background-image: url(..//images/sunset.jpg);
@@ -37,9 +28,6 @@ body{
   background-blend-mode: soft-light;  
 }
 
-li{
-  padding-bottom: 10px;
-}
 
 aside:first-of-type{
   text-align: left;

@@ -10,10 +10,6 @@ nav ul li{
  padding-left: 20px;
 }
 
-nav{
-  text-align: center;
-}
-
 body{
     background-image: url(..//images/skywaterfall.png);
     background-size: cover;
@@ -63,10 +59,4 @@ ul li{
     padding-left: 10px;
     padding-right: 10px;
     
-}
-
-footer{
-  clear: both; 
-  text-align: center;
-  padding-top: 20px;
 }

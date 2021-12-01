@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="../../images/flower.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arch Installation</title>
+  <link rel="stylesheet" href="../../css/normalize.css">
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/arch.css">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Coming+Soon|Rancho|Architects+Daughter|Shadows+Into+Light+Two|Delius&display=swap" rel="stylesheet">
+</head>
+  
+<body >
+    <div class="topnav" id="Topnav">
+    <a  href="../../index.html">Home</a>
+    
+    <div class="dropdown">
+   <button class="dropbtn">Projects<i class="fa fa-caret-down"></i></button>
+      <div class="dropdown-content">
+        <a href="archguide.html" class="active">Arch Linux Install Guide</a> 
+        <a href="matera.html">Matera Reborn</a>
+        <a href="modpackinstaller.html">Modpack Installer</a>
+      </div>
+    </div> 
+    <a href="../../chardb/main.html">Character Database</a>
+    <a href="../../rparchives.html" >RP Archives</a>
+    <a href="../../about.html">About Me</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="function()"> &#9776;</a>
+    </div>
+<script>
+    function function(){
+        var x = document.getElementById("Topnav");
+        if(x.className === "topnav"){
+            x.className += " responsive";
+        }
+        else{
+            x.className = "topnav";
+        }
+    }
+</script>
+<main>
+    <h1>Arch Linux Installation</h1>
+
+    <p>
+        A guide for installing Arch Linux, from scratch. Please read all the steps before asking for help. 
+    </p>
+    
+    <section>
+        Prerequisites:
+        <ul>
+            <li>Arch Linux ISO burned to a USB thumb drive.</li>
+            <li>Basic competency with the Linux command line interface.</li>
+            <li>An internet connection on the installation PC. Preferrably ethernet or wired.</li>
+            <li>At least 32 Gb free on a hard drive. </li>
+        </ul>
+        Whether or not you are dual booting off the same drive. If it is on the same drive, shrink your Windows partition by at least 32 Gb, making sure it is at the tail end of the disk.
+    </section>
+    
+    <section>
+        Notes and warnings before we get started here:
+        <ul>
+            <li>This was written for a <b>Desktop Computer</b>, not a laptop. You are on your own if you have a dual graphics laptop. It's possible, but you cannot use the dedicated GPU.</li>
+            <li>This guide is built for a PC with an AMD GPU. This is because, out of the box, Arch does not like NVIDIA GPUs. I have an RX 580 8Gb on the system I installed on. </li>
+            <li>Commands in text will be in italics <i>like so</i>, to make them stand out.</li>
+            
+        </ul>
+        If you have an Nvida GPU, go install Endeavour OS instead. I would also swap kernels as I dislike the mainline and prefer LTS myself.
+    </section>
+    
+    <section>
+        <h3>Connecting to the internet</h3>
+        After plugging in your drive, and selecting it in your system's boot menu, we must first verify that you are connected to the internet. To do this, once all the text has gone away and you see "root@archiso"
+        type in <i>ping archlinux.org -c 4</i> to test internet connectivity. If you're wired in, this should work just fine, and you can carry on.
+    </section>
+</main>
+  <footer>
+    &copy; Aubrey Jane - 2021
+  </footer>
+</body>
+</html> 
