@@ -1,43 +1,49 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Character Database</title>
-        <link rel="stylesheet" href="css/fonts.css">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/jquery-ui.min.css">
-        <link rel="stylesheet" href="css/index.css">
-    </head>
-    <body>
-        <h1>The Character Database</h1>
-        <section>
-            <p>You don't actually have to create an account or login.</p>
-            <p>Since this is just HTML, and no PHP to handle scripting, it does not work</p>
-            <p>Therefore, you can just hit "Log in" Though, it's just the user interface.</p>
-            <p>No data you enter will be stored, as the functionality isn't even there.</p>
-			<p>Yet.</p>
-        </section>
-        <div id="forms">
-
-            <form id="login" class = "align" action="main.html">
-                <label for="username">Username: </label>
-                <input type="text" id="username" name="user_name"><span class = "error"></span>
-                <input type="hidden" id="user_name" value="">
-                <br>
-
-                <label for="pass">Password: </label>
-                <input type="password" id="pass" name="password"><span class = "error"></span>
-                <input type="hidden" id="password" value="">
-                <br>
-                <input type="submit" id="login_button" value="Log-in">    
-
-            </form>
-            <form id="new_profile" class ="align" action="newprofile.html">
-                <input type="submit" class="button" id="new_button" value="New Profile">    
-            </form>
+    <title>Character Database</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font-awesome-min.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/w3-min.css">
+    <script type="text/javascript" src="scripts/ui.js"></script>
+    <script type="text/javascript" src="scripts/jquery.min.js"></script> 
+    <body class="w3-main">
+        <nav class="w3-sidebar w3-bar-block w3-collapse w3-animate-left w3-card" style="z-index:3;width:250px;" id="sidenav">
+            <a class="w3-bar-item w3-button w3-hide-large w3-large" href="javascript:void(0)" onclick="closenav()">Close <i class="fa fa-remove"></i></a>
+            <a class="w3-bar-item w3-button" href="javascript:framerender('home.html')">Home</a>
+            <div>
+                <a class="w3-bar-item w3-button" onclick="dropdown('creation')" href="javascript:void(0)">Create New...<i class="fa fa-caret-down"></i></a>
+                <div id="creation" class="w3-hide">
+                    <a class="w3-bar-item w3-button" href="javascript:framerender('newability.html')">Ability / Power</a>
+                    <a class="w3-bar-item w3-button" href="javascript:framerender('newchar.html')">Character</a>
+                    <a class="w3-bar-item w3-button" href="javascript:framerender('newitem.html')">Item</a>
+                    <a class="w3-bar-item w3-button" href="javascript:framerender('newweapon.html')">Weapon</a>
+                </div>
+            </div>
+            <hr>
+            <a class="w3-bar-item w3-button" href="javascript:framerender('abilities.html')">Abilities / Powers</a>
+            <a class="w3-bar-item w3-button" href="javascript:framerender('chars.html')">Characters</a>
+            <a class="w3-bar-item w3-button" href="javascript:framerender('items.html')">Items</a>
+            <a class="w3-bar-item w3-button" href="javascript:framerender('weapons.html')">Weapons</a>
+            <hr>
+            <a class="w3-bar-item w3-button" href="javascript:framerender('resources.html')">Resources</a>
+            <a class="w3-bar-item w3-button" href="javascript:framerender('notes.html')">Notes</a>
+            <a class="w3-bar-item w3-button" href="javascript:framerender('credits.html')">Credits</a>
+            <hr>
+            <a class="w3-bar-item w3-button" href="logout.html">Logout</a>        
+        </nav>
+        <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="closenav()" style="cursor:pointer" id="overlay"></div>
+        <div class="w3-main" style="margin-left:250px;">
+            <i class="fa fa-bars w3-button  w3-hide-large w3-xlarge" onclick="opennav()"></i>
+            <h1>Character Database</h1>
+            <span id="userdisplay">Aubrey</span>
+            <div id="container"></div>
+            <script type="text/javascript" src="scripts/main.js"></script>
+            <footer>Aubrey Jane - Spring 2020</footer>
         </div>
-
-
     </body>
-</html>
+    <noscript>Please turn scripts on to allow the page to render properly, and the navigation menu to work properly.</noscript> 
+</html> 

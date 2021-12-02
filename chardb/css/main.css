@@ -1,34 +1,45 @@
-
-
 h1{
     font-weight: 600;
     font-family: 'handlee';
     text-align: center;
 }
 
-#controls{
-    margin-left: 2%;
-    margin-top: 1%;
-
-}
-
-#paddocks{
-    margin-left: 0.5%;
-    margin-top: 0.5%;
-}
-
 #container{
     margin-top: 2.5%;
     border: none;
     height: 70%;
-    margin-left: 20%;
-    width: 70%;
+    margin-left: 15%;
+    width: 75%;
     border-radius: 10px;
 }
 
 
+iframe{
+    width: 80%;
+    margin-bottom: 5%;
+    display: block;
+    margin-left: 10%;
+    border: 2.5px dotted black;
+    border-radius: 10px;
+    background-image: url(../images/winter.png);
+    background-size: cover;
+}
+
 body{
-background-image: url(../images/sunset.png);
+    background-image: url(../images/sunset.png);
+    background-size: cover;
+}
+
+#userdisplay{
+    margin-top: -3.75rem;
+    margin-right: 2.5rem;
+    font-size: 150%;
+    float: right;
+    font-family: 'handlee';
+    border: 2px solid black;
+    padding: 0.5rem;
+    border-radius: 3px;
+    background-color: #ACBFF3;
 }
 
 footer{
@@ -39,14 +50,9 @@ footer{
     padding: 10px;
     width: 50%;
     border-radius: 3px;
-    margin-left: 31%;
+    margin-left: 29%;
     background: rgba(135,128, 206, 0.35);
     font-family: 'coming';
-}
-
-footer a{
-    text-decoration: none;
-    
 }
 
 @media screen and (max-width: 600px) {
@@ -54,7 +60,7 @@ footer a{
         width: 65%;
         margin-left: 30%;
     }   
-    
+
     .sidenav{
         background-color: transparent;
         border: none;
