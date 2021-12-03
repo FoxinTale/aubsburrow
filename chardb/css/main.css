@@ -14,17 +14,6 @@ h1{
 }
 
 
-iframe{
-    width: 80%;
-    margin-bottom: 5%;
-    display: block;
-    margin-left: 10%;
-    border: 2.5px dotted black;
-    border-radius: 10px;
-    background-image: url(../images/winter.png);
-    background-size: cover;
-}
-
 body{
     background-image: url(../images/sunset.png);
     background-size: cover;
@@ -68,4 +57,9 @@ footer{
         width: 100%;
         margin-top: 10%;
     }
+}
+
+
+input[type=checkbox]:hover{
+    color:white;
 }
