@@ -2,41 +2,45 @@
 <html>
     <title>Character Database</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://unpkg.com/@csstools/normalize.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/font-awesome-min.css">
+    <link rel="stylesheet" href="css/mainpage.css">
     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/font-awesome-min.css">
     <link rel="stylesheet" href="css/w3-min.css">
+
     <script type="text/javascript" src="scripts/ui.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <body class="w3-main">
-        <nav class="w3-sidebar w3-bar-block w3-collapse w3-animate-left w3-card" style="z-index:3;width:250px;" id="sidenav">
-            <a class="w3-bar-item w3-button w3-hide-large w3-large" href="javascript:void(0)" onclick="closenav()">Close <i class="fa fa-remove"></i></a>
-            <a class="w3-bar-item w3-button" href="javascript:framerender('home.html')">Home</a>
+    <body class="mainpage">
+        <nav class="w3-sidebar bar-block w3-collapse w3-animate-left w3-card" style="z-index:3;width:250px;" id="sidenav">
+            <a class="bar-item nav-button hide-large w3-large" href="javascript:void(0)" onclick="closenav()">Close <i class="fa fa-remove"></i></a>
+            <a class="bar-item nav-button" href="javascript:framerender('home.html')">Home</a>
             <div>
-                <a class="w3-bar-item w3-button" onclick="dropdown('creation')" href="javascript:void(0)">Create New...<i class="fa fa-caret-down"></i></a>
-                <div id="creation" class="w3-hide">
-                    <a class="w3-bar-item w3-button" href="javascript:framerender('newability.html')">Ability / Power</a>
-                    <a class="w3-bar-item w3-button" href="javascript:framerender('newchar.html')">Character</a>
-                    <a class="w3-bar-item w3-button" href="javascript:framerender('newitem.html')">Item</a>
-                    <a class="w3-bar-item w3-button" href="javascript:framerender('newweapon.html')">Weapon</a>
+                <a class="bar-item nav-button" onclick="dropdown('creation')" href="javascript:void(0)">Create New...<i class="fa fa-caret-down"></i></a>
+                <div id="creation" class="hide">
+                    <a class="bar-item nav-button" href="javascript:framerender('newability.html')">Ability / Power</a>
+                    <a class="bar-item nav-button" href="javascript:framerender('newchar.html')">Character</a>
+                    <a class="bar-item nav-button" href="javascript:framerender('newitem.html')">Item</a>
+                    <a class="bar-item nav-button" href="javascript:framerender('newweapon.html')">Weapon</a>
                 </div>
             </div>
             <hr class="nav-hr">
-            <a class="w3-bar-item w3-button" href="javascript:framerender('abilities.html')">Abilities / Powers</a>
-            <a class="w3-bar-item w3-button" href="javascript:framerender('chars.html')">Characters</a>
-            <a class="w3-bar-item w3-button" href="javascript:framerender('items.html')">Items</a>
-            <a class="w3-bar-item w3-button" href="javascript:framerender('weapons.html')">Weapons</a>
+            <a class="bar-item nav-button" href="javascript:framerender('abilities.html')">Abilities / Powers</a>
+            <a class="bar-item nav-button" href="javascript:framerender('chars.html')">Characters</a>
+            <a class="bar-item nav-button" href="javascript:framerender('items.html')">Items</a>
+            <a class="bar-item nav-button" href="javascript:framerender('weapons.html')">Weapons</a>
             <hr class="nav-hr">
-            <a class="w3-bar-item w3-button" href="javascript:framerender('resources.html')">Resources</a>
-            <a class="w3-bar-item w3-button" href="javascript:framerender('notes.html')">Notes</a>
-            <a class="w3-bar-item w3-button" href="javascript:framerender('credits.html')">Credits</a>
+            <a class="bar-item nav-button" href="javascript:framerender('resources.html')">Resources</a>
+            <a class="bar-item nav-button" href="javascript:framerender('notes.html')">Notes</a>
+            <a class="bar-item nav-button" href="javascript:framerender('credits.html')">Credits</a>
             <hr class="nav-hr">
+            <a class="bar-item nav-button" href="javascript:framerender('newprofile.html')">Create Portfolio</a> <!-- In PHP, display only if the username is null or empty.-->
+            <a class="bar-item nav-button" href="javascript:framerender('login.html')">Login</a> <!-- Both of these hide if the username is equal to anything that isn't empty or null" -->
+   <!--         <a class="bar-item nav-button" href="javascript.framerender('logout.html')">Log Out</a> -->
         </nav>
         <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="closenav()" style="cursor:pointer" id="overlay"></div>
-        <div class="w3-main" style="margin-left:250px;">
-            <i class="fa fa-bars w3-button  w3-hide-large w3-xlarge" onclick="opennav()"></i>
+        <div class="mainpage" style="margin-left:250px;">
+            <i id="minimenu" class="fa fa-bars w3-button w3-hide-large w3-xlarge" onclick="opennav()"></i>
             <h1>Character Database</h1>
             <span id="userdisplay">Aubrey</span> <!-- this will only show up if the user is logged in, when I get PHP working-->
             <div id="container"></div>

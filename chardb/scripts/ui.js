@@ -1,4 +1,3 @@
-
 function opennav() {
     document.getElementById("sidenav").style.display = "block";
     document.getElementById("overlay").style.display = "block";
@@ -24,11 +23,11 @@ function scrolldo() {
 
 function dropdown(id) {
     var x = document.getElementById(id);
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
+    if (x.className.indexOf("show") == -1) {
+        x.className += " show";
         x.previousElementSibling.className += " w3-theme";
     } else {
-        x.className = x.className.replace("w3-show", "");
+        x.className = x.className.replace("show", "");
         x.previousElementSibling.className =
                 x.previousElementSibling.className.replace(" w3-theme", "");
     }
@@ -36,11 +35,11 @@ function dropdown(id) {
 
 function doaccordion(id) {
     var x = document.getElementById(id);
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
+    if (x.className.indexOf("show") == -1) {
+        x.className += " show";
         x.previousElementSibling.className += " w3-light-purple2";
     } else {
-        x.className = x.className.replace("w3-show", "");
+        x.className = x.className.replace("show", "");
         x.previousElementSibling.className =
                 x.previousElementSibling.className.replace("w3-light-purple2", "");
     }
