@@ -18,11 +18,20 @@ None of the information entered anywhere is shared with anyone but you and the s
 they are not sold, or shared in any other way. I care about user privacy, so nothing will ever be shared or sold, with the exception of an incredibly unlikley event where law enforcement gets involved somehow.
 
 
+Remember to remove the test user account from the database itself.
 
 To avoid file conflicts for uploading images, when an image is uploaded, create a folder on the server that is either the username, or user ID, then create a folder inside there of either the character name or character ID.
-Store the images in there, obviously after checking the image itself to make sure it is actually an image file, and preferably clean the EXIF data too.
+Store the images in there, obviously after checking the image itself to make sure it is actually an image file, and preferably clean the EXIF data too. I could create a unique identifier for each image 
 
-
+In my Attacks & defences class, we had a project that was to hack, and identify security vulnerabilities in a website. I decided on using the first iteration of this website for that project. 
+This re-write is also my attempt at mitigating some of my findings.
+	[] - Authentication bypass. By typing into the main page (<main link>/main.php) one could get access directly to the site without needing to sign in. 
+			Removing an immediate and required sign-in, in addition to removing the demo user account, should mitigate the main problems.
+			
+	[] - Unsecured network communication. Encrypting via HTTPS fixes this.
+	
+	[] - 
+	
 https://www.the-art-of-web.com/javascript/setcookie/
 
 https://www.geeksforgeeks.org/how-to-create-auto-resize-textarea-using-javascript-jquery/
@@ -33,3 +42,4 @@ DnD Throws bonus:
 	
 Feature Types:
 	Class | Race | Background | 
+	

@@ -1,5 +1,3 @@
-
-
 :root {
     font-size: 16px;
     font-family: 'Open Sans';
@@ -23,20 +21,13 @@
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
-
 }
 
-.fa-remove:before {
-    content: "\f00d"
-}
+.fa-remove:before { content: "\f00d"; }
 
-.fa-caret-down:before {
-    content: "\f0d7"
-}
+.fa-caret-down:before { content: "\f0d7"; }
 
-.fa-bars:before {
-    content: "\f0c9"
-}
+.fa-bars:before { content: "\f0c9"; }
 
 
 /* Main page content */
@@ -87,17 +78,11 @@ footer{
 }
 
 /* The side nav*/
-body::-webkit-scrollbar {
-    width: 0.25rem;
-}
+body::-webkit-scrollbar { width: 0.25rem; }
 
-body::-webkit-scrollbar-track {
-    background: #1e1e24;
-}
+body::-webkit-scrollbar-track { background: #1e1e24; }
 
-body::-webkit-scrollbar-thumb {
-    background: #6649b8;
-}
+body::-webkit-scrollbar-thumb { background: #6649b8; }
 
 .nav-hr{
     margin-left: 0.5em;
@@ -143,7 +128,5 @@ body::-webkit-scrollbar-thumb {
         margin-top: 1em;
     }
     
-    #userdisplay{
-        display:none;
-    }
+    #userdisplay{ display:none; }
 }

@@ -13,11 +13,11 @@ window.onscroll = function () {
 };
 function scrolldo() {
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        document.getElementById("top").classList.add("w3-card-4", "w3-animate-opacity");
-        document.getElementById("intro").classList.add("w3-show-inline-block");
+        document.getElementById("top").classList.add("card-4", "animate-opacity");
+        document.getElementById("intro").classList.add("show-inline-block");
     } else {
-        document.getElementById("intro").classList.remove("w3-show-inline-block");
-        document.getElementById("top").classList.remove("w3-card-4", "w3-animate-opacity");
+        document.getElementById("intro").classList.remove("show-inline-block");
+        document.getElementById("top").classList.remove("card-4", "animate-opacity");
     }
 }
 
@@ -53,8 +53,8 @@ function opentab(evt, pagename) {
     }
     tablinks = document.getElementsByClassName("tablink");
     for (i = 0; i < x.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" w3-light-purple2", "");
+        tablinks[i].className = tablinks[i].className.replace(" light-purple3", "");
     }
     document.getElementById(pagename).style.display = "block";
-    evt.currentTarget.className += " w3-light-purple2";
+    evt.currentTarget.className += " light-purple3";
 }

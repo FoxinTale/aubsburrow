@@ -8,10 +8,6 @@ ul li a{
     text-decoration: none;
 }
 
-#sep{
-    margin: 0% 10%;
-}
-
 @media screen and (max-width: 992px){
     section{
         margin-left: 2.5%;
@@ -21,10 +17,5 @@ ul li a{
 @media screen and (max-width: 600px) {
     ul li{
         padding-right: 10px;
-    }
-
-    .desc{
-        padding-right: 10px;
-        padding-left: 10px;
     }
 }
