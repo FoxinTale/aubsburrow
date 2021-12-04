@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
-    <title>Character Database</title>
+    <title>The Character Journal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://unpkg.com/@csstools/normalize.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/mainpage.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/w3-min.css">
-
     <script type="text/javascript" src="scripts/ui.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <body class="mainpage">
@@ -34,14 +33,14 @@
             <a class="bar-item nav-button" href="javascript:framerender('resources.html')">Resources</a>
             <a class="bar-item nav-button" href="javascript:framerender('credits.html')">Credits</a>
             <hr class="nav-hr">
-            <a class="bar-item nav-button" href="javascript:framerender('newprofile.html')">Create Portfolio</a> <!-- In PHP, display only if the username is null or empty.-->
+            <a class="bar-item nav-button" href="javascript:framerender('newprofile.html')">Create Journal</a> <!-- In PHP, display only if the username is null or empty.-->
             <a class="bar-item nav-button" href="javascript:framerender('login.html')">Login</a> <!-- Both of these hide if the username is equal to anything that isn't empty or null" -->
    <!--         <a class="bar-item nav-button" href="javascript.framerender('logout.html')">Log Out</a> -->
         </nav>
         <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="closenav()" style="cursor:pointer" id="overlay"></div>
         <div class="mainpage" style="margin-left:250px;">
             <i id="minimenu" class="fa fa-bars w3-button w3-hide-large xlarge" onclick="opennav()"></i>
-            <h1>Character Database</h1>
+            <h1>The Character Journal</h1>
             <span id="userdisplay">Aubrey</span> <!-- this will only show up if the user is logged in, when I get PHP working-->
             <div id="container"></div>
             <script type="text/javascript" src="scripts/main.js"></script>
