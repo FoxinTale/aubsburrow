@@ -3,7 +3,82 @@ Minimized version of the full W3.css, "compressed" to exclude items not utilized
 There have also been heavy modifications, removals and additions to the original code to make it more fit the usage.
 */
 
+
+
+/* Creating the classes to set fonts */
+
+.coming{ font-family: 'coming'; }
+
+.handlee { font-family: 'coming'; }
+
+
+/* General style rules for everywhere */
+ul li a{ text-decoration: none; }
+
+
+/* The boxes that everything is displayed in*/
+.box{
+    padding: 2.5%;
+    border-radius: 5px;
+    border: 1.5px solid black;
+}
+
+.box2{
+    margin: 2.5% 5% 2.5% 5%;
+    border: 1.5px solid black;
+    border-radius: 3px;
+}
+
+.box3{
+    padding: 2.5%;
+    border: 2px solid black;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/* Colours! */
+.pale-purple{ background-color: #f1edf8; }
+
+.light-purple{ background-color: #c5b5e3; }
+
+.light-purple2{ background-color: #d3c7e9; }
+
+.light-purple3{ background-color: #dc96e8!important; }
+
+.light-purple4{ background-color: #b19cd9; }
+
+.light-gray{ background-color: #f1f1f1!important; }
+
+.purple{ background-color: #9c27b0!important; }
+
+.black{ background-color: #000!important; }
+
+
+/* */ 
+
+.display-text{
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
 .mainpage{ transition: margin-left .4s; }
+
+
+
+/* Lists*/
+
+
+.link-list{ margin-left: 2.5%; }
+
+.link-list li{
+    list-style-type: none;
+    padding-bottom: 0.5rem;
+}
+
+.link-list li a { font-family: 'malireg';}
+
+
 
 .w3-btn,
 .nav-button {
@@ -89,7 +164,7 @@ There have also been heavy modifications, removals and additions to the original
 
 .infotab label, .container2 label{ width: 15rem; }
 
-.w3-select option{ font-family: 'coming'; }
+/* .w3-select option{ font-family: 'coming'; } */
 
 @media (min-width:993px) {
     .w3-modal-content { width: 900px; }
@@ -164,28 +239,7 @@ There have also been heavy modifications, removals and additions to the original
     margin-bottom: 16px
 }
 
-.box{
-    padding: 2.5%;
-
-    border-radius: 5px;
-    border: 1.5px solid black;
-}
-
-.box2{
-    margin: 2.5% 5% 2.5% 5%;
-    border: 1.5px solid black;
-
-    border-radius: 3px;
-}
-
 .shadow-816{  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); } /* So called because it's 8 by 16 pixels. */
-
-.box3{
-    padding: 2.5%;
-    border: 2px solid black;
-    border-radius: 3px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
 
 .textbox{
     width: 50%;
@@ -278,6 +332,14 @@ There have also been heavy modifications, removals and additions to the original
     font-weight: 300;
 }
 
+.title-header{
+    background: lightgray;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
 .nav-hr{
     margin-left: 0.5em;
     margin-right: 0.5em;
@@ -300,10 +362,7 @@ There have also been heavy modifications, removals and additions to the original
     font-size: 1.5em;
 }
 
-.w3-info-display{
-    font-weight: 600;
-    font-family: 'coming';
-}
+.w3-info-display{ font-weight: 600; }
 
 .w3-info-section span, .w3-data-span{ font-family: 'delius'; }
 
@@ -312,6 +371,8 @@ There have also been heavy modifications, removals and additions to the original
 .label{ width: auto; }
 
 .sep{ margin: 0% 10%; }
+
+.sep2{ margin: 0% 2.55%; }
 
 .data-entry{
     margin-left: 0.75rem;
@@ -348,19 +409,4 @@ There have also been heavy modifications, removals and additions to the original
     background-size: cover;
 }
 
-
-/* Colours! */
-.pale-purple{ background-color: #f1edf8; }
-
-.light-purple{ background-color: #c5b5e3; }
-
-.light-purple2{ background-color: #d3c7e9; }
-
-.light-purple3{ background-color: #dc96e8!important; }
-
-.light-gray{ background-color: #f1f1f1!important; }
-
-.purple{ background-color: #9c27b0!important; }
-
-.black{ background-color: #000!important; }
 
