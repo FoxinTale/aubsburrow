@@ -11,8 +11,6 @@ Figure out a way to create shareable links with other people.
 Create an admin panel, that utilises the "is admin" bit of the user. If it is 0, text that says "sorry, you don't have access". This would only appear anyways if they directly navigated to the file somehow. It would be hidden in the nav menu for non-admins.
 (0 for non-admins, 1 for admins)
 
-For efficency's sake, in the beginning PHP create a boolean that is true 'if(username==null || username == "")' otherwise it is false. Use this to determine if one is logged in.  
-
 Privacy and security policy:
 None of the information entered anywhere is shared with anyone but you and the site. The email is required solely so there is a way to be able to send a password reset link.
 they are not sold, or shared in any other way. I care about user privacy, so nothing will ever be shared or sold, with the exception of an incredibly unlikley event where law enforcement gets involved somehow.
