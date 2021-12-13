@@ -19,8 +19,8 @@
     <div class="minipage" id="charpagebox"></div>
     <script type="text/javascript">
         window.onload = load_it();
-        var currentPage = "";
-        var PrevPage = "";
+        var currentPage = "home";
+        var prevPage = "";
         const infoArray = [];
                 
  
@@ -30,89 +30,59 @@
             });
         }
 
+        
         function pagerender(url, page) {
-            setInfo();
-            getInfo();
+            prevPage = currentPage;
+            currentPage = page;
             
-            switch(page){
-                case "home":
-                    break;
-                    
-                case "info":
-                    //getInfo();
-                    // console.log("General info");
-                    break;
-                    
-                case "appearance":
-                    console.log("Appearance");
-                    break;
-                    
-                case "personality":
-                    console.log("Personality");
-                    break;
-                    
-                case "race":
-                    console.log("Race");
-                    break;
-                    
-                case "omega":
-                    console.log("Omega");
-                    break;
-                
-                case "settings":
-                    console.log("Settings");
-                    break;
-                    
-                default:
-                    break;       
+            console.log(currentPage);
+            console.log(prevPage);
+
+            if(prevPage === "info"){
+                getInfo();
             }
+            
+            if(currentPage === "info"){
+                setInfo();
+            }
+            
             
             jQuery(document).ready(function ($) {
                 $("#charpagebox").load(url);
             });
+            
+            if(infoArray[0] !== "" || ''){
+                document.cookie = infoArray;
+            }
+            console.log(infoArray);
         }
         
         
         function getInfo(){
             jQuery(document).ready(function ($) {
-                
                 if(document.getElementById("charname").value !== null || ""){
                     infoArray[0] = document.getElementById("charname").value;
-                } else {
-                    infoArray[0] = "";
-                }
+                } else { infoArray[0] = ""; }
                 
                 if(document.getElementById("charalias").value !== null || ""){
                     infoArray[1] = document.getElementById("charname").value;
-                } else {
-                    infoArray[1] = "";
-                }
+                } else { infoArray[1] = ""; }
                 
                 if(document.getElementById("shortdesc").value !== null || ""){
                     infoArray[2] = document.getElementById("shortdesc").value;
-                } else {
-                    infoArray[2] = "";
-                }
+                } else { infoArray[2] = ""; }
                
                 if(document.getElementById("charage").value !== null || ""){
                     infoArray[3] = document.getElementById("charage").value;
-                } else {
-                    infoArray[3] = "";
-                }
+                } else { infoArray[3] = ""; }
 
                 if(document.getElementById("chargender").value !== null || ""){
                     infoArray[4] = document.getElementById("chargender").value;
-                } else {
-                    infoArray[4] = "";
-                }
+                } else { infoArray[4] = ""; }
                
                 if(document.getElementById("charrace").value !== null || ""){
                     infoArray[5] = document.getElementById("charrace").value;
-                } else {
-                    infoarray[5] = "";
-                }
-                
-                console.log(infoArray);
+                } else { infoarray[5] = ""; }
             });
         }
         

@@ -10,7 +10,7 @@
             <h3 class="display-header">Character Information</h3>
             <p>You can hover over each entry to learn more about what it is.</p>
             <hr>
-            <form id="charinfo" method="post" action="newchar.php">
+            <form id="charinfo" method="post" action="javascript:pagerender('pages/newchar_info.html')">
                 <p class="tooltip" title="This is the full name of the character">
                     <label for="charname">Full Name: </label>
                     <input type="text" class="textinput" required id="charname" name="char_name">
@@ -34,6 +34,10 @@
                 <p class="tooltip" title="Use the Race/Species section if they are not a human character. Otherwise, this is fine.">
                     <label for="charrace">Race / Species: </label>
                     <input type="text" id="charrace" class="textinput" name="char_race">
+                </p>
+                <p>
+                    <label for="charbutton">&nbsp;</label>
+                    <input type="submit" class="clicky-button clicky-button-two" name="submit_char" value="Add Character" id="charbutton">
                 </p>
             </form>
         </div>

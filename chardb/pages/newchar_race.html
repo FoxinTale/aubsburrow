@@ -14,7 +14,7 @@
                 You can hover over each entry to learn more about what it is.
             </p>
             <hr>
-            <form id="charspecies" method="post" action="newchar_race.html">
+            <form id="charspecies" method="post" action="javascript:pagerender('pages/newchar_race.html', 'race')">
                 <p class="tooltip" title="The name of the species / race.">
                     <label for="racename">Name: </label>
                     <input type="text" id="racename" name="race_name" class='textinput'>
@@ -38,6 +38,10 @@
                 <p class="tooltip" title="A full, detailed description of the race.">
                     <label for="racedesc">Description: </label>
                     <textarea id="racedesc" name="race_desc" class='textbox'></textarea>
+                </p>
+                <p>
+                    <label for="racebutton">&nbsp;</label>
+                    <input type="submit" class="clicky-button clicky-button-two" name="submit_race" value="Add Race Info" id="racebutton">
                 </p>
             </form>
         </div>
