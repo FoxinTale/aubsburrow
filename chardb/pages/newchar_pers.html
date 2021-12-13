@@ -10,12 +10,12 @@
         <h3 class="display-header">Character Personality</h3>
         <p>You can hover over each entry to learn more about what it is.</p>
         <hr>
-        <form id="char_pers" method="post" action="newchar.php#character_personality">
+        <form id="char_pers" method="post" action="javascript:pagerender('pages/newchar_pers.html', 'personality')">
             <p class="tooltip" title="Their personality description.">
                 <label for="persdesc">Personality Description:</label>
                 <textarea id="charpersdesc" class="textbox" name="pers_desc"></textarea>
             </p>
-            <p class="tooltip" title="The personality type. Can be Meyers-Briggs, Big 5, or any other type.">
+            <p class="tooltip" title="The personality type. Can be Meyers-Briggs (Big 16), Big 5, or any other type.">
                 <label for="charperstype">Personality Type: </label>
                 <input type="text" id="charperstype" class='textinput' name="pers_type">
             </p>
@@ -71,6 +71,10 @@
                 <p class="tooltip" title="How likely this character is to rebel against a given plan, situation or rules.">
                     <label for="charrebel">Rebelliousness: </label>
                     <input type="text" id="charrebel" class='textinput' name="char_rebel">
+                </p>
+                <p>
+                    <label for="persbutton">&nbsp;</label>
+                    <input type="submit" class="clicky-button clicky-button-two" name="submit_pers" value="Add Personality Info" id="persbutton">
                 </p>
             </div>
         </form>
