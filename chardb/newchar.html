@@ -8,17 +8,21 @@
 </head>
 <body>
     <div class="w3-tab pale-purple">
-        <a class="tab-item tablink" href="javascript:pagerender('pages/newchar_home.html')">General Info</a>
-        <a class="tab-item tablink" href="javascript:pagerender('pages/newchar_info.html')">Character Info</a>
-        <a class="tab-item tablink" href="javascript:pagerender('pages/newchar_appear.html')">Appearance</a>
-        <a class="tab-item tablink" href="javascript:pagerender('pages/newchar_pers.html')" >Personality</a>
-        <a class="tab-item tablink" href="javascript:pagerender('pages/newchar_race.html')" >Race</a>
-        <a id="omegalink" class="tab-item tablink" href="javascript:pagerender('pages/newchar_omega.html')" style="display: none;">Omega Timeline</a>
-        <a class="tab-item tablink" href="javascript:pagerender('pages/newchar_settings.html')" >Settings &amp; Options</a>
+        <a class="tab-item tablink" href="javascript:pagerender('pages/newchar_home.html', 'home')">General Info</a>
+        <a class="tab-item tablink" href="javascript:pagerender('pages/newchar_info.html', 'info')">Character Info</a>
+        <a class="tab-item tablink" href="javascript:pagerender('pages/newchar_appear.html', 'appearance')">Appearance</a>
+        <a class="tab-item tablink" href="javascript:pagerender('pages/newchar_pers.html', 'personality')" >Personality</a>
+        <a class="tab-item tablink" href="javascript:pagerender('pages/newchar_race.html', 'race')" >Race</a>
+        <a id="omegalink" class="tab-item tablink" href="javascript:pagerender('pages/newchar_omega.html', 'omega')" style="display: none;">Omega Timeline</a>
+        <a class="tab-item tablink" href="javascript:pagerender('pages/newchar_settings.html', 'settings')" >Settings &amp; Options</a>
     </div>
     <div class="minipage" id="charpagebox"></div>
     <script type="text/javascript">
         window.onload = load_it();
+        var currentPage = "";
+        var PrevPage = "";
+        const infoArray = [];
+                
  
         function load_it() {
             jQuery(document).ready(function ($) {
@@ -26,9 +30,98 @@
             });
         }
 
-        function pagerender(url) {
+        function pagerender(url, page) {
+            setInfo();
+            getInfo();
+            
+            switch(page){
+                case "home":
+                    break;
+                    
+                case "info":
+                    //getInfo();
+                    // console.log("General info");
+                    break;
+                    
+                case "appearance":
+                    console.log("Appearance");
+                    break;
+                    
+                case "personality":
+                    console.log("Personality");
+                    break;
+                    
+                case "race":
+                    console.log("Race");
+                    break;
+                    
+                case "omega":
+                    console.log("Omega");
+                    break;
+                
+                case "settings":
+                    console.log("Settings");
+                    break;
+                    
+                default:
+                    break;       
+            }
+            
             jQuery(document).ready(function ($) {
                 $("#charpagebox").load(url);
+            });
+        }
+        
+        
+        function getInfo(){
+            jQuery(document).ready(function ($) {
+                
+                if(document.getElementById("charname").value !== null || ""){
+                    infoArray[0] = document.getElementById("charname").value;
+                } else {
+                    infoArray[0] = "";
+                }
+                
+                if(document.getElementById("charalias").value !== null || ""){
+                    infoArray[1] = document.getElementById("charname").value;
+                } else {
+                    infoArray[1] = "";
+                }
+                
+                if(document.getElementById("shortdesc").value !== null || ""){
+                    infoArray[2] = document.getElementById("shortdesc").value;
+                } else {
+                    infoArray[2] = "";
+                }
+               
+                if(document.getElementById("charage").value !== null || ""){
+                    infoArray[3] = document.getElementById("charage").value;
+                } else {
+                    infoArray[3] = "";
+                }
+
+                if(document.getElementById("chargender").value !== null || ""){
+                    infoArray[4] = document.getElementById("chargender").value;
+                } else {
+                    infoArray[4] = "";
+                }
+               
+                if(document.getElementById("charrace").value !== null || ""){
+                    infoArray[5] = document.getElementById("charrace").value;
+                } else {
+                    infoarray[5] = "";
+                }
+                
+                console.log(infoArray);
+            });
+        }
+        
+        
+        function setInfo(){
+            jQuery(document).ready(function ($) {
+                if(infoArray[0] !== ""){
+                    document.getElementById("charname").value = infoArray[0];
+                }
             });
         }
     </script>
