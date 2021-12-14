@@ -10,20 +10,22 @@
     </head>
     <body>
         <div id="login-form" class="light-purple2">
-            <form id="login" class="container" method="post" action='index.html'>
+            <form id="login" class="container" method="post" action="javascript:framerender('home.html')">
                 <input type="text" readonly id="errorbox">
                 <br>
                 <p>
                     <label class="labeltext" for="username">Username: </label>
-                    <input type="text" id="username" name="user_name" class='textinput'>
+                    <input type="text" required id="username" name="user_name" class='textinput'>
                 </p>
                 <p>
                     <label class="labeltext" for="pass">Password: </label>
-                    <input type="password" id="pass" name="password" class='textinput'>
+                    <input type="password" required id="pass" name="password" class='textinput'>
                 </p>
                 <br>
+                <p>
                     <label for="login-clicky">&nbsp;</label>
-                    <input class="clicky-button" type="submit" id ="login-clicky" value="Open Journal">      
+                    <input class="clicky-button" type="submit" id ="login-clicky" value="Open Journal">
+                </p>
             </form>
          </div>
     </body>

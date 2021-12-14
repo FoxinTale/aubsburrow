@@ -38,6 +38,12 @@ ul li a{ text-decoration: none; }
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
+.box4{
+    padding: 1rem;
+    margin-top: 2rem;
+    border: 1.5px solid black;
+    border-radius: 5px;
+}
 
 /* Colours! */
 .pale-purple{ background-color: #f1edf8; }
