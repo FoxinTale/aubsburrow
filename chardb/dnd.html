@@ -1,14 +1,30 @@
 <!DOCTYPE html>
-    <head>
-        <meta charset="UTF-8">
-        <title>DnD Content</title>
-        <link rel="stylesheet" href="css/fonts.css">
-        <link rel="stylesheet" href="css/w3-min.css">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <title>New Character</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/w3-min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="w3-tab pale-purple">
+        <a class="tab-item tablink" href="javascript:pagerender('pages/dnd_home.html')">Info</a>
+    </div>
+    <div class="minipage" id="dndpagebox"></div>
+    <script type="text/javascript">
+        window.onload = load_it();
+
+        function load_it() {
+            jQuery(document).ready(function ($) {
+                $("#dndpagebox").load("pages/dnd_home.html");
+            });
+        }
+
         
-        
-        
-        
+        function pagerender(url) {
+            jQuery(document).ready(function ($) {
+                $("#charpagebox").load(url);
+            });
+        }
+    </script>
 </body>

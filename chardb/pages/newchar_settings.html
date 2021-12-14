@@ -10,7 +10,7 @@
         <h3 class="display-header">Character Options</h3>
         <p>Various options for your character.</p>
         <hr>
-        <form id="charoptions" method="post" action="newchar.php#character_options">
+        <form id="charoptions" method="post" action="javascript:pagerender('pages/newchar_settings.html', 'settings')">
             <p class="tooltip" title="Whether or not this character is a favourite">
                 <label for="is_fav">Is a favourite character</label>
                 <input type="checkbox" id="is_fav" name="isfavchar">
@@ -27,6 +27,10 @@
             <p class="tooltip" title="Whether or not this character is part of the Omega Timeline. If you have to ask what this is, you don't need to check it.">
                 <label for="is_omega">Is part of the Omega Timeline:</label>
                 <input type="checkbox" id="is_omega" onchange="omegaCheck()" name="isomegachar">
+            </p>
+            <p>
+                <label for="applysettings">&nbsp;</label>
+                <input type="submit" class="clicky-button clicky-button-two" name="submit_settings" value="Apply Settings" id="applysettings">
             </p>
         </form>
     </div>
