@@ -8,7 +8,6 @@ There have also been heavy modifications, removals and additions to the original
 /* Creating the classes to set fonts */
 
 .coming{ font-family: 'coming'; }
-
 .handlee { font-family: 'coming'; }
 
 
@@ -16,6 +15,7 @@ There have also been heavy modifications, removals and additions to the original
 a{ text-decoration: none; }
 
 ul li a{ text-decoration: none; }
+
 
 
 /* The boxes that everything is displayed in*/
@@ -140,7 +140,6 @@ ul li a{ text-decoration: none; }
 }
 
 .bar-block .w3-dropdown-hover, .w3-dropdown-click { width: 100%; }
-
 .bar-block .w3-dropdown-hover .w3-dropdown-content, .w3-dropdown-click .w3-dropdown-content { min-width: 100%; }
 
 .bar-block .w3-dropdown-hover .nav-button,
@@ -166,7 +165,6 @@ ul li a{ text-decoration: none; }
 }
 
 .w3-bar .nav-button .w3-tab{ white-space: normal; }
-
 .centre, .bar-item, .tab-item{ text-align: center; }
 
 .textinput{
@@ -177,10 +175,11 @@ ul li a{ text-decoration: none; }
     font-family: 'coming';
 }
 
-.w3-select {
+.charselect{
     width: 50%;
     border: 0.5px solid black;
     margin-bottom: 0.5rem;
+    text-align: center;
     font-family: 'coming';
 }
 
@@ -214,7 +213,7 @@ ul li a{ text-decoration: none; }
     }
 }
 
-.w3-overlay {
+.overlay {
     position: fixed;
     display: none;
     width: 100%;
@@ -350,14 +349,10 @@ ul li a{ text-decoration: none; }
     margin-bottom: 5px;
 }
 
-.text-display{
-    width: 75%;
-    margin-bottom: -7px;
-}
-
-.text-display input{
-    background: transparent;
+.textdisplay{
+    background-color: transparent;
     border: none;
+    width: 75%;
 }
 
 .display-header{

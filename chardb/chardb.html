@@ -38,9 +38,9 @@
             <a class="bar-item nav-button" href="javascript:framerender('login.html')">Open Journal</a>
    <!--         <a class="bar-item nav-button" href="javascript.framerender('logout.html')">Log Out</a> -->
         </nav>
-        <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="closenav()" style="cursor:pointer" id="overlay"></div>
+        <div class="overlay hide-large animate-opacity" onclick="closenav()" style="cursor:pointer" id="overlay"></div>
         <div class="mainpage" style="margin-left:250px;">
-            <i id="minimenu" class="fa fa-bars w3-button w3-hide-large xlarge" onclick="opennav()"></i>
+            <i id="minimenu" class="fa fa-bars w3-button hide-large xlarge" onclick="opennav()"></i>
             <h1>The Character Journal</h1>
             <span id="userdisplay">Aubrey</span> <!-- this will only show up if the user is logged in, when I get PHP working-->
             <!--
@@ -49,6 +49,7 @@
                 While I do not remember exactly *why* I did it this way, I think I had issues with the iframe not doing things I wanted it to.
             -->
             <div class="minipage" id="container"></div>
+            <iframe id="pageframe" name="frame" src="about:blank"></iframe>
             <script type="text/javascript" src="scripts/main.js"></script>
             <footer>Aubrey - 2021</footer>
         </div>
