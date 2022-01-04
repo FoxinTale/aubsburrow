@@ -1,0 +1,41 @@
+Developer's notes:
+
+
+For the love of all that is holy, figure out HTTPS!
+
+Possibly save text as a user types, in case something happens?
+
+Only once everything is done, then remove the CSS and scripts from the sub pages. Comment them out for development reasons. 
+Figure out a way to create shareable links with other people.
+
+Create an admin panel, that utilises the "is admin" bit of the user. If it is 0, text that says "sorry, you don't have access". This would only appear anyways if they directly navigated to the file somehow. It would be hidden in the nav menu for non-admins.
+(0 for non-admins, 1 for admins)
+
+Privacy and security policy:
+None of the information entered anywhere is shared with anyone but you and the site. The email is required solely so there is a way to be able to send a password reset link.
+they are not sold, or shared in any other way. I care about user privacy, so nothing will ever be shared or sold, with the exception of an incredibly unlikley event where law enforcement gets involved somehow.
+
+
+To avoid file conflicts for uploading images, when an image is uploaded, create a folder on the server that is either the username, or user ID, then create a folder inside there of either the character name or character ID.
+Store the images in there, obviously after checking the image itself to make sure it is actually an image file, and preferably clean the EXIF data too. I could create a unique identifier for each image 
+
+In my Attacks & defences class, we had a project that was to identify security vulnerabilities in a website. I decided on using the first iteration of this website for that project. 
+This re-write is also my attempt at mitigating some of my findings.
+	[x] - Authentication bypass. By typing into the main page (<main link>/main.php) one could get access directly to the site without needing to sign in. 
+			Removing an immediate and required sign-in, in addition to removing the demo user account, should mitigate the main problems.
+			
+	[] - Unsecured network communication. Encrypting via HTTPS fixes this.
+		
+	
+	
+https://www.the-art-of-web.com/javascript/setcookie/
+
+https://www.geeksforgeeks.org/how-to-create-auto-resize-textarea-using-javascript-jquery/
+https://www.w3schools.com/howto/howto_js_display_checkbox_text.asp
+
+DnD Throws bonus:
+	Prof bonus | Half Prof | Double Prof
+	
+Feature Types:
+	Class | Race | Background | 
+	

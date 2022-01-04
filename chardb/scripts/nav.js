@@ -15,18 +15,18 @@ function scrolldo() {
     document.getElementById("top").classList.add("w3-card-4", "w3-animate-opacity");
     document.getElementById("intro").classList.add("w3-show-inline-block");
   } else {
-    document.getElementById("intro").classList.remove("w3-show-inline-block");
+    document.getElementById("intro").classList.remove("show-inline-block");
     document.getElementById("top").classList.remove("w3-card-4", "w3-animate-opacity");
   }
 }
 
 function dropdown(id) {
   var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
+  if (x.className.indexOf("show") == -1) {
+    x.className += " show";
     x.previousElementSibling.className += " w3-theme";
   } else { 
-    x.className = x.className.replace("w3-show", "");
+    x.className = x.className.replace("show", "");
     x.previousElementSibling.className = 
     x.previousElementSibling.className.replace(" w3-theme", "");
   }
