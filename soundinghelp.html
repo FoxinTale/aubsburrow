@@ -8,29 +8,77 @@
   <title>How to read a sounding</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/common.css">
-  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Coming+Soon|Rancho|Architects+Daughter|Shadows+Into+Light+Two|Delius&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/soundings.css">
 </head>
   
 <body >
 <main>
     <h1>How to read a meteorlogical sounding.</h1>
-    <p>
-     This is a sounding. Specifically, a model based sounding. Wile this looks complicated, and frankly, it is. Let's break it down into simple, digestible chunks.     
-      <img src="images/grassblock.png" alt="This is a placeholder image">
-    </p>
-    <ul>
-        <li>The Skew-T chart.</li>
-        <li>The Hodograph</li>
-        <li>Lapse Rates.</li>
-        <li>Parameter space</li>
-        <li>STP</li>
-        <li>Other</li>
-    </ul>
-    <br>
-    <h3>The Skew-T Chart</h3>
-    <p>This one is a beast in its own right, and would deserve its own page regularly. But I'm lazy.</p>
-    To explain some of this, we will have to dive into something known as parcel theory. Don't worry, it's not as scary as it sounds.
-    Starting off with the basics, warm air rises and cold air sinks. So, with that understood, imagine a hot air baloon.
+          <div class='box3 shadow-816'>
+            <div class="w3-tab black">
+                <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'basic_info')">Home</button>
+                <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'skewt')">Skew-T Chart</button>
+                <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'hodo')">Hodograph</button>
+                <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'character_personality')">Parameters I</button>
+                <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'character_race')">Parameters II</button>
+                <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'character_options')">STP</button>
+                <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'character_options')">Other</button>
+              </div>
+        <div id="basic_info" class="box shadow-816 infotab">
+            <section>
+                This is a sounding. Specifically, a model based sounding. Wile this looks complicated, and frankly, it is. Let's break it down into simple, digestible chunks. Video series exist that go in depth but they are like 40+ minutes long. This is more or less a text ersion of them all.
+            </section>
+            <img src="images/soundings/basesounding.png" alt="This is a sounding. Sadly, it would be way too much text to describe here.">
+        </div>
+        
+        <div id="skewt" class="box shadow-816 infotab">
+            <img class="sounding" src="images/soundings/SkewT.png">
+            <section>
+               This one is a beast in its own right, and would deserve its own page regularly. But I'm lazy.
+                To explain some of this, we will have to dive into something known as parcel theory. Don't worry, it's not as scary as it sounds.
+                <br><br>
+                Starting off with the basics, warm air rises and cold air sinks. So, with that understood, imagine a hot air balloon.
+            </section>
+        </div>
+        
+        <div id="hodo" class="box shadow-816 infotab">
+            <img class="sounding" src="images/soundings/Hodo.png">
+            <section>
+                The Hodograph
+            </section>
+        </div>
+        
+    </div>
+
+
+    <h3 id="paramsI">Parameters I</h3>
+    <img src="images/soundings/Params1.png">
+    <section>
+        Severe Parameters 1.
+    </section>
+    <hr>
+    <h3 id="paramsII">Parameters II</h3>
+    <img src="images/soundings/Params2.png">
+    <section>
+        Severe Parameters 2.
+    </section>
+    
+    <script type="text/javascript">
+        function opentab(evt, pagename) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("infotab");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" light-purple3", "");
+            }
+            document.getElementById(pagename).style.display = "block";
+            evt.currentTarget.className += " light-purple3";
+        }
+    </script>
 </main>
   <footer>
     &copy; 2022
