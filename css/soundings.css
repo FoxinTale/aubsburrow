@@ -1,0 +1,100 @@
+li{
+    list-style: none;
+    display: inline;
+    padding: 0px 2rem;
+}
+
+hr{
+    padding: 0% 5%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.exp{
+    padding: 0.5rem 3rem;
+}
+
+#help{
+    margin: 1rem;
+}
+
+
+/* The boxes that everything is displayed in*/
+.box{
+    padding: 2.5%;
+    border-radius: 5px;
+    border: 1.5px solid black;
+}
+
+.box2{
+    margin: 2.5% 5% 2.5% 5%;
+    border: 1.5px solid black;
+    border-radius: 3px;
+}
+
+.box3{
+    padding: 2.5%;
+    border: 2px solid black;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Colours!*/
+.black{ background-color: #000!important; }
+
+
+/* */
+.descriptor{
+    margin: 0.5% 5%;
+    display: block;
+}
+
+.descriptor li{
+    display: block;
+    padding-bottom: 1rem;
+}
+/* */
+
+.w3-tab{ white-space: normal; }
+.w3-tab-item{ text-align: center; }
+    
+.w3-tab:before,
+.w3-tab:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.w3-tab .w3-tab-item{
+    padding: 8px 16px;
+    float: left;
+    width: auto;
+    border: none;
+    display: block;
+    outline: 0;
+    white-space: normal;
+    margin: 5px 0px 5px 5px;
+    border-radius: 5px;
+}
+
+.w3-tab-item {
+    width: 100%;
+    display: block;
+    padding: 8px 16px;
+    text-align: left;
+    border: none;
+    white-space: normal;
+    float: none;
+    outline: 0;
+    color: black;
+}
+
+.w3-tab{
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+
+.shadow-816{  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); } /* So called because it's 8 by 16 pixels. */
