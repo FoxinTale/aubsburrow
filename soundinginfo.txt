@@ -1,0 +1,72 @@
+Reading a Skew-T:
+Treating this like a regular graph, the further right you go along the bottom (x-axis) the warmer you get with temperature. This is measured in Celcius.
+The further up you go on the graph (Y-axis) the higher up in the atmosphere you get. (here, the height is denoted by the red lettering, measured in Kilometres)
+
+The bars to the left and the right of the Y-axis... The longer the red bars, the more "contamination" the sounding has [what is this contamination?] and potentially unusable the sounding is.
+This one has very little contamination, and is therefore generally reliable. I have no idea what the blue bars mean.
+The "SFC" noted on the bottom is the surface height, measured Above Mean Sea Level (AMSL).
+White lines with numbers next to them, are the "millibar" levels of the atmosphere.
+The red line (rightmost solid) is the air temperature, and the green (leftmost solid) line is the dewpoint.
+
+
+Things I do not know what they mean:
+On the background, the curved lines radiating from the bottom left corner.
+Also on the background, the diagonal dashed lines.
+The *blue* lines on the leftmost side.
+The highlighted teal thing.
+The diagonal dashed blue lines.
+The solid teal line.
+The diagonal-ish numbered green lines towards the bottom right.
+And finally, inferred temperature.
+
+-------
+
+
+LCL - Lifted Condensation Level
+LFC - Leven of Free Convection
+The Parcel is a theoretical bubble of warm air that is lifted through the atmosphere and any change in temperature is measured. (Oversimplification, but it's enough for now)
+- Vertical shear is the wind *speed* changing with height.
+- Horizontal shear is the wind *direction* changing with height. 
+ -STP, is "Significant Tornado Parameter" It's a "composite" (or combination) of multiple values. Higher it is, the more possibility there is for significant (EF2+) tornadoes. 
+	This number is meant to highlight the co-existence of ingredients supercells capable of producing EF2+ tornadoes. 
+- SARS is Sounding Analog Retrieval System, it compared the current or forecast soundings to a database of historical soundings and returns any matches with the date, location and any severe weather reports then.
+- The hodograph is a more visual representation of the Skew-T Chart. 
+- CAPE, Is Convective Available Potential Energy, a measure of instability in the atmosphere, or simply "storm fuel".
+- Storm Slinky shows only the wind direction changing. 
+
+Other notes on this section: 
+CAPE, horizontal and vertical shear are needed for tornadoes. You can have lots of CAPE, but if there's no (or very weak) shear, nothing may happen. 
+I made a saying "Oodles of CAPE does not an outbreak make" Generally, values between 3,000 and 5,000 (the measurement is Joules per Kilogram, J/Kg) is perfect for supercells,
+or tornado produsing storms. Any higher and the storms tend to go linear (squall line, or they congeal into a mess). The amound of CAPE is calculated by finding the area
+under the parcel line and above the red temperature line. (shaded in solid pink) 
+
+On the vertical shear, the longer the lines the faster the wind. On horizontal, the direction of the flag indicates the direction of the wind. 
+If the directions are rotating (note the curve in the storm slinky and hodograph)
+The three question marks, I know what they are, but not what role they play/what they mean.
+
+Regarding the storm slinky and hodograph, what you *don't* want to see is a curve resembling the backwards upper half of a question mark.
+What this means is that there is rotation and shear in the atmosphere already. Tornadoes like this. A lot.
+--------------
+
+Precipitable water is just how much water is in the atmosphere. 
+CAPE is CAPE.
+CINH, is convective inhibition, or "cap" if there's a lot, there's a layer of warm air trapping the instability. Warm air can't rise into warm air.
+LCL is Lifted Condensation Level, the lower it is the lower the cloud base is to the ground and the easier it is for tornadoes to form.
+LI is Lifted Index, the lower (more negative) it is the more unstable the atmosphere is.
+LCL is Level of Free Convection, where the parcel of air becomes warmer than its surroundings and starts to rise. This is the bottom of the area of CAPE.
+EL is Equilibrium Level where the parcel temperature equals the surrounding air temperature, and is the top of the CAPE-containing layer.
+
+
+Possible Hazard - Ignore this, it's not that useful.
+Theta-E
+
+
+
+
+Both humidities are..well, humidity. Moisture in the atmosphere. 
+Significant Severe, the higher it is the more severe the storms can be...That's all I know about it.
+Lapse Rates show how temperature changes with height.
+Supercell Composite Parameter simply shows how favourable the environment is for supercells and tornado producing storms.
+Significant hail just shows the possibility of severe hail.
+
+Enhanced Helicity Index, Storm Relative Helicity and Shear...All I understand is the higher they are the more energy and wind there is for storms.
