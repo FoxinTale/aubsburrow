@@ -1,0 +1,12 @@
+#avatarBases{
+    text-align: center;
+}
+
+#avatarBases li, #avatarPricing li, #commInfo li,  #inProgress li, #serviceTerms li {
+    list-style-type: none;
+}
+
+#avatarBases li a {
+    text-decoration: none;
+    color: black;
+}
