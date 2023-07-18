@@ -1,5 +1,5 @@
 body {
-    background-image: url(..//images/sunset.jpg);
+    background-image: url(..//images/winter.png);
     background-color: #cccccc;
     background-size: cover;
     background-repeat: no-repeat;
@@ -13,11 +13,17 @@ main{
     border-radius: 7.5px;
 }
 
-#aboutMe {
+#aboutMe{
     font-family: 'Coming Soon', cursive;
+    font-size: 125%;
 }
 
-.box{
+h2, h3, h4, h5 {
+    font-family: 'Indie Flower', cursive;
+    font-weight: 600;
+}
+
+.box {
     border: 1px solid black;
     border-radius: 10px;
     padding: 1rem;
@@ -38,4 +44,9 @@ main{
 
 #avatarBases li, #commInfo li, #serviceTerms li{
     text-align: left;
+}
+
+.carousel-caption {
+    color: ghostwhite;
+    font-size: 150%;
 }
