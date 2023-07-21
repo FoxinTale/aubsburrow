@@ -6,10 +6,6 @@ body {
     background-blend-mode: soft-light;
 }
 
-.list-group-item{
-    color: white;
-}
-
 main{
     margin: 0.75rem;
     border: 2px solid black;
