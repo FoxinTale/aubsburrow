@@ -33,7 +33,7 @@ h2, h3, h4, h5 {
     text-align: center;
 }
 
-#avatarBases li, #avatarPricing li, #commInfo li,  #inProgress li, #serviceTerms li {
+#avatarBases li, #avatarPricing li, #commInfo li,  #inProgress li{
     list-style-type: none;
 }
 

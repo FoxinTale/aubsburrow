@@ -11,10 +11,17 @@
   <link rel="stylesheet" href="css/soundings.css">
 </head>
   
-<body >
-<main>
-    <h1>How to read a meteorlogical sounding.</h1>
-          <div class='box3 shadow-816' id="help">
+<body>
+    <div class="topnav" id="Topnav">
+        <a href="index.html">Home</a>
+        <a href="rparchives.html">RP Archives</a>
+        <a href="soundinghelp.html" class="active">How to read a sounding</a>
+        <a href="commissions.html" >VR Chat Avatar Comms</a>
+        <a href="about.html">About Me</a>
+    </div>
+    <main>
+        <h1>How to read a meteorlogical sounding.</h1>
+        <div class='box3 shadow-816' id="help">
             <div class="w3-tab black">
                 <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'basic_info')">Home</button>
                 <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'skewt')">Skew-T Chart</button>
@@ -23,122 +30,123 @@
                 <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'paramsII')">Parameters II</button>
                 <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'stp')">STP</button>
                 <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'other')">Other</button>
-              </div>
-        <div id="basic_info" class="box shadow-816 infotab">
-            <section>
-                This is a meteorlogical sounding. Specifically, a model based sounding. Wile this looks complicated, and frankly, it is. Let's break it down into simple, digestible chunks. Video series exist that go in depth but they are like 40+ minutes long each. This is more or less a text version of them all. The sections you would find them under in these tabs have been helpfully labelled.
-                <br><br>
-                You can click on the various buttons above to navigate around and learn more about each section. 
-                <br>
-                
-            </section>
-
-            <img src="images/soundings/basesounding_labeled.png" alt="This is a sounding. Sadly, it would be way too much text to describe here.">
-        </div>
-        
-        <div id="skewt" class="box shadow-816 infotab">
-            <img class="sounding" src="images/soundings/SkewT.png">
-            <section>
-               This one is a beast in its own right, and would deserve its own page regularly. But I'm lazy.
-                To explain some of this, we will have to dive into something known as parcel theory. Don't worry, it's not as scary as it sounds.
-                <br><br>
-                Starting off with the basics, warm air rises and cold air sinks. So, with that understood, imagine a hot air balloon.
-            </section>
-        </div>
-        
-        <div id="hodo" class="box shadow-816 infotab">
-            <img class="sounding" src="images/soundings/Hodo.png">
-            <section>
-                The Hodograph
-            </section>
-        </div>
-        
-         <div id="paramsI" class="box shadow-816 infotab">
-            <img class="sounding" src="images/soundings/Params1.png">
-            <section>
-                Starting with the labels. 
-                <ul class="descriptor">
-                    <li>PCL is Parcel. Refer to the Skew-T section for what a Parcel is.</li>
-                    <li>CAPE, was also explained in the Skew-T section.</li>
-                    <li>CINH is Convective INHibition. Not quite negative CAPE, but is close. It represents a layer of warm air.</li>
-                    <li>LCL is Lifted Codensation Level. This is measrured above sea level in metres. This is the lowest that the base of a storm (and possibly tornadoes) can start to form.</li>
-                    <li>LI is Lifted Index. If memory serves, it represents the overall change in temperature throughout the atmosphere. The lower it is the more meteorogically unstable the atmosphere tends to be.</li>
-                    <li>LFC is the Level of Free Convection. Going back to the hot air balloon, this is when the air in the balloon (parcel) becomes warmer then the surrounding environment and it begins to rise on its own. This is the bottom of the CAPE-containing layer.</li>
-                    <li>EL is Equilibrium Level. This is when the air inside our balloon equals the temperature of the surrounding environment and it stops rising on its own. This is the top of the CAPE-containing layer.</li>
-                </ul>
-                <br>
-                <ul class="descriptor">
-                    <li>SFC, once again is Surface.</li>
-                    <li>ML, is Mid-Level. What height this correlates to, I am not quite sure.</li>
-                    <li> FCST is Forecast. I think it means exactly this. What it is forecast to be at the given time of the model sounding.</li>
-                    <li>MU is Most Unstable. I.E., the most unstable part of the atmosphere.</li>
-                </ul>
-                <br>
+            </div>
+            <div id="basic_info" class="box shadow-816 infotab">
                 <section>
-                    [Some descriptor and context for the various, above listed values.]
-                </section>
-                <br>
-                Here's the image again to save you some scrolling back and forth. We have covered the top third above. Below is the middle third of it.
-                <img class="sounding" src="images/soundings/Params1.png">
-                <ul class="descriptor">
-                    <li>PW is Precipitable Water. A measure of just how much water is in the atmosphere, if it all fell as rain. This is measured in inches.</li>
-                </ul>
-            </section>
-        </div>
-        
-         <div id="paramsII" class="box shadow-816 infotab">
-            <img class="sounding" src="images/soundings/Params2.png">
-            <section>
-                Parameters II
-            </section>
-        </div>
-        
-        <div id="stp" class="box shadow-816 infotab">
-            <img class="sounding" src="images/soundings/STP.png">
-            <section>
-                STP (Significant Tornado Parameter)
-                <br>
-                This is laid out like a vertical box and whisker plot.
-                <br>
-                This is a "composite" (or combination) of multiple values. Generally, the higher it is, the more possibility there is for significant (EF2+) tornadoes. This number is meant to highlight the co-existence of ingredients supercells capable of producing EF2+ tornadoes. Extremley high values<i><b> do not </b></i> indicate there will 100% be an EF5 monster wedge. This value simply indicates that <i>conditions are favourable for the development of strong to violent tornadoes.</i>
-            </section>
-        </div>
-        
-        <div id="other" class="box shadow-816 infotab">
-            <img class="sounding" src="images/soundings/Other.png">
-            <section>
-                Here, we have a few things. From left to right.
-                <ul class="descriptor">
-                    <li>SARS, or Sounding Analogue Retrieival System compares past (observed) soundings to the current ones and gives its best estimate of what might happen based off of prior storm reports, parameters and current conditions.</li>
-                    <li>
-                    "Storm slinky" - This shows the direction of the wind changing with height. A more readable version of the Skew-T's wind barbs. This is a feature on model soundigns only I have noticed. This does not exist on observed soundings.</li>
-                    <li>Theta-E Index. [Not in my notes, will ask an analyst.]</li>
-                    <li>SR (Storm Relative) wind with height - Also no idea.</li>
-                    <li>Possibe hazard type - This is SHARPY's little thing. Ignore it most of the time. It's fairly useless.</li>
-                </ul>  
-            </section>
-        </div>
-    </div>
+                    This is a meteorlogical sounding. Specifically, a model based sounding. Wile this looks complicated, and frankly, it is. Let's break it down into simple, digestible chunks. Video series exist that go in depth but they are like 40+ minutes long each. This is more or less a text version of them all. The sections you would find them under in these tabs have been helpfully labelled.
+                    <br><br>
+                    You can click on the various buttons above to navigate around and learn more about each section.
+                    <br>
 
-    <script type="text/javascript">
-        function opentab(evt, pagename) {
-            var i, x, tablinks;
-            x = document.getElementsByClassName("infotab");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
+                </section>
+
+                <img src="images/soundings/basesounding_labeled.png" alt="This is a sounding. Sadly, it would be way too much text to describe here.">
+            </div>
+
+            <div id="skewt" class="box shadow-816 infotab">
+                <img class="sounding" src="images/soundings/SkewT.png">
+                <section>
+                    This one is a beast in its own right, and would deserve its own page regularly. But I'm lazy.
+                    To explain some of this, we will have to dive into something known as parcel theory. Don't worry, it's not as scary as it sounds.
+                    <br><br>
+                    Starting off with the basics, warm air rises and cold air sinks. So, with that understood, imagine a hot air balloon.
+                </section>
+            </div>
+
+            <div id="hodo" class="box shadow-816 infotab">
+                <img class="sounding" src="images/soundings/Hodo.png">
+                <section>
+                    The Hodograph
+                </section>
+            </div>
+
+            <div id="paramsI" class="box shadow-816 infotab">
+                <img class="sounding" src="images/soundings/Params1.png">
+                <section>
+                    Starting with the labels.
+                    <ul class="descriptor">
+                        <li>PCL is Parcel. Refer to the Skew-T section for what a Parcel is.</li>
+                        <li>CAPE, was also explained in the Skew-T section.</li>
+                        <li>CINH is Convective INHibition. Not quite negative CAPE, but is close. It represents a layer of warm air.</li>
+                        <li>LCL is Lifted Codensation Level. This is measrured above sea level in metres. This is the lowest that the base of a storm (and possibly tornadoes) can start to form.</li>
+                        <li>LI is Lifted Index. If memory serves, it represents the overall change in temperature throughout the atmosphere. The lower it is the more meteorogically unstable the atmosphere tends to be.</li>
+                        <li>LFC is the Level of Free Convection. Going back to the hot air balloon, this is when the air in the balloon (parcel) becomes warmer then the surrounding environment and it begins to rise on its own. This is the bottom of the CAPE-containing layer.</li>
+                        <li>EL is Equilibrium Level. This is when the air inside our balloon equals the temperature of the surrounding environment and it stops rising on its own. This is the top of the CAPE-containing layer.</li>
+                    </ul>
+                    <br>
+                    <ul class="descriptor">
+                        <li>SFC, once again is Surface.</li>
+                        <li>ML, is Mid-Level. What height this correlates to, I am not quite sure.</li>
+                        <li> FCST is Forecast. I think it means exactly this. What it is forecast to be at the given time of the model sounding.</li>
+                        <li>MU is Most Unstable. I.E., the most unstable part of the atmosphere.</li>
+                    </ul>
+                    <br>
+                    <section>
+                        [Some descriptor and context for the various, above listed values.]
+                    </section>
+                    <br>
+                    Here's the image again to save you some scrolling back and forth. We have covered the top third above. Below is the middle third of it.
+                    <img class="sounding" src="images/soundings/Params1.png">
+                    <ul class="descriptor">
+                        <li>PW is Precipitable Water. A measure of just how much water is in the atmosphere, if it all fell as rain. This is measured in inches.</li>
+                    </ul>
+                </section>
+            </div>
+
+            <div id="paramsII" class="box shadow-816 infotab">
+                <img class="sounding" src="images/soundings/Params2.png">
+                <section>
+                    Parameters II
+                </section>
+            </div>
+
+            <div id="stp" class="box shadow-816 infotab">
+                <img class="sounding" src="images/soundings/STP.png">
+                <section>
+                    STP (Significant Tornado Parameter)
+                    <br>
+                    This is laid out like a vertical box and whisker plot.
+                    <br>
+                    This is a "composite" (or combination) of multiple values. Generally, the higher it is, the more possibility there is for significant (EF2+) tornadoes. This number is meant to highlight the co-existence of ingredients supercells capable of producing EF2+ tornadoes. Extremley high values<i><b> do not </b></i> indicate there will 100% be an EF5 monster wedge. This value simply indicates that <i>conditions are favourable for the development of strong to violent tornadoes.</i>
+                </section>
+            </div>
+
+            <div id="other" class="box shadow-816 infotab">
+                <img class="sounding" src="images/soundings/Other.png">
+                <section>
+                    Here, we have a few things. From left to right.
+                    <ul class="descriptor">
+                        <li>SARS, or Sounding Analogue Retrieival System compares past (observed) soundings to the current ones and gives its best estimate of what might happen based off of prior storm reports, parameters and current conditions.</li>
+                        <li>
+                            "Storm slinky" - This shows the direction of the wind changing with height. A more readable version of the Skew-T's wind barbs. This is a feature on model soundigns only I have noticed. This does not exist on observed soundings.
+                        </li>
+                        <li>Theta-E Index. [Not in my notes, will ask an analyst.]</li>
+                        <li>SR (Storm Relative) wind with height - Also no idea.</li>
+                        <li>Possibe hazard type - This is SHARPY's little thing. Ignore it most of the time. It's fairly useless.</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            function opentab(evt, pagename) {
+                var i, x, tablinks;
+                x = document.getElementsByClassName("infotab");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablink");
+
+                for (i = 0; i < x.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" light-purple3", "");
+                }
+                document.getElementById(pagename).style.display = "block";
+                evt.currentTarget.className += " light-purple3";
             }
-            tablinks = document.getElementsByClassName("tablink");
-            
-            for (i = 0; i < x.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" light-purple3", "");
-            }
-            document.getElementById(pagename).style.display = "block";
-            evt.currentTarget.className += " light-purple3";
-        }
-    </script>
-</main>
-  <footer>
-    &copy; Aubrey Jane - 2022
-  </footer>
+        </script>
+    </main>
+    <footer>
+        &copy; Aubrey Jane - 2022
+    </footer>
 </body>
 </html> 
