@@ -4,6 +4,7 @@ h1{
   text-align: center;
 }
 
+
 body{
     background-image: url(..//images/woodhoriz.jpg);
     background-size: cover;
@@ -15,3 +16,18 @@ body{
     background-color: #cccccc;
 }
 
+
+p {
+    font-family: 'Coming Soon', cursive;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+
+.header{
+    font-weight: 600;
+    font-size: 1.25em;
+}
