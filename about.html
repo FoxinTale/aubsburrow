@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <link rel="icon" type="image/png" href="images/flower.ico">
@@ -14,6 +15,8 @@
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Coming+Soon|Rancho|Architects+Daughter|Shadows+Into+Light+Two|Delius&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/about.css">
 </head>
+
+
   
 <body>
     <div class="topnav" id="Topnav">
@@ -23,36 +26,79 @@
         <a href="about.html"  class="active">About Me</a>
     </div>
     <main>
-        <h1>About me</h1>
-        <p>
-            Howdy! I'm Aubrey and thanks for checking out the about me page.
-            I am a 24 year old trans woman (she/hers) from southwestern Ohio. I like to call myself a jack of all trades, master of none who specialises in some areas.
-            I've done all sorts of things, from texture work, to programming, 3D modelling shenanigans and more.
-        </p>
+        <div class="container text-center">
+            <div class="row">
+                <div class="card">
+                    Howdy! I'm Aubrey and thanks for checking out the about me page.
+                    I am a 24 year old trans woman (she/hers) from southwestern Ohio. I like to call myself a jack of all trades, master of none who specialises in some areas.
+                    I've done all sorts of things, from texture work, to programming, 3D modelling shenanigans and more.
+                </div>
 
-        <p>
-            I am largley self-taught on texture work, Unity and Blender so if a dingus like me can do it by just poking at it and seeing what happens, you can too!<br>
+                <div class="card">
+                    <h3>About me</h3>
+                    I am largley self-taught on texture work, Unity and Blender so if a dingus like me can do it by just poking at it and seeing what happens, you can too!<br>
 
-            I'm an amatuer meteorologist, and often follow severe weather outbreaks when they happen.<br>
+                    I'm an amatuer meteorologist, and often follow severe weather outbreaks when they happen.<br>
 
-            I went to college for a bachelor's in cybersecurity and IT, and have spent the last five years programming in many different languages.<br>
-        </p>
+                    I went to college for a bachelor's in cybersecurity and IT, and have spent the last five years programming in many different languages.<br>
+                </div>
 
-        <p>
-            <span class="header">Games: </span> <br><!-- Because for *reasons* putting a header (h4) here breaks the HTML paragraph. -->
-            In terms of games, I generally play open world non-linear RPGS like the Fallout series, Elder Scrolls series (Except ESO) and Starbound. I also enjoy open world sandbox games like
-            Minecraft, Gmod and more...and modding the everloving crap out of these games because that's just what you do.
-        </p>
+                <div class="card">
+                    <h3>Games:</h3>
+                    In terms of games, I generally play open world non-linear RPGS like the Fallout series, Elder Scrolls series (Except ESO) and Starbound. I also enjoy open world sandbox games like
+                    Minecraft, Gmod and more...and modding the everloving crap out of these games because that's just what you do.
+                </div>
 
-        <p>
-            <span class="header">Experience:</span><br> 
-            Professionally, I worked in I.T. at a small computer repair shop for about a year and worked as a "Full Stack developer" for about six months. <br>
-            I have roughly three years in web development experience, witgh "raw" HTML, CSS and Javascript. I also have experience with PHP and mySQL.<br>
-            Simultaneously, I have four years of Java experience and have done various projects listed on my Github including a character generator and a custom modded minecraft modpack installer. <br>
-        </p>
+                <div class="card">
+                    <h3>Texture Experience:</h3>
+                    I have been doing texture work for about three years across four games. (Skyrim, MSFS 2020, Subnautica and VR Chat). I started with doing simple texture edits in Skyrim mods playing around with making custom races, only being able to heavily edit existing textures.
+                    Eventually I met someone who taught me the ropes of Substance Painter and got me down the right track. This is around when I did a little bit of texture work for the A32NX in MSFS 2020 (The cockpit text decals).<br><br>
+
+                    Next thing I did after this was make a battery mod for Subnautica and made textures for it. Then I got to playing around with what I was trying to do before Painter, which was to create a custom goat race in Skyrim. Took me quite a while but I got it done after about a month or two.
+                    I had also figured out how to do outfit re-textures in Skyrim during this journey. About a year and a half pass of me playing with Painter off and on, refining my skills and learning how Skyrim's texture formats work.<br><br>
+
+                    More time passes until August 2022 when I discover VR Chat. At this point, I already had about two years of texture experience under my belt so the most difficulty of making avatars was figuring out Unity itself and how it worked. 
+                    This took the better part of three to four months before I was able to easily do anything more than simple toggles and importing packages. After more time passes aI fdeel confident enough to start doing commissions.
+                    
+                    
+                    <a href="https://www.nexusmods.com/subnautica/mods/798" class="card-link" target="_blank">Link to the Subnautica mod.</a>
+                </div>
+
+                <div class="card">
+                    <h3>Computer Science Background and Experience:</h3>
+                    I got my start when I was younger, playing a (sadly) long since dead game called Mars Explorer. You played as a small vehicle roving around community made worlds with up to ten other people online. 
+                    I wanted to try and make a world in this game. At the time Unity + Blender went way over the head of a 13 year old me.  However, this ignited a small fire for game development that smouldered for a few years.<br><br>
+
+                    I did some playing around with Arduinos (C++) sometime afterwards, and eventually played with Raspberry Pis in High school and picked up some Python then.  In college, is really where it picked up. 
+                    Classes I took in no particular order: Python, Java 1 and 2, Game Development, mySQL, Web Development 1 (HTML, CSS, JS), Web Development 2 (PHP) , and C. <br><br>
+                    Professionally, I worked in I.T. at a small computer repair shop for about a year and worked as a "Full Stack developer" for about six months.
+                    I have roughly three years in web development experience, witgh "raw" HTML, CSS and Javascript. I also have experience with PHP and mySQL.
+                    Simultaneously, I have four years of Java experience and have done various projects listed on my Github including a character generator and a custom modded minecraft modpack installer.
+                </div>
+            </div>
+        </div>
+        <br>
     </main>
     <footer>
         &copy; 2023
     </footer>
 </body>
+
 </html> 
+<style>
+    h3 {
+        /* font-family: 'Indie Flower', cursive; */
+        font-family: 'Rancho', cursive;
+        text-align: center;
+    }
+
+
+    .card {
+        font-family: 'Coming Soon', cursive;
+        margin-top: 1rem;
+        padding: 1rem;
+        border: 1px solid black;
+        border-radius: 10px;
+        background-color: #d3c7e9;
+    }
+</style>

@@ -1,4 +1,4 @@
-h1{
+h3{
   /* font-family: 'Indie Flower', cursive; */
   font-family: 'Rancho', cursive;
   text-align: center;
@@ -17,7 +17,7 @@ body{
 }
 
 
-p {
+.text {
     font-family: 'Coming Soon', cursive;
     margin-left: 5rem;
     margin-right: 5rem;
