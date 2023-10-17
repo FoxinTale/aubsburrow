@@ -28,6 +28,12 @@ h2, h3, h4, h5 {
     padding: 1rem;
 }
 
+#commissionStatus{
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0.5rem;
+    background-color: lightsalmon;
+}
 
 #avatarBases{
     text-align: center;
