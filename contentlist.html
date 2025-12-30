@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="images/flower.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aubrey's Workshop</title>
+ <!-- <script src="https://cdn.tailwindcss.com"></script> --> 
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/contentlist.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Coming+Soon|Rancho|Architects+Daughter|Shadows+Into+Light+Two|Delius&display=swap" rel="stylesheet">
+</head>
+  
+<body>
+
+
+<main>
+  <h1>Assets and bases that I own</h1>
+  <p>Last updated: in progress</p>
+   <div class='box3 shadow-816' id="ownedAssets">
+            <div class="w3-tab black">
+                <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'infoPage')">Info</button>
+                <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'bases')">Avatar Bases</button>
+                <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'clothing')">Clothing</button>
+                <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'hodo')">Other Assets</button>
+            </div>
+             <div id="infoPage" class="box shadow-816 infotab">
+                The full list of every asset I own, updated infrequently.
+                If it's not here, I probably don't own it. 
+                <br>
+                Assets ordered by date of purchase. If you're looking for a particular asset, use "ctrl + f" to find what you're looking for.
+
+
+            </div>
+            <div id="bases" class="box shadow-816 infotab">
+                <table>
+                    <tr>
+                        <th>Base Name:</th>
+                        <th>Creator Name:</th>
+                        <th>Cost (USD): (Gumroad/Jinxxy)</th>
+                        <th>Links:</th>
+                        <th>Notes:</th>
+                    </tr>
+                    <tr>
+                        <td>Bunnic</td>
+                        <td>ArkorenArt</td>
+                        <td>--/ $50</td>
+                        <td><a href="https://jinxxy.com/ArkorenArt/Bunnic">Jinxxy</a></td>
+                        <td>NSFW Variant</td>
+                    </tr>
+                    <tr>
+                        <td>Shawn the Shark</td>
+                        <td>Darbi</td>
+                        <td>$40</td>
+                        <td><a href="https://darbi.gumroad.com/l/shawnshark">Gumroad</a> / <a href="https://jinxxy.com/Darbi/shawnshark">Jinxxy</a></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="clothing" class="box shadow-816 infotab">
+                <table>
+                    <tr>
+                        <th>Clothing Asset:</th>
+                        <th>For Base:</th>
+                        <th>Creator:</th>
+                        <th>Cost: (Gumroad/Jinxxy)</th>
+                        <th>Links:</th>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="otherassets" class="box shadow-816 infotab">
+                <table>
+                    <tr>
+                        <th>Asset:</th>
+                        <th>Type:</th>
+                        <th>Creator:</th>
+                        <th>Cost: (Gumroad/Jinxxy)</th>
+                        <th>Links:</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            function opentab(evt, pagename) {
+                var i, x, tablinks;
+                x = document.getElementsByClassName("infotab");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablink");
+
+                for (i = 0; i < x.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" light-purple3", "");
+                }
+                document.getElementById(pagename).style.display = "block";
+                evt.currentTarget.className += " light-purple3";
+            }
+        </script>
+  
+</main>
+  <footer>
+    &copy; Website built from scratch in 2025.
+  </footer>
+</body>
+</html> 
