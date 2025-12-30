@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aubrey's Workshop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/main.css">
@@ -13,47 +14,43 @@
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Coming+Soon|Rancho|Architects+Daughter|Shadows+Into+Light+Two|Delius&display=swap" rel="stylesheet">
 </head>
   
-<body >
-  <div class="topnav" id="Topnav">
-    <a  href="index.html" class="active">Home</a>
-    
-    <div class="dropdown">
-   <button class="dropbtn">Projects<i class="fa fa-caret-down"></i></button>
-      <div class="dropdown-content">
-        <a href="subpages/projects/archguide.html">Arch Linux Install Guide</a>
-        <a href="subpages/projects/matera.html">Matera Reborn</a>
-        <a href="subpages/projects/modpackinstaller.html">Modpack Installer</a>
+<body>
+  <div class="topnav  border-b border-slate-800 sticky top-0 z-20 backdrop-blur-sm">
+    <div class="max-w-6xl mx-auto flex items-center gap-4 px-4 py-3">
+      <div class="font-semibold tracking-tight text-black">
+        Aubrey's Workshop
       </div>
-    </div> 
-    <a href="chardb/main.html">Character Database</a>
-    <a href="rparchives.html">RP Archives</a>
-    <a href="about.html">About Me</a>
-    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="function()"> &#9776;</a>
+      <nav class="ml-auto flex flex-wrap items-center gap-2 text-sm">
+        <a href="index.html" class="active px-3 py-1 rounded-md bg-slate-800 text-white hover:bg-slate-700 transition">
+          Home
+        </a>
+        <!--
+        <a href="soundinghelp.html" class="px-3 py-1 rounded-md text-white hover:bg-slate-800 hover:text-slate-100 transition">
+          How to read a sounding
+        </a>
+        -->
+        <a href="commissions.html" class="px-3 py-1 rounded-md text-white hover:bg-slate-800 hover:text-slate-100 transition">
+          VR Chat Avatar Comms
+        </a>
+        <a href="about.html" class="px-3 py-1 rounded-md text-white hover:bg-slate-800 hover:text-slate-100 transition">
+          About Me
+        </a>
+      </nav>
     </div>
-<script>
-    function function(){
-        var x = document.getElementById("Topnav");
-        if(x.className === "topnav"){
-            x.className += " responsive";
-        }
-        else{
-            x.className = "topnav";
-        }
-    }
-    
-</script>
-    
+  </div>
+
 <main>
   <h1></h1>
-    <section>
+    <section class="max-w-4xl mx-auto px-4 pt-12 pb-8">
       <p>
-        This is the home of all my various projects. Past, present and future. If it can be put on a website, I'll do it.
-          Mostly because I'm unorganized as hell, and will end up forgetting something or losing something.
+        Welcome to the home of my projects. Past, present and future. 
+
+
       </p>
     </section>
 </main>
   <footer>
-    &copy; Aubrey Jane - 2021
+    &copy; Website built from scratch in 2025.
   </footer>
 </body>
 </html> 

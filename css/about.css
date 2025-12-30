@@ -1,8 +1,9 @@
-h1{
+h3{
   /* font-family: 'Indie Flower', cursive; */
   font-family: 'Rancho', cursive;
   text-align: center;
 }
+
 
 body{
     background-image: url(..//images/woodhoriz.jpg);
@@ -15,3 +16,18 @@ body{
     background-color: #cccccc;
 }
 
+
+.text {
+    font-family: 'Coming Soon', cursive;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+
+.header{
+    font-weight: 600;
+    font-size: 1.25em;
+}
