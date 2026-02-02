@@ -8,104 +8,138 @@
  <!-- <script src="https://cdn.tailwindcss.com"></script> --> 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/contentlist.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Coming+Soon|Rancho|Architects+Daughter|Shadows+Into+Light+Two|Delius&display=swap" rel="stylesheet">
+      <script src="//unpkg.com/alpinejs"></script>
 </head>
   
 <body>
 
 
 <main>
+
   <h1>Assets and bases that I own</h1>
   <p>Last updated: in progress</p>
-   <div class='box3 shadow-816' id="ownedAssets">
-            <div class="w3-tab black">
-                <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'infoPage')">Info</button>
-                <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'bases')">Avatar Bases</button>
-                <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'clothing')">Clothing</button>
-                <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'ftassets')">Facetracking Packages</button>
-                <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'otherassets')">Other Assets</button>
-            </div>
-             <div id="infoPage" class="box shadow-816 infotab">
-                The full list of every asset I own, updated infrequently.
-                If it's not here, I probably don't own it.
-                <br>
-                Assets ordered by date of purchase. If you're looking for a particular asset, use "ctrl + f" to find what you're looking for.
 
+<div x-data="{ 
+            openTab: 1,
+            activeClasses: 'border-l border-t border-r rounded-t text-blue-700',
+            inactiveClasses: 'text-blue-500 hover:text-blue-700'
+        }" class="p-6">
+    <ul class="flex border-b">
+        <li @click="openTab = 1" :class="{ '-mb-px': openTab === 1 }" class="-mb-px mr-1">
+            <a href="#" :class="openTab === 1 ? activeClasses : inactiveClasses"
+                class="bg-white inline-block py-2 px-4 font-semibold">
+                Bases
+            </a>
+        </li>
+        <li @click="openTab = 2" :class="{ '-mb-px': openTab === 2 }" class="mr-1">
+            <!-- Set active class by using :class provided by Alpine -->
+            <a href="#" :class="openTab === 2 ? activeClasses : inactiveClasses"
+                class="bg-white inline-block py-2 px-4 font-semibold">
+                Clothing
+            </a>
+        </li>
+        <li @click="openTab = 3" :class="{ '-mb-px': openTab === 3 }" class="mr-1">
+            <a href="#" :class="openTab === 3 ? activeClasses : inactiveClasses"
+                class="bg-white inline-block py-2 px-4 font-semibold">
+                Tab
+            </a>
+        </li>
+    </ul>
+    <div class="w-full">
+        <div x-show="openTab === 1">
 
+            <div class="flex flex-col">
+    <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+        <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+            <div class="overflow-hidden">
+                <table class="">
+                    <thead class="bg-slate-200 border-b">
+                        <tr>
+                            <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Base Name</th>
+                            <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Creator</th>
+                            <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Cost (USD) Gumroad / Jinxxy</th>
+                            <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Link (Gumroad/Jinxxy)</th>
+                            <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Bunnic</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">ArkorenArt</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$50</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"><a href="https://jinxxy.com/ArkorenArt/Bunnic">Jinxxy</a></td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">NSFW Variant</td>
+                        </tr>
+                        <tr class="bg-white border-b">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Shawn the Shark</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Darbi</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$40</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"><a href="https://darbi.gumroad.com/l/shawnshark">Gumroad</a> / <a href="https://jinxxy.com/Darbi/shawnshark">Jinxxy</a></td>
+                        </tr>
+                        <tr class="bg-white border-b">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Winterpaw Feline</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Julia Winterpaw</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$45</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"><a href="https://juliawinterpaw.gumroad.com/l/Feline">Gumroad</a> / <a href="https://jinxxy.com/winterpaw/WinterpawFeline">Jinxxy</a></td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Extras + NSFW Addon</td>
+                        </tr>
+                        <tr class="bg-white border-b">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Soap Dog</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">ironicsoap</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$40</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"><a href="https://ironicsoap.gumroad.com/l/SoapDogs">Gumroad</a> / <a href="https://jinxxy.com/ironicsoap/SoapDogs">Jinxxy</a></td>
+                        </tr>
+                         <tr class="bg-white border-b">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Jinxed Maelstrorca</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">dont_jinxit</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">25 (Euro) / $26</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"><a href="https://dontjinxit.gumroad.com/l/JinxedMaelstrorca">Gumroad</a> / <a href="https://jinxxy.com/dont_jinxit/JinxedMaelstrorca">Jinxxy</a></td>
+                        </tr>
+                        <tr class="bg-white border-b">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Winterbold (Fluffy/Furred Kobold)</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">ItsGussy</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$45</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"><a href="https://itsguusy.gumroad.com/l/the-winterbold-fluffy-furred-kobold-avatar-base-for-vrchat-by-itsguusy">Gumroad</a> / <a href="https://jinxxy.com/ItsGuusy/products/the-winterbold-fluffy-furred-kobold-avatar-base-for-vrchat-by-itsguusy">Jinxxy</a></td>
+                        </tr>
+                        <tr class="bg-white border-b">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Novabeast</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Kittomatic</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$35</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"><a href="https://kittomatic.gumroad.com/l/Novabeast">Gumroad</a> / <a href="https://jinxxy.com/Kittomatic/products/novabeast">Jinxxy</a></td>
+                        </tr>
+                        <tr class="bg-white border-b">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Kirin</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Callista's VR Creations</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$40</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"><a href="https://callistakirin.gumroad.com/l/kirinavatar">Gumroad</a> / <a href="https://jinxxy.com/CallistaKirin/CalliKirin">Jinxxy</a></td>
+                        </tr>
+                        <tr class="bg-white border-b">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Nicroeda Protogen (Protodal)</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Callista's VR Creation</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$25</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"><a href="https://nicoreda.gumroad.com/l/protodal">Gumroad</a> / <a href="https://jinxxy.com/Nicoreda/protodal">Jinxxy</a></td>
+                        </tr>
+                        <tr class="bg-white border-b">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Nico & JHK Mantled Beast</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Nicoreda</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$25</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div id="bases" class="box shadow-816 infotab">
-                <table>
+        </div>
+    </div>
+</div>
+      <table>
                     <tr>
                         <th>Base Name:</th>
                         <th>Creator Name:</th>
                         <th>Cost (USD): (Gumroad/Jinxxy)</th>
                         <th>Links:</th>
                         <th>Notes:</th>
-                    </tr>
-                    <tr>
-                        <td>Bunnic</td>
-                        <td>ArkorenArt</td>
-                        <td>$50</td>
-                        <td><a href="https://jinxxy.com/ArkorenArt/Bunnic">Jinxxy</a></td>
-                        <td>NSFW Variant</td>
-                    </tr>
-                    <tr>
-                        <td>Shawn the Shark</td>
-                        <td>Darbi</td>
-                        <td>$40</td>
-                        <td><a href="https://darbi.gumroad.com/l/shawnshark">Gumroad</a> / <a href="https://jinxxy.com/Darbi/shawnshark">Jinxxy</a></td>
-                    </tr>
-                    <tr>
-                        <td>Winterpaw Feline</td>
-                        <td>Julia Winterpaw</td>
-                        <td>$45</td>
-                        <td><a href="https://juliawinterpaw.gumroad.com/l/Feline">Gumroad</a> / <a href="https://jinxxy.com/winterpaw/WinterpawFeline">Jinxxy</a></td>
-                        <td>Extras + NSFW Addon.</td>
-                    </tr>
-                    <tr>
-                        <td>Soap Dogs</td>
-                        <td>ironicsoap</td>
-                        <td>$40</td>
-                        <td><a href="https://ironicsoap.gumroad.com/l/SoapDogs">Gumroad</a> / <a href="https://jinxxy.com/ironicsoap/SoapDogs">Jinxxy</a></td>
-                    </tr>
-                    <tr>
-                        <td>Jinxed Maelstrorca</td>
-                        <td>dont_jinxit</td>
-                        <td>25 (euro)/$26</td>
-                        <td><a href="https://dontjinxit.gumroad.com/l/JinxedMaelstrorca">Gumroad</a> / <a href="https://jinxxy.com/dont_jinxit/JinxedMaelstrorca">Jinxxy</a></td>
-                    </tr>
-                    <tr>
-                        <td>Winterbold (Fluffy/Furred Kobold)</td>
-                        <td>ItsGussy</td>
-                        <td>$45</td>
-                        <td><a href="https://itsguusy.gumroad.com/l/the-winterbold-fluffy-furred-kobold-avatar-base-for-vrchat-by-itsguusy">Gumroad</a> / <a href="https://jinxxy.com/ItsGuusy/products/the-winterbold-fluffy-furred-kobold-avatar-base-for-vrchat-by-itsguusy">Jinxxy</a></td>
-                    </tr>
-                    <tr>
-                        <td>Novabeast</td>
-                        <td>Kittomatic</td>
-                        <td>$35</td>
-                        <td><a href="https://kittomatic.gumroad.com/l/Novabeast">Gumroad</a> / <a href="https://jinxxy.com/Kittomatic/products/novabeast">Jinxxy</a></td>
-                    </tr>
-                    <tr>
-                        <td>Kirin</td>
-                        <td>Callista's VR Creations</td>
-                        <td>$40</td>
-                        <td><a href="https://callistakirin.gumroad.com/l/kirinavatar">Gumroad</a> / <a href="https://jinxxy.com/CallistaKirin/CalliKirin">Jinxxy</a></td>
-                    </tr>
-                    <tr>
-                        <td>Nicoreda Protogen</td>
-                        <td>Nicoreda</td>
-                        <td>$25</td>
-                        <td><a href="https://nicoreda.gumroad.com/l/protodal">Gumroad</a> / <a href="https://jinxxy.com/Nicoreda/protodal">Jinxxy</a></td>
-                    </tr>
-                    <tr>
-                        <td>Nico & JHK Mantled Beast</td>
-                        <td>Nicoreda</td>
-                        <td>$25</td>
-                        <td><a href="">Gumroad</a> / <a href="">Jinxxy</a></td>
                     </tr>
                     <tr>
                         <td>Paw'vali</td>
@@ -187,6 +221,22 @@
                         <td><a href="https://dvl.gumroad.com/l/RobotFallbacks">Gumroad</a></td>
                     </tr>
                 </table>
+        </div>
+        <div x-show="openTab === 2">Tab #2</div>
+        <div x-show="openTab === 3">Tab #3</div>
+    </div>
+</div>
+
+   <div class='box3 shadow-816' id="ownedAssets">
+            <div class="w3-tab black">
+                <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'infoPage')">Info</button>
+                <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'bases')">Avatar Bases</button>
+                <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'clothing')">Clothing</button>
+                <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'ftassets')">Facetracking Packages</button>
+                <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'otherassets')">Other Assets</button>
+            </div>
+            <div id="bases" class="box shadow-816 infotab">
+              
             </div>
 
             <div id="clothing" class="box shadow-816 infotab">
@@ -248,3 +298,6 @@
   </footer>
 </body>
 </html> 
+<!--
+Tab Credit:
+->
