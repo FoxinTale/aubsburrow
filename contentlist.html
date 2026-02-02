@@ -7,7 +7,6 @@
   <title>Aubrey's Workshop</title>
  <!-- <script src="https://cdn.tailwindcss.com"></script> --> 
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/common.css">
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Coming+Soon|Rancho|Architects+Daughter|Shadows+Into+Light+Two|Delius&display=swap" rel="stylesheet">
       <script src="//unpkg.com/alpinejs"></script>
@@ -60,7 +59,7 @@
                             <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Base Name</th>
                             <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Creator</th>
                             <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Cost (USD) Gumroad / Jinxxy</th>
-                            <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Link (Gumroad/Jinxxy)</th>
+                            <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Link(s)</th>
                             <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Notes</th>
                         </tr>
                     </thead>
@@ -127,6 +126,18 @@
                             <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$25</td>
                             <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
                         </tr>
+                        <tr class="bg-white border-b">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Pawvali</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">TheRPGSlayer</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$30</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                        </tr>
+                        <tr class="bg-white border-b">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Ashbeast</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">TheRPGSlayer</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$35</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -140,18 +151,6 @@
                         <th>Cost (USD): (Gumroad/Jinxxy)</th>
                         <th>Links:</th>
                         <th>Notes:</th>
-                    </tr>
-                    <tr>
-                        <td>Paw'vali</td>
-                        <td>TheRPGSlayer</td>
-                        <td></td>
-                        <td><a href="">Gumroad</a> / <a href="">Jinxxy</a></td>
-                    </tr>
-                    <tr>
-                        <td>Ashbeast</td>
-                        <td>TheRPGSlayer</td>
-                        <td></td>
-                        <td><a href="">Gumroad</a> / <a href="">Jinxxy</a></td>
                     </tr>
                     <tr>
                         <td>Furbold</td>
@@ -222,76 +221,31 @@
                     </tr>
                 </table>
         </div>
-        <div x-show="openTab === 2">Tab #2</div>
+        <div x-show="openTab === 2">
+                            <table class="">
+                    <thead class="bg-slate-200 border-b">
+                        <tr>
+                            <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Clothing</th>
+                            <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">For Base</th>
+                            <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Creator</th>
+                            <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Cost (USD)</th>
+                            <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Link(s)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"></td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
         <div x-show="openTab === 3">Tab #3</div>
     </div>
 </div>
-
-   <div class='box3 shadow-816' id="ownedAssets">
-            <div class="w3-tab black">
-                <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'infoPage')">Info</button>
-                <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'bases')">Avatar Bases</button>
-                <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'clothing')">Clothing</button>
-                <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'ftassets')">Facetracking Packages</button>
-                <button class="w3-tab-item w3-button tablink" onclick="opentab(event, 'otherassets')">Other Assets</button>
-            </div>
-            <div id="bases" class="box shadow-816 infotab">
-              
-            </div>
-
-            <div id="clothing" class="box shadow-816 infotab">
-                <table>
-                    <tr>
-                        <th>Clothing Asset:</th>
-                        <th>For Base:</th>
-                        <th>Creator:</th>
-                        <th>Cost: (Gumroad/Jinxxy)</th>
-                        <th>Links:</th>
-                    </tr>
-                </table>
-            </div>
-
-            <div id="ftassets" class="box shadow-816 infotab">
-                <table>
-                    <tr>
-                        <th>For Base:</th>
-                        <th>Creator:</th>
-                        <th>Cost: (Gumroad/Jinxxy)</th>
-                        <th>Links:</th>
-                    </tr>
-                </table>
-            </div>
-
-            <div id="otherassets" class="box shadow-816 infotab">
-                <table>
-                    <tr>
-                        <th>Asset:</th>
-                        <th>Type:</th>
-                        <th>Creator:</th>
-                        <th>Cost: (Gumroad/Jinxxy)</th>
-                        <th>Links:</th>
-                    </tr>
-                </table>
-            </div>
-        </div>
-
-        <script type="text/javascript">
-            function opentab(evt, pagename) {
-                var i, x, tablinks;
-                x = document.getElementsByClassName("infotab");
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";
-                }
-                tablinks = document.getElementsByClassName("tablink");
-
-                for (i = 0; i < x.length; i++) {
-                    tablinks[i].className = tablinks[i].className.replace(" light-purple3", "");
-                }
-                document.getElementById(pagename).style.display = "block";
-                evt.currentTarget.className += " light-purple3";
-            }
-        </script>
-  
 </main>
   <footer>
     &copy; Website built from scratch in 2025.
@@ -299,5 +253,6 @@
 </body>
 </html> 
 <!--
-Tab Credit:
+Tab Credit: 
+Table Credit: https://tailwindflex.com/@prashant/tailwind-css-responsive-table
 ->

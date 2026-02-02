@@ -6,14 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aubrey's Workshop</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 	-->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Coming+Soon|Rancho|Architects+Daughter|Shadows+Into+Light+Two|Delius&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/commissions.css">
     <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
   </head>
   <body>
@@ -187,28 +185,27 @@
               <h2 class="text-xl leading-6 font-bold text-slate-900">Some of the bases I own</h2>
             </div>
             <div class="pt-6 pb-8 px-6">
-              <ul class="list" id="avatarBases">
+              <ul class="flex flex-col gap-2" id="avatarBases">
                 <!-- I'm leaving little spaces and "placeholders" for bases I want. If you're looking at the source of this site for secrets, Hi! Hope you're having a good day. -->
-                <li class="list-group-item">The Awtter</li>
-                <li class="list-group-item">Darbi Otter</li>
-                <li class="list-group-item">Da'Vali</li>
-                <li class="list-group-item">Meelo's Dutch Angel Dragon</li>
-                <li class="list-group-item">Female Kiggy</li>
-                <li class="list-group-item">Fox Moth</li>
-                <li class="list-group-item">Alber's Hyenid</li>
-                <li class="list-group-item">KitFox</li>
-                <li class="list-group-item">Kita'Vali</li>
-                <li class="list-group-item">Callista's Manokit</li>
-                <li class="list-group-item">Male Kiggy</li>
-                <li class="list-group-item">Nardoragon (Expanded)</li>
-                <!-- NKD Protogen -->
-                <li class="list-group-item">Novabeast</li>
-                <li class="list-group-item">Rex</li>
-                <li class="list-group-item">Sergodal</li>
-                <li class="list-group-item">Wickerbeast King</li>
-                <li class="list-group-item">Winterpaw's Chibi Mini Canine</li>
-                <li class="list-group-item">Winterpaw's Fem Canine (Complete)</li>
-                <li class="list-group-item">Winterpaw's Male Canine</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">The Awtter</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Darbi Otter</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Da'Vali</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Meelo's Dutch Angel Dragon</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Female Kiggy</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Fox Moth</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Alber's Hyenid</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">KitFox</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Kita'Vali</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Callista's Manokit</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Male Kiggy</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Nardoragon (Expanded)</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Novabeast</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Rex</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Wickerbeast King</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Winterpaw's Chibi Mini Canine</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Winterpaw's Feline</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Winterpaw's Fem Canine (Complete)</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Winterpaw's Male Canine</li>
                 <li>
                   <hr>
                 </li>
@@ -295,13 +292,37 @@
         });
       </script>
     </main>
-    <footer> &copy; Aubrey Jane / Foxintale - Made from scratch in Tailwind CSS without a builder or AI.</footer>
-  </body>
+<footer >
+    <div class="max-w-screen-lg px-4 sm:px-6 text-gray-800 sm:grid md:grid-cols-3 sm:grid-cols-2 mx-auto">
+        <div class="p-5">
+            <h3 class="font-bold text-xl text-indigo-600">Fox's Digital Creations</h3>
+        </div>
+        <div class="p-5">
+            <div class="text-sm uppercase text-indigo-600 font-bold">Commissions</div>
+            <a class="my-3 block" href="/#">Main comms page<span class="text-teal-600 text-xs p-1"></span></a>
+            <a class="my-3 block" href="/#">Owned assets<span class="text-teal-600 text-xs p-1"></span></a>
+            <a nclass="my-3 block" href="/#">Terms of Service</a>
+        </div>
+        <div class="p-5">
+            <div class="text-sm uppercase text-indigo-600 font-bold">Rest of the site</div>
+            <a class="my-3 block" href="/#">About Me<span class="text-teal-600 text-xs p-1"></span></a>
+            <a class="my-3 block" href="/#">Character Database<span class="text-teal-600 text-xs p-1"></span></a>
+            <a class="my-3 block" href="/#">Other projects<span class="text-teal-600 text-xs p-1"></span></a>
+        </div>
+    </div>
+</div>
+
+    <div class="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col max-w-screen-lg items-center">
+        <div class="my-5">&copy; Aubrey Jane / Foxintale - Made in Tailwind CSS without a builder or AI.</div>
+    </div>
+  </footer>
 </html>
 <!--
 Credits:
-	For the nav bar: https://tailwindflex.com/@piet-vriend/responsive-navbar
+	Nav bar: https://tailwindflex.com/@piet-vriend/responsive-navbar
 	The pricing template for the three main cards: https://tailwindflex.com/@laurits/3-pricing-cards
 	For the carosel of images:   https://tailwindflex.com/@fagundo/image-carousel
-  The lighjtbox was from various sources around the interne, not just one or two.
+  Lists: https://tailwindflex.com/@sophia-baker/basic-list
+  Footer: https://tailwindflex.com/@mr-robot/basic-footer
+  The lightbox was from various sources around the interne, not just one or two.
 -->
