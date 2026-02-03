@@ -7,14 +7,11 @@
     <title>Aubrey's Workshop</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-	-->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Coming+Soon|Rancho|Architects+Daughter|Shadows+Into+Light+Two|Delius&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
   </head>
-  <body>
+  <body class="h-screen w-screen bg-gradient-to-l from-gray-200 via-fuchsia-200 to-stone-100">
     <nav class="bg-white border-gray-200 py-2.5 dark:bg-pink-100">
       <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
         <a href="#" class="flex items-center">
@@ -40,79 +37,79 @@
     <!--
 	<div class="topnav" id="Topnav"><a href="index.html">Home</a><a href="commissions.html"  class="active">VR Chat Avatar Comms</a><a href="about.html">About Me</a></div>
 -->
-    <main>
-      <div class="row align-items" id="aboutMe">
-        <h1 id="commissionStatus">Commission Status: <b>CLOSED</b>
-        </h1>
+    <main class="px-10">
+        <h1 class="bg-red-300 rounded-lg border px-3 py-3 text-center">Commission Status: <b>CLOSED</b> </h1>
         <!-- I decided on two slots to start off with. -->
-      </div>
       <div class="sm:flex sm:flex-col sm:align-center">
         <div class="mt-10 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-5 sm:gap-6 md:max-w-10xl md:mx-auto xl:grid-cols-5">
           <div class="border border-black rounded-lg shadow-sm divide-y divide-slate-200">
             <div class="p-2">
-              <h2 class="text-xl leading-6 font-bold text-slate-900">Pricing</h2>
+              <h2 class="text-xl leading-6 font-bold text-center">Pricing</h2>
             </div>
-            <div class="pt-6 pb-10 px-6">
+            <div class="pt-6 pb-10 px-4">
               <ul>
-                <li class="list-group-item">
+                <li class="px-2 py-1 text-md">
                   <b>All prices assume I have the asset already, otherwise you add the cost of the asset for both of us.</b>
                 </li>
-                <li class="list-group-item">Price ranges depend on the complexity of the project and task. This will be assessed once contacted</li>
-                <hr>
-                <li class="list-group-item">
-                  <h4>Recolours:</h4>
-                </li>
-                <li class="list-group-item">These would be of an existing pattern I already have, or of the "stock".</li>
-                <li class="list-group-item">Flat colours: $5 - 10</li>
-                <li class="list-group-item">Detailed (Fur brushed or fur): $20-30.</li>
-                <!-- Fun fact: On Brianna's substance project alone, it uses 14 Gb of VRAM and 24 GB of RAM. This is why I had to buy a 4060 Ti 16 Gb. The previous 8 Gb 3060 wasn't having it.-->
-                <li></li>
-                <li class="list-group-item" data-toggle="tooltip">
+                <li class="px-2 py-1 text-md">Price ranges depend on the complexity of the project and task. This will be assessed once contacted</li>
+
+                <section class="w-full mt-2 rounded-lg border px-2 py-1 text-md bg-gray-100">
+                  <li class="text-xl">
+                    <h4>Recolours:</h4>
+                  </li>
+                  <li class="px-2 py-1 text-md">These would be of an existing pattern I already have, or of the "stock".</li>
+                  <li class="px-2 py-1 text-md">Flat colours: $5 - 10</li>
+                  <li class="px-2 py-1 text-md">Detailed (Fur brushed or fur): $20-30.</li>
+                  <!-- Fun fact: On Brianna's substance project alone, it uses 14 Gb of VRAM and 24 GB of RAM. This is why I had to buy a 4060 Ti 16 Gb. The previous 8 Gb 3060 wasn't having it.-->
+                </section>
+
+                <section class="w-full mt-2 rounded-lg border px-2 py-1 text-md bg-gray-100">
                   <h4>Retextures:</h4>
-                </li>
-                <li class="list-group-item">Avatar retexture (Flat colours): $20 - 40</li>
-                <li class="list-group-item" data-placement="left" title="Depends on how painful the model is to work with in substance painter.">Avatar retexture (Fur brushed or detailed): $40 - 120</li>
-                <li class="list-group-item">Clothing retexture: $10 - 30</li>
-                <li class="list-group-item">Prop retextures: $5 - 20</li>
-                <li>
-                  <hr>
-                </li>
-                <li class="list-group-item">
-                  <h4>Unity Related:</h4>
-                </li>
-                <li class="list-group-item">PC only project setup*: $10 - 20</li>
-                <li class="list-group-item">Quest only project setup*: $10</li>
-                <li class="list-group-item">PC + Quest project setup*: $20 - 30</li>
-                <li class="list-group-item" data-toggle="tooltip" data-placement="left" title="Like a Nardo's gesture lock. Different from VRC's inbuilt lock where you can still move your fingers.">Gesture lock / toggle: Free.</li>
-                <li class="list-group-item"> GoGo Loco setup: Free</li>
-                <!-- It's not hard to set this up with or without VRCFury. I've done both.-->
-                <li class="list-group-item">( Below here depends on the complexity of the project itself. )</li>
-                <li class="list-group-item" data-toggle="tooltip" data-placement="left" title="Depends if I need to add a new blendshape in Blender for it to work or not. If the blendshape exists, then it's free.">Headpat and boop reactions: Free - $5</li>
-                <li class="list-group-item" data-toggle="tooltip" data-placement="left" title="Only extra if there are an awful lot of textures. Like over 100 textures which would happen with a lot of assets.">Texture optimization: Free - $5. </li>
-                <li class="list-group-item" data-toggle="tooltip" data-placement="left" title="For flight worlds to keep your physics from flying everywhere when travelling Mach f*ck.">Physics toggle - Free</li>
-                <li>
-                  <hr>
-                </li>
-                <li class="list-group-item">
-                  <h4>Blender related</h4>
-                </li>
-                <li class="list-group-item">Specular reflective eyes (If not already present): $10.</li>
-                <li class="list-group-item">Clothing refits: $20 - 40</li>
-                <li class="list-group-item">Custom (from scratch) clothing: Inquire for pricing. Starts at $20.</li>
-                <li>
-                  <hr>
-                </li>
-                <li class="list-group-item">
-                  <h4>Other Content:</h4>
-                </li>
-                <li class="list-group-item">Custom (spliced) Avatars: Price varies.</li>
-                <li class="list-group-item">VRM Conversion: $30</li>
+                  <li class="px-2 py-1 text-md">Avatar retexture (Flat colours): $20 - 40</li>
+                  <li class="px-2 py-1 text-md" data-placement="left" title="Depends on how painful the model is to work with in substance painter.">Avatar retexture (Fur brushed or detailed): $40 - 120</li>
+                  <li class="px-2 py-1 text-md">Clothing retexture: $10 - 30</li>
+                  <li class="px-2 py-1 text-md">Prop retextures: $5 - 20</li>
+                </section>
+
+                <section class="w-full mt-2 rounded-lg border px-2 py-1 text-md bg-gray-100">
+                  <li class="text-lg">
+                    <h4>Unity Related:</h4>
+                  </li>
+                  <li class="px-2 py-1 text-md">PC only project setup*: $10 - 20</li>
+                  <li class="px-2 py-1 text-md">Quest only project setup*: $10</li>
+                  <li class="px-2 py-1 text-md">PC + Quest project setup*: $20 - 30</li>
+                  <li class="px-2 py-1 text-md"> GoGo Loco setup: Free</li>
+                  <!-- It's not hard to set this up with or without VRCFury. I've done both.-->
+                   <li><br></li>
+                  <li class="px-2 py-1 text-md">( Below here depends on the complexity of the project itself. )</li>
+                  <li class="px-2 py-1 text-md" data-toggle="tooltip" data-placement="left" title="Like a Nardo's gesture lock. Different from VRC's inbuilt lock where you can still move your fingers.">Gesture lock / toggle: Free.</li>
+                  <li class="px-2 py-1 text-md" data-toggle="tooltip" data-placement="left" title="Depends if I need to add a new blendshape in Blender for it to work or not. If the blendshape exists, then it's free.">Headpat and boop reactions: Free - $5</li>
+                  <li class="px-2 py-1 text-md" data-toggle="tooltip" data-placement="left" title="Only extra if there are an awful lot of textures. Like over 100 textures which would happen with a lot of assets.">Texture optimization: Free - $5. </li>
+                  <li class="px-2 py-1 text-md" data-toggle="tooltip" data-placement="left" title="For flight worlds to keep your physics from flying everywhere when travelling Mach f*ck.">Physics toggle - Free</li>
+                </section>
+
+                <section class="w-full mt-2 rounded-lg border px-2 py-1 text-md bg-gray-100">
+                  <li class="text-lg">
+                    <h4>Blender Related:</h4>
+                  </li>
+                  <li class="px-2 py-1 text-md">Specular reflective eyes (If not already present): $10.</li>
+                  <li class="px-2 py-1 text-md">Clothing refits: $20 - 40</li>
+                  <li class="px-2 py-1 text-md">Custom (from scratch) clothing: Inquire for pricing. Starts at $50.</li>
+                </section>
+
+                <section class="w-full mt-2 rounded-lg border px-2 py-1 text-md bg-gray-100">
+                  <li class="text-lg">
+                    <h4>Other Services:</h4>
+                  </li>
+                  <li class="px-2 py-1 text-md">Custom (spliced) Avatars: Price varies.</li>
+                  <li class="px-2 py-1 text-md">VRM Conversion: $30</li>
+                </section>
               </ul>
             </div>
           </div>
           <div class="border border-black rounded-lg shadow-sm divide-y divide-slate-200 col-span-3">
             <div>
-              <h1 class="text-xl leading-6 font-bold text-slate-900">Work showcase</h1>
+              <h1 class="text-xl leading-6 font-bold text-slate-900 text-center">Work showcase</h1>
             </div>
             <div class="pt-6 pb-8 px-6">
               <div id="default-carousel" class="relative rounded-lg overflow-hidden shadow-lg" data-carousel="static">
@@ -179,10 +176,13 @@
                 </button>
               </div>
             </div>
+            <section>
+              <!-- The diviuding point to put anything important right after the photo, that is not in the photos zzone itself. This will probqably be full size links tot he TOS and owned assets. -->
+            </section>
           </div>
           <div class="border border-black rounded-lg shadow-sm divide-y divide-slate-200 md:max-w-10xl">
             <div class="p-6">
-              <h2 class="text-xl leading-6 font-bold text-slate-900">Some of the bases I own</h2>
+              <h2 class="text-xl leading-6 text-center">Some of the bases I own</h2>
             </div>
             <div class="pt-6 pb-8 px-6">
               <ul class="flex flex-col gap-2" id="avatarBases">
@@ -323,6 +323,7 @@ Credits:
 	Nav bar: https://tailwindflex.com/@piet-vriend/responsive-navbar
 	The pricing template for the three main cards: https://tailwindflex.com/@laurits/3-pricing-cards
 	For the carosel of images:   https://tailwindflex.com/@fagundo/image-carousel
+  Nested List (pricing): https://tailwindflex.com/@noob_dev/nested-list
   Lists: https://tailwindflex.com/@sophia-baker/basic-list
   Footer: https://tailwindflex.com/@mr-robot/basic-footer
   The lightbox was from various sources around the interne, not just one or two.
