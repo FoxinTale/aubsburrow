@@ -7,14 +7,23 @@
     <title>Aubrey's Workshop</title>
     <link rel="stylesheet" href="css/normalize.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Coming+Soon|Rancho|Architects+Daughter|Shadows+Into+Light+Two|Delius&display=swap" rel="stylesheet">
+    <style type="text/tailwindcss">
+        @theme {
+          --font-coming: "Coming Soon", ui-sans-serif, system-ui;
+          --font-architect: "Architects Daughter", ui-sans-serif, system-ui;
+          --font-indie: "Indie Flower", ui-sans-serif, system-ui;
+          --font-shadows: "Shadows Into Light Two", ui-sans-serif, system-ui;
+          --font-delius: "Delius", ui-sans-serif, system-ui;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Coming+Soon|Architects+Daughter|Shadows+Into+Light+Two|Delius&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
   </head>
-  <body class="h-screen w-screen bg-gradient-to-l from-gray-200 via-fuchsia-200 to-stone-100">
+  <body class="h-screen w-screen bg-gradient-to-b from-slate-50 via-pink-50 to-slate-50">
     <nav class="bg-purple-300 border-gray-200 py-2.5">
       <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
-        <a href="#" class="flex items-center">
-          <span class="self-center text-xl font-semibold whitespace-nowrap ">Aubrey's Workshop</span>
+        <a href="index.html" class="flex items-center">
+          <span class="self-center text-2xl font-semibold whitespace-nowrap font-indie">Aubrey's Workshop</span>
         </a>
         <div class="flex items-center lg:order-2">
           <div class="hidden mt-2 mr-4 sm:inline-block">
@@ -33,30 +42,47 @@
         <div class="items-center justify-between w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
           <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
             <li>
-              <a href="#" class="block py-2 pl-3 pr-4 text-white hover:text-black lg:p-0">VR Chat Avatar Comissions</a>
+              <button id="commsDropdownButton" data-dropdown-toggle="commsDropdown" data-dropdown-placement="bottom-start" type="button"
+                  class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-white hover:text-black lg:p-0">
+                      <p class="font-indie text-xl">VR Chat Avatar Commissions</p>
+                <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7" />
+                </svg>
+              </button>    
+              <div id="commsDropdown" class="z-50 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-56" aria-labelledby="commsDropdownButton">
+                <ul class="py-2 text-sm text-gray-700">
+                  <li>
+                    <a href="commissions.html" class="block px-4 py-2 hover:bg-gray-100">Main page</a>
+                  </li>
+                  <li>
+                    <a href="contentlist.html" class="block px-4 py-2 hover:bg-gray-100">Owned assets</a>
+                  </li>
+                  <li>
+                    <a href="commstos.html" class="block px-4 py-2 hover:bg-gray-100">Terms of service</a>
+                  </li>
+                </ul>
+            </div>
+          </li>
             </li>
             <li>
-              <a href="#" class="block py-2 pl-3 pr-4 hover:text-white lg:p-0">Other Projects</a>
+              <a href="#" class="block py-2 pl-3 pr-4 hover:text-white lg:p-0 font-indie text-xl">Other Projects</a>
             </li>
             <li>
-              <a href="#" class="block py-2 pl-3 pr-4 hover:text-white lg:p-0">About Me</a>
+              <a href="about.html" class="block py-2 pl-3 pr-4 hover:text-white lg:p-0 font-indie text-xl">About Me</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <!--
-	<div class="topnav" id="Topnav"><a href="index.html">Home</a><a href="commissions.html"  class="active">VR Chat Avatar Comms</a><a href="about.html">About Me</a></div>
--->
     <main class="px-10">
-      <h1 class="bg-red-300 rounded-lg border px-3 py-3 text-center">Commission Status: <b>CLOSED</b>
+      <h1 class="bg-red-300 rounded-lg border px-3 py-3 text-center font-architect">Commission Status: <b>CLOSED</b>
       </h1>
       <!-- I decided on two slots to start off with. -->
       <div class="sm:flex sm:flex-col sm:align-center">
-        <div class="mt-10 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-5 sm:gap-6 md:max-w-10xl md:mx-auto xl:grid-cols-5">
+        <div class="mt-10 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-5 sm:gap-6 md:max-w-10xl md:mx-auto xl:grid-cols">
           <div class="border border-black rounded-lg shadow-sm divide-y divide-slate-200">
             <div class="p-2">
-              <h2 class="text-xl leading-6 font-bold text-center">Pricing</h2>
+              <h2 class="text-xl leading-6 font-bold text-center font-coming">Pricing</h2>
             </div>
             <div class="pt-6 pb-10 px-4">
               <ul>
@@ -66,7 +92,7 @@
                 <li class="px-2 py-1 text-md">Price ranges depend on the complexity of the project and task. This will be assessed once contacted</li>
                 <section class="w-full mt-2 rounded-lg border px-1 py-1 text-md bg-gray-100">
                   <li class="text-xl">
-                    <h4>Recolours:</h4>
+                    <h4 class="font-shadows">Recolours:</h4>
                   </li>
                   <li class="px-2 py-1 text-md">These would be of an existing pattern I already have, or of the "stock".</li>
                   <li class="px-2 py-1 text-md">Flat colours: $5 - 10</li>
@@ -74,7 +100,7 @@
                   <!-- Fun fact: On Brianna's substance project alone, it uses 14 Gb of VRAM and 24 GB of RAM. This is why I had to buy a 4060 Ti 16 Gb. The previous 8 Gb 3060 wasn't having it.-->
                 </section>
                 <section class="w-full mt-2 rounded-lg border px-2 py-1 text-md bg-gray-100">
-                  <h4>Retextures:</h4>
+                  <h4 class="font-shadows">Retextures:</h4>
                   <li class="px-2 py-1 text-md">Avatar retexture (Flat colours): $20 - 40</li>
                   <li class="px-2 py-1 text-md" data-placement="left" title="Depends on how painful the model is to work with in substance painter.">Avatar retexture (Fur brushed or detailed): $40 - 120</li>
                   <li class="px-2 py-1 text-md">Clothing retexture: $10 - 30</li>
@@ -82,7 +108,7 @@
                 </section>
                 <section class="w-full mt-2 rounded-lg border px-2 py-1 text-md bg-gray-100">
                   <li class="text-lg">
-                    <h4>Unity Related:</h4>
+                    <h4 class="font-shadows">Unity Related:</h4>
                   </li>
                   <li class="px-2 py-1 text-md">PC only project setup*: $10 - 20</li>
                   <li class="px-2 py-1 text-md">Quest only project setup*: $10</li>
@@ -100,7 +126,7 @@
                 </section>
                 <section class="w-full mt-2 rounded-lg border px-2 py-1 text-md bg-gray-100">
                   <li class="text-lg">
-                    <h4>Blender Related:</h4>
+                    <h4 class="font-shadows">Blender Related:</h4>
                   </li>
                   <li class="px-2 py-1 text-md">Specular reflective eyes (If not already present): $10.</li>
                   <li class="px-2 py-1 text-md">Clothing refits: $20 - 40</li>
@@ -108,7 +134,7 @@
                 </section>
                 <section class="w-full mt-2 rounded-lg border px-2 py-1 text-md bg-gray-100">
                   <li class="text-lg">
-                    <h4>Other Services:</h4>
+                    <h4 class="font-shadows">Other Services:</h4>
                   </li>
                   <li class="px-2 py-1 text-md">Custom (spliced) Avatars: Price varies.</li>
                   <li class="px-2 py-1 text-md">VRM Conversion: $30</li>
@@ -118,7 +144,7 @@
           </div>
           <div class="border border-black rounded-lg shadow-sm divide-y divide-slate-200 col-span-3">
             <div>
-              <h1 class="text-xl leading-6 font-bold text-slate-900 text-center">Work showcase</h1>
+              <h1 class="text-xl leading-6 font-bold text-slate-900 text-center font-coming">Work showcase</h1>
             </div>
             <div class="pt-6 pb-8 px-6">
               <div id="default-carousel" class="relative rounded-lg overflow-hidden shadow-lg" data-carousel="static">
@@ -186,12 +212,12 @@
               </div>
             </div>
             <section>
-              <!-- The diviuding point to put anything important right after the photo, that is not in the photos zzone itself. This will probqably be full size links tot he TOS and owned assets.-->
+              <!-- The dividing point to put anything important right after the photo, that is not in the photos zzone itself. This will probqably be full size links tot he TOS and owned assets.-->
             </section>
           </div>
           <div class="border border-black rounded-lg shadow-sm divide-y divide-slate-200 md:max-w-10xl">
             <div class="p-6">
-              <h2 class="text-xl leading-6 text-center">Some of the bases I own</h2>
+              <h2 class="text-xl leading-6 text-center font-coming">Some of the bases I own</h2>
             </div>
             <div class="pt-6 pb-8 px-6">
               <ul class="flex flex-col gap-2" id="avatarBases">
@@ -218,7 +244,7 @@
                 <li>
                   <hr>
                 </li>
-                <li class="list-group-item">See spreadsheet for complete list, pricies and links.</li>
+                <li class="w-full px-2 py-1 text-md"><a href="contentlist.html">See the full list of assets by clicking here</a></li>
               </ul>
             </div>
           </div>
@@ -280,24 +306,25 @@
             }
           });
         });
+
       </script>
     </main>
     <footer>
       <div class="max-w-screen-lg px-4 sm:px-6 text-gray-800 sm:grid md:grid-cols-3 sm:grid-cols-2 mx-auto">
         <div class="p-5">
-          <h3 class="font-bold text-xl text-indigo-600">Fox's Digital Creations</h3>
+          <h3 class="font-bold text-xl text-indigo-600 font-indie">Fox's Digital Creations</h3>
         </div>
         <div class="p-5">
-          <div class="text-sm uppercase text-indigo-600 font-bold">Commissions</div>
-          <a class="my-3 block" href="/#">Main comms page <span class="text-teal-600 text-xs p-1"></span>
+          <div class="text-md uppercase text-indigo-600 font-bold font-indie">Commissions</div>
+          <a class="my-3 block" href="commissions.html">Main comms page <span class="text-teal-600 text-xs p-1"></span>
           </a>
-          <a class="my-3 block" href="/#">Owned assets <span class="text-teal-600 text-xs p-1"></span>
+          <a class="my-3 block" href="contentlist.html">Owned assets <span class="text-teal-600 text-xs p-1"></span>
           </a>
-          <a nclass="my-3 block" href="/#">Terms of Service</a>
+          <a nclass="my-3 block" href="commstos.html">Terms of Service</a>
         </div>
         <div class="p-5">
-          <div class="text-sm uppercase text-indigo-600 font-bold">Rest of the site</div>
-          <a class="my-3 block" href="/#">About Me <span class="text-teal-600 text-xs p-1"></span>
+          <div class="text-md uppercase text-indigo-600 font-bold font-indie">Rest of the site</div>
+          <a class="my-3 block" href="about.html">About Me <span class="text-teal-600 text-xs p-1"></span>
           </a>
           <a class="my-3 block" href="/#">Character Database <span class="text-teal-600 text-xs p-1"></span>
           </a>

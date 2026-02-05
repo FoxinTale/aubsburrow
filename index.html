@@ -7,50 +7,263 @@
   <title>Aubrey's Workshop</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+          --font-coming: "Coming Soon", ui-sans-serif, system-ui;
+          --font-architect: "Architects Daughter", ui-sans-serif, system-ui;
+          --font-indie: "Indie Flower", ui-sans-serif, system-ui;
+          --font-shadows: "Shadows Into Light Two", ui-sans-serif, system-ui;
+          --font-delius: "Delius", ui-sans-serif, system-ui;
+        }
+    </style>
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Coming+Soon|Rancho|Architects+Daughter|Shadows+Into+Light+Two|Delius&display=swap" rel="stylesheet">
 </head>
   
 <body>
-  <div class="topnav  border-b border-slate-800 sticky top-0 z-20 backdrop-blur-sm">
-    <div class="max-w-6xl mx-auto flex items-center gap-4 px-4 py-3">
-      <div class="font-semibold tracking-tight text-black">
-        Aubrey's Workshop
+    <nav class="bg-purple-300 border-gray-200 py-2.5">
+      <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
+        <a href="#" class="flex items-center">
+          <span class="self-center text-2xl font-semibold whitespace-nowrap font-indie text-white hover:text-black">Aubrey's Workshop</span>
+        </a>
+        <div class="flex items-center lg:order-2">
+          <div class="hidden mt-2 mr-4 sm:inline-block">
+            <span></span>
+          </div>
+          <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="true">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+            </svg>
+            <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="items-center justify-between w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+          <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+            <li>
+              <a href="#" class="block py-2 pl-3 pr-4 hover:text-white lg:p-0 font-indie text-xl">VR Chat Avatar Comissions</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 pl-3 pr-4 hover:text-white lg:p-0 font-indie text-xl">Other Projects</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 pl-3 pr-4 hover:text-white lg:p-0 font-indie text-xl">About Me</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <nav class="ml-auto flex flex-wrap items-center gap-2 text-sm">
-        <a href="index.html" class="active px-3 py-1 rounded-md bg-slate-800 text-white hover:bg-slate-700 transition">
-          Home
-        </a>
-        <!--
-        <a href="soundinghelp.html" class="px-3 py-1 rounded-md text-white hover:bg-slate-800 hover:text-slate-100 transition">
-          How to read a sounding
-        </a>
-        -->
-        <a href="commissions.html" class="px-3 py-1 rounded-md text-white hover:bg-slate-800 hover:text-slate-100 transition">
-          VR Chat Avatar Comms
-        </a>
-        <a href="about.html" class="px-3 py-1 rounded-md text-white hover:bg-slate-800 hover:text-slate-100 transition">
-          About Me
-        </a>
-      </nav>
+    </nav>
+  <main>
+<div
+  class="w-screen h-full overflow-y-scroll bg-gray-900 bg-no-repeat bg-cover">
+
+  <div class="xl:w-[70%] lg:w-[80%] md:w-[90%] mx-auto relative md:px-0 px-4 md:my-10 bg-[#111111] rounded-xl overflow-hidden">
+    <div class="w-full h-full flex flex-col items-center">
+      <!-- Hero Section -->
+      <section class="w-full relative flex items-center flex-col lg:flex-row" id="about">
+        <img class="lg:w-1/2 " src="https://images.unsplash.com/photo-1513258496099-48168024aec0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxMnx8cHJvZ3JhbW1lcnxlbnwwfDB8fHwxNzY0MDU1MTU4fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="port image">
+        <!--  -->
+        <div
+          class="lg:absolute lg:left-[40%] md:left-[30%] lg:w-[55%] lg:p-12 sm:p-6 p-4 flex flex-col justify-center bg-[#222222]">
+          <p class="text-gray-400 text-sm mb-1">Virtual Asset Creator & Developer</p>
+          <h2 class="text-white md:text-5xl text-2xl font-bold mb-4">Aubrey Woodhouse (@foxintale)</h2>
+          <p class="text-gray-400 text-md mb-6">
+            I am a dedicated and innovative FullStack Developer passionate about creating impactful
+            digital experiences. With a keen eye for detail and a commitment to excellence, I specialize in designing
+            and developing solutions that combine creativity with functionality.
+          </p>
+        </div>
+      </section>
+
+      <!-- What I DO -->
+      <section class="md:pt-20 pt-10 md:px-20 px-2" id="what-i-do">
+        <!-- Heading -->
+        <div class="w-fit">
+          <h2 class="text-2xl font-bold text-white pb-2">What I Do</h2>
+          <div class="rounded-t-full border-[1px] border-gray-500 overflow-hidden">
+            <hr class="border-[3px] border-green-400 w-[20%]" />
+          </div>
+        </div>
+
+        <div class="w-full grid lg:grid-cols-2 grid-cols-1 gap-4 mt-8">
+          <!-- 1 -->
+          <div class="flex sm:gap-4 gap-1">
+            <span class="">
+              <ion-icon class="sm:text-5xl text-3xl text-green-400" name="code-slash-outline"></ion-icon>
+              </span>
+
+            <div class="flex flex-col gap-2">
+              <h3 class="text-xl font-semibold text-white">Web Development</h3>
+              <p class="text-gray-400">
+                Crafting responsive and intuitive websites tailored to your unique needs using cutting-edge
+                technologies.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="flex sm:gap-4 gap-2">
+            <span>
+              <ion-icon class="sm:text-5xl text-3xl text-green-400" name="browsers-outline"></ion-icon>
+            </span>
+
+            <div class="flex flex-col gap-2">
+              <h3 class="text-xl font-semibold text-white">UI/UX Design</h3>
+              <p class="text-gray-400">Creating visually appealing and user-centric designs that enhance user
+                experiences and engagement.</p>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="flex sm:gap-4 gap-2">
+            <span>
+              <ion-icon class="sm:text-5xl text-3xl text-green-400" name="archive-outline"></ion-icon>
+            </span>
+
+            <div class="flex flex-col gap-2">
+              <h3 class="text-xl font-semibold text-white">Custom CMS Solutions</h3>
+              <p class="text-gray-400">Building reusable and efficient CMS APIs to simplify website management and
+                scalability.</p>
+            </div>
+          </div>
+          <!-- 4 -->
+          <div class="flex sm:gap-4 gap-2">
+            <span>
+              <ion-icon class="sm:text-5xl text-3xl text-green-400" name="phone-portrait-outline"></ion-icon>
+            </span>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-xl font-semibold text-white">Mobile App Dev't</h3>
+              <p class="text-gray-400">Designing and developing user-friendly mobile applications for iOS and Android,
+                ensuring seamless performance and user satisfaction.</p>
+            </div>
+          </div>
+          <!-- 5 -->
+          <div class="flex sm:gap-4 gap-2">
+            <span>
+              <ion-icon class="sm:text-5xl text-3xl text-green-400" name="bag-check-outline"></ion-icon>
+            </span>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-xl font-semibold text-white">E-commerce Development</h3>
+              <p class="text-gray-400">Creating robust platforms to elevate your online business presence.</p>
+            </div>
+          </div>
+          <!-- 6 -->
+          <div class="flex sm:gap-4 gap-2">
+            <span>
+              <ion-icon class="sm:text-5xl text-3xl text-green-400" name="swap-horizontal-outline"></ion-icon>
+            </span>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-xl font-semibold text-white">API Integration</h3>
+              <p class="text-gray-400">Seamlessly connecting systems to enhance functionality and performance.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- Fun Facts -->
+      <section class="w-full sm:py-20 py-10 md:px-20 px-6" id="fun-facts">
+        <!-- Heading -->
+        <div class="w-fit sm:mb-20 mb-10">
+          <h2 class="text-2xl font-bold text-white pb-2">Fun Facts</h2>
+          <div class="rounded-t-full border-[1px] border-gray-500 overflow-hidden">
+            <hr class="border-[3px] border-green-400 w-[80%]" />
+          </div>
+        </div>
+
+        <div class="w-full grid gap-2 lg:grid-cols-4 sm:grid-cols-2 grid-cols-1">
+          <!-- 1 -->
+          <div
+            class="flex flex-col gap-4 items-center justify-center border border-2 border-gray-400 p-6 rounded-lg text-gray-400">
+            <span class="text-4xl">😁</span>
+            <h3 class="sm:text-xl text-md font-bold text-gray-200">Happy Clients</h3>
+            <span class="sm:text-5xl text-3xl font-semibold">400<sup>+</sup></span>
+          </div>
+          <!-- 2 -->
+          <div
+            class="flex flex-col gap-4 items-center justify-center border border-2 border-gray-400 p-6 rounded-lg text-gray-400">
+            <span class="text-4xl">😬</span>
+            <h3 class="sm:text-xl text-md font-bold text-gray-200">Working Hours</h3>
+            <span class="sm:text-5xl text-3xl font-semibold">7,845<sup>+</sup></span>
+          </div>
+          <!-- 3 -->
+          <div
+            class="flex flex-col gap-4 items-center justify-center border border-2 border-gray-400 p-6 rounded-lg text-gray-400">
+            <span class="text-4xl">👋</span>
+            <h3 class="sm:text-xl text-md font-bold text-gray-200">Certification</h3>
+            <span class="sm:text-5xl text-3xl font-semibold">77<sup>+</sup></span>
+          </div>
+          <!-- 4 -->
+          <div
+            class="flex flex-col gap-4 items-center justify-center border border-2 border-gray-400 p-6 rounded-lg text-gray-400">
+            <span class="text-4xl">😲</span>
+            <h3 class="sm:text-xl text-md  font-bold text-gray-200">Portfolios</h3>
+            <span class="sm:text-5xl text-3xl font-semibold">65<sup>+</sup></span>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
+</div>
+<!--  -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-<main>
-  <h1></h1>
-    <section class="max-w-4xl mx-auto px-4 pt-12 pb-8">
-      <p>
-        Welcome to the home of my projects. Past, present and future. 
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMenuButton = document.getElementById('close-menu-button');
 
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+      mobileMenu.querySelector('div').classList.remove('-translate-x-full');
+    });
 
-      </p>
-    </section>
-</main>
+    closeMenuButton.addEventListener('click', () => {
+      mobileMenu.querySelector('div').classList.add('-translate-x-full');
+      setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+    });
+
+    mobileMenu.addEventListener('click', (e) => {
+      if (e.target === mobileMenu) {
+        closeMenuButton.click();
+      }
+    });
+</script>
+  </main>
   <footer>
-    &copy; Website built from scratch in 2025.
+          <div class="max-w-screen-lg px-4 sm:px-6 text-gray-800 sm:grid md:grid-cols-3 sm:grid-cols-2 mx-auto">
+        <div class="p-5">
+          <h3 class="font-bold text-xl text-indigo-600 font-indie">Fox's Workshop</h3>
+        </div>
+        <div class="p-5">
+          <div class="text-md uppercase text-indigo-600 font-bold font-indie">Commissions</div>
+          <a class="my-3 block" href="/#">Main comms page <span class="text-teal-600 text-xs p-1"></span>
+          </a>
+          <a class="my-3 block" href="/#">Owned assets <span class="text-teal-600 text-xs p-1"></span>
+          </a>
+          <a nclass="my-3 block" href="/#">Terms of Service</a>
+        </div>
+        <div class="p-5">
+          <div class="text-md uppercase text-indigo-600 font-bold font-indie">Rest of the site</div>
+          <a class="my-3 block" href="/#">About Me <span class="text-teal-600 text-xs p-1"></span>
+          </a>
+          <a class="my-3 block" href="/#">Character Database <span class="text-teal-600 text-xs p-1"></span>
+          </a>
+          <a class="my-3 block" href="/#">Other projects <span class="text-teal-600 text-xs p-1"></span>
+          </a>
+        </div>
+      </div>
+      <div class="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col max-w-screen-lg items-center">
+        <div class="my-5">&copy; Aubrey Jane / Foxintale - Made in Tailwind CSS without a builder or AI.</div>
+      </div>
   </footer>
 </body>
-</html> 
+</html>
+<!--
+  Landing Page: https://tailwindflex.com/@sammytg7/single-page-portfolio-2
+-->
