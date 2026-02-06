@@ -1,352 +1,430 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<link rel="icon" type="image/png" href="images/flower.ico">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Aubrey's Workshop</title>
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/common.css">
+  <head>
+    <link rel="icon" type="image/png" href="images/flower.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fox's Workshop</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss"> @theme {
+          --font-coming: "Coming Soon", ui-sans-serif, system-ui;
+          --font-architect: "Architects Daughter", ui-sans-serif, system-ui;
+          --font-indie: "Indie Flower", ui-sans-serif, system-ui;
+          --font-shadows: "Shadows Into Light Two", ui-sans-serif, system-ui;
+          --font-delius: "Delius", ui-sans-serif, system-ui;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Coming+Soon|Architects+Daughter|Shadows+Into+Light+Two|Delius&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+  </head>
+  <body class="h-screen w-screen bg-gradient-to-r from-rose-100 via-purple-100 to-sky-100">
+    <nav class="border-gray-200 py-2.5">
+      <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
+        <a href="index.html" class="flex items-center">
+          <span class="self-center text-2xl font-semibold whitespace-nowrap font-indie">Fox's Workshop</span>
+        </a>
+        <div class="flex items-center lg:order-2">
+          <div class="hidden mt-2 mr-4 sm:inline-block">
+            <span></span>
+          </div>
+          <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="true">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+            </svg>
+            <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="items-center justify-between w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+          <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+            <li>
+              <button id="commsDropdownButton" data-dropdown-toggle="commsDropdown" data-dropdown-placement="bottom-start" type="button" class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-slate-400 hover:text-black lg:p-0">
+                <p class="font-indie text-xl">VR Chat Avatar Commissions</p>
+                <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7" />
+                </svg>
+              </button>
+              <div id="commsDropdown" class="z-50 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-56" aria-labelledby="commsDropdownButton">
+                <ul class="py-2 text-sm text-gray-700">
+                  <li>
+                    <a href="commissions.html" class="block px-4 py-2 hover:bg-gray-100">Main page</a>
+                  </li>
+                  <li>
+                    <a href="contentlist.html" class="block px-4 py-2 hover:bg-gray-100">Owned assets</a>
+                  </li>
+                  <li>
+                    <a href="commstos.html" class="block px-4 py-2 hover:bg-gray-100">Terms of service</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            </li>
+            <li>
+              <a href="#" class="block py-2 pl-3 pr-4 hover:text-white lg:p-0 font-indie text-xl">Other Projects</a>
+            </li>
+            <li>
+              <a href="about.html" class="block py-2 pl-3 pr-4 hover:text-white lg:p-0 font-indie text-xl">About Me</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="px-10">
+      <h1 class="bg-red-300 rounded-lg border px-3 py-3 text-center font-indie">Commission Status: <b>CLOSED</b>
+      </h1>
+      <!-- I decided on two slots to start off with. -->
+      <div class="sm:flex sm:flex-col sm:align-center">
+        <div class="mt-10 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-5 sm:gap-6 md:max-w-10xl md:mx-auto xl:grid-cols">
+          <div class="border border-black rounded-lg shadow-sm divide-y divide-slate-200">
+            <div class="p-2">
+              <h2 class="text-xl leading-6 font-bold text-center font-delius">Pricing</h2>
+            </div>
+            <div class="pt-6 pb-10 px-4">
+              <ul>
+                <li class="px-2 py-1 text-md">
+                  <b>All prices assume I have the asset already, otherwise you add the cost of the asset for both of us.</b>
+                </li>
+                <li class="px-2 py-1 text-md">Price ranges depend on the complexity of the project and task. This will be assessed once contacted</li>
+                <section class="w-full mt-2 rounded-lg border px-1 py-1 text-md bg-gray-100">
+                  <li class="text-xl">
+                    <h4 class="font-indie font-bold">Recolours:</h4>
+                  </li>
+                  <li class="px-2 py-1 text-md">These would be of an existing pattern I already have, or of the "stock".</li>
+                  <li class="px-2 py-1 text-md">Flat colours: $5 - 10</li>
+                  <li class="px-2 py-1 text-md">Detailed (Fur brushed or fur): $20-30.</li>
+                  <!-- Fun fact: On Brianna's substance project alone, it uses 14 Gb of VRAM and 24 GB of RAM. This is why I had to buy a 4060 Ti 16 Gb. The previous 8 Gb 3060 wasn't having it.-->
+                </section>
+                <section class="w-full mt-2 rounded-lg border px-2 py-1 text-md bg-gray-100">
+                  <li class="text-xl">
+                    <h4 class="font-indie font-bold">Retextures:</h4>
+                  </li>
+                  <li class="px-2 py-1 text-md">Avatar retexture (Flat colours): $20 - 40</li>
+                  <li class="px-2 py-1 text-md" data-placement="left" title="Depends on how painful the model is to work with in substance painter.">Avatar retexture (Fur brushed or detailed): $40 - 120</li>
+                  <li class="px-2 py-1 text-md">Clothing retexture: $10 - 30</li>
+                  <li class="px-2 py-1 text-md">Prop retextures: $5 - 20</li>
+                </section>
+                <section class="w-full mt-2 rounded-lg border px-2 py-1 text-md bg-gray-100">
+                  <li class="text-xl">
+                    <h4 class="font-indie font-bold">Unity Related:</h4>
+                  </li>
+                  <li class="px-2 py-1 text-md">PC only project setup*: $10 - 20</li>
+                  <li class="px-2 py-1 text-md">Quest only project setup*: $10</li>
+                  <li class="px-2 py-1 text-md">PC + Quest project setup*: $20 - 30</li>
+                  <li class="px-2 py-1 text-md"> GoGo Loco setup: Free</li>
+                  <!-- It's not hard to set this up with or without VRCFury. I've done both.-->
+                  <li>
+                    <br>
+                  </li>
+                  <li class="px-2 py-1 text-md">( Below here depends on the complexity of the project itself. )</li>
+                  <li class="px-2 py-1 text-md" data-toggle="tooltip" data-placement="left" title="Like a Nardo's gesture lock. Different from VRC's inbuilt lock where you can still move your fingers.">Gesture lock / toggle: Free.</li>
+                  <li class="px-2 py-1 text-md" data-toggle="tooltip" data-placement="left" title="Depends if I need to add a new blendshape in Blender for it to work or not. If the blendshape exists, then it's free.">Headpat and boop reactions: Free - $5</li>
+                  <li class="px-2 py-1 text-md" data-toggle="tooltip" data-placement="left" title="Only extra if there are an awful lot of textures. Like over 100 textures which would happen with a lot of assets.">Texture optimization: Free - $5. </li>
+                  <li class="px-2 py-1 text-md" data-toggle="tooltip" data-placement="left" title="For flight worlds to keep your physics from flying everywhere when travelling Mach f*ck.">Physics toggle - Free</li>
+                </section>
+                <section class="w-full mt-2 rounded-lg border px-2 py-1 text-md bg-gray-100">
+                  <li class="text-xl">
+                    <h4 class="font-indie font-bold">Blender Related:</h4>
+                  </li>
+                  <li class="px-2 py-1 text-md">Specular reflective eyes (If not already present): $10.</li>
+                  <li class="px-2 py-1 text-md">Clothing refits: $20 - 40</li>
+                  <li class="px-2 py-1 text-md">Custom (from scratch) clothing: Inquire for pricing. Starts at $50.</li>
+                </section>
+                <section class="w-full mt-2 rounded-lg border px-2 py-1 text-md bg-gray-100">
+                  <li class="text-xl">
+                    <h4 class="font-indie font-bold">Other Services:</h4>
+                  </li>
+                  <li class="px-2 py-1 text-md">Custom (spliced) Avatars: Price varies.</li>
+                  <li class="px-2 py-1 text-md">VRM Conversion: $30</li>
+                </section>
+              </ul>
+            </div>
+          </div>
+          <div class="border border-black rounded-lg shadow-sm divide-y divide-slate-200 col-span-3">
+            <div>
+              <h1 class="text-xl leading-6 font-bold text-slate-900 text-center font-coming">Work showcase</h1>
+            </div>
+            <div class="pt-6 pb-8 px-6">
+              <div id="default-carousel" class="relative rounded-lg overflow-hidden shadow-lg" data-carousel="static">
+                <!-- Carousel wrapper -->
+                <div class="relative aspect-video" data-carousel-inner>
+                  <!-- New images start here -->
+                  <!-- Somna edition of Feyrith, because I'm really damn proud of it-->
+                  <div class="hidden duration-700 ease-in-out" data-carousel-item
+                    <a href="images\commission\FeyrithHeader.webp" class="js-lightbox">
+                      <img src="images\commission\FeyrithHeader.webp" class="object-cover w-full h-full">
+                    </a>
+                    <div class="hidden md:block absolute inset-x-0 bottom-0 bg-black/50 p-4">
+                      <p class="text-white text-sm md:text-base">A variant of my fox moth made for Furality Somna</p>
+                    </div>
+                  </div>
+                  <!-- Kaylie - Fennec Fox -->
+                  <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <div class="hidden md:block absolute inset-x-0 top-0 p-4">
+                      <p class="text-2xl font-indie">Kaylie</p>
+                    </div>
+                    <a href="images\commission\Kaylie.webp" class="js-lightbox">
+                      <img src="images\commission\Kaylie.webp" class="object-cover w-full h-full">
+                    </a>
+                    <div class="hidden md:block absolute inset-x-0 bottom-0 bg-black/50 p-4">
+                      <p class="text-white text-sm md:text-base">My main avatar and fursona.</p>
+                    </div>
+                  </div>
+                  <!-- Feyrith Hawthorne - Fox Moth -->
+                  <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <div class="hidden md:block absolute inset-x-0 top-0 p-4">
+                      <p class="text-white text-lg font-indie">Feyrith Hawthorne</p>
+                    </div>
+                    <a href="images\commission\Feyrith.webp" class="js-lightbox">
+                      <img src="images\commission\Feyrith.webp" class="object-cover w-full h-full">
+                    </a>
+                    <div class="hidden md:block absolute inset-x-0 bottom-0 bg-black/50 p-4">
+                      <p class="text-white text-sm md:text-base">Darbi's Fox Moth with custom clothing I made.</p>
+                    </div>
+                  </div>
+                  <!-- Feyrith Hawthorne - Fox Moth Somna Edition-->
+                  <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <a href="images\commission\Feyrith Somna.webp" class="js-lightbox">
+                      <img src="images\commission\Feyrith Somna.webp" class="object-cover w-full h-full">
+                    </a>
+                    <div class="hidden md:block absolute inset-x-0 bottom-0 bg-black/50 p-4">
+                      <p class="text-white text-sm md:text-base">The full version of the Somna themed Fox Moth.</p>
+                    </div>
+                  </div>
+                  <!-- Deidre Deighton - Nardoragon -->
+                  <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <div class="hidden md:block absolute inset-x-0 top-0 p-4">
+                      <p class="text-white text-2xl font-indie">Deidre Deighton</p>
+                    </div>
+                    <a href="images\commission\Deidre.webp" class="js-lightbox">
+                      <img src="images\commission\Deidre.webp" class="object-cover w-full h-full">
+                    </a>
+                    <div class="hidden md:block absolute inset-x-0 bottom-0 bg-black/50 p-4">
+                      <p class="text-white text-sm md:text-base">Four-eared, long tail Nardo. Textures by me.</p>
+                    </div>
+                  </div>
+                  <!-- Palilia - Manokit (ViviFae)  -->
+                  <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <div class="hidden md:block absolute inset-x-0 top-0 p-4">
+                      <p class="text-2xl font-indie">Palilia</p>
+                    </div>
+                    <a href="images\commission\PaliliaVivi.webp" class="js-lightbox">
+                      <img src="images\commission\PaliliaVivi.webp" class="object-cover w-full h-full">
+                    </a>
+                    <div class="hidden md:block absolute inset-x-0 bottom-0 bg-black/50 p-4">
+                      <p class="text-white text-sm md:text-base">Vivi Manokit with custom clothing and textures.</p>
+                    </div>
+                  </div>
+                  <!-- Brianna Avari - Hyenid-->
+                  <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <div class="hidden md:block absolute inset-x-0 top-0 p-4">
+                      <p class="text-white text-2xl font-indie">Brianna Avari</p>
+                    </div>
+                    <a href="images\commission\Brianna.webp" class="js-lightbox">
+                      <img src="images\commission\Brianna.webp" class="object-cover w-full h-full">
+                    </a>
+                    <div class="hidden md:block absolute inset-x-0 bottom-0 bg-black/50 p-4">
+                      <p class="text-white text-sm md:text-base">Alber's Hyenid. Realistic fur retexture on the base pattern.</p>
+                    </div>
+                  </div>
+                  <!-- Rylee Kasunii - Kitavali -->
+                  <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <div class="hidden md:block absolute inset-x-0 top-0 p-4">
+                      <p class="text-white text-xl font-indie">Rylee Kasunii</p>
+                    </div>
+                    <a href="images\commission\Rylee.webp" class="js-lightbox">
+                      <img src="images\commission\Rylee.webp" class="object-cover w-full h-full">
+                    </a>
+                    <div class="hidden md:block absolute inset-x-0 bottom-0 bg-black/50 p-4">
+                      <p class="text-white text-sm md:text-base">Female kitavali. Clothing re-fitted, and custom textures.</p>
+                    </div>
+                  </div>
+                  <!-- End of images. Don't delete the following div.-->
+                </div>
+                <!-- Slider controls -->
+                <button type="button" class="flex absolute top-1/2 left-3 z-40 items-center justify-center w-10 h-10 bg-gray-200/50 rounded-full hover:bg-gray-300 focus:outline-none transition" data-carousel-prev>
+                  <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                  </svg>
+                </button>
+                <button type="button" class="flex absolute top-1/2 right-3 z-40 items-center justify-center w-10 h-10 bg-gray-200/50 rounded-full hover:bg-gray-300 focus:outline-none transition" data-carousel-next>
+                  <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <section class="py-6 leading-7 text-gray-900 sm:py-12 md:py-16">
+              <div class="px-4 mx-auto sm:px-6 md:px-6 lg:px-0 max-w-7xl">
+                <div class="flex flex-col items-center leading-7 text-center text-gray-900 border-0 border-gray-200">
+                  <h2 class="box-border m-0 text-3xl font-semibold leading-tight tracking-tight text-black border-solid sm:text-4xl md:text-5xl"> Related links </h2>
+                </div>
+                <div class="grid grid-cols-1 gap-4 mt-4 leading-7 text-gray-900 sm:mt-6 sm:gap-6 md:mt-8 md:gap-0 lg:grid-cols-3">
+                  <div class="relative z-10 flex flex-col items-center max-w-md p-4 mx-auto my-0  lg:-mr-3 sm:my-0 sm:p-6 md:my-8 md:p-8">
+                    <h3 class="m-0 text-2xl font-semibold leading-tight tracking-tight sm:text-3xl md:text-3xl font-indie">
+                      <a href="contentlist.html">Full list of assets</a>
+                    </h3>
+                    <div class="flex mt-6 leading-7">
+                      <p class="m-0 text-center"> See every asset I own before asking if I have something. </p>
+                    </div>
+                  </div>
+                  <div class="relative z-20 flex flex-col items-center max-w-md p-4 mx-auto my-0sm:p-6 md:px-8 md:py-16">
+                    <h3 class="m-0 text-2xl font-semibold leading-tight tracking-tight sm:text-3xl md:text-3xl font-indie">
+                      <a href="commstos.html">Terms of service</a>
+                    </h3>
+                    <div class="flex mt-6 leading-7">
+                      <p class="m-0 text-center"> Please read before commissioning me. </p>
+                    </div>
+                  </div>
+                  <div class="relative z-10 flex flex-col items-center max-w-md p-4 mx-auto my-0 lg:-ml-3 sm:my-0 sm:p-6 md:my-8 md:p-8">
+                    <h3 class="m-0 text-2xl font-semibold leading-tight tracking-tight sm:text-3xl md:text-3xl font-indie">
+                      <a href="characters.html">About the characters</a>
+                    </h3>
+                    <div class="flex mt-6 leading-7">
+                      <p class="m-0 text-center"> If you'd like to learn more about the characters pictured above. </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- The dividing point to put anything important right after the photo, that is not in the photos zzone itself. This will probqably be full size links tot he TOS and owned assets.-->
+            </section>
+          </div>
+          <div class="border border-black rounded-lg shadow-sm divide-y divide-slate-200 md:max-w-10xl">
+            <div class="p-6">
+              <h2 class="text-xl leading-6 text-center font-coming">Some of the bases I own</h2>
+            </div>
+            <div class="pt-6 pb-8 px-6">
+              <ul class="flex flex-col gap-2" id="avatarBases">
+                <!-- I'm leaving little spaces and "placeholders" for bases I want. If you're looking at the source of this site for secrets, Hi! Hope you're having a good day. -->
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">The Awtter</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Darbi Otter</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Da'Vali</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Meelo's Dutch Angel Dragon</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Female Kiggy</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Fox Moth</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Alber's Hyenid</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">KitFox</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Kita'Vali</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Callista's Manokit</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Male Kiggy</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Nardoragon (Expanded)</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Novabeast</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Rex</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Wickerbeast King</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Winterpaw's Chibi Mini Canine</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Winterpaw's Feline</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Winterpaw's Fem Canine (Complete)</li>
+                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Winterpaw's Male Canine</li>
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-	<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Coming+Soon|Rancho|Architects+Daughter|Shadows+Into+Light+Two|Delius&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/commissions.css">
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/70">
+        <div class="relative w-full max-w-5xl">
+          <!-- Close button -->
+          <button id="lightbox-close" class="absolute -top-3 -right-3 w-10 h-10 rounded-full bg-white text-black shadow flex items-center justify-center hover:bg-gray-200" aria-label="Close"> ✕ </button>
+          <!-- Image container -->
+          <div class="bg-black rounded-lg overflow-hidden shadow-lg">
+            <img id="lightbox-img" src="" alt="Full size preview" class="w-full h-auto max-h-[85vh] object-contain">
+          </div>
+          <!-- Optional: “open original” link -->
+          <div class="mt-3 text-center">
+            <a id="lightbox-open" href="#" target="_blank" class="text-white/90 underline hover:text-white"> Open full image in new tab </a>
+          </div>
+        </div>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const lightbox = document.getElementById("lightbox");
+          const img = document.getElementById("lightbox-img");
+          const closeBtn = document.getElementById("lightbox-close");
+          const openLink = document.getElementById("lightbox-open");
 
-</head>
-  
-<body>
-	<div class="topnav" id="Topnav">
-		<a href="index.html">Home</a>
-<!--		<a href="soundinghelp.html">How to read a sounding</a> -->
-		<a href="commissions.html"  class="active">VR Chat Avatar Comms</a>
-		<a href="about.html">About Me</a>
-	</div>
+          function openLightbox(src) {
+            img.src = src;
+            openLink.href = src;
+            lightbox.classList.remove("hidden");
+            lightbox.classList.add("flex");
+            document.body.classList.add("overflow-hidden"); // prevent background scroll
+          }
 
-	<main>
-		<div class="container-fluid">
-			<div class="row align-items" id="aboutMe">
-				<p>
-					I'm Aubrey, or Foxintale in most places. I've been doing avatar work in Unity and Blender since about mid 2022, and I've done texture work since mid 2020 across four different games. (MSFS 2020, Subnautica, Skyrim SE and VRC)<br>
-					While I specialise in realistic looking fur textures, I can also do flat textures, custom clothing textures, and some solid objects such as props, or world items.
-				</p>
-				<p>
-					General quotes are free, and the timeframe I aim for is two to four weeks.  
-					<br />
-					I <b>DO NOT</b> do "Last minute" / "I have an event tomorrow" rush jobs. That is way too stressful. Find someone else.
-				</p>
-				<p>Finally, if the site looks wonky kindly turn your device into landscape mode. I coded it myself so it isn't perfect. I'm still working on mobile compatibility in portrait mode..</p>
-				<br>
-				<h1 id="commissionStatus">Commission Status: <b>CLOSED</b></h1>
-				<!-- I decided on two slots to start off with. -->
-			</div>
-			<hr>
-			<div class="row align-items">
-				<div class="col-3 box">
-					<h2>Pricing</h2>
-					<ul class="list-group" id="avatarPricing">
-						<li class="list-group-item"><b>All prices assume I have the asset already, otherwise you add the cost of the asset for both of us.</b></li>
-						<li class="list-group-item">Price ranges depend on the complexity of the project and task. This will be assessed once contacted</li>
-						<hr>
-						<li class="list-group-item"><h4>Recolours:</h4></li>
-						<li class="list-group-item">These would be of an existing pattern I already have, or of the "stock".</li>
-						<li class="list-group-item">Flat colours: $5 - 10</li>
-						<li class="list-group-item">Detailed (Fur brushed or fur): $20-30.</li>
-						<li></li>
-						<li class="list-group-item" data-toggle="tooltip"><h4>Retextures:</h4></li>
-						<li class="list-group-item">Avatar retexture (Flat colours): $20 - 40</li>
-						<li class="list-group-item" data-placement="left" title="Depends on how painful the model is to work with in substance painter.">Avatar retexture (Fur brushed or detailed): $40 - 120</li>
-						<li class="list-group-item">Clothing retexture: $10 - 30</li>
-						<li class="list-group-item">Prop retextures: $5 - 20</li>
-						<li></li>
-						<li class="list-group-item"><h4>Unity Related:</h4></li>
-						<li class="list-group-item">PC only project setup*: $10 - 20</li>
-						<li class="list-group-item">Quest only project setup*: $10</li>
-						<li class="list-group-item">PC + Quest project setup*: $20 - 30</li>
-						<li class="list-group-item">Simple on/off toggles: Free.</li>
-						<li class="list-group-item" data-toggle="tooltip" data-placement="left" title="Like a Nardo's gesture lock. Different from VRC's inbuilt lock where you can still move your fingers.">Gesture lock / toggle: Free.</li>
-						<li class="list-group-item"> GoGo Loco setup: Free</li> <!-- It's not hard to set this up with or without VRCFury. I've done both.-->
-						<li class="list-group-item">( Below here depends on the complexity of the project itself. )</li>
-						<li class="list-group-item" data-toggle="tooltip" data-placement="left" title="Depends if I need to add a new blendshape in Blender for it to work or not. If the blendshape exists, then it's free.">Headpat and boop reactions: Free - $5</li>
-						<li class="list-group-item" data-toggle="tooltip" data-placement="left" title="Only extra if there are an awful lot of textures. Like over 100 textures which would happen with a lot of assets.">Texture optimization: Free - $5. </li>
-						<li class="list-group-item" data-toggle="tooltip" data-placement="left" title="For flight worlds to keep your physics from flying everywhere when travelling Mach f*ck.">Physics toggle - Free</li>
-		
-						<li></li>
-						<li class="list-group-item"><h4>Blender related</h4></li>
-						<li class="list-group-item">Custom blendshapes: Price varies.</li>
-						<li class="list-group-item">Specular reflective eyes (If not already present. PC Only.): $10.</li>
-						<li class="list-group-item">Clothing refits: $20 - 40</li>
-						<li class="list-group-item">Custom (from scratch) clothing: Inquire for pricing. Starts at $20.</li>  
-
-						<li></li>
-						<li class="list-group-item"><h4>Other Content:</h4></li>
-						<li class="list-group-item">Custom (spliced) Avatars: Price varies.</li>
-						<li class="list-group-item">PC optimisation to not be "very poor" ranked: Varies depending on project complexity, but starting is $20</li>
-						<li class="list-group-item">Quest optimisation: $20</li>
-						<li class="list-group-item" data-toggle="tooltip" data-placement="left" title="Features and clothing will be cut and it may look like hot garbage, because Quest can't handle shit.">Quest optimisation so Questies can see something that isn't a fallback: See above for pricing.</li>
-					</ul>
-				</div>
-				<div class="col-7 box">
-					<h3>Showcase of my work on previous avatars.</h3>
-					<div id="carouselExample" class="carousel slide carousel-fade">
-						<div class="carousel-inner">
-							<div class="carousel-item active">
-								<a href="images\commission\Kaylie V2.png"><img src="images\commission\Thumb\Kaylie V2.png" class="d-block w-100"></a>
-								<div class="carousel-caption d-none d-md-block">
-									<p style="color:black; background-color: rgba(255, 255, 255, 0.75);">My main avatar, with custom assets I made.</p>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<a href="images\commission\Kaylie V1.png"><img src="images\commission\Thumb\Kaylie V1.png" class="d-block w-100"></a>
-								<div class="carousel-caption d-none d-md-block">
-									<p style="color:black; background-color: rgba(255, 255, 255, 0.75);">An older version of my main avatar.</p>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<a href="images\commission\Fox Girl.png"><img src="images\commission\Thumb\Fox Girl.png" class="d-block w-100"></a>
-								<div class="carousel-caption d-none d-md-block">
-									<p style="color:black; background-color: rgba(255, 255, 255, 0.75);">The original iteration of the main avatar before I became Fennec. This is the second one I ever textured.</p>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<a href="images\commission\PaliliaVivi.png"><img src="images\commission\Thumb\PaliliaVivi.png" class="d-block w-100"></a>
-								<div class="carousel-caption d-none d-md-block">
-									<p style="color:black; background-color: rgba(255, 255, 255, 0.75);">Manokit on a different base. I made and textured the clothing from scratch. <br> Shirt decal by <a href="https://sandypaws.shop/" target="_blank">@ssquig.</a></p>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<a href="images\commission\Aileen.png"><img src="images\commission\Thumb\Aileen.png" class="d-block w-100"></a>
-								<div class="carousel-caption d-none d-md-block">
-									<p style="color:black; background-color: rgba(255, 255, 255, 0.75);">An Alicorn OC. Her clothing is refit, and her tail + hair are custom rigged.</p>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<a href="images\commission\Feyrith.png"><img src="images\commission\Thumb\Feyrith.png" class="d-block w-100"></a>
-								<div class="carousel-caption d-none d-md-block">
-									<p style="color:black; background-color: rgba(255, 255, 255, 0.75);">Darbi's Fox Moth with clothing that I, again made from scratch.</p>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<a href="images\commission\Palilia.png"><img src="images\commission\Thumb\Palilia.png" class="d-block w-100"></a>
-								<div class="carousel-caption d-none d-md-block">
-									<p style="color:black; background-color: rgba(255, 255, 255, 0.75);">A Manokit!</p>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<a href="images\commission\Keo.png"><img src="images\commission\Thumb\Keo.png" class="d-block w-100"></a>
-								<div class="carousel-caption d-none d-md-block">
-									<p style="color:black; background-color: rgba(255, 255, 255, 0.75);">A Manokit I did for a good friend. Not my character.</p>
-								</div>
-							</div>
-							<!--
-							<div class="carousel-item">
-								<a href="images\commission\Brianna.png"><img src="images\commission\Thumb\Brianna.png" class="d-block w-100"></a>
-								<div class="carousel-caption d-none d-md-block">
-									<p style="color:black; background-color: rgba(255, 255, 255, 0.75);">A basic spotted Yeen. Really, all she's gopt is realistic fur on top of the default colours.</p>
-								</div>
-							</div>
-							-->
-							<div class="carousel-item">
-								<a href="images\commission\Imber.png"><img src="images\commission\Thumb\Imber.png" class="d-block w-100"></a>
-								<div class="carousel-caption d-none d-md-block">
-									<p style="color:black; background-color: rgba(255, 255, 255, 0.75);">Imber the Dutchie. This one took about a day and a half total.</p>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<a href="images\commission\Kiyomi.png"><img src="images\commission\Thumb\Kiyomi.png" class="d-block w-100"></a>
-								<div class="carousel-caption d-none d-md-block">
-									<p style="color:black; background-color: rgba(255, 255, 255, 0.75);">My original sona. No custom textures here but an experiment in splicing.</p>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<a href="images\commission\Deiedre - Reg.png"><img src="images\commission\Thumb\Deiedre - Reg.png" class="d-block w-100"></a>
-								<div class="carousel-caption d-none d-md-block">
-									<p style="color:black; background-color: rgba(255, 255, 255, 0.75);">My Nardo, Dedrie.</p>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<a href="images\commission\Toxy V1.png"><img src="images\commission\Thumb\Toxy V1.png" class="d-block w-100"></a>
-								<div class="carousel-caption d-none d-md-block">
-									<p style="color:black; background-color: rgba(255, 255, 255, 0.75);">A commission for a friend I did some time ago.</p>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<a href="images\commission\Toxy V2.png"><img src="images\commission\Thumb\Toxy V2.png" class="d-block w-100"></a>
-								<div class="carousel-caption d-none d-md-block">
-									<p style="color:black; background-color: rgba(255, 255, 255, 0.75);">I went back and re-made the previous commission.</p>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<a href="images\commission\Abigail V1.png"><img src="images\commission\Thumb\Abigail V1.png" class="d-block w-100"></a>
-								<div class="carousel-caption d-none d-md-block">
-									<p style="color:black; background-color: rgba(255, 255, 255, 0.75);">A retexture of a female Asriel, and an OC, Abby. </p>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<a href="images\commission\Abigail V2.png"><img src="images\commission\Thumb\Abigail V2.png" class="d-block w-100"></a>
-								<div class="carousel-caption d-none d-md-block">
-									<p style="color:black; background-color: rgba(255, 255, 255, 0.75);">Second iteration of Abby on the Leafygote base, with refitted (and re-textured) clothing. </p>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<a href="images\commission\Rylee - Davali.png"><img src="images\commission\Thumb\Rylee - Davali.png" class="d-block w-100"></a>
-								<div class="carousel-caption d-none d-md-block">
-									<p style="color:black; background-color: rgba(255, 255, 255, 0.75);">A Davali, also an OC. Rylee.</p>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<a href="images\commission\Rylee - Davali Clothes.png"><img src="images\commission\Thumb\Rylee - Davali Clothes.png" class="d-block w-100"></a>
-								<div class="carousel-caption d-none d-md-block" ">
-									<p style="color:black; background-color: rgba(255, 255, 255, 0.75);">Rylee the Davali, but with clothes I textured.</p>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<a href="images\commission\Rylee.png"><img src="images\commission\Thumb\Rylee.png" class="d-block w-100"></a>
-								<div class="carousel-caption d-none d-md-block">
-									<p style="color:black; background-color: rgba(255, 255, 255, 0.75);">Rylee as a Kita'Vali.</p>
-								</div>
-							</div>
-							<!--
-							<div class="carousel-item">
-								<a href="images\commission\Kurena.png"><img src="images\commission\Thumb\Kurena.png" class="d-block w-100"></a>
-								<div class="carousel-caption d-none d-md-block">
-									<p style="color:black; background-color: rgba(255, 255, 255, 0.75);">The first avatar I ever textured. The base's name is "Kurena" and was found on Booth.</i></p>
-								</div>
-							</div>
-						-->
-						</div>
-						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Previous</span>
-						</button>
-						<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Next</span>
-						</button>
-					</div>
-					<br>
-					<p>The world used for making these images is "The Avatar Studio" by avatown. I have added the gradient backgrounds and text in Gimp afterwards. You can click or tap on each image to see the full size. <br>
-					<br> I'm sorry if you want to see an un-watermarked image, I don't want my work stolen by scammers and claimed as theirs.</p>
-					<br>
-					<p>
-						<a href="https://docs.google.com/spreadsheets/d/1Xi-YpiZhyFjVeHaZCqWroPuteiBx_NbRpOqhWnpCWG0/edit?usp=sharing" target="_blank">Here is a list</a> of all the bases, clothing and assets that I own. <br>
-						Instead of asking "Do you have x?" if it's not on the spreadsheet, I don't have it. <br>
-						This is divided into sheets for each category found at the bottom left area, ordered by date of purchase. 
-						<ul class="list-group">
-							<li>Bases / avatars are under "Bases"</li>
-							<li>Assets is an avatar asset,</li>
-							<li>Clothing is well...clothing</li>
-							<li>Other is anything else I felt didn't fit in the other categories. </li>
-						</ul>
-					</p>
-					<br>
-					<p></p>
-
-				</div>
-				<div class="col-2 box">
-					<ul class="list-group" id="avatarBases">
-						<li class="list-group-item"><h5>Some of the bases that I own:</h5></li>
-						<!-- I'm leaving little spaces and "placeholders" for bases I want. If you're looking at the source of this site for secrets, Hi! Hope you're having a good day. -->
-						<li class="list-group-item"><a href="https://shadethebat.gumroad.com/l/awtter" target="_blank">The Awtter</a></li>
-						<!-- Baby Nardo -->
-						<li class="list-group-item"><a href="https://darbi.gumroad.com/l/d_otter" target="_blank">Darbi Otter</a></li>
-						<li class="list-group-item"><a href="https://abiboi.gumroad.com/l/Deuzear">Deuzear</a></li>
-						<li class="list-group-item">Da'Vali</li> <!-- There's not really a link for this one that I can provide as it's on Discord. I could provide a server link but most already know what the thing looks like.-->
-						<li class="list-group-item"><a href="https://marivr.gumroad.com/l/Deira" target="_blank">Deira</a></li>
-						<li class="list-group-item"><a href="https://nicoreda.gumroad.com/l/Dergodal" target="_blank">Dergodal</a></li>
-						<li class="list-group-item"><a href="https://meelo3d.gumroad.com/l/MeeloAngelDragon">Dutch Angel Dragon (Dutchie)</a></li>
-						<li class="list-group-item"><a href="https://darbi.gumroad.com/l/femalekiggy">Female Kiggy</a></li>
-						<li class="list-group-item"><a href="https://darbi.gumroad.com/l/foxmoth" target="_blank">Fox Moth</a></li>
-						<!-- Grinlin -->
-						<li class="list-group-item"><a href="https://alber.gumroad.com/l/Hyenid" target="_blank">Hyenid</a></li>
-						<li class="list-group-item"><a href="https://wispweaver.gumroad.com/l/JerryAvali" target="_blank">Jerry Avali</a></li>
-						<li class="list-group-item"><a href="https://milofox.gumroad.com/l/KitFox" target="_blank">KitFox</a></li>
-						<li class="list-group-item"><a href="https://nicoreda.gumroad.com/l/Kobodal">Kobodal</a></li>
-						<li class="list-group-item">Kita'Vali</li> <!-- See the comment for the Davali.-->
-						<li class="list-group-item"><a href="https://callistakirin.gumroad.com/l/manokitavatar" target="_blank">Manokit</a></li>
-						<li class="list-group-item"><a href="https://callistakirin.gumroad.com/l/maelstrorca" target="_blank">Maelstrorca</a></li>
-						<li class="list-group-item"><a href="https://darbi.gumroad.com/l/malekiggy" target="_blank">Male Kiggy</li>
-						<li class="list-group-item"><a href="https://nardoiri.gumroad.com/l/Nardoragon" target="_blank">Nardoragon (Expanded)</a></li>
-						<!-- NKD Protogen -->
-						<li class="list-group-item"><a href="https://kittomatic.gumroad.com/l/Novabeast" target="_blank">Novabeast</a></li>
-						<!-- Regulus -->
-						<li class="list-group-item"><a href="https://rezilloryker.gumroad.com/l/MYutV" target="_blank">Rex</a></li>
-						<li class="list-group-item"><a href="https://nicoreda.gumroad.com/l/sergodal">Sergodal</a></li>
-						<li class="list-group-item"><a href="https://darbi.gumroad.com/l/sweethooves">Sweet Hooves</a></li>
-						<li class="list-group-item"><a href="https://irix.gumroad.com/l/DpDFe">Taidum</a></li>
-						<li class="list-group-item"><a href="https://jinapark.gumroad.com/l/JinsWickerbeast" target="_blank">Wickerbeast King</a></li>
-						<li class="list-group-item"><a href="https://juliawinterpaw.gumroad.com/l/minicanine" target="_blank">Winterpaw's Chibi Mini Canine</a></li>
-						<li class="list-group-item"><a href="https://juliawinterpaw.gumroad.com/l/vrchatcanine" target="_blank">Winterpaw's Fem Canine (Complete)</a></li>
-						<li class="list-group-item"><a href="https://juliawinterpaw.gumroad.com/l/canine" target="_blank">Winterpaw's Male Canine</a></li>
-						<li class="list-group-item">See spreadsheet for complete list.</li>
-					</ul>
-					<hr>
-					<!--
-	<ul class="list-group" id="avatarBaseWishlist">
-		<li class="list-group-item"><h5>Bases that are on my wishlist:</h5></li>
-		<li class="list-group-item"><a href="https://cookiebean.gumroad.com/l/BabyNardo" target="_blank">Baby Nardo</a></li>
-		<li class="list-group-item"><a href ="https://mdcrtv.gumroad.com/l/cottonfox" target = "_blank">Cotton Fox</a></li>
-		<li class="list-group-item"><a href="https://jzody.gumroad.com/l/grinlin" target="_blank">Grinlin</a></li>
-		<li class="list-group-item"><a href="https://nukude.gumroad.com/l/ueLiW" target="_blank">NKD Protogen</a></li>
-		<li class="list-group-item"><a href="https://gigasuke-shokai.booth.pm/items/2365403" target="_blank">Regulus</a></li>
-	</ul>
-
-	<hr>
-	Purchase of any base on the wishlish for me using a gift system means a free or reduced cost commission.
-						-->
-				</div>
-			</div>
-			<hr>
-			<div class="row align-items box">
-				<div class="col-6">
-					<h3>Commission Info:</h3>
-					<ul class="list-group" id="commInfo">
-						<li class="list-group-item">Contact me over Discord at "foxintale". Please don't just say "hi" or "hello" <a href="https://nohello.net/en/" target="_blank">I won't respond.</a> Nothing personal, it's annoying.</li> <!-- It really is annoying when you get a "hi" and literally nothing more isn't it..-->
-						<li class="list-group-item">I aim for within two to four weeks, but do not hold me to that. In addition to working a full time, second shift job in retail, I may take periodic breaks of a day or two to avoid burnout. A month is the absolute longest it will take.</li>
-						<li class="list-group-item">If you want a base re-textured that I do not have, if you purchase it for me then the commission price is halved or free depending on the cost of the base.</li> <!-- If the base is equal to or greater than the comission cost the commission is free, if it is less than the base cost then the commission is 50% off.-->
-						<li class="list-group-item">
-							Once comissioned, if you like I can livestream progress via Discord DMs if you would like.<br>
-							No charge for this, you only need to let me know that you would like this to be done.
-						</li>
-						<li class="list-group-item">If you would like something listed as free, just let me know with the initial commission and I'll do it.</li>
-						<li class="list-group-item">Unity project setups assume that we are starting from just a model, otherwise it is a flat $10 for PC + Quest.</li>
-					</ul>
-					<br>
-					<h3>Other notes:</h3>
-					<ul class="list-group">
-						<li class="list-group-item">I do avatar edits as well, and the same applies as to refits. I'm still learning. Though I'm always willing to give a go at something to see if I can do it.</li>
-						<li class="list-group-item">Custom clothing is now something I offer, however depending on the complexity of the clothing the price can vary wildly.</li>
-					</ul>
-				</div>
-
-				<div class="col-6">
-					<h3>My Terms of Service</h3>
-					<ul class="list-group" id="serviceTerms">
-						<li class="list-group-item"><b>You will need to provide proof of ownership of any non-free assets or bases you would like me to use.</b></li>
-						<li class="list-group-item">There is not a whole lot that I won't do, provided it is not against an asset or avatar's own terms of service.</li>
-						<li class="list-group-item">All base (starting) prices are final. If you request additonal feature(s) after the first payment it will be added onto the second payment.</li>
-						<li class="list-group-item"></li>
-						<li class="list-group-item">I will not spring additional costs on you without telling you, and will run it by you before doing anything.</li> <!-- Such as purchasing additional bases or components for avatar splicing.-->
-						<li class="list-group-item">I won't do heavily NSFW content, but if you have a request for that feel free to ask a lemon anyways, just know I may not be able to do it.</li> <!-- Lemon. Lemon. Lemon. Stops having any meaning if you say it enough.-->
-						<!-- It's mostly like heavily lewd stuff and questionable things I won't do. Or if the original species creator does not want them used in NSFW context like the Manokit.-->
-						<li class="list-group-item">Understand that if you ask for something I am still learning it may take longer than my usual turnaround time, <i>and</i> that results may not be as desired.</li>
-						<li class="list-group-item">If you are not happy with the result(s) please let me know and I will try my best to make it right where I can.</li>
-					</ul>
-					<br>
-					<h3>Payment:</h3>
-					<ul class="list-group" id="paymentTerms">
-						<li class="list-group-item">I take paypal for the most part, but am open to other options except CashApp. If, forwhatever reason nothing works we'll figure something out.</li>
-						<li class="list-group-item">Payment is all upfront at the start. If additional costs come afterwards due to changes made or other reasons you will be notified.</li>
-						<li class="list-group-item">Once completed, I will work with you to upload it if needed. This is no extra cost.</li>
-						<li class="list-group-item">If you choose to issue a chargeback or force one without talking to me, you will be blacklisted and shared with other creators. I will upload what I made for you to either my personal Jinxxy or make them public for anyone to use.</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</main>
-	<footer>
-		&copy; Aubrey Jane - 2025.
-	</footer>
-</body>
-</html> 
+          function closeLightbox() {
+            lightbox.classList.add("hidden");
+            lightbox.classList.remove("flex");
+            img.src = "";
+            openLink.href = "#";
+            document.body.classList.remove("overflow-hidden");
+          }
+          // Click thumbnails
+          document.querySelectorAll("a.js-lightbox").forEach((a) => {
+            a.addEventListener("click", (e) => {
+              e.preventDefault(); // stop navigating to the image
+              openLightbox(a.getAttribute("href"));
+            });
+          });
+          // Close button
+          closeBtn.addEventListener("click", closeLightbox);
+          // Click outside the image closes
+          lightbox.addEventListener("click", (e) => {
+            if (e.target === lightbox) closeLightbox();
+          });
+          // ESC closes
+          document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && !lightbox.classList.contains("hidden")) {
+              closeLightbox();
+            }
+          });
+        });
+      </script>
+    </main>
+    <footer>
+      <div class="max-w-screen-lg px-4 sm:px-6 text-gray-800 sm:grid md:grid-cols-4 sm:grid-cols-2 mx-auto">
+        <div class="p-5">
+          <h3 class="font-bold text-xl text-indigo-600 font-indie">Fox's Digital Creations</h3>
+        </div>
+        <div class="p-5">
+          <div class="text-md text-indigo-600 font-bold font-indie">Commissions</div>
+          <a class="my-3 block" href="commissions.html">Main comms page <span class="text-teal-600 text-xs p-1"></span>
+          </a>
+          <a class="my-3 block" href="contentlist.html">Owned assets <span class="text-teal-600 text-xs p-1"></span>
+          </a>
+          <a nclass="my-3 block" href="commstos.html">Terms of Service</a>
+        </div>
+        <div class="p-5">
+          <div class="text-md text-indigo-600 font-bold font-indie">Rest of the site</div>
+          <a class="my-3 block" href="about.html">About Me <span class="text-teal-600 text-xs p-1"></span>
+          </a>
+          <a class="my-3 block" href="/#">Character Database <span class="text-teal-600 text-xs p-1"></span>
+          </a>
+          <a class="my-3 block" href="/#">Other projects <span class="text-teal-600 text-xs p-1"></span>
+          </a>
+        </div>
+        <div class="p-5">
+          <div class="text-md text-indigo-600 font-bold font-indie">External Links</div>
+          <a class="my-3 block" href="about.html">Gumroad <span class="text-teal-600 text-xs p-1"></span>
+          </a>
+          <a class="my-3 block" href="/#">Jinxxy <span class="text-teal-600 text-xs p-1"></span>
+          </a>
+          <a class="my-3 block" href="/#">FurAffinity <span class="text-teal-600 text-xs p-1"></span>
+          </a>
+        </div>
+      </div>
+      <div class="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col max-w-screen-lg items-center">
+        <div class="my-5">&copy; Aubrey Jane / Foxintale - Made in Tailwind CSS without a builder or AI.</div>
+      </div>
+    </footer>
+</html>
+<!--
+Credits:
+	Nav bar: https://tailwindflex.com/@piet-vriend/responsive-navbar
+	The pricing template for the three main cards: https://tailwindflex.com/@laurits/3-pricing-cards
+	For the carosel of images:   https://tailwindflex.com/@fagundo/image-carousel
+  Nested List (pricing): https://tailwindflex.com/@noob_dev/nested-list
+  Lists: https://tailwindflex.com/@sophia-baker/basic-list
+  Footer: https://tailwindflex.com/@mr-robot/basic-footer
+  The lightbox was from various sources around the interne, not just one or two.
+-->
