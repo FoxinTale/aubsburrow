@@ -7,8 +7,7 @@
     <title>Fox's Workshop</title>
     <link rel="stylesheet" href="css/normalize.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-        @theme {
+    <style type="text/tailwindcss"> @theme {
           --font-coming: "Coming Soon", ui-sans-serif, system-ui;
           --font-architect: "Architects Daughter", ui-sans-serif, system-ui;
           --font-indie: "Indie Flower", ui-sans-serif, system-ui;
@@ -42,13 +41,12 @@
         <div class="items-center justify-between w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
           <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
             <li>
-              <button id="commsDropdownButton" data-dropdown-toggle="commsDropdown" data-dropdown-placement="bottom-start" type="button"
-                  class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-slate-400 hover:text-black lg:p-0">
-                      <p class="font-indie text-xl">VR Chat Avatar Commissions</p>
+              <button id="commsDropdownButton" data-dropdown-toggle="commsDropdown" data-dropdown-placement="bottom-start" type="button" class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-slate-400 hover:text-black lg:p-0">
+                <p class="font-indie text-xl">VR Chat Avatar Commissions</p>
                 <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7" />
                 </svg>
-              </button>    
+              </button>
               <div id="commsDropdown" class="z-50 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-56" aria-labelledby="commsDropdownButton">
                 <ul class="py-2 text-sm text-gray-700">
                   <li>
@@ -61,8 +59,8 @@
                     <a href="commstos.html" class="block px-4 py-2 hover:bg-gray-100">Terms of service</a>
                   </li>
                 </ul>
-            </div>
-          </li>
+              </div>
+            </li>
             </li>
             <li>
               <a href="#" class="block py-2 pl-3 pr-4 hover:text-white lg:p-0 font-indie text-xl">Other Projects</a>
@@ -222,7 +220,38 @@
                 </button>
               </div>
             </div>
-            <section>
+            <section class="py-6 leading-7 text-gray-900 sm:py-12 md:py-16">
+              <div class="px-4 mx-auto sm:px-6 md:px-6 lg:px-0 max-w-7xl">
+                <div class="flex flex-col items-center leading-7 text-center text-gray-900 border-0 border-gray-200">
+                  <h2 class="box-border m-0 text-3xl font-semibold leading-tight tracking-tight text-black border-solid sm:text-4xl md:text-5xl"> Related links </h2>
+                </div>
+                <div class="grid grid-cols-1 gap-4 mt-4 leading-7 text-gray-900 sm:mt-6 sm:gap-6 md:mt-8 md:gap-0 lg:grid-cols-3">
+                  <div class="relative z-10 flex flex-col items-center max-w-md p-4 mx-auto my-0  lg:-mr-3 sm:my-0 sm:p-6 md:my-8 md:p-8">
+                    <h3 class="m-0 text-2xl font-semibold leading-tight tracking-tight sm:text-3xl md:text-3xl font-indie">
+                      <a href="contentlist.html">Full list of assets</a>
+                    </h3>
+                    <div class="flex mt-6 leading-7">
+                      <p class="m-0 text-center"> See every asset I own before asking if I have something. </p>
+                    </div>
+                  </div>
+                  <div class="relative z-20 flex flex-col items-center max-w-md p-4 mx-auto my-0sm:p-6 md:px-8 md:py-16">
+                    <h3 class="m-0 text-2xl font-semibold leading-tight tracking-tight sm:text-3xl md:text-3xl font-indie">
+                      <a href="commstos.html">Terms of service</a>
+                    </h3>
+                    <div class="flex mt-6 leading-7">
+                      <p class="m-0 text-center"> Please read before commissioning me. </p>
+                    </div>
+                  </div>
+                  <div class="relative z-10 flex flex-col items-center max-w-md p-4 mx-auto my-0 lg:-ml-3 sm:my-0 sm:p-6 md:my-8 md:p-8">
+                    <h3 class="m-0 text-2xl font-semibold leading-tight tracking-tight sm:text-3xl md:text-3xl font-indie">
+                      <a href="characters.html">About the characters</a>
+                    </h3>
+                    <div class="flex mt-6 leading-7">
+                      <p class="m-0 text-center"> If you'd like to learn more about the characters pictured above. </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <!-- The dividing point to put anything important right after the photo, that is not in the photos zzone itself. This will probqably be full size links tot he TOS and owned assets.-->
             </section>
           </div>
@@ -252,10 +281,7 @@
                 <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Winterpaw's Feline</li>
                 <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Winterpaw's Fem Canine (Complete)</li>
                 <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Winterpaw's Male Canine</li>
-                <li>
-                  <hr>
-                </li>
-                <li class="w-full px-2 py-1 text-md"><a href="contentlist.html">See the full list of assets by clicking here</a></li>
+
               </ul>
             </div>
           </div>
@@ -317,7 +343,6 @@
             }
           });
         });
-
       </script>
     </main>
     <footer>
@@ -344,11 +369,11 @@
         </div>
         <div class="p-5">
           <div class="text-md text-indigo-600 font-bold font-indie">External Links</div>
-          <a class="my-3 block" href="about.html">Gumroad<span class="text-teal-600 text-xs p-1"></span>
+          <a class="my-3 block" href="about.html">Gumroad <span class="text-teal-600 text-xs p-1"></span>
           </a>
-          <a class="my-3 block" href="/#">Jinxxy<span class="text-teal-600 text-xs p-1"></span>
+          <a class="my-3 block" href="/#">Jinxxy <span class="text-teal-600 text-xs p-1"></span>
           </a>
-          <a class="my-3 block" href="/#">FurAffinity<span class="text-teal-600 text-xs p-1"></span>
+          <a class="my-3 block" href="/#">FurAffinity <span class="text-teal-600 text-xs p-1"></span>
           </a>
         </div>
       </div>

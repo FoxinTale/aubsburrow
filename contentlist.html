@@ -10,264 +10,327 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Coming+Soon|Rancho|Architects+Daughter|Shadows+Into+Light+Two|Delius&display=swap" rel="stylesheet">
     <script src="//unpkg.com/alpinejs"></script>
+    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
   </head>
-  <body>
+  <body class="h-screen w-screen bg-gradient-to-r from-rose-100 via-purple-100 to-sky-100">
+    <nav class="border-gray-200 py-2.5">
+      <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
+        <a href="index.html" class="flex items-center">
+          <span class="self-center text-2xl font-semibold whitespace-nowrap font-indie">Fox's Workshop</span>
+        </a>
+        <div class="flex items-center lg:order-2">
+          <div class="hidden mt-2 mr-4 sm:inline-block">
+            <span></span>
+          </div>
+          <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="true">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+            </svg>
+            <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="items-center justify-between w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+          <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+            <li>
+              <button id="commsDropdownButton" data-dropdown-toggle="commsDropdown" data-dropdown-placement="bottom-start" type="button" class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-slate-400 hover:text-black lg:p-0">
+                <p class="font-indie text-xl">VR Chat Avatar Commissions</p>
+                <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7" />
+                </svg>
+              </button>
+              <div id="commsDropdown" class="z-50 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-56" aria-labelledby="commsDropdownButton">
+                <ul class="py-2 text-sm text-gray-700">
+                  <li>
+                    <a href="commissions.html" class="block px-4 py-2 hover:bg-gray-100">Main page</a>
+                  </li>
+                  <li>
+                    <a href="contentlist.html" class="block px-4 py-2 hover:bg-gray-100">Owned assets</a>
+                  </li>
+                  <li>
+                    <a href="commstos.html" class="block px-4 py-2 hover:bg-gray-100">Terms of service</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="block py-2 pl-3 pr-4 hover:text-white lg:p-0 font-indie text-xl">Other Projects</a>
+            </li>
+            <li>
+              <a href="about.html" class="block py-2 pl-3 pr-4 hover:text-white lg:p-0 font-indie text-xl">About Me</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <main>
-      <h1>Assets and bases that I own</h1>
-      <p>Last updated: in progress</p>
-      <div x-data="{ 
+      <div class="relative p-4">
+        <div class="max-w-6xl mx-auto">
+          <div class="mt-3 rounded-b lg:rounded-b-none lg:rounded-r items-center">
+            <div>
+              <h1 class="text-gray-900 font-bold text-4xl">Complete list of assets I own</h1>
+              <h3 class="text-2xl font-bold my-5">Last Updated: In Progress</h3>
+              <div x-data="{ 
             openTab: 1,
             activeClasses: 'border-l border-t border-r rounded-t text-blue-700',
             inactiveClasses: 'text-blue-500 hover:text-blue-700'
         }" class="p-6">
-        <ul class="flex border-b">
-          <li @click="openTab = 1" :class="{ '-mb-px': openTab === 1 }" class="-mb-px mr-1">
-            <a href="#" :class="openTab === 1 ? activeClasses : inactiveClasses" class="bg-white inline-block py-2 px-4 font-semibold"> Bases </a>
-          </li>
-          <li @click="openTab = 2" :class="{ '-mb-px': openTab === 2 }" class="mr-1">
-            <!-- Set active class by using :class provided by Alpine -->
-            <a href="#" :class="openTab === 2 ? activeClasses : inactiveClasses" class="bg-white inline-block py-2 px-4 font-semibold"> Clothing </a>
-          </li>
-          <li @click="openTab = 3" :class="{ '-mb-px': openTab === 3 }" class="mr-1">
-            <a href="#" :class="openTab === 3 ? activeClasses : inactiveClasses" class="bg-white inline-block py-2 px-4 font-semibold"> Tab </a>
-          </li>
-        </ul>
-        <div class="w-full">
-          <div x-show="openTab === 1">
-            <div class="flex flex-col">
-              <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-                <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-                  <div class="overflow-hidden">
+                <ul class="flex border-b">
+                  <li @click="openTab = 1" :class="{ '-mb-px': openTab === 1 }" class="-mb-px mr-1">
+                    <a href="#" :class="openTab === 1 ? activeClasses : inactiveClasses" class="bg-white inline-block py-2 px-4 font-semibold"> Bases </a>
+                  </li>
+                  <li @click="openTab = 2" :class="{ '-mb-px': openTab === 2 }" class="mr-1">
+                    <!-- Set active class by using :class provided by Alpine -->
+                    <a href="#" :class="openTab === 2 ? activeClasses : inactiveClasses" class="bg-white inline-block py-2 px-4 font-semibold"> Clothing </a>
+                  </li>
+                  <li @click="openTab = 3" :class="{ '-mb-px': openTab === 3 }" class="mr-1">
+                    <a href="#" :class="openTab === 3 ? activeClasses : inactiveClasses" class="bg-white inline-block py-2 px-4 font-semibold"> Tab </a>
+                  </li>
+                </ul>
+                <div class="w-full">
+                  <div x-show="openTab === 1">
+                    <div class="flex flex-col">
+                      <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                        <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                          <div class="overflow-hidden">
+                            <table class="">
+                              <thead class="bg-slate-200 border-b">
+                                <tr>
+                                  <th scope="col" class="text-md font-medium px-6 py-4 text-left">Base Name</th>
+                                  <th scope="col" class="text-md font-medium px-6 py-4 text-left">Creator</th>
+                                  <th scope="col" class="text-md font-medium px-6 py-4 text-left">Cost (USD)</th>
+                                  <th scope="col" class="text-md font-medium px-6 py-4 text-left">Link(s)</th>
+                                  <th scope="col" class="text-md font-medium px-6 py-4 text-left">Notes</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr class="bg-white border-b">
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">Bunnic</td>
+                                  <td class="text-sm font-light px-6 py-4 whitespace-nowrap">ArkorenArt</td>
+                                  <td class="text-sm font-light px-6 py-4 whitespace-nowrap">$50</td>
+                                  <td class="text-sm font-light px-6 py-4 whitespace-nowrap">
+                                    <a href="https://jinxxy.com/ArkorenArt/Bunnic">Jinxxy</a>
+                                  </td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">NSFW Variant</td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Shawn the Shark</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Darbi</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$40</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <a href="https://darbi.gumroad.com/l/shawnshark">Gumroad</a> / <a href="https://jinxxy.com/Darbi/shawnshark">Jinxxy</a>
+                                  </td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Winterpaw Feline</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Julia Winterpaw</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$45</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <a href="https://juliawinterpaw.gumroad.com/l/Feline">Gumroad</a> / <a href="https://jinxxy.com/winterpaw/WinterpawFeline">Jinxxy</a>
+                                  </td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Extras + NSFW Addon</td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Soap Dog</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">ironicsoap</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$40</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <a href="https://ironicsoap.gumroad.com/l/SoapDogs">Gumroad</a> / <a href="https://jinxxy.com/ironicsoap/SoapDogs">Jinxxy</a>
+                                  </td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Jinxed Maelstrorca</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">dont_jinxit</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">25 (Euro) / $26</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <a href="https://dontjinxit.gumroad.com/l/JinxedMaelstrorca">Gumroad</a> / <a href="https://jinxxy.com/dont_jinxit/JinxedMaelstrorca">Jinxxy</a>
+                                  </td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Winterbold (Fluffy/Furred Kobold)</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">ItsGussy</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$45</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <a href="https://itsguusy.gumroad.com/l/the-winterbold-fluffy-furred-kobold-avatar-base-for-vrchat-by-itsguusy">Gumroad</a> / <a href="https://jinxxy.com/ItsGuusy/products/the-winterbold-fluffy-furred-kobold-avatar-base-for-vrchat-by-itsguusy">Jinxxy</a>
+                                  </td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Novabeast</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Kittomatic</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$35</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <a href="https://kittomatic.gumroad.com/l/Novabeast">Gumroad</a> / <a href="https://jinxxy.com/Kittomatic/products/novabeast">Jinxxy</a>
+                                  </td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Kirin</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Callista's VR Creations</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$40</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <a href="https://callistakirin.gumroad.com/l/kirinavatar">Gumroad</a> / <a href="https://jinxxy.com/CallistaKirin/CalliKirin">Jinxxy</a>
+                                  </td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Nicroeda Protogen (Protodal)</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Nicoreda</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$25</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <a href="https://nicoreda.gumroad.com/l/protodal">Gumroad</a> / <a href="https://jinxxy.com/Nicoreda/protodal">Jinxxy</a>
+                                  </td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Nico & JHK Mantled Beast</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Nicoreda</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$25</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <a href=""></a>
+                                  </td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Pawvali</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">TheRPGSlayer</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$30</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Ashbeast</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">TheRPGSlayer</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$35</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Furbold</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Kumo Polyworks (LorcanVR)</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$35</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">BestBoi Dutch Angel Dragon</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Zex</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Free</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Zio Red Panda</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">ziodynes098</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Free</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Zio Red Fox</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">ziodynes098</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Free</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Kyliin Redux</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Avislime</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">VRby (Furby)</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Avislime</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Male Kiggy</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Darbi</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Full Version</td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Fox Moth</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Darbi</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$40</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <a href="https://darbi.gumroad.com/l/foxmoth">Gumroad</a> / <a href="https://jinxxy.com/Darbi/foxmoth">Jinxxy</a>
+                                  </td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Royal Pony</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Vertex Keni</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Chibi Novabeast</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">TheRPGSlayer</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$30</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <a href="https://therpgslayer.gumroad.com/l/chibinova">Gumroad</a> / <a href="https://jinxxy.com/TheRPGslayer/chibinova">Jinxxy</a>
+                                  </td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Robot Fallbacks</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">dvl</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Free</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <a href="https://dvl.gumroad.com/l/RobotFallbacks">Gumroad</a>
+                                  </td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div x-show="openTab === 2">
                     <table class="">
                       <thead class="bg-slate-200 border-b">
                         <tr>
-                          <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Base Name</th>
+                          <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Clothing</th>
+                          <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">For Base</th>
                           <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Creator</th>
                           <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Cost (USD)</th>
                           <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Link(s)</th>
-                          <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Notes</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr class="border-b">
-                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Bunnic</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">ArkorenArt</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$50</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                            <a href="https://jinxxy.com/ArkorenArt/Bunnic">Jinxxy</a>
-                          </td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">NSFW Variant</td>
-                        </tr>
-                        <tr class="bg-white border-b">
-                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Shawn the Shark</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Darbi</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$40</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                            <a href="https://darbi.gumroad.com/l/shawnshark">Gumroad</a> / <a href="https://jinxxy.com/Darbi/shawnshark">Jinxxy</a>
-                          </td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                        </tr>
-                        <tr class="bg-white border-b">
-                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Winterpaw Feline</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Julia Winterpaw</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$45</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                            <a href="https://juliawinterpaw.gumroad.com/l/Feline">Gumroad</a> / <a href="https://jinxxy.com/winterpaw/WinterpawFeline">Jinxxy</a>
-                          </td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Extras + NSFW Addon</td>
-                        </tr>
-                        <tr class="bg-white border-b">
-                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Soap Dog</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">ironicsoap</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$40</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                            <a href="https://ironicsoap.gumroad.com/l/SoapDogs">Gumroad</a> / <a href="https://jinxxy.com/ironicsoap/SoapDogs">Jinxxy</a>
-                          </td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                        </tr>
-                        <tr class="bg-white border-b">
-                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Jinxed Maelstrorca</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">dont_jinxit</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">25 (Euro) / $26</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                            <a href="https://dontjinxit.gumroad.com/l/JinxedMaelstrorca">Gumroad</a> / <a href="https://jinxxy.com/dont_jinxit/JinxedMaelstrorca">Jinxxy</a>
-                          </td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                        </tr>
-                        <tr class="bg-white border-b">
-                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Winterbold (Fluffy/Furred Kobold)</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">ItsGussy</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$45</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                            <a href="https://itsguusy.gumroad.com/l/the-winterbold-fluffy-furred-kobold-avatar-base-for-vrchat-by-itsguusy">Gumroad</a> / <a href="https://jinxxy.com/ItsGuusy/products/the-winterbold-fluffy-furred-kobold-avatar-base-for-vrchat-by-itsguusy">Jinxxy</a>
-                          </td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                        </tr>
-                        <tr class="bg-white border-b">
-                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Novabeast</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Kittomatic</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$35</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                            <a href="https://kittomatic.gumroad.com/l/Novabeast">Gumroad</a> / <a href="https://jinxxy.com/Kittomatic/products/novabeast">Jinxxy</a>
-                          </td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                        </tr>
-                        <tr class="bg-white border-b">
-                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Kirin</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Callista's VR Creations</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$40</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                            <a href="https://callistakirin.gumroad.com/l/kirinavatar">Gumroad</a> / <a href="https://jinxxy.com/CallistaKirin/CalliKirin">Jinxxy</a>
-                          </td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                        </tr>
-                        <tr class="bg-white border-b">
-                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Nicroeda Protogen (Protodal)</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Nicoreda</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$25</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                            <a href="https://nicoreda.gumroad.com/l/protodal">Gumroad</a> / <a href="https://jinxxy.com/Nicoreda/protodal">Jinxxy</a>
-                          </td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                        </tr>
-                        <tr class="bg-white border-b">
-                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Nico & JHK Mantled Beast</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Nicoreda</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$25</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"><a href=""></a></td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                        </tr>
-                        <tr class="bg-white border-b">
-                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Pawvali</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">TheRPGSlayer</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$30</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                        </tr>
-                        <tr class="bg-white border-b">
-                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Ashbeast</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">TheRPGSlayer</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$35</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                        </tr>
-                        <tr class="bg-white border-b">
-                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Furbold</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Kumo Polyworks (LorcanVR)</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$35</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                        </tr>
-                        <tr class="bg-white border-b">
-                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">BestBoi Dutch Angel Dragon</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Zex</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Free</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                        </tr>
-                        <tr class="bg-white border-b">
-                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Zio Red Panda</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">ziodynes098</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Free</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                        </tr>
-                        <tr class="bg-white border-b">
-                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Zio Red Fox</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">ziodynes098</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Free</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                        </tr>
-                        <tr class="bg-white border-b">
-                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Kyliin Redux</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Avislime</td>
+                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"></td>
                           <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
                           <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
                           <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                        </tr>
-                        <tr class="bg-white border-b">
-                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">VRby (Furby)</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Avislime</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                        </tr>
-                        <tr class="bg-white border-b">
-                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Male Kiggy</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Darbi</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Full Version</td>
-                        </tr>
-                        <tr class="bg-white border-b">
-                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Fox Moth</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Darbi</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$40</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                            <a href="https://darbi.gumroad.com/l/foxmoth">Gumroad</a> / <a href="https://jinxxy.com/Darbi/foxmoth">Jinxxy</a>
-                          </td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                        </tr>
-                        <tr class="bg-white border-b">
-                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Royal Pony</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Vertex Keni</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                        </tr>
-                        <tr class="bg-white border-b">
-                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Chibi Novabeast</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">TheRPGSlayer</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$30</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                            <a href="https://therpgslayer.gumroad.com/l/chibinova">Gumroad</a> / <a href="https://jinxxy.com/TheRPGslayer/chibinova">Jinxxy</a>
-                          </td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                        </tr>
-                        <tr class="bg-white border-b">
-                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Robot Fallbacks</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">dvl</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Free</td>
-                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                            <a href="https://dvl.gumroad.com/l/RobotFallbacks">Gumroad</a>
-                          </td>
                           <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
+                  <div x-show="openTab === 3">Tab #3</div>
                 </div>
               </div>
             </div>
           </div>
-          <div x-show="openTab === 2">
-            <table class="">
-              <thead class="bg-slate-200 border-b">
-                <tr>
-                  <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Clothing</th>
-                  <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">For Base</th>
-                  <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Creator</th>
-                  <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Cost (USD)</th>
-                  <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Link(s)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="border-b">
-                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"></td>
-                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div x-show="openTab === 3">Tab #3</div>
         </div>
       </div>
     </main>
-        <footer>
+    <footer>
       <div class="max-w-screen-lg px-4 sm:px-6 text-gray-800 sm:grid md:grid-cols-3 sm:grid-cols-2 mx-auto">
         <div class="p-5">
           <h3 class="font-bold text-xl text-indigo-600 font-indie">Fox's Digital Creations</h3>

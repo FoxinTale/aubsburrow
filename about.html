@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aubrey's Workshop</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-        @theme {
+    <style type="text/tailwindcss"> @theme {
           --font-coming: "Coming Soon", ui-sans-serif, system-ui;
           --font-architect: "Architects Daughter", ui-sans-serif, system-ui;
           --font-indie: "Indie Flower", ui-sans-serif, system-ui;
@@ -18,8 +17,8 @@
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Coming+Soon|Architects+Daughter|Shadows+Into+Light+Two|Delius&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
   </head>
-  <body>
-    <nav class="bg-purple-300 border-gray-200 py-2.5">
+  <body class="h-screen w-screen bg-gradient-to-r from-rose-100 via-purple-100 to-sky-100">
+    <nav class="border-gray-200 py-2.5">
       <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
         <a href="index.html" class="flex items-center">
           <span class="self-center text-2xl font-semibold whitespace-nowrap font-indie">Fox's Workshop</span>
@@ -41,13 +40,12 @@
         <div class="items-center justify-between w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
           <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
             <li>
-              <button id="commsDropdownButton" data-dropdown-toggle="commsDropdown" data-dropdown-placement="bottom-start" type="button"
-                  class="flex items-center justify-between w-full py-2 pl-3 pr-4 hover:text-white lg:p-0">
-                      <p class="font-indie text-xl">VR Chat Avatar Commissions</p>
+              <button id="commsDropdownButton" data-dropdown-toggle="commsDropdown" data-dropdown-placement="bottom-start" type="button" class="flex items-center justify-between w-full py-2 pl-3 pr-4 hover:text-white lg:p-0">
+                <p class="font-indie text-xl">VR Chat Avatar Commissions</p>
                 <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7" />
                 </svg>
-              </button>    
+              </button>
               <div id="commsDropdown" class="z-50 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-56" aria-labelledby="commsDropdownButton">
                 <ul class="py-2 text-sm text-gray-700">
                   <li>
@@ -60,31 +58,31 @@
                     <a href="commstos.html" class="block px-4 py-2 hover:bg-gray-100">Terms of service</a>
                   </li>
                 </ul>
-            </div>
-          </li>
+              </div>
+            </li>
             </li>
             <li>
               <a href="#" class="block py-2 pl-3 pr-4 hover:text-white lg:p-0 font-indie text-xl">Other Projects</a>
             </li>
             <li>
-              <a href="about.html" class="block py-2 pl-3 pr-4 hover:text-black lg:p-0 text-white font-indie text-xl">About Me</a>
+              <a href="about.html" class="block py-2 pl-3 pr-4 hover:text-white lg:p-0 text-slate-400 font-indie text-xl">About Me</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <main>
-      <div class="py-12 bg-white">
+      <div class="py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="mt-10">
             <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-              <section class="relative shadow-xl py-2 rounded-lg border:gray-300 bg-purple-300">
+              <section class="relative shadow-xl py-2 rounded-lg border:gray-300 bg-purple-200">
                 <dt>
                   <p class="font-heading ml-16 text-lg leading-6 font-bold font-delius text-gray-700">Who am I?</p>
                 </dt>
                 <dd class="mt-2 ml-16 px-2 text-base font-coming"> I'm Aubrey, or Foxintale in most places. I am a 26 year old trans woman (she/hers) from southwestern Ohio. I like to call myself a jack of all trades, master of none who specialises in some areas. I've done all sorts of things, from texture work, to programming, 3D modelling shenanigans and more </dd>
               </section>
-              <section class="relative shadow-xl py-2 rounded-lg border:gray-300 bg-purple-300">
+              <section class="relative shadow-xl py-2 rounded-lg border:gray-300 bg-purple-200">
                 <dt>
                   <p class="font-heading ml-16 text-lg leading-6 font-bold font-delius text-gray-700"> What's your history? </p>
                 </dt>
@@ -96,13 +94,13 @@
                   </ul>
                 </dd>
               </section>
-              <section class="relative shadow-xl py-2 rounded-lg border:gray-300 bg-purple-300">
+              <section class="relative shadow-xl py-2 rounded-lg border:gray-300 bg-purple-200">
                 <dt>
                   <p class="font-heading ml-16 text-lg leading-6 font-bold text-gray-700 font-delius ">What games do you play? </p>
                 </dt>
                 <dd class="mt-2 ml-16 text-base px-2 font-coming"> In terms of games, I generally play open world non-linear RPGS like the Fallout (Except 76) series, Elder Scrolls series (Except ESO) and Starbound. I also enjoy open world sandbox games like Minecraft, Gmod and more...and modding the everloving crap out of these games til it's a miracle they run because that's just what you do with them. </dd>
               </section>
-              <section class="relative shadow-xl py-2 rounded-lg border:gray-300 bg-purple-300">
+              <section class="relative shadow-xl py-2 rounded-lg border:gray-300 bg-purple-200">
                 <dt>
                   <p class="font-heading ml-16 text-lg leading-6 font-bold text-gray-700 font-delius">Fun Facts </p>
                 </dt>
@@ -161,22 +159,50 @@
                 </svg>
               </button>
               <div id="answer3" style="display:none" class="px-4 pb-5 sm:px-6 sm:pb-6 font-coming">
-                  <ul>
-                    <li class="px-2 py-1 text-md"><b>CPU: </b>Intel i7 12700K, stock</li>
-                    <li class="px-2 py-1 text-md"><b>GPU: </b>MSI Ventus 2X RTX 4060 Ti 16 Gb</li>
-                    <li class="px-2 py-1 text-md"><b>RAM: </b>48 Gb (2x16, 2x8) Corsair G-Skill Aigis 2133MHz</li>
-                    <li class="px-2 py-1 text-md"><b>Cooler: </b>MSI MAG Coreliquid A13 360 AIO</li>
-                    <li class="px-2 py-1 text-md"><b>Motherboard: </b>MSI Pro Z790-P WiFi DDR4</li>
-                    <li class="px-2 py-1 text-md"><b>PSU: </b>MSI MAG 1250GL</li>
-                    <li class="px-2 py-1 text-md"><b>Case: </b>SilverStone SETA D1 Mid-Tower</li>
-                    <li class="px-2 py-1 text-md"><b>Headphones: </b>Beyerdynamic DT 990 Pro 250 Ohm</li>
-                    <li><br></li>
-                    <li class="px-2 py-1 text-md"><b>VR Headset: </b>Valve Index</li>
-                    <li class="px-2 py-1 text-md"><b>FBT: </b>3x Vive 3.0 trackers</li>
-                    <li class="px-2 py-1 text-md"><b>Facetracking: </b>1080p Nexigo webcam with Project Babble.</li>
-                    <li class="px-2 py-1 text-md"><b>Travel gaming: </b>Steam Deck OLED 1 Tb</li>
-                    <li class="px-2 py-1 text-md"><b>Laptop: </b>Panasonic Toughbook CF-33 Mk2 2Tb</li>
-                  </ul>
+                <ul>
+                  <li class="px-2 py-1 text-md">
+                    <b>CPU: </b>Intel i7 12700K, stock
+                  </li>
+                  <li class="px-2 py-1 text-md">
+                    <b>GPU: </b>MSI Ventus 2X RTX 4060 Ti 16 Gb
+                  </li>
+                  <li class="px-2 py-1 text-md">
+                    <b>RAM: </b>48 Gb (2x16, 2x8) Corsair G-Skill Aigis 2133MHz
+                  </li>
+                  <li class="px-2 py-1 text-md">
+                    <b>Cooler: </b>MSI MAG Coreliquid A13 360 AIO
+                  </li>
+                  <li class="px-2 py-1 text-md">
+                    <b>Motherboard: </b>MSI Pro Z790-P WiFi DDR4
+                  </li>
+                  <li class="px-2 py-1 text-md">
+                    <b>PSU: </b>MSI MAG 1250GL
+                  </li>
+                  <li class="px-2 py-1 text-md">
+                    <b>Case: </b>SilverStone SETA D1 Mid-Tower
+                  </li>
+                  <li class="px-2 py-1 text-md">
+                    <b>Headphones: </b>Beyerdynamic DT 990 Pro 250 Ohm
+                  </li>
+                  <li>
+                    <br>
+                  </li>
+                  <li class="px-2 py-1 text-md">
+                    <b>VR Headset: </b>Valve Index
+                  </li>
+                  <li class="px-2 py-1 text-md">
+                    <b>FBT: </b>3x Vive 3.0 trackers
+                  </li>
+                  <li class="px-2 py-1 text-md">
+                    <b>Facetracking: </b>1080p Nexigo webcam with Project Babble.
+                  </li>
+                  <li class="px-2 py-1 text-md">
+                    <b>Travel gaming: </b>Steam Deck OLED 1 Tb
+                  </li>
+                  <li class="px-2 py-1 text-md">
+                    <b>Laptop: </b>Panasonic Toughbook CF-33 Mk2 2Tb
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -199,7 +225,42 @@
         </script>
       </section>
     </main>
-    <footer> &copy; 2025 </footer>
+    <footer>
+      <div class="max-w-screen-lg px-4 sm:px-6 text-gray-800 sm:grid md:grid-cols-4 sm:grid-cols-2 mx-auto">
+        <div class="p-5">
+          <h3 class="font-bold text-xl text-indigo-600 font-indie">Fox's Digital Creations</h3>
+        </div>
+        <div class="p-5">
+          <div class="text-md text-indigo-600 font-bold font-indie">Commissions</div>
+          <a class="my-3 block" href="commissions.html">Main comms page <span class="text-teal-600 text-xs p-1"></span>
+          </a>
+          <a class="my-3 block" href="contentlist.html">Owned assets <span class="text-teal-600 text-xs p-1"></span>
+          </a>
+          <a nclass="my-3 block" href="commstos.html">Terms of Service</a>
+        </div>
+        <div class="p-5">
+          <div class="text-md text-indigo-600 font-bold font-indie">Rest of the site</div>
+          <a class="my-3 block" href="about.html">About Me <span class="text-teal-600 text-xs p-1"></span>
+          </a>
+          <a class="my-3 block" href="/#">Character Database <span class="text-teal-600 text-xs p-1"></span>
+          </a>
+          <a class="my-3 block" href="/#">Other projects <span class="text-teal-600 text-xs p-1"></span>
+          </a>
+        </div>
+        <div class="p-5">
+          <div class="text-md text-indigo-600 font-bold font-indie">External Links</div>
+          <a class="my-3 block" href="about.html">Gumroad <span class="text-teal-600 text-xs p-1"></span>
+          </a>
+          <a class="my-3 block" href="/#">Jinxxy <span class="text-teal-600 text-xs p-1"></span>
+          </a>
+          <a class="my-3 block" href="/#">FurAffinity <span class="text-teal-600 text-xs p-1"></span>
+          </a>
+        </div>
+      </div>
+      <div class="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col max-w-screen-lg items-center">
+        <div class="my-5">&copy; Aubrey Jane / Foxintale - Made in Tailwind CSS without a builder or AI.</div>
+      </div>
+    </footer>
   </body>
 </html>
 <!--
