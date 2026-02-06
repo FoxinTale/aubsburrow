@@ -3,8 +3,16 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Character List</title>
-        <link rel="stylesheet" href="css/charselect.css">
+        <link rel="stylesheet" href="css/w3-min.css">
     </head>
     <body>
-
+        <form class='light-purple box container' method='get' target='_blank' action='viewchar.html'>
+            <p>
+                <input type='text' hidden readonly name='char_ID' value='1'>
+                <label for='char_name'>Name:</label>
+                <input type='text' readonly class='textdisplay' id='charalias' value='Alyan Gatriel'>
+            </p>
+            
+            <input type = 'submit' id = 'morecharinfo' value="more info">
+        </form>
     </body>

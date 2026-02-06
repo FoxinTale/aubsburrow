@@ -14,7 +14,7 @@
             <a class="bar-item nav-button hide-large large" href="javascript:void(0)" onclick="closenav()">Close <i class="fa fa-remove"></i></a>
             <a class="bar-item nav-button" href="javascript:framerender('home.html')">Home</a>
             <div>
-                <a class="bar-item nav-button" onclick="dropdown('creation')" href="javascript:void(0)">Create New...<i class="fa fa-caret-down"></i></a>
+                <a class="bar-item nav-button" onclick="dropdown('creation')" href="javascript:void(0)">Create Page <i class="fa fa-caret-down"></i></a>
                 <div id="creation" class="hide">
                     <a class="bar-item nav-button" href="javascript:framerender('newability.html')">Ability / Power / Spell</a>
                     <a class="bar-item nav-button" href="javascript:framerender('newchar.html')">Character</a>
@@ -32,14 +32,15 @@
             <hr class="nav-hr">
             <a class="bar-item nav-button" href="javascript:framerender('resources.html')">Resources</a>
             <a class="bar-item nav-button" href="javascript:framerender('credits.html')">Credits</a>
+            <a class="bar-item nav-button" href="javascript:framerender('aboutsite.html')">About Site</a>
             <hr class="nav-hr">
-            <a class="bar-item nav-button" href="javascript:framerender('newprofile.html')">Create Journal</a> <!-- In PHP, display only if the username is null or empty.-->
-            <a class="bar-item nav-button" href="javascript:framerender('login.html')">Login</a> <!-- Both of these hide if the username is equal to anything that isn't empty or null" -->
+            <a class="bar-item nav-button" href="javascript:framerender('newprofile.html')">Create Journal</a>
+            <a class="bar-item nav-button" href="javascript:framerender('login.html')">Open Journal</a>
    <!--         <a class="bar-item nav-button" href="javascript.framerender('logout.html')">Log Out</a> -->
         </nav>
-        <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="closenav()" style="cursor:pointer" id="overlay"></div>
+        <div class="overlay hide-large animate-opacity" onclick="closenav()" style="cursor:pointer" id="overlay"></div>
         <div class="mainpage" style="margin-left:250px;">
-            <i id="minimenu" class="fa fa-bars w3-button w3-hide-large xlarge" onclick="opennav()"></i>
+            <i id="minimenu" class="fa fa-bars w3-button hide-large xlarge" onclick="opennav()"></i>
             <h1>The Character Journal</h1>
             <span id="userdisplay">Aubrey</span> <!-- this will only show up if the user is logged in, when I get PHP working-->
             <!--
@@ -47,7 +48,8 @@
                 Why? I did not feel like repeating myself (this nav page) on every page so I settled on this way.
                 While I do not remember exactly *why* I did it this way, I think I had issues with the iframe not doing things I wanted it to.
             -->
-            <div id="container"></div>
+            <div class="minipage" id="container"></div>
+            <iframe id="pageframe" name="frame" src="about:blank"></iframe>
             <script type="text/javascript" src="scripts/main.js"></script>
             <footer>Aubrey - 2021</footer>
         </div>
