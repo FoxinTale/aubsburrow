@@ -83,10 +83,13 @@
                   </li>
                   <li @click="openTab = 2" :class="{ '-mb-px': openTab === 2 }" class="mr-1">
                     <!-- Set active class by using :class provided by Alpine -->
-                    <a href="#" :class="openTab === 2 ? activeClasses : inactiveClasses" class="bg-white inline-block py-2 px-4 font-semibold"> Clothing </a>
+                    <a href="#" :class="openTab === 2 ? activeClasses : inactiveClasses" class="bg-white inline-block py-2 px-4 font-semibold"> Assets </a>
                   </li>
                   <li @click="openTab = 3" :class="{ '-mb-px': openTab === 3 }" class="mr-1">
-                    <a href="#" :class="openTab === 3 ? activeClasses : inactiveClasses" class="bg-white inline-block py-2 px-4 font-semibold"> Tab </a>
+                    <a href="#" :class="openTab === 3 ? activeClasses : inactiveClasses" class="bg-white inline-block py-2 px-4 font-semibold"> Clothing </a>
+                  </li>
+                  <li @click="openTab = 4" :class="{ '-mb-px': openTab === 4 }" class="mr-1">
+                    <a href="#" :class="openTab === 4 ? activeClasses : inactiveClasses" class="bg-white inline-block py-2 px-4 font-semibold"> Other Assets </a>
                   </li>
                 </ul>
                 <div class="w-full">
@@ -221,7 +224,7 @@
                                   <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">BestBoi Dutch Angel Dragon</td>
                                   <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Zex</td>
                                   <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Free</td>
-                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"><a href="https://bestbois.com/ModelHub.html" target="_blank">Link</a></td>
                                   <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
                                 </tr>
                                 <tr class="bg-white border-b">
@@ -238,20 +241,7 @@
                                   <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"><a href="https://ziodynes098.gumroad.com/l/ZioRedFox" target="_blank">Gumroad</a> / <a href="https://jinxxy.com/ziodynes098/RedFox" target="_blank">Jinxxy</a></td>
                                   <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
                                 </tr>
-                                <tr class="bg-white border-b">
-                                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Kyliin Redux</td>
-                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Avislime</td>
-                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                                </tr>
-                                <tr class="bg-white border-b">
-                                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">VRby (Furby)</td>
-                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Avislime</td>
-                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
-                                </tr>
+                                <!-- I do have the Kyliin Redux and VRby by Avislime, but they seem to have deleted their stores -->
                                 <tr class="bg-white border-b">
                                   <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Male Kiggy</td>
                                   <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Darbi</td>
@@ -293,13 +283,30 @@
                                   </td>
                                   <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
                                 </tr>
-
                                 <tr class="bg-white border-b">
                                   <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Manokit</td>
                                   <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">ViviFae</td>
                                   <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$35</td>
                                   <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                     <a href="https://vivifae.gumroad.com/l/Manokit" target="_blank">Gumroad</a> / <a href="https://jinxxy.com/ViviFae/Manokit" target="_blank">Jinxxy</a>
+                                  </td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Sweet Hooves V2</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Darbi</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$45</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <a href="https://darbi.gumroad.com/l/sweethooves" target="_blank">Gumroad</a> / <a href="https://jinxxy.com/Darbi/sweethooves" target="_blank">Jinxxy</a>
+                                  </td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                                </tr>
+                                <tr class="bg-white border-b">
+                                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Fenneko</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">TheRPGSlayer</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">$30</td>
+                                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <a href="https://therpgslayer.gumroad.com/l/fenneko" target="_blank">Gumroad</a>
                                   </td>
                                   <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
                                 </tr>
@@ -311,10 +318,32 @@
                     </div>
                   </div>
                   <div x-show="openTab === 2">
-                    <table class="">
+                     <table class="">
                       <thead class="bg-slate-200 border-b">
                         <tr>
-                          <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Clothing</th>
+                          <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Asset Name</th>
+                          <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Category</th>
+                          <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Creator</th>
+                          <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Cost (USD)</th>
+                          <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Link(s)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="border-b">
+                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"></td>
+                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div x-show="openTab === 3">
+                   <table class="">
+                      <thead class="bg-slate-200 border-b">
+                        <tr>
+                          <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Name</th>
                           <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">For Base</th>
                           <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Creator</th>
                           <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Cost (USD)</th>
@@ -332,7 +361,28 @@
                       </tbody>
                     </table>
                   </div>
-                  <div x-show="openTab === 3">Tab #3</div>
+                  <div x-show="openTab === 4">
+                      <table class="">
+                      <thead class="bg-slate-200 border-b">
+                        <tr>
+                          <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Asset Name</th>
+                          <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Category</th>
+                          <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Creator</th>
+                          <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Cost (USD)</th>
+                          <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4 text-left">Link(s)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="border-b">
+                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"></td>
+                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
