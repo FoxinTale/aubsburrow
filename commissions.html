@@ -18,11 +18,13 @@
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Coming+Soon|Architects+Daughter|Shadows+Into+Light+Two|Delius&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
   </head>
-  <body class="h-screen w-screen bg-gradient-to-r from-rose-100 via-purple-100 to-sky-100">
+  <!-- Accessability: Dark mode by default-->
+  <body class="min-h-screen bg-gradient-to-r
+             from-rose-100 via-purple-100 to-sky-100">
     <nav class="border-gray-200 py-2.5">
       <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
         <a href="index.html" class="flex items-center">
-          <span class="self-center text-2xl font-semibold whitespace-nowrap font-indie">Fox's Workshop</span>
+          <span class="self-center text-2xl font-semibold whitespace-nowrap font-indie ">Fox's Workshop</span>
         </a>
         <div class="flex items-center lg:order-2">
           <div class="hidden mt-2 mr-4 sm:inline-block">
@@ -42,7 +44,7 @@
           <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
             <li>
               <button id="commsDropdownButton" data-dropdown-toggle="commsDropdown" data-dropdown-placement="bottom-start" type="button" class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-slate-400 hover:text-black lg:p-0">
-                <p class="font-indie text-xl">VR Chat Avatar Commissions</p>
+                <p class="font-indie text-xl font-bold">VR Chat Avatar Commissions</p>
                 <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7" />
                 </svg>
@@ -63,18 +65,18 @@
             </li>
             </li>
             <li>
-              <a href="#" class="block py-2 pl-3 pr-4 hover:text-white lg:p-0 font-indie text-xl">Other Projects</a>
+              <a href="#" class="block py-2 pl-3 pr-4 hover:text-white lg:p-0 font-indie text-xl font-bold">Other Projects</a>
             </li>
             <li>
-              <a href="about.html" class="block py-2 pl-3 pr-4 hover:text-white lg:p-0 font-indie text-xl">About Me</a>
+              <a href="about.html" class="block py-2 pl-3 pr-4 hover:text-white lg:p-0 font-indie text-xl font-bold">About Me</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <main class="px-10">
-      <h1 class="bg-red-300 rounded-lg border px-3 py-3 text-center font-indie">Commission Status: <b>CLOSED</b>
-      </h1>
+      <h1 class="bg-red-300 rounded-lg border px-3 py-3 text-center font-indie">Commission Status: <b>CLOSED</b></h1>
+      <p></p>
       <!-- I decided on two slots to start off with. -->
       <div class="sm:flex sm:flex-col sm:align-center">
         <div class="mt-10 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-5 sm:gap-6 md:max-w-10xl md:mx-auto xl:grid-cols">
@@ -90,7 +92,7 @@
                 <li class="px-2 py-1 text-md">Price ranges depend on the complexity of the project and task. This will be assessed once contacted</li>
                 <section class="w-full mt-2 rounded-lg border px-1 py-1 text-md bg-gray-100">
                   <li class="text-xl">
-                    <h4 class="font-indie font-bold">Recolours:</h4>
+                    <h4 class="font-indie font-bold tracking-wide">Recolours:</h4>
                   </li>
                   <li class="px-2 py-1 text-md">These would be of an existing pattern I already have, or of the "stock".</li>
                   <li class="px-2 py-1 text-md">Flat colours: $5 - 10</li>
@@ -99,7 +101,7 @@
                 </section>
                 <section class="w-full mt-2 rounded-lg border px-2 py-1 text-md bg-gray-100">
                   <li class="text-xl">
-                    <h4 class="font-indie font-bold">Retextures:</h4>
+                    <h4 class="font-indie font-bold tracking-wide">Retextures:</h4>
                   </li>
                   <li class="px-2 py-1 text-md">Avatar retexture (Flat colours): $20 - 40</li>
                   <li class="px-2 py-1 text-md" data-placement="left" title="Depends on how painful the model is to work with in substance painter.">Avatar retexture (Fur brushed or detailed): $40 - 120</li>
@@ -108,7 +110,7 @@
                 </section>
                 <section class="w-full mt-2 rounded-lg border px-2 py-1 text-md bg-gray-100">
                   <li class="text-xl">
-                    <h4 class="font-indie font-bold">Unity Related:</h4>
+                    <h4 class="font-indie font-bold tracking-wide">Unity Related:</h4>
                   </li>
                   <li class="px-2 py-1 text-md">PC only project setup*: $10 - 20</li>
                   <li class="px-2 py-1 text-md">Quest only project setup*: $10</li>
@@ -126,7 +128,7 @@
                 </section>
                 <section class="w-full mt-2 rounded-lg border px-2 py-1 text-md bg-gray-100">
                   <li class="text-xl">
-                    <h4 class="font-indie font-bold">Blender Related:</h4>
+                    <h4 class="font-indie font-bold tracking-wide">Blender Related:</h4>
                   </li>
                   <li class="px-2 py-1 text-md">Specular reflective eyes (If not already present): $10.</li>
                   <li class="px-2 py-1 text-md">Clothing refits: $20 - 40</li>
@@ -134,7 +136,7 @@
                 </section>
                 <section class="w-full mt-2 rounded-lg border px-2 py-1 text-md bg-gray-100">
                   <li class="text-xl">
-                    <h4 class="font-indie font-bold">Other Services:</h4>
+                    <h4 class="font-indie font-bold tracking-wide">Other Services:</h4>
                   </li>
                   <li class="px-2 py-1 text-md">Custom (spliced) Avatars: Price varies.</li>
                   <li class="px-2 py-1 text-md">VRM Conversion: $30</li>
@@ -144,7 +146,7 @@
           </div>
           <div class="border border-black rounded-lg shadow-sm divide-y divide-slate-200 col-span-3">
             <div>
-              <h1 class="text-xl leading-6 font-bold text-slate-900 text-center font-coming">Work showcase</h1>
+              <h1 class="text-xl leading-6 font-bold text-slate-900 text-center font-delius">Work showcase</h1>
             </div>
             <div class="pt-6 pb-8 px-6">
               <div id="default-carousel" class="relative rounded-lg overflow-hidden shadow-lg" data-carousel="static">
@@ -190,7 +192,7 @@
                       <img src="images\commission\Feyrith Somna.webp" class="object-cover w-full h-full">
                     </a>
                     <div class="hidden md:block absolute inset-x-0 bottom-0 bg-black/50 p-4">
-                      <p class="text-white text-sm md:text-base">The full version of the Somna themed Fox Moth.</p>
+                      <p class="text-white text-sm md:text-base">The full version of the Somna themed Fox Moth. Clothing and textures by me.</p>
                     </div>
                   </div>
                   <!-- Deidre Deighton - Nardoragon -->
@@ -226,7 +228,7 @@
                       <img src="images\commission\PaliliaVivi.webp" class="object-cover w-full h-full">
                     </a>
                     <div class="hidden md:block absolute inset-x-0 bottom-0 bg-black/50 p-4">
-                      <p class="text-white text-sm md:text-base">Vivi Manokit with custom clothing and textures.</p>
+                      <p class="text-white text-sm md:text-base">Vivi Manokit with custom clothing and textures. Shirt decal by <a href="https://www.sandypaws.shop/" target="_blank">@ssquig</a></p>
                     </div>
                   </div>
                   <!-- Brianna Avari - Hyenid-->
@@ -275,7 +277,7 @@
                 </div>
                 <div class="grid grid-cols-1 gap-4 mt-4 leading-7 text-gray-900 sm:mt-6 sm:gap-6 md:mt-8 md:gap-0 lg:grid-cols-3">
                   <div class="relative z-10 flex flex-col items-center max-w-md p-4 mx-auto my-0  lg:-mr-3 sm:my-0 sm:p-6 md:my-8 md:p-8">
-                    <h3 class="m-0 text-2xl font-semibold leading-tight tracking-tight sm:text-3xl md:text-3xl font-indie">
+                    <h3 class="m-0 text-2xl font-semibold leading-tight tracking-tight sm:text-3xl md:text-3xl font-indie tracking-wide">
                       <a href="contentlist.html">Full list of assets</a>
                     </h3>
                     <div class="flex mt-6 leading-7">
@@ -283,7 +285,7 @@
                     </div>
                   </div>
                   <div class="relative z-20 flex flex-col items-center max-w-md p-4 mx-auto my-0sm:p-6 md:px-8 md:py-16">
-                    <h3 class="m-0 text-2xl font-semibold leading-tight tracking-tight sm:text-3xl md:text-3xl font-indie">
+                    <h3 class="m-0 text-2xl font-semibold leading-tight tracking-tight sm:text-3xl md:text-3xl font-indie tracking-wide">
                       <a href="commstos.html">Terms of service</a>
                     </h3>
                     <div class="flex mt-6 leading-7">
@@ -291,7 +293,15 @@
                     </div>
                   </div>
                   <div class="relative z-10 flex flex-col items-center max-w-md p-4 mx-auto my-0 lg:-ml-3 sm:my-0 sm:p-6 md:my-8 md:p-8">
-                    <h3 class="m-0 text-2xl font-semibold leading-tight tracking-tight sm:text-3xl md:text-3xl font-indie">
+                    <h3 class="m-0 text-2xl font-semibold leading-tight tracking-tight sm:text-3xl md:text-3xl font-indie tracking-wide">
+                      <a href="https://www.furaffinity.net/gallery/foxintale/">FurAffinity Gallery</a>
+                    </h3>
+                    <div class="flex mt-6 leading-7">
+                      <p class="m-0 text-center"> To see the images in 1080p</p>
+                    </div>
+                  </div>
+                  <div class="relative z-10 flex flex-col items-center max-w-md p-4 mx-auto my-0 lg:-ml-3 sm:my-0 sm:p-6 md:my-8 md:p-8">
+                    <h3 class="m-0 text-2xl font-semibold leading-tight tracking-tight sm:text-3xl md:text-3xl font-indie tracking-wide">
                       <a href="characters.html">About the characters</a>
                     </h3>
                     <div class="flex mt-6 leading-7">
@@ -300,25 +310,22 @@
                   </div>
                 </div>
               </div>
-              <!-- The dividing point to put anything important right after the photo, that is not in the photos zzone itself. This will probqably be full size links tot he TOS and owned assets.-->
+              <!-- The dividing point to put anything important right after the photo, that is not in the photos zone itself. This will probably be full size links tot he TOS and owned assets.-->
             </section>
           </div>
           <div class="border border-black rounded-lg shadow-sm divide-y divide-slate-200 md:max-w-10xl">
             <div class="p-6">
-              <h2 class="text-xl leading-6 text-center font-coming">Some of the bases I own</h2>
+              <h2 class="text-xl leading-6 text-center font-delius font-bold">Some of the bases I own</h2>
             </div>
             <div class="pt-6 pb-8 px-6">
               <ul class="flex flex-col gap-2" id="avatarBases">
-                <!-- I'm leaving little spaces and "placeholders" for bases I want. If you're looking at the source of this site for secrets, Hi! Hope you're having a good day. -->
                 <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">The Awtter</li>
                 <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Darbi Otter</li>
-                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Da'Vali</li>
                 <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Meelo's Dutch Angel Dragon</li>
                 <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Female Kiggy</li>
                 <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Fox Moth</li>
                 <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Alber's Hyenid</li>
                 <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">KitFox</li>
-                <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Kita'Vali</li>
                 <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Callista's Manokit</li>
                 <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Male Kiggy</li>
                 <li class="w-full rounded-lg border px-2 py-1 text-md bg-gray-100">Nardoragon (Expanded)</li>
@@ -407,7 +414,7 @@
           <a nclass="my-3 block" href="commstos.html">Terms of Service</a>
         </div>
         <div class="p-5">
-          <div class="text-md text-indigo-600 font-bold font-indie">Rest of the site</div>
+          <div class="text-md text-indigo-600 font-bold font-indie tracking-wide">Rest of the site</div>
           <a class="my-3 block" href="about.html">About Me <span class="text-teal-600 text-xs p-1"></span>
           </a>
           <a class="my-3 block" href="/#">Character Database <span class="text-teal-600 text-xs p-1"></span>
@@ -419,9 +426,9 @@
           <div class="text-md text-indigo-600 font-bold font-indie">External Links</div>
           <a class="my-3 block" href="" target="_blank">Gumroad <span class="text-teal-600 text-xs p-1"></span>
           </a>
-          <a class="my-3 block" href="/#" target="_blank">Jinxxy <span class="text-teal-600 text-xs p-1"></span>
+          <a class="my-3 block" href="https://jinxxy.com/foxintale" target="_blank">Jinxxy <span class="text-teal-600 text-xs p-1"></span>
           </a>
-          <a class="my-3 block" href="/#" target="_blank">FurAffinity <span class="text-teal-600 text-xs p-1"></span>
+          <a class="my-3 block" href="https://www.furaffinity.net/user/foxintale/" target="_blank">FurAffinity <span class="text-teal-600 text-xs p-1"></span>
           </a>
         </div>
       </div>
