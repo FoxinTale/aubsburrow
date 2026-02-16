@@ -1,0 +1,206 @@
+[
+  {
+    "name": "Bunnic",
+    "creator": "ArkorenArt",
+    "publicUsage": "No",
+    "tags": "",
+    "notes": "NSFW Variant",
+    "offers": [
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/ArkorenArt/Bunnic",
+        "price": 50,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Shawn the Shark",
+    "creator": "Darbi",
+    "notes": "",
+    "publicUsage": "Yes, with credit",
+    "tags": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://darbi.gumroad.com/l/shawnshark",
+        "price": 40,
+        "currency": "USD"
+      },
+      {
+        "store": "Gumroad",
+        "url": "https://jinxxy.com/Darbi/shawnshark",
+        "price": 40,
+        "currency": "USD"
+      }
+    ]
+  },
+    {
+    "name": "Winterpaw Feline",
+    "creator": "Julia Winterpaw",
+    "publicUsage": "Yes, with credit",
+    "tags": "",
+    "notes": "Extras + NSFW",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://juliawinterpaw.gumroad.com/l/Feline",
+        "price": 45,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/winterpaw/WinterpawFeline",
+        "price": 45,
+        "currency": "USD"
+      }
+    ]
+  },
+    {
+    "name": "Soap Dog",
+    "creator": "ironicsoap",
+    "publicUsage": "Yes, with credit",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://ironicsoap.gumroad.com/l/SoapDogs",
+        "price": 40,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/ironicsoap/SoapDogs",
+        "price": 40,
+        "currency": "USD"
+      }
+    ]
+  },
+    {
+    "name": "Jinxed Malestrorca",
+    "creator": "dont_jinxit",
+    "publicUsage": "Yes, with credit",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://dontjinxit.gumroad.com/l/JinxedMaelstrorca",
+        "price": 25,
+        "currency": "Euro"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/dont_jinxit/JinxedMaelstrorca",
+        "price": 26,
+        "currency": "USD"
+      }
+    ]
+  },
+    {
+    "name": "Winterbold",
+    "creator": "itsguusy",
+    "publicUsage": "Yes, with credit",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://itsguusy.gumroad.com/l/the-winterbold-fluffy-furred-kobold-avatar-base-for-vrchat-by-itsguusy",
+        "price": 45,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/ItsGuusy/products/the-winterbold-fluffy-furred-kobold-avatar-base-for-vrchat-by-itsguusy",
+        "price": 45,
+        "currency": "USD"
+      }
+    ]
+  },
+    {
+    "name": "Novabeast",
+    "creator": "Kittomatic",
+    "publicUsage": "Yes, with credit",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://kittomatic.gumroad.com/l/Novabeast",
+        "price": 35,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Kittomatic/products/novabeast",
+        "price": 35,
+        "currency": "USD"
+      }
+    ]
+  },
+    {
+    "name": "Kirin",
+    "creator": "Callista's VR Creations",
+    "publicUsage": "Yes, with credit",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://callistakirin.gumroad.com/l/kirinavatar",
+        "price": 40,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/CallistaKirin/CalliKirin",
+        "price": 36,
+        "currency": "USD"
+      }
+    ]
+  },
+    {
+    "name": "Nicoreda Protogen (Protodal)",
+    "creator": "Nicoreda",
+    "publicUsage": "Yes, with credit",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://nicoreda.gumroad.com/l/protodal",
+        "price": 15,
+        "currency": "Euro"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Nicoreda/protodal",
+        "price": 20,
+        "currency": "USD"
+      }
+    ]
+  },
+    {
+    "name": "Nico & JHK Mantled Beast",
+    "creator": "Nicoreda",
+    "publicUsage": "Yes, with credit",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://nicoreda.gumroad.com/l/mantlednicojedi",
+        "price": 25,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Nicoreda/mantlednicojedi",
+        "price": 25,
+        "currency": "USD"
+      }
+    ]
+  }
+]
