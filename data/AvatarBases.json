@@ -202,5 +202,187 @@
         "currency": "USD"
       }
     ]
-  }
+    },
+    {
+    "name": "Pawvali",
+    "creator": "TheRPGSlayer",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://therpgslayer.gumroad.com/l/Pawvali",
+        "price": 30,
+        "currency": "USD"
+      }
+    ]
+  },
+    {
+    "name": "Ashbeast",
+    "creator": "TheRPGSlayer",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://therpgslayer.gumroad.com/l/ashbeast",
+        "price": 35,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/TheRPGslayer/ashbeast",
+        "price": 31.50,
+        "currency": "USD"
+      }
+    ]
+    },
+    {
+    "name": "Furbold",
+    "creator": "Kumo Polyworks",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://kumopolyworks.gumroad.com/l/furbold",
+        "price": 35,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/KumoPolyWorks/furbold",
+        "price": 35,
+        "currency": "USD"
+      }
+    ]
+    },
+    {
+    "name": "BestBoi - Dutch Angel Drago Edit",
+    "creator": "Zex / RustyDustyFox",
+    "publicUsage": "Unknown",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "BestBoi Model Hub",
+        "url": "https://bestbois.com/ModelHub.html",
+        "price": 0,
+        "currency": "USD"
+      }
+    ]
+    },
+    {
+    "name": "Zio's Red Panda",
+    "creator": "ziodynes098",
+    "publicUsage": "Yes, with credit",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://ziodynes098.gumroad.com/l/ZioRedPanda",
+        "price": 0,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/ziodynes098/RedPanda",
+        "price": 0,
+        "currency": "USD"
+      }
+    ]
+    },
+    {
+    "name": "Zio's Red Fox",
+    "creator": "ziodynes098",
+    "publicUsage": "Yes, with credit",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://ziodynes098.gumroad.com/l/ZioRedFox",
+        "price": 0,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/ziodynes098/RedFox",
+        "price": 0,
+        "currency": "USD"
+      }
+    ]
+    },
+    {
+    "name": "Male Kiggy",
+    "creator": "Darbi",
+    "publicUsage": "Yes, with credit",
+    "tags": "",
+    "notes": "Full version",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://darbi.gumroad.com/l/malekiggy",
+        "price": 40,
+        "currency": "USD"
+      }
+    ]
+    },
+    {
+    "name": "Fox Moth",
+    "creator": "Darbi",
+    "publicUsage": "Yes, with credit",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://darbi.gumroad.com/l/foxmoth",
+        "price": 40,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Darbi/foxmoth",
+        "price": 40,
+        "currency": "USD"
+      }]
+    },{
+    "name": "Royal Pony",
+    "creator": "Vertex Keni",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://keni.gumroad.com/l/RoyalPony",
+        "price": 35,
+        "currency": "USD"
+      }]
+    },{
+    "name": "Chibi Novabeast",
+    "creator": "TheRPGSlayer",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://therpgslayer.gumroad.com/l/chibinova",
+        "price": 30,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/TheRPGslayer/chibinova",
+        "price": 30,
+        "currency": "USD"
+      }
+    ]
+    }
 ]
