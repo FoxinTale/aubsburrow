@@ -384,5 +384,269 @@
         "currency": "USD"
       }
     ]
+    },{
+    "name": "Manokit",
+    "creator": "ViviFae",
+    "publicUsage": "Yes, with credit",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://vivifae.gumroad.com/l/Manokit",
+        "price": 35,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/ViviFae/Manokit",
+        "price": 35,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Sweet Hooves V2",
+    "creator": "Darbi",
+    "publicUsage": "Yes, with credit",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://darbi.gumroad.com/l/sweethooves",
+        "price": 45,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Darbi/sweethooves",
+        "price": 45,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Fenneko",
+    "creator": "TheRPGSlayer",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://therpgslayer.gumroad.com/l/fenneko",
+        "price": 30,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Dergodal",
+    "creator": "Nicoreda",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://nicoreda.gumroad.com/l/Dergodal",
+        "price": 30,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Nicoreda/dergodal",
+        "price": 30,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Malestrorca",
+    "creator": "Callista's VR Creations",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://callistakirin.gumroad.com/l/maelstrorca",
+        "price": 40,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/CallistaKirin/CalliMaelstrorca",
+        "price": 36,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Kit Fox",
+    "creator": "MiloFox",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://milofox.gumroad.com/l/KitFox",
+        "price": 45,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/MiloFox/KitFox",
+        "price": 45,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Deizear",
+    "creator": "Abiboi",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "UwU Variant",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://abiboi.gumroad.com/l/Deuzear",
+        "price": 50,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Female Kiggy",
+    "creator": "Darbi",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://darbi.gumroad.com/l/femalekiggy",
+        "price": 45,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Vixine",
+    "creator": "Hecka.Space",
+    "publicUsage": "See page for perms",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://hecka.gumroad.com/l/Vixine",
+        "price": 50,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Hecka/Vix",
+        "price": 50,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "D.Otter",
+    "creator": "Darbi",
+    "publicUsage": "Yes, with credit",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://darbi.gumroad.com/l/d_otter",
+        "price": 35,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Darbi/d_otter",
+        "price": 35,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Angel Dragon",
+    "creator": "Meelo",
+    "publicUsage": "Unclear",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://meelo3d.gumroad.com/l/MeeloAngelDragon",
+        "price": 40,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Rexouium",
+    "creator": "Rezillo",
+    "publicUsage": "Yes, with credit",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://rezilloryker.gumroad.com/l/MYutV",
+        "price": 45,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Low Poly Rex",
+    "creator": "Hetero",
+    "publicUsage": "Not Listed",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://heteroschmexual.gumroad.com/l/lowpolyrex",
+        "price": 10,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Heteroschmexual/lowpolyrex",
+        "price": 10,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Kobodal",
+    "creator": "Nicoreda",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://nicoreda.gumroad.com/l/Kobodal",
+        "price": 30,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Nicoreda/kobodal",
+        "price": 30,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Taidum",
+    "creator": "irix",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://irix.gumroad.com/l/DpDFe",
+        "price": 15,
+        "currency": "USD"
+      }
+    ]
     }
 ]
