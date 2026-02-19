@@ -13,12 +13,20 @@
           --font-indie: "Indie Flower", ui-sans-serif, system-ui;
           --font-shadows: "Shadows Into Light Two", ui-sans-serif, system-ui;
           --font-delius: "Delius", ui-sans-serif, system-ui;
+
+          --color-mutedpink: #d5b9bb;
+          --color-mutedred: #da7d7d;
+          --color-mutedpurple: #c8bdd5;
+          --color-mutedreddish: #d5c8bd;
+          --color-mutedblue: #b2c7d4;
+          --color-mutedgreen: #738a58;
+          --color-deepmutedpurple: #6c35ad;
         }
     </style>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Coming+Soon|Architects+Daughter|Shadows+Into+Light+Two|Delius&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
   </head>
-  <body class="h-screen w-screen bg-gradient-to-r from-rose-100 via-purple-100 to-sky-100">
+  <body class="min-h-screen bg-gradient-to-r from-mutedpink via-mutedpurple to-mutedblue">
     <nav class="border-gray-200 py-2.5">
       <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
         <a href="index.html" class="flex items-center">
@@ -66,7 +74,7 @@
               <a href="#" class="block py-2 pl-3 pr-4 hover:text-white lg:p-0 font-indie text-xl">Other Projects</a>
             </li>
             <li>
-              <a href="about.html" class="block py-2 pl-3 pr-4 hover:text-white lg:p-0 text-slate-400 font-indie text-xl">About Me</a>
+              <a href="about.html" class="block py-2 pl-3 pr-4 hover:text-white lg:p-0 text-mutedgreen font-indie text-xl">About Me</a>
             </li>
           </ul>
         </div>
@@ -77,13 +85,13 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="mt-10">
             <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-              <section class="relative shadow-xl py-2 rounded-lg border:gray-300 bg-purple-200">
+              <section class="relative shadow-xl py-2 rounded-lg border:gray-300 bg-mutedreddish">
                 <dt>
                   <p class="font-heading ml-16 text-lg leading-6 font-bold font-delius text-gray-700  tracking-wide">Who am I?</p>
                 </dt>
                 <dd class="mt-2 ml-16 px-2"> I'm Aubrey, or Foxintale in most places. I am a 26 year old trans woman (she/hers) from southwestern Ohio. I like to call myself a jack of all trades, master of none who specialises in some areas. I've done all sorts of things, from texture work, to programming, 3D modelling shenanigans and more </dd>
               </section>
-              <section class="relative shadow-xl py-2 rounded-lg border:gray-300 bg-purple-200">
+              <section class="relative shadow-xl py-2 rounded-lg border:gray-300 bg-mutedreddish">
                 <dt>
                   <p class="font-heading ml-16 text-lg leading-6 font-bold font-delius text-gray-700 tracking-wide"> What's your history? </p>
                 </dt>
@@ -95,13 +103,13 @@
                   </ul>
                 </dd>
               </section>
-              <section class="relative shadow-xl py-2 rounded-lg border:gray-300 bg-purple-200">
+              <section class="relative shadow-xl py-2 rounded-lg border:gray-300 bg-mutedreddish">
                 <dt>
                   <p class="font-heading ml-16 text-lg leading-6 font-bold text-gray-700 font-delius tracking-wide">What games do you play? </p>
                 </dt>
                 <dd class="mt-2 ml-16 text-base px-2"> In terms of games, I generally play open world non-linear RPGS like the Fallout (Except 76) series, Elder Scrolls series (Except ESO) and Starbound. I also enjoy open world sandbox games like Minecraft, Gmod and more...and modding the everloving crap out of these games til it's a miracle they run because that's just what you do with them. </dd>
               </section>
-              <section class="relative shadow-xl py-2 rounded-lg border:gray-300 bg-purple-200">
+              <section class="relative shadow-xl py-2 rounded-lg border:gray-300 bg-mutedreddish">
                 <dt>
                   <p class="font-heading ml-16 text-lg leading-6 font-bold text-gray-700 font-delius tracking-wide">Fun Facts </p>
                 </dt>
@@ -124,7 +132,7 @@
             <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl font-delius tracking-wide"> Explore the details </h2>
           </div>
           <div class="max-w-3xl mx-auto mt-8 space-y-4 md:mt-16">
-            <div class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50">
+            <div class="transition-all duration-200 bg-gray-200 border shadow-lg cursor-pointer hover:bg-gray-50">
               <button type="button" id="question1" data-state="closed" class="flex items-center justify-between w-full px-4 py-5 sm:p-6">
                 <span class="flex text-lg font-semibold text-black font-delius  tracking-wide">Avatar Creation Experience</span>
                 <svg id="arrow1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-gray-400">
@@ -140,7 +148,7 @@
                 </p>
               </div>
             </div>
-            <div class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50">
+            <div class="transition-all duration-200 bg-gray-200 border border shadow-lg cursor-pointer hover:bg-gray-50">
               <button type="button" id="question2" data-state="closed" class="flex items-center justify-between w-full px-4 py-5 sm:p-6">
                 <span class="flex text-lg font-semibold text-black font-delius  tracking-wide">Computer Science background and experience</span>
                 <svg id="arrow2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-gray-400">
@@ -154,7 +162,7 @@
                 </p>
               </div>
             </div>
-            <div class="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50">
+            <div class="transition-all duration-200 bg-gray-200 border border shadow-lg cursor-pointer hover:bg-gray-50">
               <button type="button" id="question2" data-state="closed" class="flex items-center justify-between w-full px-4 py-5 sm:p-6">
                 <span class="flex text-lg font-semibold text-black font-delius  tracking-wide">PC build for you nerds out there</span>
                 <svg id="arrow2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 text-gray-400">
@@ -248,33 +256,25 @@
     <footer>
       <div class="max-w-screen-lg px-4 sm:px-6 text-gray-800 sm:grid md:grid-cols-4 sm:grid-cols-2 mx-auto">
         <div class="p-5">
-          <a href="index.html"><h3 class="font-bold text-xl text-indigo-600 font-indie">Fox's Workshop</h3></a>
+          <a href="index.html"><h3 class="font-bold text-xl text-deepmutedpurple font-indie">Fox's Workshop</h3></a>
         </div>
         <div class="p-5">
-          <div class="text-md text-indigo-600 font-bold font-indie tracking-wide">Commissions</div>
-          <a class="my-3 block" href="commissions.html">Main comms page <span class="text-teal-600 text-xs p-1"></span>
-          </a>
-          <a class="my-3 block" href="contentlist.html">Owned assets <span class="text-teal-600 text-xs p-1"></span>
-          </a>
+          <div class="text-md text-deepmutedpurple font-bold font-indie tracking-wide">Commissions</div>
+          <a class="my-3 block" href="commissions.html">Main comms page</a>
+          <a class="my-3 block" href="contentlist.html">Owned assets</a>
           <a nclass="my-3 block" href="commstos.html">Terms of Service</a>
         </div>
         <div class="p-5">
-          <div class="text-md text-indigo-600 font-bold font-indie tracking-wide">Rest of the site</div>
-          <a class="my-3 block" href="about.html">About Me <span class="text-teal-600 text-xs p-1"></span>
-          </a>
-          <a class="my-3 block" href="/#">Character Database <span class="text-teal-600 text-xs p-1"></span>
-          </a>
-          <a class="my-3 block" href="/#">Other projects <span class="text-teal-600 text-xs p-1"></span>
-          </a>
+          <div class="text-md text-deepmutedpurple font-bold font-indie tracking-wide">Rest of the site</div>
+          <a class="my-3 block" href="about.html">About Me</a>
+          <a class="my-3 block" href="/#">Character Database</a>
+          <a class="my-3 block" href="/#">Other projects</a>
         </div>
         <div class="p-5">
-          <div class="text-md text-indigo-600 font-bold font-indie tracking-wide">External Links</div>
-          <a class="my-3 block" href="https://github.com/foxintale" target="_blank">My Github<span class="text-teal-600 text-xs p-1"></span>
-          </a>
-          <a class="my-3 block" href="https://jinxxy.com/foxintale" target="_blank">Jinxxy <span class="text-teal-600 text-xs p-1"></span>
-          </a>
-          <a class="my-3 block" href="https://www.furaffinity.net/user/foxintale/" target="_blank">FurAffinity <span class="text-teal-600 text-xs p-1"></span>
-          </a>
+          <div class="text-md text-deepmutedpurple font-bold font-indie tracking-wide">External Links</div>
+          <a class="my-3 block" href="https://github.com/foxintale" target="_blank">My Github</a>
+          <a class="my-3 block" href="https://jinxxy.com/foxintale" target="_blank">Jinxxy</a>
+          <a class="my-3 block" href="https://www.furaffinity.net/user/foxintale/" target="_blank">FurAffinity</a>
         </div>
       </div>
       <div class="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col max-w-screen-lg items-center">
