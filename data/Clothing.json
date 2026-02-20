@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Feline Clothing (Techwear + Casual)",
+    "creator": "Julia Winterpaw",
+    "forBase": "Winterpaw Feline",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://juliawinterpaw.gumroad.com/l/Feline",
+        "price": 24,
+        "currency": "USD"
+      },{
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/winterpaw/WinterpawFeline",
+        "price": 24,
+        "currency": "USD"
+      }
+    ]
+  }
+]

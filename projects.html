@@ -1,37 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="icon" type="image/png" href="images/flower.ico">
-  <meta charset="UTF-8">
-  <title>Aubrey's website</title>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/projects.css">
-  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Coming+Soon|Rancho|Architects+Daughter|Shadows+Into+Light+Two|Delius&display=swap" rel="stylesheet">
-</head>
-  
-<body >
-  <nav>
-    <ul>
-        <li><a href = "index.html">Home</a></li>
-      <li><a href ="rparchives.html">RP Archive</a></li>
-      <li><a href = "about.html">About Me</a></li>
-    </ul>
-  </nav> 
-<main>
-    <h1>My Projects</h1>
-    <p><!--
+  <head>
+    <link rel="icon" type="image/png" href="images/flower.ico">
+    <meta charset="UTF-8">
+    <title>Aubrey's website</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss"> @theme {
+      --font-coming: "Coming Soon", ui-sans-serif, system-ui;
+      --font-architect: "Architects Daughter", ui-sans-serif, system-ui;
+      --font-indie: "Indie Flower", ui-sans-serif, system-ui;
+      --font-shadows: "Shadows Into Light Two", ui-sans-serif, system-ui;
+      --font-delius: "Delius", ui-sans-serif, system-ui;
+
+      --color-mutedpink: #d5b9bb;
+      --color-mutedred: #da7d7d;
+      --color-mutedpurple: #c8bdd5;
+      --color-mutedblue: #b2c7d4;
+      --color-mutedgreen: #738a58;
+      --color-deepmutedpurple: #6c35ad;
+    }
+  </style>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Coming+Soon|Rancho|Architects+Daughter|Shadows+Into+Light+Two|Delius&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+  </head>
+  <body class="min-h-screen bg-gradient-to-r from-mutedpink via-mutedpurple to-mutedblue">
+    <nav class="border-gray-200 py-2.5">
+      <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
+        <a href="index.html" class="flex items-center">
+          <span class="self-center text-2xl font-semibold whitespace-nowrap font-indie ">Fox's Workshop</span>
+        </a>
+        <div class="flex items-center lg:order-2">
+          <div class="hidden mt-2 mr-4 sm:inline-block">
+            <span></span>
+          </div>
+          <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="true">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+            </svg>
+            <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="items-center justify-between w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+          <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+            <li>
+              <button id="commsDropdownButton" data-dropdown-toggle="commsDropdown" data-dropdown-placement="bottom-start" type="button" class="flex items-center justify-between w-full py-2 pl-3 pr-4 hover:text-black lg:p-0">
+                <p class="font-indie text-xl font-bold">VR Chat Avatar Commissions</p>
+                <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7" />
+                </svg>
+              </button>
+              <div id="commsDropdown" class="z-50 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-56" aria-labelledby="commsDropdownButton">
+                <ul class="py-2 text-sm text-gray-700">
+                  <li>
+                    <a href="commissions.html" class="block px-4 py-2 hover:bg-gray-100">Main page</a>
+                  </li>
+                  <li>
+                    <a href="contentlist.html" class="block px-4 py-2 hover:bg-gray-100">Owned assets</a>
+                  </li>
+                  <li>
+                    <a href="commstos.html" class="block px-4 py-2 hover:bg-gray-100">Terms of service</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            </li>
+            <li>
+              <a href="projects.html" class="block py-2 pl-3 pr-4 hover:text-white lg:p-0 font-indie text-xl text-mutedgreen font-bold">Other Projects</a>
+            </li>
+            <li>
+              <a href="about.html" class="block py-2 pl-3 pr-4 hover:text-white lg:p-0 font-indie text-xl font-bold">About Me</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="min-h-screen flex flex-col items-center justify-center">
+      <p>
+        <!--
       Character database
       Modpack Installer (old)
       Character generator
       Character weight system
       Source engine stuff.
        -->
-    I'll put stuff here later, when I feel like getting around to it.
-    </p>
-</main>
-  <footer>
-    &copy; Aubrey Jane - Fall 2019 
-  </footer>
-</body>
-</html> 
+      </p>
+
+      <section>
+        <div class="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl">
+        <h1 class="text-5xl font-bold mb-8 font-delius">Projects home page</h1>
+          <p class="text-lg mb-8">
+            The main homepage of the varioius projects I've worked on over the years. 
+            None of these currently have usable links as all are being overhauled.
+          </p>
+          <div class="grid w-full grid-cols-1 gap-6 mx-auto lg:grid-cols-3">
+          
+            <div class="p-6 bg-gray-300 rounded-lg">
+              <h1 class="mx-auto mb-8 text-2xl font-semibold leading-none lg:text-3xl font-delius">Character Database</h1>
+              <p class="mx-auto text-base leading-relaxed"> A web-based front end built in HTML and CSS, without a framework. The backend was built in PHP, with a regular front-end. </p>
+              <div class="mt-4"></div>
+            </div>
+            <div class="p-6 bg-gray-300 rounded-lg">
+              <h1 class="mx-auto mb-8 text-2xl font-semibold leading-none lg:text-3xl font-delius">Modpack installer</h1>
+              <p class="mx-auto text-base leading-relaxed"> A Java-based program for a now defunct modded Minecraft server. It would download the mods, and install it for you with minimal input. </p>
+              <div class="mt-4"></div>
+            </div>
+            <div class="p-6 bg-gray-300 rounded-lg">
+              <h1 class="mx-auto mb-8 text-2xl font-semibold leading-none lg:text-3xl font-delius">Character Generator</h1>
+              <p class="mx-auto text-base leading-relaxed"> A simple character generator made in Java meant to be locally ran. </p>
+              <div class="mt-4"></div>
+            </div>
+            <div class="p-6 bg-gray-300 rounded-lg">
+              <h1 class="mx-auto mb-8 text-2xl font-semibold leading-none lg:text-3xl font-delius">Character Weight System</h1>
+              <p class="mx-auto text-base leading-relaxed">(Still in progress) A system designed to accurately estimate the weight of a fictional anthro character using real world science.</p>
+              <div class="mt-4"></div>
+            </div>
+            <div class="p-6 bg-gray-300 rounded-lg">
+              <h1 class="mx-auto mb-8 text-2xl font-semibold leading-none lg:text-3xl font-delius">Physbone-QC converter.</h1>
+              <p class="mx-auto text-base leading-relaxed">
+                A Java based program to read an avatar's Unity scene file, extract the physbones, and convert them to JiggleBones for usage in the source game engine.</p>
+              <div class="mt-4"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="max-w-screen-lg px-4 sm:px-6 text-gray-800 sm:grid md:grid-cols-4 sm:grid-cols-2 mx-auto">
+        <div class="p-5">
+          <a href="index.html">
+            <h3 class="font-bold text-xl text-deepmutedpurple font-indie">Fox's Workshop</h3>
+          </a>
+        </div>
+        <div class="p-5">
+          <div class="text-md text-deepmutedpurple font-bold font-indie tracking-wide">Commissions</div>
+          <a class="my-3 block" href="commissions.html">Main comms page</a>
+          <a class="my-3 block" href="contentlist.html">Owned assets</a>
+          <a nclass="my-3 block" href="commstos.html">Terms of Service</a>
+        </div>
+        <div class="p-5">
+          <div class="text-md text-deepmutedpurple font-bold font-indie tracking-wide">Rest of the site</div>
+          <a class="my-3 block" href="about.html">About Me</a>
+          <a class="my-3 block" href="/chardb/chardb.html">Character Database</a>
+          <a class="my-3 block" href="projects.html">Other projects</a>
+        </div>
+        <div class="p-5">
+          <div class="text-md text-deepmutedpurple font-bold font-indie tracking-wide">External Links</div>
+          <a class="my-3 block" href="https://github.com/foxintale" target="_blank">My Github</a>
+          <a class="my-3 block" href="https://jinxxy.com/foxintale" target="_blank">Jinxxy</a>
+          <a class="my-3 block" href="https://www.furaffinity.net/user/foxintale/" target="_blank">FurAffinity</a>
+        </div>
+      </div>
+      <div class="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col max-w-screen-lg items-center">
+        <div class="my-5">&copy; Aubrey Jane / Foxintale - Made in Tailwind CSS without a builder or AI.</div>
+      </div>
+    </footer>
+  </body>
+</html>
+<!-- 
+Template used: https://tailwindflex.com/@ui-dev-amar/responsive-grid-with-featured-image
+ -->

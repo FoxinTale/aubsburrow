@@ -172,6 +172,7 @@
     {
     "name": "Nicoreda Protogen (Protodal)",
     "creator": "Nicoreda",
+    "nsfwAllowed": "Yes",
     "publicUsage": "Yes, with credit",
     "tags": "",
     "notes": "",
@@ -193,6 +194,7 @@
     {
     "name": "Nico & JHK Mantled Beast",
     "creator": "Nicoreda",
+    "nsfwAllowed": "Yes",
     "publicUsage": "Yes, with credit",
     "tags": "",
     "notes": "",
@@ -214,6 +216,7 @@
     {
     "name": "Pawvali",
     "creator": "TheRPGSlayer",
+    "nsfwAllowed":"Yes",
     "publicUsage": "Yes",
     "tags": "",
     "notes": "",
@@ -251,6 +254,7 @@
     {
     "name": "Furbold",
     "creator": "Kumo Polyworks",
+    "nsfwAllowed":"Yes",
     "publicUsage": "Yes",
     "tags": "",
     "notes": "",
@@ -272,6 +276,7 @@
     {
     "name": "BestBoi - Dutch Angel Drago Edit",
     "creator": "Zex / RustyDustyFox",
+    "nsfwAllowed":"Unknown",
     "publicUsage": "Unknown",
     "tags": "",
     "notes": "",
@@ -309,6 +314,7 @@
     {
     "name": "Zio's Red Fox",
     "creator": "ziodynes098",
+    "nsfwAllowed":"Yes",
     "publicUsage": "Yes, with credit",
     "tags": "",
     "notes": "",
@@ -330,6 +336,7 @@
     {
     "name": "Male Kiggy",
     "creator": "Darbi",
+    "nsfwAllowed":"Yes",
     "publicUsage": "Yes, with credit",
     "tags": "",
     "notes": "Full version",
@@ -345,6 +352,7 @@
     {
     "name": "Fox Moth",
     "creator": "Darbi",
+    "nsfwAllowed":"Yes, separate package.",
     "publicUsage": "Yes, with credit",
     "tags": "",
     "notes": "",
@@ -364,6 +372,7 @@
     },{
     "name": "Royal Pony",
     "creator": "Vertex Keni",
+    "nsfwAllowed":"Yes",
     "publicUsage": "Yes",
     "tags": "",
     "notes": "",
@@ -377,6 +386,7 @@
     },{
     "name": "Chibi Novabeast",
     "creator": "TheRPGSlayer",
+    "nsfwAllowed":"No",
     "publicUsage": "Yes",
     "tags": "",
     "notes": "",
@@ -397,6 +407,7 @@
     },{
     "name": "Manokit",
     "creator": "ViviFae",
+    "nsfwAllowed":"No",
     "publicUsage": "Yes, with credit",
     "tags": "",
     "notes": "",
@@ -417,6 +428,7 @@
     },{
     "name": "Sweet Hooves V2",
     "creator": "Darbi",
+    "nsfwAllowed":"Yes",
     "publicUsage": "Yes, with credit",
     "tags": "",
     "notes": "",
@@ -437,6 +449,7 @@
     },{
     "name": "Fenneko",
     "creator": "TheRPGSlayer",
+    "nsfwAllowed":"No",
     "publicUsage": "Yes",
     "tags": "",
     "notes": "",
@@ -451,6 +464,7 @@
     },{
     "name": "Dergodal",
     "creator": "Nicoreda",
+    "nsfwAllowed":"Yes",
     "publicUsage": "Yes",
     "tags": "",
     "notes": "",
@@ -471,6 +485,7 @@
     },{
     "name": "Malestrorca",
     "creator": "Callista's VR Creations",
+    "nsfwAllowed":"Yes",
     "publicUsage": "Yes",
     "tags": "",
     "notes": "",
@@ -491,6 +506,7 @@
     },{
     "name": "Kit Fox",
     "creator": "MiloFox",
+    "nsfwAllowed":"Yes",
     "publicUsage": "Yes",
     "tags": "",
     "notes": "",
@@ -511,6 +527,7 @@
     },{
     "name": "Deizear",
     "creator": "Abiboi",
+    "nsfwAllowed":"Yes, separate package",
     "publicUsage": "Yes",
     "tags": "",
     "notes": "UwU Variant",
@@ -525,6 +542,7 @@
     },{
     "name": "Female Kiggy",
     "creator": "Darbi",
+    "nsfwAllowed":"Yes",
     "publicUsage": "Yes",
     "tags": "",
     "notes": "",
@@ -539,6 +557,7 @@
     },{
     "name": "Vixine",
     "creator": "Hecka.Space",
+    "nsfwAllowed":"Yes, separate package",
     "publicUsage": "See page for perms",
     "tags": "",
     "notes": "",
@@ -559,6 +578,7 @@
     },{
     "name": "D.Otter",
     "creator": "Darbi",
+    "nsfwAllowed":"Yes",
     "publicUsage": "Yes, with credit",
     "tags": "",
     "notes": "",
@@ -579,6 +599,7 @@
     },{
     "name": "Angel Dragon",
     "creator": "Meelo",
+    "nsfwAllowed":"No",
     "publicUsage": "Unclear",
     "tags": "",
     "notes": "",
@@ -593,6 +614,7 @@
     },{
     "name": "Rexouium",
     "creator": "Rezillo",
+    "nsfwAllowed":"No",
     "publicUsage": "Yes, with credit",
     "tags": "",
     "notes": "",
@@ -607,6 +629,7 @@
     },{
     "name": "Low Poly Rex",
     "creator": "Hetero",
+    "nsfwAllowed":"Unknown",
     "publicUsage": "Not Listed",
     "tags": "",
     "notes": "",
@@ -627,6 +650,7 @@
     },{
     "name": "Kobodal",
     "creator": "Nicoreda",
+    "nsfwAllowed":"Yes",
     "publicUsage": "Yes",
     "tags": "",
     "notes": "",
@@ -647,6 +671,7 @@
     },{
     "name": "Taidum",
     "creator": "irix",
+    "nsfwAllowed":"Unknown",
     "publicUsage": "Yes",
     "tags": "",
     "notes": "",
@@ -655,6 +680,546 @@
         "store": "Gumroad",
         "url": "https://irix.gumroad.com/l/DpDFe",
         "price": 15,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Sergodal",
+    "creator": "Nicoreda",
+    "nsfwAllowed":"Yes",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://nicoreda.gumroad.com/l/sergodal",
+        "price": 30,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Nicoreda/sergodal",
+        "price": 25,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Jerry Avali",
+    "creator": "whispweaver",
+    "nsfwAllowed":"No",
+    "publicUsage": "No",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://wispweaver.gumroad.com/l/JerryAvali",
+        "price": 45,
+        "currency": "AUD"
+      }
+    ]
+    },{
+    "name": "BestBoi: Dutch Angel Dragon Edit",
+    "creator": "Zex",
+    "nsfwAllowed":"Unknown",
+    "publicUsage": "Unknown",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "BestBoi Model Hub",
+        "url": "https://bestbois.com/ModelHub.html",
+        "price": 0,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Capricorn",
+    "creator": "SMÖL",
+    "nsfwAllowed":"Yes",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "Discount code in description",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://sm0l.gumroad.com/l/zoftl",
+        "price": 1,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "ZhuZhu",
+    "creator": "SMÖL",
+    "nsfwAllowed":"Yes",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "Discount code in description",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://sm0l.gumroad.com/l/uyrje",
+        "price": 10,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/SM0L/iwHxw",
+        "price": 10,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Kubrow",
+    "creator": "SMÖL",
+    "nsfwAllowed":"Yes",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "Discount code in description",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://sm0l.gumroad.com/l/pylur",
+        "price": 10,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Gremlin",
+    "creator": "SMÖL",
+    "nsfwAllowed":"Yes",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "Discount code in description",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://sm0l.gumroad.com/l/hmwyd",
+        "price": 10,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Storic",
+    "creator": "SMÖL",
+    "nsfwAllowed":"Yes",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "Discount code in description",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://sm0l.gumroad.com/l/trexa",
+        "price": 10,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Leafygote",
+    "creator": "azmidi",
+    "nsfwAllowed":"Unknown",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://azmidi.gumroad.com/l/leafygote",
+        "price": 30,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Mini Canine",
+    "creator": "Julia Winterpaw",
+    "nsfwAllowed":"No",
+    "publicUsage": "Yes, with credit",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://juliawinterpaw.gumroad.com/l/minicanine",
+        "price": 40,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/winterpaw/minicanine",
+        "price": 36,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Stellara",
+    "creator": "TheRPGSlayer",
+    "nsfwAllowed":"Yes",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://therpgslayer.gumroad.com/l/mcuui",
+        "price": 0,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Amaterasu",
+    "creator": "TheRPGSlayer",
+    "nsfwAllowed":"Yes",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://therpgslayer.gumroad.com/l/Amaterasu",
+        "price": 0,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Auroradon",
+    "creator": "TheRPGSlayer",
+    "nsfwAllowed":"Yes",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://therpgslayer.gumroad.com/l/vyxxw",
+        "price": 0,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Ryuki",
+    "creator": "TheRPGSlayer",
+    "nsfwAllowed":"Yes",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://therpgslayer.gumroad.com/l/zrfkf",
+        "price": 0,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Calli's Manokit",
+    "creator": "Callista's VR Creations",
+    "nsfwAllowed":"No",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://callistakirin.gumroad.com/l/manokitavatar",
+        "price": 40,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/CallistaKirin/CalliManokit",
+        "price": 36,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Red Panda Avatar",
+    "creator": "Skibbles",
+    "nsfwAllowed":"Yes",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://skibbles.gumroad.com/l/RedPandaAvatar",
+        "price": 0,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Deira",
+    "creator": "MariVR",
+    "nsfwAllowed":"Yes",
+    "publicUsage": "No",
+    "tags": "",
+    "notes": "Personal Edition",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://marivr.gumroad.com/l/Deira",
+        "price": 45,
+        "currency": "USD"
+      },
+      {
+        "store": "Payhip",
+        "url": "https://payhip.com/b/PvZTg",
+        "price": 45,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Dragon Puppet",
+    "creator": "Meelo",
+    "nsfwAllowed":"How?",
+    "publicUsage": "Unsure",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://meelo3d.gumroad.com/l/NoodleDragon",
+        "price": 35,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Wickerbeast King",
+    "creator": "Jin A",
+    "nsfwAllowed":"Yes",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://jinapark.gumroad.com/l/JinsWickerbeast",
+        "price": 25,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "The Awtter",
+    "creator": "Shade the Bat",
+    "nsfwAllowed":"Yes",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://shadethebat.gumroad.com/l/awtter",
+        "price": 40,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Shade_the_Bat/awtter",
+        "price": 40,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Floaxy Dragon",
+    "creator": "Kyderra",
+    "nsfwAllowed":"Yes",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://kyderra.gumroad.com/l/Floaxy",
+        "price": 10,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Hyenid",
+    "creator": "Alber",
+    "nsfwAllowed":"Yes",
+    "publicUsage": "Yes, with credit",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://alber.gumroad.com/l/Hyenid",
+        "price": 40,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Alber/Hyenid",
+        "price": 40,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Cotton",
+    "creator": "Kumo Polyworks",
+    "nsfwAllowed":"Yes",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://kumopolyworks.gumroad.com/l/cotton",
+        "price": 15,
+        "currency": "Euro"
+      }]
+    },{
+    "name": "Narachi",
+    "creator": "Nara",
+    "nsfwAllowed":"Yes",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://naraenda.gumroad.com/l/narachi",
+        "price": 5,
+        "currency": "Euro"
+      }
+     ]
+    },{
+    "name": "DigiGuil",
+    "creator": "Kyderra",
+    "nsfwAllowed":"Yes",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://kyderra.gumroad.com/l/DigiGuil",
+        "price": 0,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Nardoragon",
+    "creator": "Nardo",
+    "nsfwAllowed":"Yes",
+    "publicUsage": "Yes, with credit",
+    "tags": "",
+    "notes": "Expanded Version",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://nardoiri.gumroad.com/l/Nardoragon",
+        "price": 45,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Nardo/Nardoragon",
+        "price": 45,
+        "currency": "USD"
+      }
+    ]
+    }
+    ,{
+    "name": "Male Canine",
+    "creator": "Julia Winterpaw",
+    "nsfwAllowed":"Yes",
+    "publicUsage": "Yes, with credit",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://juliawinterpaw.gumroad.com/l/canine",
+        "price": 45,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/winterpaw/vrcanine",
+        "price": 40.50,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Female Canine",
+    "creator": "Julia Winterpaw",
+    "nsfwAllowed":"Yes",
+    "publicUsage": "Yes, with credit",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://juliawinterpaw.gumroad.com/l/vrchatcanine",
+        "price": 45,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/winterpaw/femcanine",
+        "price": 40.50,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Gurichi Canine / Half Eastern Dragon",
+    "creator": "Goteer Txuria",
+    "nsfwAllowed":"Yes",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://goteer.gumroad.com/l/GurechiBase",
+        "price": 0,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Tasque Manager",
+    "creator": "Toastador",
+    "nsfwAllowed":"How?",
+    "publicUsage": "Not Listed",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://neotoasteo.gumroad.com/l/TDRTM",
+        "price": 0,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "BestBoi Chibi Edition",
+    "creator": "Zex",
+    "nsfwAllowed":"Unknown",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "BestBoi Model Hub",
+        "url": "https://bestbois.com/BestboiChibi.html",
+        "price": 0,
+        "currency": "USD"
+      }
+    ]
+    },{
+    "name": "Lorc'Avali",
+    "creator": "Kumo Polyworks",
+    "nsfwAllowed":"Unsure",
+    "publicUsage": "Unclear",
+    "tags": "",
+    "notes": "",
+    "offers": [
+    {
+        "store": "Gumroad",
+        "url": "https://kumopolyworks.gumroad.com/l/lorcavali",
+        "price": 0,
         "currency": "USD"
       }
     ]

@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Greatbow",
+    "creator": "Liindy",
+    "category": "Weapons",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://liindy.gumroad.com/l/Greatbow",
+        "price": 13,
+        "currency": "USD"
+      },{
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Liindy/Greatbow",
+        "price": 12,
+        "currency": "USD"
+      }
+    ]
+  }
+]
