@@ -1,5 +1,452 @@
 [
   {
+    "name": "Wickerbeast Facetracking",
+    "creator": "Han's Creations",
+    "category": "Facetracking",
+    "publicUsage": "Unknown",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://hantnor.gumroad.com/l/wickft",
+        "price": 10,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/hantnor/wickft",
+        "price": 10,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Furbrushed normal maps for Hyenid",
+    "creator": "Nadaro",
+    "category": "Texture",
+    "publicUsage": "No",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://nadaro.gumroad.com/l/dnbej",
+        "price": 7,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Nadaro/gzHXY",
+        "price": 5,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Furbrushed normal maps for Wickerbeast",
+    "creator": "Nadaro",
+    "category": "Texture",
+    "publicUsage": "No",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://nadaro.gumroad.com/l/ooqpnf",
+        "price": 7,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Nadaro/4SrXV",
+        "price": 5,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Furbrushed normal maps for Novabeast",
+    "creator": "Nadaro",
+    "category": "Texture",
+    "publicUsage": "No",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://nadaro.gumroad.com/l/vcyzgrs",
+        "price": 7,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Nadaro/euRAw",
+        "price": 5,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Pigtail Hair for Novabeast",
+    "creator": "TubbyTubs",
+    "category": "Hair",
+    "publicUsage": "No",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://tubbytubs.gumroad.com/l/Nova_ponytail",
+        "price": 7,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Tubbytubs/NovabeastPigtails",
+        "price": 7,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Novabeast Idle Ear Twitch and Tail Wag",
+    "creator": "Wolffie",
+    "category": "Animation",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://werewoofpaws.gumroad.com/l/EarTwitchAndTailWagNovabeast",
+        "price": 0,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Novabeast Headpat and Nose Boop",
+    "creator": "Wolffie",
+    "category": "Animation",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://werewoofpaws.gumroad.com/l/NovabeastHeadPatNoseBoop",
+        "price": 0,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Ictus Tame Hair",
+    "creator": "Darbi",
+    "category": "Hair",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "Megapack",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://darbi.gumroad.com/l/ictustamehair",
+        "price": 12,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "CyberWavy Hair",
+    "creator": "aidenfur",
+    "category": "Hair",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://aidenart.gumroad.com/l/apsbw",
+        "price": 10,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Wildcat Textures for Vixine",
+    "creator": "Pawlygon",
+    "category": "Texture",
+    "publicUsage": "Unknown",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://pawlygon.gumroad.com/l/VixineWildCats",
+        "price": 10,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Pawlygon/VixineWildCats",
+        "price": 10,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Novabeast Husky Texture",
+    "creator": "cilcipher",
+    "category": "Texture",
+    "publicUsage": "Yes, with credit.",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://cilcipher.gumroad.com/l/husky",
+        "price": 0,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/cilcipher/husky",
+        "price": 0,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Icon Pack VRChat",
+    "creator": "Niki Besnik",
+    "category": "Ui Icons",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://besniktlp.gumroad.com/l/ttijm",
+        "price": 0,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Puppy Asset Pack",
+    "creator": "Mari",
+    "category": "Model",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://marivr.gumroad.com/l/PuppyAssetbyMari",
+        "price": 10,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "85+ Animation Dance Pack",
+    "creator": "Vyath",
+    "category": "Animation",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://vyath.gumroad.com/l/Dance_Pack",
+        "price": 0,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Maelstrorca Facetracking",
+    "creator": "Han's Creations",
+    "category": "Facetracking",
+    "publicUsage": "Unknown",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://hantnor.gumroad.com/l/maelft",
+        "price": 10,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/hantnor/maelft",
+        "price": 10,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Animated Dragon Wings",
+    "creator": "Kyderra",
+    "category": "Model",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://kyderra.gumroad.com/l/Wings",
+        "price": 5,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Kyderra/Wings",
+        "price": 5,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Multi-Species Cheese Slap",
+    "creator": "Meaty",
+    "category": "mmmmmmCheese.",
+    "publicUsage": "Yes, with credit.",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://bigschmeatyy.gumroad.com/l/prefab_multispecies_cheese",
+        "price": 2,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Shark Tail",
+    "creator": "bratbun",
+    "category": "Tail Model",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Payhip",
+        "url": "https://payhip.com/b/pxeD0",
+        "price": 4,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Angel Dragon Facetracking",
+    "creator": "Han's Creations",
+    "category": "Facetracking",
+    "publicUsage": "Unknown",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://hantnor.gumroad.com/l/angeldragft",
+        "price": 10,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/hantnor/angeldragft",
+        "price": 10,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Facetracking - Robot",
+    "creator": "Han's Creations",
+    "category": "Facetracking",
+    "publicUsage": "Unknown",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://hantnor.gumroad.com/l/robotft",
+        "price": 0,
+        "currency": "USD"
+      },
+      {
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/hantnor/robotft",
+        "price": 0,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Manokit Facetracking",
+    "creator": "adjerry91",
+    "category": "Facetracking",
+    "publicUsage": "Unknown",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://adjerry91.gumroad.com/l/ManokitFaceTracking",
+        "price": 0,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Punchable Avatar System",
+    "creator": "runefox237",
+    "category": "System",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://runefox237.gumroad.com/l/punchable",
+        "price": 0,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Fluffy Tail",
+    "creator": "Novaic Night",
+    "category": "Tail Model",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://novaicnight.gumroad.com/l/fluffytail",
+        "price": 10,
+        "currency": "USD"
+      },
+      {
+        "store": "Payhip",
+        "url": "https://payhip.com/b/rGC03",
+        "price": 10,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Kitavali Shark Tail and Fin",
+    "creator": "CookieBean",
+    "category": "Tail Model",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://cookiebean.gumroad.com/l/kitasharktailandfin",
+        "price": 4,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "New Kita Tail",
+    "creator": "archangel1839",
+    "category": "Tail Model",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://archangel1839.gumroad.com/l/msrvf",
+        "price": 0,
+        "currency": "USD"
+      }
+    ]
+  },{
     "name": "Goddess Wing Set",
     "creator": "moonlightpeach",
     "category": "Model",
@@ -10,6 +457,21 @@
       {
         "store": "Gumroad",
         "url": "https://moonlightpeachh.gumroad.com/l/gpovz",
+        "price": 0,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "GoGo Loco",
+    "creator": "franada",
+    "category": "Animation",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://franadavrc.gumroad.com/l/gogoloco",
         "price": 0,
         "currency": "USD"
       }

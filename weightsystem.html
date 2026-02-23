@@ -1,7 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/png" href="images/flower.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aubrey's Workshop</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss"> @theme {
+          --font-coming: "Coming Soon", ui-sans-serif, system-ui;
+          --font-architect: "Architects Daughter", ui-sans-serif, system-ui;
+          --font-indie: "Indie Flower", ui-sans-serif, system-ui;
+          --font-shadows: "Shadows Into Light Two", ui-sans-serif, system-ui;
+          --font-delius: "Delius", ui-sans-serif, system-ui;
+
+          --color-mutedpink: #d5b9bb;
+          --color-mutedred: #da7d7d;
+          --color-mutedpurple: #c8bdd5;
+          --color-mutedblue: #b2c7d4;
+          --color-mutedgreen: #738a58;
+          --color-deepmutedpurple: #6c35ad;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Coming+Soon|Rancho|Architects+Daughter|Shadows+Into+Light+Two|Delius&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+  </head>
+  <body class="min-h-screen bg-gradient-to-r from-mutedpink via-mutedpurple to-mutedblue">
+    <nav class="border-gray-200 py-2.5">
+      <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
+        <a href="index.html" class="flex items-center">
+          <span class="self-center text-2xl font-semibold whitespace-nowrap font-indie">Fox's Workshop</span>
+        </a>
+        <div class="flex items-center lg:order-2">
+          <div class="hidden mt-2 mr-4 sm:inline-block">
+            <span></span>
+          </div>
+          <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="true">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+            </svg>
+            <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="items-center justify-between w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+          <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+            <li>
+              <button id="commsDropdownButton" data-dropdown-toggle="commsDropdown" data-dropdown-placement="bottom-start" type="button" class="flex items-center justify-between w-full py-2 pl-3 pr-4 hover:text-black lg:p-0">
+                <p class="font-indie text-xl">VR Chat Avatar Commissions</p>
+                <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7" />
+                </svg>
+              </button>
+              <div id="commsDropdown" class="z-50 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-56" aria-labelledby="commsDropdownButton">
+                <ul class="py-2 text-sm text-gray-700">
+                  <li>
+                    <a href="commissions.html" class="block px-4 py-2 hover:bg-gray-100">Main page</a>
+                  </li>
+                  <li>
+                    <a href="contentlist.html" class="block px-4 py-2 hover:bg-gray-100">Owned assets</a>
+                  </li>
+                  <li>
+                    <a href="commstos.html" class="block px-4 py-2 hover:bg-gray-100">Terms of service</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            </li>
+            <li>
+              <a href="projects.html" class="block py-2 pl-3 pr-4 hover:text-white lg:p-0 font-indie text-xl text-mutedgreen ">Other Projects</a>
+            </li>
+            <li>
+              <a href="about.html" class="block py-2 pl-3 pr-4 hover:text-white lg:p-0 font-indie text-xl">About Me</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="relative ">
+        <div class="flex flex-col gap-4 justify-center items-center w-full h-full px-3 md:px-0">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-delius tracking-wide"> Character / Species weight calculator </h1>
+          <p> Ever wanted to calculate how much a fictional, anthro character weighs? Well, now using real world science, <b><i>We can</i>.</b> </p>
+          <div class="grid gap-8 md:grid-cols-2 lg:gap-5 p-6 md:p-10">
+            <section class="flex flex-col p-1 space-y-6 bg-gray-200/75 rounded-lg shadowlg:p-8 lg:flex-row lg:space-y-0 lg:space-x-6">
+              <div class="flex-1">
+                <div class="w-full mx-auto">
+                  <!-- Tab Buttons -->
+                  <div class=" p-2 rounded-t-lg">
+                    <div class="flex justify-center space-x-4">
+                      <button class="px-4 py-2 border-b-4 border-blue-700 hover:bg-blue-300 focus:outline-none tab-button" onclick="showTab('tab1')">Info</button>
+                      <button class="px-4 py-2 border-b-4 border-blue-700 hover:bg-blue-300 focus:outline-none tab-button" onclick="showTab('tab2')">BMI</button>
+                      <button class="px-4 py-2 border-b-4 border-blue-700 hover:bg-blue-300 focus:outline-none tab-button" onclick="showTab('tab3')">Species Mod</button>
+                      <button class="px-4 py-2 border-b-4 border-blue-700 hover:bg-blue-300 focus:outline-none tab-button" onclick="showTab('tab4')">Tail</button>
+                      <button class="px-4 py-2 border-b-4 border-blue-700 hover:bg-blue-300 focus:outline-none tab-button" onclick="showTab('tab5')">Wings</button>
+                      <button class="px-4 py-2 border-b-4 border-blue-700 hover:bg-blue-300 focus:outline-none tab-button" onclick="showTab('tab6')">Ears</button>
+                      <button class="px-4 py-2 border-b-4 border-blue-700 hover:bg-blue-300 focus:outline-none tab-button" onclick="showTab('tab7')">Other</button>
+                    </div>
+                  </div>
+                  <!-- Tab Content -->
+                  <div id="tab1" class="p-4 tab-content">
+                    <h2 class="text-2xl font-semibold mb-2 text-blue-700">Tab 1 Content</h2>
+                    <p> Vestibulum condimentum imperdiet velit nec ornare. Nullam lobortis urna posuere quam porta consequat. Donec commodo diam lectus, sit amet tempor dolor scelerisque eget. Vestibulum at lectus dui. Maecenas consectetur tempor ipsum non porttitor. Cras accumsan mattis aliquam. Fusce eleifend maximus elit facilisis condimentum. Mauris non risus sed ligula convallis fermentum. <br> Quisque eu purus nunc. Ut eget ligula ac lorem laoreet scelerisque in ut nulla. Quisque volutpat elit eget tellus pharetra, vel sollicitudin velit scelerisque. Vivamus ac libero eu nunc congue malesuada eu vitae est. </p>
+                  </div>
+                  <div id="tab2" class="p-4 tab-content hidden">
+                    <h2 class="text-2xl font-semibold mb-2 text-blue-700">Body Mass Index</h2>
+                    <p class="mb-5 mt-5">
+                      In humans, this is a system that is used to determine body weight to height. For our purposes, we will be using it for the very build of the creature so we have a starting point.
+                      Pick a range that fits your character the best, and give it your best shot from there. You can always adjust this number later. 
+                    </p>
+                     <table class="">
+                      <thead class="bg-slate-400 border-b">
+                        <tr>
+                          <th scope="col" class="px-6 py-4 text-left">BMI Range</th>
+                          <th scope="col" class="px-6 py-4 text-left">Build Type</th>
+                          <th scope="col" class="px-6 py-4 text-left">Short Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="border-b">
+                          <td class="px-6 py-4 whitespace-nowrap">Less than 18.5</td>
+                          <td class="px-6 py-4 whitespace-nowrap">A very light, or very small frame.</td>
+                          <td class="px-6 py-4 whitespace-nowrap">Twig, String bean</td>
+                        </tr>
+                        <tr class="border-b">
+                          <td class="px-6 py-4 whitespace-nowrap">18.5 - 21</td>
+                          <td class="px-6 py-4 whitespace-nowrap">Light build. Skinny, but not thin.</td>
+                          <td class="px-6 py-4 whitespace-nowrap">-</td>
+                        </tr>
+                        <tr class="border-b">
+                          <td class="px-6 py-4 whitespace-nowrap">21 - 24.9</td>
+                          <td class="px-6 py-4 whitespace-nowrap">Average human build. Not chonky, not skinny.</td>
+                          <td class="px-6 py-4 whitespace-nowrap">A perfectly fine creature</td>
+                        </tr>
+                        <tr class="border-b">
+                          <td class="px-6 py-4 whitespace-nowrap">25 - 27</td>
+                          <td class="px-6 py-4 whitespace-nowrap">Dense. Muscular or a larger frame.</td>
+                          <td class="px-6 py-4 whitespace-nowrap">A heccin' chonker.</td>
+                        </tr>
+                        <tr class="border-b">
+                          <td class="px-6 py-4 whitespace-nowrap">27 - 29.9</td>
+                          <td class="px-6 py-4 whitespace-nowrap">Heavy build. Either bodybuilder-like or bigger.</td>
+                          <td class="px-6 py-4 whitespace-nowrap">Hefty Chonk</td>
+                        </tr>
+                        <tr class="border-b">
+                          <td class="px-6 py-4 whitespace-nowrap">30 - 34.9</td>
+                          <td class="px-6 py-4 whitespace-nowrap"></td>
+                          <td class="px-6 py-4 whitespace-nowrap">Damn!</td>
+                        </tr>
+                        <tr class="border-b">
+                          <td class="px-6 py-4 whitespace-nowrap">35 - 40</td>
+                          <td class="px-6 py-4 whitespace-nowrap">Huge, or massive build. Also applicable to bulky species.</td>
+                          <td class="px-6 py-4 whitespace-nowrap">Megachonk</td>
+                        </tr>
+                        <tr class="border-b">
+                          <td class="px-6 py-4 whitespace-nowrap">Greater than 40</td>
+                          <td class="px-6 py-4 whitespace-nowrap">Extreme mass or almost gigantic frame.</td>
+                          <td class="px-6 py-4 whitespace-nowrap">OH LAWD THEY COMIN'!!</td>
+                        </tr>
+                      </tbody>
+               
+                    </table>
+                  </div>
+                  <div id="tab3" class="p-4 tab-content hidden">
+                    <h2 class="text-2xl font-semibold mb-2 text-blue-700">Species Modifier</h2>
+                    <p class="mb-5 mt-5">
+                      This is a corrective factor applied to our previously assigned BMI value that is the heart of this system. BMI does not take into account muscle, nor fat content. This does. 
+                    </p>
+                  </div>
+                  <div id="tab4" class="p-4 tab-content hidden">
+                    <h2 class="text-2xl font-semibold mb-2 text-blue-700">Tab 4 Content</h2>
+                    <p>
+                      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+                    </p>
+                  </div>
+                  <div id="tab5" class="p-4 tab-content hidden">
+                    <h2 class="text-2xl font-semibold mb-2 text-blue-700">Tab 5 Content</h2>
+                    <p>
+                      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+                    </p>
+                  </div>
+                  <div id="tab6" class="p-4 tab-content hidden">
+                    <h2 class="text-2xl font-semibold mb-2 text-blue-700">Tab 6 Content</h2>
+                    <p>
+                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Yeah, we're going this deep.
+                    </p>
+                  </div>
+                  <div id="tab7" class="p-4 tab-content hidden">
+                    <h2 class="text-2xl font-semibold mb-2 text-blue-700">Tab 7 Content</h2>
+                    <p>
+                      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="flex flex-col p-6 space-y-6 bg-gray-200/75 rounded-lg shadow lg:p-8 lg:flex-row lg:space-y-0 lg:space-x-6">
+              <div class="flex-1">
+                <h5 class="mb-3 text-xl font-bold lg:text-2xl font-delius tracking-wide">Data In</h5>
+                <p class="mb-6 text-lg text-gray-600">This is where the data the user enters will be.</p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <script>
+        function showTab(tabId) {
+          // Hide all tab content
+          const tabContents = document.querySelectorAll('.tab-content');
+          tabContents.forEach((content) => {
+            content.classList.add('hidden');
+          });
+          // Show the selected tab content
+          const selectedTab = document.getElementById(tabId);
+          if (selectedTab) {
+            selectedTab.classList.remove('hidden');
+          }
+          // Remove the 'active' class from all tab buttons
+          const tabButtons = document.querySelectorAll('.tab-button');
+          tabButtons.forEach((button) => {
+            button.classList.remove('active');
+          });
+          // Add the 'active' class to the clicked tab button
+          const clickedButton = document.querySelector(`[onclick="showTab('${tabId}')"]`);
+          if (clickedButton) {
+            clickedButton.classList.add('active');
+          }
+        }
+        // Initialize the first tab
+        showTab('tab1');
+      </script>
+    </main>
+    <footer>
+      <div class="max-w-screen-lg px-4 sm:px-6 text-gray-800 sm:grid md:grid-cols-4 sm:grid-cols-2 mx-auto">
+        <div class="p-5">
+          <a href="index.html">
+            <h3 class="font-bold text-xl text-deepmutedpurple font-indie">Fox's Workshop</h3>
+          </a>
+        </div>
+        <div class="p-5">
+          <div class="text-md text-deepmutedpurple font-bold font-indie tracking-wide">Commissions</div>
+          <a class="my-3 block" href="commissions.html">Main comms page</a>
+          <a class="my-3 block" href="contentlist.html">Owned assets</a>
+          <a nclass="my-3 block" href="commstos.html">Terms of Service</a>
+        </div>
+        <div class="p-5">
+          <div class="text-md text-deepmutedpurple font-bold font-indie tracking-wide">Rest of the site</div>
+          <a class="my-3 block" href="about.html">About Me</a>
+          <a class="my-3 block" href="/chardb/chardb.html">Character Database</a>
+          <a class="my-3 block" href="projects.html">Other projects</a>
+        </div>
+        <div class="p-5">
+          <div class="text-md text-deepmutedpurple font-bold font-indie tracking-wide">External Links</div>
+          <a class="my-3 block" href="https://github.com/foxintale" target="_blank">My Github</a>
+          <a class="my-3 block" href="https://jinxxy.com/foxintale" target="_blank">Jinxxy</a>
+          <a class="my-3 block" href="https://www.furaffinity.net/user/foxintale/" target="_blank">FurAffinity</a>
+        </div>
+      </div>
+      <div class="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col max-w-screen-lg items-center">
+        <div class="my-5">&copy; Aubrey Jane / Foxintale - Made in Tailwind CSS without a builder or AI.</div>
+      </div>
+    </footer>
+  </body>
+</html>
 <!--
-Holding page for character weight system.
-
-
-
-
+Template for this credit: https://tailwindflex.com/@brandon/frequently-asked-questions-section 
 -->
