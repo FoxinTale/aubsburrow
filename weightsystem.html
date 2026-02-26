@@ -89,7 +89,7 @@
               <div class="flex-1">
                 <div class="w-full mx-auto">
                   <!-- Tab Buttons -->
-                  <div class=" p-2 rounded-t-lg">
+                  <div class="">
                     <div class="flex justify-center space-x-4">
                       <button class="px-4 py-2 border-b-4 border-blue-700 hover:bg-blue-300 focus:outline-none tab-button" onclick="showTab('tab1')">Info</button>
                       <button class="px-4 py-2 border-b-4 border-blue-700 hover:bg-blue-300 focus:outline-none tab-button" onclick="showTab('tab2')">BMI</button>
@@ -111,7 +111,7 @@
                       In humans, this is a system that is used to determine body weight to height. For our purposes, we will be using it for the very build of the creature so we have a starting point.
                       Pick a range that fits your character the best, and give it your best shot from there. You can always adjust this number later. 
                     </p>
-                     <table class="">
+                     <table class="py-2 inline-block min-w-full sm:px-6 lg:px-8"">
                       <thead class="bg-slate-400 border-b">
                         <tr>
                           <th scope="col" class="px-6 py-4 text-left">BMI Range</th>
@@ -163,6 +163,14 @@
                       </tbody>
                
                     </table>
+                    <ul>
+                      <li class="text-xl">
+                        <h4 class="font-indie font-bold tracking-wide">Sources:</h4>
+                      </li>
+                      <li class="px-2 py-1 text-md"><a href="https://www.cdc.gov/bmi/adult-calculator/bmi-categories.html" target="_blank">Center for Disease Control</a></li>
+                      <li class="px-2 py-1 text-md"><a href="https://www.nhlbi.nih.gov/health/heart-healthy-living/healthy-weight" target="_blank">National Heart, Lung and Blood Institute</a></li>
+                      <li class="px-2 py-1 text-md"></li>
+                    </ul>
                   </div>
                   <div id="tab3" class="p-4 tab-content hidden">
                     <h2 class="text-2xl font-semibold mb-2 text-blue-700">Species Modifier</h2>

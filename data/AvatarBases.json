@@ -1,4 +1,19 @@
-[
+[{
+    "name": "Kobold and Roo Combo",
+    "creator": "Mister Blundertainment",
+    "publicUsage": "No",
+    "nsfwAllowed": "Yes, Native",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Jinxxy",
+        "url": "https://mrblu.gumroad.com/l/yunsbp",
+        "price": 21,
+        "currency": "USD"
+      }
+    ]
+  },
   {
     "name": "Bunnic",
     "creator": "ArkorenArt",
@@ -12,10 +27,14 @@
         "url": "https://jinxxy.com/ArkorenArt/Bunnic",
         "price": 50,
         "currency": "USD"
+      },{
+        "store": "Itch.io",
+        "url": "https://arkorenart.itch.io/bunnic",
+        "price": 50,
+        "currency": "USD"
       }
     ]
-  },
-  {
+  },{
     "name": "Shawn the Shark",
     "creator": "Darbi",
     "notes": "",
@@ -28,16 +47,14 @@
         "url": "https://darbi.gumroad.com/l/shawnshark",
         "price": 40,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Gumroad",
         "url": "https://jinxxy.com/Darbi/shawnshark",
         "price": 40,
         "currency": "USD"
       }
     ]
-  },
-    {
+  },{
     "name": "Winterpaw Feline",
     "creator": "Julia Winterpaw",
     "nsfwAllowed": "Yes, separate package",
@@ -50,16 +67,14 @@
         "url": "https://juliawinterpaw.gumroad.com/l/Feline",
         "price": 45,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/winterpaw/WinterpawFeline",
         "price": 45,
         "currency": "USD"
       }
     ]
-  },
-    {
+  },{
     "name": "Soap Dog",
     "creator": "ironicsoap",
     "nsfwAllowed": "No",
@@ -72,16 +87,14 @@
         "url": "https://ironicsoap.gumroad.com/l/SoapDogs",
         "price": 40,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/ironicsoap/SoapDogs",
         "price": 40,
         "currency": "USD"
       }
     ]
-  },
-    {
+  },{
     "name": "Jinxed Malestrorca",
     "creator": "dont_jinxit",
     "nsfwAllowed": "No",
@@ -94,16 +107,14 @@
         "url": "https://dontjinxit.gumroad.com/l/JinxedMaelstrorca",
         "price": 25,
         "currency": "Euro"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/dont_jinxit/JinxedMaelstrorca",
         "price": 26,
         "currency": "USD"
       }
     ]
-  },
-    {
+  },{
     "name": "Winterbold",
     "creator": "itsguusy",
     "publicUsage": "Yes, with credit",
@@ -116,16 +127,14 @@
         "url": "https://itsguusy.gumroad.com/l/the-winterbold-fluffy-furred-kobold-avatar-base-for-vrchat-by-itsguusy",
         "price": 45,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/ItsGuusy/products/the-winterbold-fluffy-furred-kobold-avatar-base-for-vrchat-by-itsguusy",
         "price": 45,
         "currency": "USD"
       }
     ]
-  },
-    {
+  },{
     "name": "Novabeast",
     "creator": "Kittomatic",
     "publicUsage": "Yes, with credit",
@@ -138,16 +147,14 @@
         "url": "https://kittomatic.gumroad.com/l/Novabeast",
         "price": 35,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/Kittomatic/products/novabeast",
         "price": 35,
         "currency": "USD"
       }
     ]
-  },
-    {
+  },{
     "name": "Kirin",
     "creator": "Callista's VR Creations",
     "nsfwAllowed": "Yes",
@@ -160,16 +167,14 @@
         "url": "https://callistakirin.gumroad.com/l/kirinavatar",
         "price": 40,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/CallistaKirin/CalliKirin",
         "price": 36,
         "currency": "USD"
       }
     ]
-  },
-    {
+  },{
     "name": "Nicoreda Protogen (Protodal)",
     "creator": "Nicoreda",
     "nsfwAllowed": "Yes",
@@ -182,16 +187,14 @@
         "url": "https://nicoreda.gumroad.com/l/protodal",
         "price": 15,
         "currency": "Euro"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/Nicoreda/protodal",
         "price": 20,
         "currency": "USD"
       }
     ]
-  },
-    {
+  },{
     "name": "Nico & JHK Mantled Beast",
     "creator": "Nicoreda",
     "nsfwAllowed": "Yes",
@@ -204,16 +207,14 @@
         "url": "https://nicoreda.gumroad.com/l/mantlednicojedi",
         "price": 25,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/Nicoreda/mantlednicojedi",
         "price": 25,
         "currency": "USD"
       }
     ]
-    },
-    {
+    },{
     "name": "Pawvali",
     "creator": "TheRPGSlayer",
     "nsfwAllowed":"Yes",
@@ -228,8 +229,7 @@
         "currency": "USD"
       }
     ]
-  },
-    {
+  },{
     "name": "Ashbeast",
     "creator": "TheRPGSlayer",
     "nsfwAllowed":"Yes",
@@ -242,16 +242,14 @@
         "url": "https://therpgslayer.gumroad.com/l/ashbeast",
         "price": 35,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/TheRPGslayer/ashbeast",
         "price": 31.50,
         "currency": "USD"
       }
     ]
-    },
-    {
+    },{
     "name": "Furbold",
     "creator": "Kumo Polyworks",
     "nsfwAllowed":"Yes",
@@ -264,16 +262,14 @@
         "url": "https://kumopolyworks.gumroad.com/l/furbold",
         "price": 35,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/KumoPolyWorks/furbold",
         "price": 35,
         "currency": "USD"
       }
     ]
-    },
-    {
+    },{
     "name": "BestBoi - Dutch Angel Drago Edit",
     "creator": "Zex / RustyDustyFox",
     "nsfwAllowed":"Unknown",
@@ -288,8 +284,7 @@
         "currency": "USD"
       }
     ]
-    },
-    {
+    },{
     "name": "Zio's Red Panda",
     "creator": "ziodynes098",
     "nsfwAllowed":"Yes",
@@ -302,16 +297,14 @@
         "url": "https://ziodynes098.gumroad.com/l/ZioRedPanda",
         "price": 0,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/ziodynes098/RedPanda",
         "price": 0,
         "currency": "USD"
       }
     ]
-    },
-    {
+    },{
     "name": "Zio's Red Fox",
     "creator": "ziodynes098",
     "nsfwAllowed":"Yes",
@@ -324,16 +317,14 @@
         "url": "https://ziodynes098.gumroad.com/l/ZioRedFox",
         "price": 0,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/ziodynes098/RedFox",
         "price": 0,
         "currency": "USD"
       }
     ]
-    },
-    {
+    },{
     "name": "Male Kiggy",
     "creator": "Darbi",
     "nsfwAllowed":"Yes",
@@ -348,8 +339,7 @@
         "currency": "USD"
       }
     ]
-    },
-    {
+    },{
     "name": "Fox Moth",
     "creator": "Darbi",
     "nsfwAllowed":"Yes, separate package.",
@@ -362,8 +352,7 @@
         "url": "https://darbi.gumroad.com/l/foxmoth",
         "price": 40,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/Darbi/foxmoth",
         "price": 40,
@@ -396,8 +385,7 @@
         "url": "https://therpgslayer.gumroad.com/l/chibinova",
         "price": 30,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/TheRPGslayer/chibinova",
         "price": 30,
@@ -417,8 +405,7 @@
         "url": "https://vivifae.gumroad.com/l/Manokit",
         "price": 35,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/ViviFae/Manokit",
         "price": 35,
@@ -438,8 +425,7 @@
         "url": "https://darbi.gumroad.com/l/sweethooves",
         "price": 45,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/Darbi/sweethooves",
         "price": 45,
@@ -474,8 +460,7 @@
         "url": "https://nicoreda.gumroad.com/l/Dergodal",
         "price": 30,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/Nicoreda/dergodal",
         "price": 30,
@@ -495,8 +480,7 @@
         "url": "https://callistakirin.gumroad.com/l/maelstrorca",
         "price": 40,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/CallistaKirin/CalliMaelstrorca",
         "price": 36,
@@ -516,8 +500,7 @@
         "url": "https://milofox.gumroad.com/l/KitFox",
         "price": 45,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/MiloFox/KitFox",
         "price": 45,
@@ -567,8 +550,7 @@
         "url": "https://hecka.gumroad.com/l/Vixine",
         "price": 50,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/Hecka/Vix",
         "price": 50,
@@ -588,8 +570,7 @@
         "url": "https://darbi.gumroad.com/l/d_otter",
         "price": 35,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/Darbi/d_otter",
         "price": 35,
@@ -639,8 +620,7 @@
         "url": "https://heteroschmexual.gumroad.com/l/lowpolyrex",
         "price": 10,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/Heteroschmexual/lowpolyrex",
         "price": 10,
@@ -660,8 +640,7 @@
         "url": "https://nicoreda.gumroad.com/l/Kobodal",
         "price": 30,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/Nicoreda/kobodal",
         "price": 30,
@@ -696,8 +675,7 @@
         "url": "https://nicoreda.gumroad.com/l/sergodal",
         "price": 30,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/Nicoreda/sergodal",
         "price": 25,
@@ -762,8 +740,7 @@
         "url": "https://sm0l.gumroad.com/l/uyrje",
         "price": 10,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/SM0L/iwHxw",
         "price": 10,
@@ -843,8 +820,7 @@
         "url": "https://juliawinterpaw.gumroad.com/l/minicanine",
         "price": 40,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/winterpaw/minicanine",
         "price": 36,
@@ -924,8 +900,7 @@
         "url": "https://callistakirin.gumroad.com/l/manokitavatar",
         "price": 40,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/CallistaKirin/CalliManokit",
         "price": 36,
@@ -960,8 +935,7 @@
         "url": "https://marivr.gumroad.com/l/Deira",
         "price": 45,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Payhip",
         "url": "https://payhip.com/b/PvZTg",
         "price": 45,
@@ -1011,8 +985,7 @@
         "url": "https://shadethebat.gumroad.com/l/awtter",
         "price": 40,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/Shade_the_Bat/awtter",
         "price": 40,
@@ -1047,8 +1020,7 @@
         "url": "https://alber.gumroad.com/l/Hyenid",
         "price": 40,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/Alber/Hyenid",
         "price": 40,
@@ -1112,8 +1084,7 @@
         "url": "https://nardoiri.gumroad.com/l/Nardoragon",
         "price": 45,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/Nardo/Nardoragon",
         "price": 45,
@@ -1134,8 +1105,7 @@
         "url": "https://juliawinterpaw.gumroad.com/l/canine",
         "price": 45,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/winterpaw/vrcanine",
         "price": 40.50,
@@ -1155,8 +1125,7 @@
         "url": "https://juliawinterpaw.gumroad.com/l/vrchatcanine",
         "price": 45,
         "currency": "USD"
-      },
-      {
+      },{
         "store": "Jinxxy",
         "url": "https://jinxxy.com/winterpaw/femcanine",
         "price": 40.50,

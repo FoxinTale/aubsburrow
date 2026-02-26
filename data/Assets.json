@@ -19,5 +19,546 @@
         "currency": "USD"
       }
     ]
+  },{
+    "name": "Firebreathing FX and Flame Sneeze",
+    "creator": "VioletPainter",
+    "category": "Particles",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://violentpainter.gumroad.com/l/vfx-firebreathing",
+        "price": 7,
+        "currency": "USD"
+      },{
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/violentpainter/vfx-firebreathing",
+        "price": 12,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Magic Spell System",
+    "creator": "Raideus",
+    "category": "Magic",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://raideus.gumroad.com/l/Magic",
+        "price": 30,
+        "currency": "USD"
+      },{
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Raideus/Magic",
+        "price": 30,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Celstial Magic",
+    "creator": "Raideus",
+    "category": "Magic",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://raideus.gumroad.com/l/CelestialMagic",
+        "price": 15,
+        "currency": "USD"
+      },{
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Raideus/CelestialMagic",
+        "price": 15,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Lever Action Winchester",
+    "creator": "Liindy",
+    "category": "Weapons",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://liindy.gumroad.com/l/LeverActionWinchester",
+        "price": 15,
+        "currency": "USD"
+      },{
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Liindy/LeverActionWinchester",
+        "price": 14,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Otherworldly Fishing Rod",
+    "creator": "Liindy",
+    "category": "Weapons",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://liindy.gumroad.com/l/FishingRod",
+        "price": 15,
+        "currency": "USD"
+      },{
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Liindy/FishingRod",
+        "price": 14,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Instant Camera",
+    "creator": "Photoboio",
+    "category": "",
+    "publicUsage": "No",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://photoboio.gumroad.com/l/rgiyyl",
+        "price": 10,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Hawk Bow",
+    "creator": "Liindy",
+    "category": "Weapons",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://liindy.gumroad.com/l/HawkBow",
+        "price": 15,
+        "currency": "USD"
+      },{
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Liindy/HawkBow",
+        "price": 14,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Card Bending",
+    "creator": "Liindy",
+    "category": "",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://liindy.gumroad.com/l/CardBending",
+        "price": 17,
+        "currency": "USD"
+      },{
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Liindy/CardBending",
+        "price": 16,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "VHS Camera",
+    "creator": "Pointless",
+    "category": "",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "Before news broke...",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://pointlesscreations.gumroad.com/l/VHSCam",
+        "price": 8,
+        "currency": "USD"
+      },{
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/POINTLESS/VHSCam",
+        "price": 8,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Pet Training Clicker",
+    "creator": "Pointless",
+    "category": "",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://pointlesscreations.gumroad.com/l/TrainingClicker",
+        "price": 3,
+        "currency": "USD"
+      },{
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/POINTLESS/TrainingClicker",
+        "price": 3,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Remington 870 Shotgun",
+    "creator": "Pointless",
+    "category": "",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "Base",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://pointlesscreations.gumroad.com/l/Remington870",
+        "price": 10,
+        "currency": "USD"
+      },{
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/POINTLESS/Remington870",
+        "price": 10,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Steel Bloody Knife",
+    "creator": "Pointless",
+    "category": "",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "Base",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://pointlesscreations.gumroad.com/l/SteelKnife",
+        "price": 6,
+        "currency": "USD"
+      },{
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/POINTLESS/SteelKnife",
+        "price": 6,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Whizzbanger",
+    "creator": "Liindy",
+    "category": "",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://liindy.gumroad.com/l/LiinWhizzbanger",
+        "price": 7,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Skyrim Magic System",
+    "creator": "Skaley Seto",
+    "category": "Magic",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://skaleyseto.gumroad.com/l/SkyrimMagicSystem",
+        "price": 20,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Fallout Style Laser Rifle",
+    "creator": "Pointless",
+    "category": "",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://pointlesscreations.gumroad.com/l/LaserRifle",
+        "price": 5,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Glass Bottle Weapon",
+    "creator": "Pointless",
+    "category": "",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://pointlesscreations.gumroad.com/l/GlassBottle",
+        "price": 0,
+        "currency": "USD"
+      },{
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/POINTLESS/GlassBottle",
+        "price": 0,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "M1 Garand",
+    "creator": "Pointless",
+    "category": "",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://pointlesscreations.gumroad.com/l/M1Garand",
+        "price": 10,
+        "currency": "USD"
+      },{
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/POINTLESS/M1Garand",
+        "price": 10,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Pip Boy",
+    "creator": "Pointless",
+    "category": "",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://pointlesscreations.gumroad.com/l/PIP-BOY",
+        "price": 10,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Trench Gun",
+    "creator": "Pointless",
+    "category": "",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://pointlesscreations.gumroad.com/l/TrenchGun",
+        "price": 10,
+        "currency": "USD"
+      },{
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/POINTLESS/TrenchGun",
+        "price": 10,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "C4 Pack",
+    "creator": "Kyrowo",
+    "category": "",
+    "publicUsage": "No",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://kyrowovrc.gumroad.com/l/C4Pack",
+        "price": 10,
+        "currency": "Euro"
+      }
+    ]
+  },{
+    "name": "M1911 Akimbo",
+    "creator": "Liindy",
+    "category": "",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "With extra textures.",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://liindy.gumroad.com/l/M1911AKIMBO",
+        "price": 21,
+        "currency": "USD"
+      },{
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Liindy/M1911AKIMBO",
+        "price": 20,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "MCX Spear",
+    "creator": "Alasky",
+    "category": "",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://alasky.gumroad.com/l/AlaskysSPEAR",
+        "price": 0,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "TF2 Deployable Chair",
+    "creator": "Pointless",
+    "category": "",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://pointlesscreations.gumroad.com/l/DeployableChair",
+        "price": 5,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Liish",
+    "creator": "Liindy",
+    "category": "",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://liindy.gumroad.com/l/Liish",
+        "price": 5,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Butterfly Knife / Balisong",
+    "creator": "Liindy",
+    "category": "",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "Skin Packs 1 and 2",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://liindy.gumroad.com/l/ButterflyKnife",
+        "price": 16,
+        "currency": "USD"
+      },{
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Liindy/ButterflyKnife",
+        "price": 15,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Interactable Lantern",
+    "creator": "Liindy",
+    "category": "",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "With extra textures.",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://liindy.gumroad.com/l/Lantern",
+        "price": 5,
+        "currency": "USD"
+      },{
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Liindy/LiindyLantern",
+        "price": 4,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Folding blades",
+    "creator": "Liindy",
+    "category": "",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://liindy.gumroad.com/l/FoldingBlades",
+        "price": 18,
+        "currency": "USD"
+      },{
+        "store": "Jinxxy",
+        "url": "https://jinxxy.com/Liindy/FoldingBlades",
+        "price": 17
+        ,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Remington 870 Shotgun",
+    "creator": "Joe",
+    "category": "",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://josephmeowlin.gumroad.com/l/rafwi",
+        "price": 10,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Slappable Frying Pan",
+    "creator": "Pointless",
+    "category": "",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://pointlesscreations.gumroad.com/l/FryingPan",
+        "price": 5,
+        "currency": "USD"
+      }
+    ]
+  },{
+    "name": "Friendship Bracelet",
+    "creator": "Liindy",
+    "category": "",
+    "publicUsage": "Yes",
+    "tags": "",
+    "notes": "",
+    "offers": [
+      {
+        "store": "Gumroad",
+        "url": "https://liindy.gumroad.com/l/FriendshipBracelet",
+        "price": 0,
+        "currency": "USD"
+      }
+    ]
   }
 ]
